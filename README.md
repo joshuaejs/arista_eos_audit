@@ -8,7 +8,7 @@
 ## About this repository 
 
 This repo has python content to collect eos commands from Arista devices.  
-It also has python content to audit the data collected and to generate a report.  
+It also has python content to audit offine the data collected and to generate a report.  
 
 The file [input.yml](input.yml) has the required input for the files [collect_eos_commands.py](collect_eos_commands.py) and  [audit_eos_files.py](audit_eos_files.py)   
  
