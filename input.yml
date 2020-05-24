@@ -25,6 +25,14 @@ text_and_json_cmds:
   - show interfaces description 
   - show lldp neighbors
 
+custom_show_tech_support: 
+  - show hostname 
+  - show version 
+  - show reload cause history
+  - show inventory 
+  - show lldp neighbors
+  - show ip bgp summary vrf all 
+  
 audit: 
   - hostname
   - version
