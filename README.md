@@ -22,17 +22,16 @@ It is used to define these variables:
 - json_cmds: list EOS commands to collect in JSON format
 - text_and_json_cmds: list EOS commands to collect in text and JSON format 
 - output_directory: directory to save the show commands collected and the reports generated
-- custom_show_tech_support: list of files (EOS show commands) to include in a custom show tech-support support file. 
-- audit: list of topics to audit and include in the report.  
+- custom_show_tech_support: list of files (show commands) to include in a custom show tech-support file. 
+- audit: list of topics to audit and to include in the report.  
 
-The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices.  
-It supports collecting show commands in both text and JSON format.  
-The commands output is saved in this [directory](output/eos_commands)
+The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices. It supports collecting show commands in both text and JSON format. The commands output is saved in this [directory](output/eos_commands)
 
 The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit offline some of the collected files and to generate a report.  
-It generates for each device 2 reports: 
-- A ```main.txt``` file. It include all the tests. Here's an example [main.txt](main.txt) 
-- A ```failures only.txt``` file. It include only the test that failed. Here's an example [failures only.txt](failures only.txt)
+For each device it generates 2 reports: 
+- A ```main.txt``` file. It includes all the tests. Here's an [example](main.txt) 
+- A ```failures only.txt``` file. It includes only the test that failed. Here's an [example](failures only.txt).  
+
 It also assemble the devices report in one file: 
 - [main.txt](main.txt) 
 - [failures only.txt](failures only.txt)
