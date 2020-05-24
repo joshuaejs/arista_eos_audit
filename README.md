@@ -47,8 +47,8 @@ For each device it generates 2 reports:
 - The file ```failures only.txt``` includes only the tests that failed. Here's an [example](failures only.txt).  
 
 It also assembles the devices report in one file: 
-- [main.txt](main.txt). It includes for all the devices all the tests. Here's an [example](output/eos_commands/reports/main.txt)  
-- [failures only.txt](failures only.txt). It includes for all the devices only the tests that failed. Here's an [example](output/eos_commands/reports/failures only.txt).  
+- The file [main.txt](output/main.txt) includes for all the devices all the tests. 
+- The file [failures only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. 
 
 It currently support these features:  
 - hostname
