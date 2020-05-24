@@ -1,0 +1,24 @@
+---
+output_directory: output
+
+audit: 
+  - hostname
+  - version
+  - inventory 
+  - power 
+  - cooling
+  - temperature
+  - temperature_transceivers
+  - reload_cause_history
+  - reload_cause_full
+  - lldp
+  - bgp
+  - mlag
+
+devices: 
+  - 10.83.28.122
+  - 10.83.28.217
+  - 10.83.28.203
+  - 10.83.28.213
+  
+  
