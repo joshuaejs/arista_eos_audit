@@ -27,8 +27,15 @@ It is used to define these variables:
 
 The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices.  
 It supports collecting show commands in both text and JSON format.  
+The commands output is saved in this [directory](output/eos_commands)
 
 The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit offline some of the collected files and to generate a report.  
+It generates for each device 2 reports: 
+- A ```main.txt``` file. It include all the tests. Here's an example [main.txt](main.txt) 
+- A ```failures only.txt``` file. It include only the test that failed. Here's an example [failures only.txt](failures only.txt)
+It also assemble the devices report in one file: 
+- [main.txt](main.txt) 
+- [failures only.txt](failures only.txt)
 It currently support these features:  
 - hostname
   - description: add to the report the device hostname and fqdn 
@@ -40,15 +47,44 @@ It currently support these features:
   - Failure conditions: This is a report without any test so there is no failure/passing condition
 - inventory 
   - requirements: ```show inventory | json```
+  - requirements:
+  - Failure conditions: 
 - power 
+  - requirements: ```| json```
+  - requirements:
+  - Failure conditions: 
 - cooling
+  - requirements: ```| json```
+  - requirements:
+  - Failure conditions: 
 - temperature
+  - requirements: ```| json```
+  - requirements:
+  - Failure conditions: 
 - temperature_transceivers
+  - requirements: ```| json```
+  - requirements:
+  - Failure conditions: 
 - reload_cause_history
+  - requirements: ```| json```
+  - requirements:
+  - Failure conditions: 
 - reload_cause_full
+  - requirements: ```| json```
+  - requirements:
+  - Failure conditions: 
 - lldp
+  - requirements: ```| json```
+  - requirements:
+  - Failure conditions: 
 - bgp
+  - requirements: ```| json```
+  - requirements:
+  - Failure conditions: 
 - mlag
+  - requirements: ```| json```
+  - requirements:
+  - Failure conditions: 
   
 ## Requirements
 
