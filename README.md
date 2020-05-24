@@ -20,19 +20,26 @@ It is used to define these variables:
 - password: devices password
 - text_cmds: list EOS commands to collect in text format
 - json_cmds: list EOS commands to collect in JSON format
-- text_and_json_cmds: list EOS commands to collect in text and json format 
+- text_and_json_cmds: list EOS commands to collect in text and JSON format 
 - output_directory: directory to save the show commands collected and the reports generated
-- custom_show_tech_support: list of files (EOS show commands) to include in a custom show tech support file. 
-- audit: list of topics to audit.  
+- custom_show_tech_support: list of files (EOS show commands) to include in a custom show tech-support support file. 
+- audit: list of topics to audit and include in the report.  
 
 The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices.  
 It supports collecting show commands in both text and JSON format.  
 
-The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit some of the collected files and to generate a report.  
-It currently support these features. It works offline, each feature requires a file (show command with a JSON format).  
+The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit offline some of the collected files and to generate a report.  
+It currently support these features:  
 - hostname
+  - description: add to the report the device hostname and fqdn 
+  - requirements: ```show hostname | json```
+  - failure conditions: This is a report without any test so there is no failure/passing condition
 - version
+  - description: add to the reports some details regarding the device (HW model, SN, SW release, uptime)
+  - requirements: ```show version | json```
+  - Failure conditions: This is a report without any test so there is no failure/passing condition
 - inventory 
+  - requirements: ```show inventory | json```
 - power 
 - cooling
 - temperature
