@@ -36,62 +36,64 @@ The commands output is saved in this [directory](output/eos_commands)
 ### [audit_eos_files.py](audit_eos_files.py) file 
 
 The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit offline some of the collected files and to generate a report.  
-For each device it generates 2 reports: 
-- A ```main.txt``` file. It includes all the tests. Here's an [example](main.txt) 
-- A ```failures only.txt``` file. It includes only the test that failed. Here's an [example](failures only.txt).  
 
-It also assemble the devices report in one file: 
-- [main.txt](main.txt) 
-- [failures only.txt](failures only.txt)
+For each device it generates 2 reports: 
+- ```main.txt``` file. It includes all the tests. Here's an [example](main.txt) 
+- ```failures only.txt``` file. It includes only the test that failed. Here's an [example](failures only.txt).  
+
+It also assembles the devices report in one file: 
+- [main.txt](main.txt). It includes for all the devices all the tests. Here's an [example](output/eos_commands/reports/main.txt)  
+- [failures only.txt](failures only.txt). It includes for all the devices only the test that failed. Here's an [example](output/eos_commands/reports/failures only.txt).  
+
 It currently support these features:  
 - hostname
-  - description: add to the report the device hostname and fqdn 
   - requirements: ```show hostname | json```
+  - description: add to the report the device hostname and fqdn 
   - failure conditions: This is a report without any test so there is no failure/passing condition
 - version
-  - description: add to the report some details regarding the device (HW model, SN, SW release, uptime)
   - requirements: ```show version | json```
+  - description: add to the report some details regarding the device (HW model, SN, SW release, uptime)
   - Failure conditions: This is a report without any test so there is no failure/passing condition
 - inventory 
   - requirements: ```show inventory | json```
-  - requirements:
+  - description: 
   - Failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
 - power 
   - requirements: ```show system environment power| json```
-  - requirements:
-  - Failure conditions: 
+  - description: 
+  - Failure conditions: A test fails if the status of a power supply is not ok
 - cooling
   - requirements: ```show system environment cooling | json```
-  - requirements:
-  - Failure conditions: 
+  - description: 
+  - Failure conditions: A test fails if the status of a fan is not ok
 - temperature
   - requirements: ```show system environment temperature | json```
-  - requirements:
-  - Failure conditions: 
+  - description: 
+  - Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
 - temperature_transceivers
   - requirements: ```show system environment temperature transceiver | json```
-  - requirements:
-  - Failure conditions: 
+  - description: 
+  - Failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
 - reload_cause_history
   - requirements: ```show reload cause history | json```
-  - requirements:
-  - Failure conditions: 
+  - description: 
+  - Failure conditions: A test fails if a device reload was not requested by user
 - reload_cause_full
   - requirements: ```show reload cause full | json```
-  - requirements:
-  - Failure conditions: 
+  - description: 
+  - Failure conditions: The test fails if the device reload was not requested by user
 - lldp
   - requirements: ```show lldp neighbors | json```
-  - requirements:
-  - Failure conditions: 
+  - description: 
+  - Failure conditions: This is a report without any test so there is no failure/passing condition
 - bgp
   - requirements: ```show ip bgp summary vrf all | json```
-  - requirements:
-  - Failure conditions: 
+  - description: 
+  - Failure conditions: A test fails if a BGP session is not established
 - mlag
   - requirements: ```show mlag detail | json```
-  - requirements:
-  - Failure conditions: 
+  - description: 
+  - Failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
   
 ## Requirements
 
