@@ -1,0 +1,8 @@
+********** Power supplies **********
+
+Required EOS command: show system environment power| json
+Failure conditions: A test fails if the status of a power supply is not ok
+
+Power supply: 1 *** Status: powerLoss *** Result: FAIL
+The other tests succesfully passed
+

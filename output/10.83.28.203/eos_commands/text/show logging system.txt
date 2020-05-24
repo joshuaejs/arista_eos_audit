@@ -1,0 +1,1299 @@
+May 24 16:35:26 localhost rsyslogd: [origin software="rsyslogd" swVersion="7.2.6" x-pid="929" x-info="http://www.rsyslog.com"] start
+May 24 16:35:26 localhost kernel: [    0.000000] Linux version 4.9.122.Ar-15576426.4224M (arastra@dhcp-242-154-160.sjc.aristanetworks.com) (gcc version 6.3.1 20170216 (Red Hat 6.3.1-3) (crosstool-NG 1.20.0) ) #1 SMP PREEMPT Thu Feb 20 17:13:24 PST 2020
+May 24 16:35:26 localhost kernel: [    0.000000] Command line:  SWI=flash:/EOS-2GB-4.22.4M.swi CONSOLESPEED=9600 tsc=reliable console=ttyS0 reboot=p block_drive=pci0000:00/0000:00:11.0/.*host./target.:0:0/.*$ net_ma1=pci0000:00/0000:00:14.6$ net_usb1=pci0000:00/0000:00:12.2/usb1/1-1/.*$ platform=raven block_flash=pci0000:00/0000:00:12.[02]/usb.*$ block_usb1=pci0000:00/0000:00:13.[02]/usb.*$ log_buf_len=2M systemd.show_status=0 systemd.default_standard_output=tty dmamem=54M-NO_IOMMU_CMA hwaddr_ma1=00:1c:73:1e:e5:ed amd_iommu=off acpi=off processor.max_cstate=1 intel_idle.max_cstate=1  kexec_jump_back_entry=0xbfa0b340
+May 24 16:35:26 localhost kernel: [    0.000000] x86/fpu: Legacy x87 FPU detected.
+May 24 16:35:26 localhost kernel: [    0.000000] e820: BIOS-provided physical RAM map:
+May 24 16:35:26 localhost kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x0000000000000fff] reserved
+May 24 16:35:26 localhost kernel: [    0.000000] BIOS-e820: [mem 0x0000000000001000-0x000000000009ffff] usable
+May 24 16:35:26 localhost kernel: [    0.000000] BIOS-e820: [mem 0x00000000000c0000-0x00000000bffeffff] usable
+May 24 16:35:26 localhost kernel: [    0.000000] BIOS-e820: [mem 0x00000000bfff0000-0x00000000bfffffff] reserved
+May 24 16:35:26 localhost kernel: [    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000013fffffff] usable
+May 24 16:35:26 localhost kernel: [    0.000000] NX (Execute Disable) protection: active
+May 24 16:35:26 localhost kernel: [    0.000000] DMI not present or invalid.
+May 24 16:35:26 localhost kernel: [    0.000000] Kernel/User page tables isolation: disabled
+May 24 16:35:26 localhost kernel: [    0.000000] AGP: No AGP bridge found
+May 24 16:35:26 localhost kernel: [    0.000000] e820: last_pfn = 0x140000 max_arch_pfn = 0x400000000
+May 24 16:35:26 localhost kernel: [    0.000000] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+May 24 16:35:26 localhost kernel: [    0.000000] e820: last_pfn = 0xbfff0 max_arch_pfn = 0x400000000
+May 24 16:35:26 localhost kernel: [    0.000000] found SMP MP-table at [mem 0x000f0400-0x000f040f] mapped at [ffff8800000f0400]
+May 24 16:35:26 localhost kernel: [    0.000000] Using GB pages for direct mapping
+May 24 16:35:26 localhost kernel: [    0.000000] log_buf_len: 2097152 bytes
+May 24 16:35:26 localhost kernel: [    0.000000] early log buf free: 5204(63%)
+May 24 16:35:26 localhost kernel: [    0.000000] RAMDISK: [mem 0x7fdf8000-0x7fff4fff]
+May 24 16:35:26 localhost kernel: [    0.000000] Reserving 34MB of memory at 848MB for crashkernel (System RAM: 4095MB)
+May 24 16:35:26 localhost kernel: [    0.000000] cma: Reserved 56 MiB at 0x00000000bc400000
+May 24 16:35:26 localhost kernel: [    0.000000] dmamem: CMA reserved start:0xbc400000 size:0x3800000
+May 24 16:35:26 localhost kernel: [    0.000000] Zone ranges:
+May 24 16:35:26 localhost kernel: [    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+May 24 16:35:26 localhost kernel: [    0.000000]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+May 24 16:35:26 localhost kernel: [    0.000000]   Normal   [mem 0x0000000100000000-0x000000013fffffff]
+May 24 16:35:26 localhost kernel: [    0.000000] Movable zone start for each node
+May 24 16:35:26 localhost kernel: [    0.000000] Early memory node ranges
+May 24 16:35:26 localhost kernel: [    0.000000]   node   0: [mem 0x0000000000001000-0x000000000009ffff]
+May 24 16:35:26 localhost kernel: [    0.000000]   node   0: [mem 0x0000000000100000-0x00000000bffeffff]
+May 24 16:35:26 localhost kernel: [    0.000000]   node   0: [mem 0x0000000100000000-0x000000013fffffff]
+May 24 16:35:26 localhost kernel: [    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x000000013fffffff]
+May 24 16:35:26 localhost kernel: [    0.000000] Intel MultiProcessor Specification v1.4
+May 24 16:35:26 localhost kernel: [    0.000000] MPTABLE: OEM ID: Arista  
+May 24 16:35:26 localhost kernel: [    0.000000] MPTABLE: Product ID: mainboard   
+May 24 16:35:26 localhost kernel: [    0.000000] MPTABLE: APIC at: 0xFEE00000
+May 24 16:35:26 localhost kernel: [    0.000000] Processor #0 (Bootup-CPU)
+May 24 16:35:26 localhost kernel: [    0.000000] Processor #1
+May 24 16:35:26 localhost kernel: [    0.000000] IOAPIC[0]: apic_id 1, version 33, address 0xfec00000, GSI 0-23
+May 24 16:35:26 localhost kernel: [    0.000000] Processors: 2
+May 24 16:35:26 localhost kernel: [    0.000000] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+May 24 16:35:26 localhost kernel: [    0.000000] e820: [mem 0xc0000000-0xffffffff] available for PCI devices
+May 24 16:35:26 localhost kernel: [    0.000000] Booting paravirtualized kernel on bare hardware
+May 24 16:35:26 localhost kernel: [    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+May 24 16:35:26 localhost kernel: [    0.000000] setup_percpu: NR_CPUS:16 nr_cpumask_bits:16 nr_cpu_ids:2 nr_node_ids:1
+May 24 16:35:26 localhost kernel: [    0.000000] percpu: Embedded 35 pages/cpu @ffff88013fa00000 s104360 r8192 d30808 u1048576
+May 24 16:35:26 localhost kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 1032057
+May 24 16:35:26 localhost kernel: [    0.000000] Kernel command line: crashkernel=512-4G:34M,4G-8G:41M,8G-:53M nmi_watchdog=panic tsc=reliable pcie_ports=native reboot=p log_buf_len=1M usb-storage.delay_use=0 pti=off  SWI=flash:/EOS-2GB-4.22.4M.swi CONSOLESPEED=9600 tsc=reliable console=ttyS0 reboot=p block_drive=pci0000:00/0000:00:11.0/.*host./target.:0:0/.*$ net_ma1=pci0000:00/0000:00:14.6$ net_usb1=pci0000:00/0000:00:12.2/usb1/1-1/.*$ platform=raven block_flash=pci0000:00/0000:00:12.[02]/usb.*$ block_usb1=pci0000:00/0000:00:13.[02]/usb.*$ log_buf_len=2M systemd.show_status=0 systemd.default_standard_output=tty dmamem=54M-NO_IOMMU_CMA hwaddr_ma1=00:1c:73:1e:e5:ed amd_iommu=off acpi=off processor.max_cstate=1 intel_idle.max_cstate=1  kexec_jump_back_entry=0xbfa0b340
+May 24 16:35:26 localhost kernel: [    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+May 24 16:35:26 localhost kernel: [    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+May 24 16:35:26 localhost kernel: [    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+May 24 16:35:26 localhost kernel: [    0.000000] AGP: Checking aperture...
+May 24 16:35:26 localhost kernel: [    0.000000] AGP: No AGP bridge found
+May 24 16:35:26 localhost kernel: [    0.000000] AGP: Node 0: aperture [bus addr 0x00000000-0x01ffffff] (32MB)
+May 24 16:35:26 localhost kernel: [    0.000000] AGP: Your BIOS doesn't leave an aperture memory hole
+May 24 16:35:26 localhost kernel: [    0.000000] AGP: Please enable the IOMMU option in the BIOS setup
+May 24 16:35:26 localhost kernel: [    0.000000] AGP: This costs you 64MB of RAM
+May 24 16:35:26 localhost kernel: [    0.000000] AGP: Mapping aperture over RAM [mem 0xb4000000-0xb7ffffff] (65536KB)
+May 24 16:35:26 localhost kernel: [    0.000000] Memory: 3878936K/4193852K available (6476K kernel code, 999K rwdata, 2252K rodata, 1348K init, 376K bss, 257572K reserved, 57344K cma-reserved)
+May 24 16:35:26 localhost kernel: [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+May 24 16:35:26 localhost kernel: [    0.000000] Preemptible hierarchical RCU implementation.
+May 24 16:35:26 localhost kernel: [    0.000000] 	Build-time adjustment of leaf fanout to 64.
+May 24 16:35:26 localhost kernel: [    0.000000] 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=2.
+May 24 16:35:26 localhost kernel: [    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=2
+May 24 16:35:26 localhost kernel: [    0.000000] NR_IRQS:4352 nr_irqs:440 16
+May 24 16:35:26 localhost kernel: [    0.000000] Console: colour dummy device 80x25
+May 24 16:35:26 localhost kernel: [    0.000000] console [ttyS0] enabled
+May 24 16:35:26 localhost kernel: [    0.000000] tsc: Fast TSC calibration using PIT
+May 24 16:35:26 localhost kernel: [    0.000000] tsc: Detected 1500.120 MHz processor
+May 24 16:35:26 localhost kernel: [    0.000004] Calibrating delay loop (skipped), value calculated using timer frequency.. 3000.24 BogoMIPS (lpj=6000480)
+May 24 16:35:26 localhost kernel: [    0.000008] pid_max: default: 32768 minimum: 301
+May 24 16:35:26 localhost kernel: [    0.000078] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+May 24 16:35:26 localhost kernel: [    0.000081] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+May 24 16:35:26 localhost kernel: [    0.000532] mce: CPU supports 6 MCE banks
+May 24 16:35:26 localhost kernel: [    0.000541] LVT offset 0 assigned for vector 0xf9
+May 24 16:35:26 localhost kernel: [    0.000547] process: using AMD E400 aware idle routine
+May 24 16:35:26 localhost kernel: [    0.000550] Last level iTLB entries: 4KB 512, 2MB 16, 4MB 8
+May 24 16:35:26 localhost kernel: [    0.000552] Last level dTLB entries: 4KB 512, 2MB 128, 4MB 64, 1GB 0
+May 24 16:35:26 localhost kernel: [    0.000565] Spectre V2 : Vulnerable: Minimal AMD ASM retpoline
+May 24 16:35:26 localhost kernel: [    0.000567] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+May 24 16:35:26 localhost kernel: [    0.001054] Freeing SMP alternatives memory: 28K
+May 24 16:35:26 localhost kernel: [    0.002219] ftrace: allocating 29023 entries in 114 pages
+May 24 16:35:26 localhost kernel: [    0.023530] smpboot: Max logical packages: 1
+May 24 16:35:26 localhost kernel: [    0.024029] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=0 pin2=0
+May 24 16:35:26 localhost kernel: [    0.276040] smpboot: CPU0: AMD Turion(tm) II Neo N41H Dual-Core Processor (family: 0x10, model: 0x6, stepping: 0x3)
+May 24 16:35:26 localhost kernel: [    0.276049] Performance Events: Broken BIOS detected, complain to your hardware vendor.
+May 24 16:35:26 localhost kernel: [    0.276055] [Firmware Bug]: the BIOS has corrupted hw-PMU resources (MSR c0010000 is 530076)
+May 24 16:35:26 localhost kernel: [    0.276056] AMD PMU driver.
+May 24 16:35:26 localhost kernel: [    0.276059] ... version:                0
+May 24 16:35:26 localhost kernel: [    0.276060] ... bit width:              48
+May 24 16:35:26 localhost kernel: [    0.276061] ... generic registers:      4
+May 24 16:35:26 localhost kernel: [    0.276063] ... value mask:             0000ffffffffffff
+May 24 16:35:26 localhost kernel: [    0.276064] ... max period:             00007fffffffffff
+May 24 16:35:26 localhost kernel: [    0.276065] ... fixed-purpose events:   0
+May 24 16:35:26 localhost kernel: [    0.276067] ... event mask:             000000000000000f
+May 24 16:35:26 localhost kernel: [    0.276152] process: System has AMD C1E enabled
+May 24 16:35:26 localhost kernel: [    0.276160] process: Switch to broadcast mode on CPU0
+May 24 16:35:26 localhost kernel: [    0.304927] MCE: In-kernel MCE decoding enabled.
+May 24 16:35:26 localhost kernel: [    0.312295] NMI watchdog: enabled on all CPUs, permanently consumes one hw-PMU counter.
+May 24 16:35:26 localhost kernel: [    0.352240] x86: Booting SMP configuration:
+May 24 16:35:26 localhost kernel: [    0.352243] .... node  #0, CPUs:      #1
+May 24 16:35:26 localhost kernel: [    0.352414] Skipped synchronization checks as TSC is reliable.
+May 24 16:35:26 localhost kernel: [    0.352452] process: Switch to broadcast mode on CPU1
+May 24 16:35:26 localhost kernel: [    0.352534] x86: Booted up 1 node, 2 CPUs
+May 24 16:35:26 localhost kernel: [    0.352538] smpboot: Total of 2 processors activated (6000.48 BogoMIPS)
+May 24 16:35:26 localhost kernel: [    0.353779] devtmpfs: initialized
+May 24 16:35:26 localhost kernel: [    0.354938] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+May 24 16:35:26 localhost kernel: [    0.354944] futex hash table entries: 512 (order: 3, 32768 bytes)
+May 24 16:35:26 localhost kernel: [    0.355424] pinctrl core: initialized pinctrl subsystem
+May 24 16:35:26 localhost kernel: [    0.355654] NET: Registered protocol family 16
+May 24 16:35:26 localhost kernel: [    0.372228] cpuidle: using governor ladder
+May 24 16:35:26 localhost kernel: [    0.372242] TOM: 00000000c0000000 aka 3072M
+May 24 16:35:26 localhost kernel: [    0.372252] TOM2: 0000000140000000 aka 5120M
+May 24 16:35:26 localhost kernel: [    0.372637] PCI: Using configuration type 1 for base access
+May 24 16:35:26 localhost kernel: [    0.372638] PCI: Using configuration type 1 for extended access
+May 24 16:35:26 localhost kernel: [    0.388661] HugeTLB registered 1 GB page size, pre-allocated 0 pages
+May 24 16:35:26 localhost kernel: [    0.388664] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+May 24 16:35:26 localhost kernel: [    0.388999] ACPI: Interpreter disabled.
+May 24 16:35:26 localhost kernel: [    0.389126] SCSI subsystem initialized
+May 24 16:35:26 localhost kernel: [    0.389364] usbcore: registered new interface driver usbfs
+May 24 16:35:26 localhost kernel: [    0.389383] usbcore: registered new interface driver hub
+May 24 16:35:26 localhost kernel: [    0.389416] usbcore: registered new device driver usb
+May 24 16:35:26 localhost kernel: [    0.389453] pps_core: LinuxPPS API ver. 1 registered
+May 24 16:35:26 localhost kernel: [    0.389455] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+May 24 16:35:26 localhost kernel: [    0.389461] PTP clock support registered
+May 24 16:35:26 localhost kernel: [    0.389467] EDAC MC: Ver: 3.0.0
+May 24 16:35:26 localhost kernel: [    0.389694] dmi: Firmware registration failed.
+May 24 16:35:26 localhost kernel: [    0.389710] PCI: Probing PCI hardware
+May 24 16:35:26 localhost kernel: [    0.389773] PCI host bridge to bus 0000:00
+May 24 16:35:26 localhost kernel: [    0.389779] pci_bus 0000:00: root bus resource [bus 00-05]
+May 24 16:35:26 localhost kernel: [    0.389783] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+May 24 16:35:26 localhost kernel: [    0.389786] pci_bus 0000:00: root bus resource [mem 0xe4200000-0xffffffff]
+May 24 16:35:26 localhost kernel: [    0.389788] pci_bus 0000:00: root bus resource [mem 0xc0000000-0xe41fffff]
+May 24 16:35:26 localhost kernel: [    0.389791] pci_bus 0000:00: root bus resource [mem 0x140000000-0xfcffffffff]
+May 24 16:35:26 localhost kernel: [    0.392914] pci_bus 0000:01: set in_fastreset to 0
+May 24 16:35:26 localhost initblockdev: dosfsck returned 1 on /dev/sda1 /mnt/flash, verifying the partition again
+May 24 16:35:26 localhost kernel: [    0.393124] pci 0000:00:01.0: PCI bridge to [bus 01]
+May 24 16:35:26 localhost kernel: [    0.393159] pci_bus 0000:02: set in_fastreset to 0
+May 24 16:35:26 localhost kernel: [    0.393193] pci 0000:00:04.0: PCI bridge to [bus 02]
+May 24 16:35:26 localhost kernel: [    0.393227] pci_bus 0000:03: set in_fastreset to 0
+May 24 16:35:26 localhost kernel: [    0.393259] pci 0000:00:08.0: PCI bridge to [bus 03]
+May 24 16:35:26 localhost kernel: [    0.393294] pci_bus 0000:04: set in_fastreset to 0
+May 24 16:35:26 localhost kernel: [    0.393627] pci 0000:00:09.0: PCI bridge to [bus 04]
+May 24 16:35:26 localhost kernel: [    0.393661] pci_bus 0000:05: set in_fastreset to 0
+May 24 16:35:26 localhost kernel: [    0.393692] pci 0000:00:0a.0: PCI bridge to [bus 05]
+May 24 16:35:26 localhost kernel: [    0.393718] pci_bus 0000:06: set in_fastreset to 0
+May 24 16:35:26 localhost kernel: [    0.393804] pci 0000:00:14.4: PCI bridge to [bus 06]
+May 24 16:35:26 localhost kernel: [    0.393863] pci 0000:00:14.4: default IRQ router [1002:4384]
+May 24 16:35:26 localhost kernel: [    0.394739] clocksource: Switched to clocksource refined-jiffies
+May 24 16:35:26 localhost kernel: [    0.405537] VFS: Disk quotas dquot_6.6.0
+May 24 16:35:26 localhost kernel: [    0.405569] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+May 24 16:35:26 localhost kernel: [    0.405666] pnp: PnP ACPI: disabled
+May 24 16:35:26 localhost kernel: [    0.413557] pci 0000:00:14.6: BAR 6: assigned [mem 0xe4200000-0xe420ffff pref]
+May 24 16:35:26 localhost kernel: [    0.413563] pci 0000:00:01.0: PCI bridge to [bus 01]
+May 24 16:35:26 localhost kernel: [    0.413567] pci 0000:00:01.0:   bridge window [io  0x7000-0x7fff]
+May 24 16:35:26 localhost kernel: [    0.413571] pci 0000:00:01.0:   bridge window [mem 0xe4000000-0xe40fffff]
+May 24 16:35:26 localhost kernel: [    0.413575] pci 0000:00:01.0:   bridge window [mem 0xe8000000-0xefffffff 64bit pref]
+May 24 16:35:26 localhost kernel: [    0.413580] pci 0000:00:04.0: PCI bridge to [bus 02]
+May 24 16:35:26 localhost kernel: [    0.413583] pci 0000:00:04.0:   bridge window [io  0x1000-0x1fff]
+May 24 16:35:26 localhost kernel: [    0.413587] pci 0000:00:04.0:   bridge window [mem 0xe2000000-0xe3ffffff]
+May 24 16:35:26 localhost kernel: [    0.413590] pci 0000:00:04.0:   bridge window [mem 0xc0000000-0xc01fffff 64bit pref]
+May 24 16:35:26 localhost kernel: [    0.413595] pci 0000:00:08.0: PCI bridge to [bus 03]
+May 24 16:35:26 localhost kernel: [    0.413598] pci 0000:00:08.0:   bridge window [io  0x2000-0x2fff]
+May 24 16:35:26 localhost kernel: [    0.413601] pci 0000:00:08.0:   bridge window [mem 0xc0200000-0xc03fffff]
+May 24 16:35:26 localhost kernel: [    0.413605] pci 0000:00:08.0:   bridge window [mem 0xc0400000-0xc05fffff 64bit pref]
+May 24 16:35:26 localhost kernel: [    0.413610] pci 0000:00:09.0: PCI bridge to [bus 04]
+May 24 16:35:26 localhost kernel: [    0.413613] pci 0000:00:09.0:   bridge window [io  0x3000-0x3fff]
+May 24 16:35:26 localhost kernel: [    0.413617] pci 0000:00:09.0:   bridge window [mem 0xe0000000-0xe1ffffff]
+May 24 16:35:26 localhost kernel: [    0.413620] pci 0000:00:09.0:   bridge window [mem 0xc0600000-0xc07fffff 64bit pref]
+May 24 16:35:26 localhost kernel: [    0.413624] pci 0000:00:0a.0: PCI bridge to [bus 05]
+May 24 16:35:26 localhost kernel: [    0.413627] pci 0000:00:0a.0:   bridge window [io  0x4000-0x4fff]
+May 24 16:35:26 localhost kernel: [    0.413631] pci 0000:00:0a.0:   bridge window [mem 0xc0800000-0xc09fffff]
+May 24 16:35:26 localhost kernel: [    0.413634] pci 0000:00:0a.0:   bridge window [mem 0xc0a00000-0xc0bfffff 64bit pref]
+May 24 16:35:26 localhost kernel: [    0.413640] pci 0000:00:14.4: PCI bridge to [bus 06]
+May 24 16:35:26 localhost kernel: [    0.413760] NET: Registered protocol family 2
+May 24 16:35:26 localhost kernel: [    0.414234] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+May 24 16:35:26 localhost kernel: [    0.414344] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes)
+May 24 16:35:26 localhost kernel: [    0.414705] TCP: Hash tables configured (established 32768 bind 32768)
+May 24 16:35:26 localhost kernel: [    0.414774] UDP hash table entries: 2048 (order: 5, 196608 bytes)
+May 24 16:35:26 localhost kernel: [    0.414851] UDP-Lite hash table entries: 2048 (order: 5, 196608 bytes)
+May 24 16:35:26 localhost kernel: [    0.415308] NET: Registered protocol family 1
+May 24 16:35:26 localhost kernel: [    0.415518] RPC: Registered named UNIX socket transport module.
+May 24 16:35:26 localhost kernel: [    0.415535] RPC: Registered udp transport module.
+May 24 16:35:26 localhost kernel: [    0.415537] RPC: Registered tcp transport module.
+May 24 16:35:26 localhost kernel: [    0.415538] RPC: Registered tcp NFSv4.1 backchannel transport module.
+May 24 16:35:26 localhost kernel: [    0.415547] pci 0000:00:01.0: MSI quirk detected; subordinate MSI disabled
+May 24 16:35:26 localhost kernel: [    0.415587] pci 0000:00:12.0: PCI->APIC IRQ transform: INT A -> IRQ 22
+May 24 16:35:26 localhost kernel: [    0.415621] pci 0000:00:12.2: PCI->APIC IRQ transform: INT B -> IRQ 23
+May 24 16:35:26 localhost kernel: [    0.415647] pci 0000:00:13.0: PCI->APIC IRQ transform: INT A -> IRQ 22
+May 24 16:35:26 localhost kernel: [    0.415672] pci 0000:00:13.2: PCI->APIC IRQ transform: INT B -> IRQ 23
+May 24 16:35:26 localhost kernel: [    0.415709] pci 0000:00:16.0: PCI->APIC IRQ transform: INT A -> IRQ 23
+May 24 16:35:26 localhost kernel: [    0.415734] pci 0000:00:16.2: PCI->APIC IRQ transform: INT B -> IRQ 22
+May 24 16:35:26 localhost kernel: [    0.415769] pci 0000:01:05.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+May 24 16:35:26 localhost kernel: [    0.416013] Unpacking initramfs...
+May 24 16:35:26 localhost kernel: [    0.568006] Freeing initrd memory: 2036K
+May 24 16:35:26 localhost kernel: [    0.568018] PCI-DMA: Disabling AGP.
+May 24 16:35:26 localhost kernel: [    0.569901] PCI-DMA: aperture base @ b4000000 size 65536 KB
+May 24 16:35:26 localhost kernel: [    0.569903] PCI-DMA: using GART IOMMU.
+May 24 16:35:26 localhost kernel: [    0.569906] PCI-DMA: Reserving 64MB of IOMMU area in the AGP aperture
+May 24 16:35:26 localhost kernel: [    0.575323] LVT offset 1 assigned for vector 0x400
+May 24 16:35:26 localhost kernel: [    0.575338] IBS: LVT offset 1 assigned
+May 24 16:35:26 localhost kernel: [    0.575416] perf: AMD IBS detected (0x0000001f)
+May 24 16:35:26 localhost kernel: [    0.575494] platform rtc_cmos: registered platform RTC device (no PNP device found)
+May 24 16:35:26 localhost kernel: [    0.576626] workingset: timestamp_bits=46 max_order=20 bucket_order=0
+May 24 16:35:26 localhost kernel: [    0.581501] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+May 24 16:35:26 localhost kernel: [    0.582231] aufs 4.9
+May 24 16:35:26 localhost kernel: [    0.582916] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
+May 24 16:35:26 localhost kernel: [    0.582919] io scheduler noop registered (default)
+May 24 16:35:26 localhost kernel: [    0.583067] pcieport 0000:00:04.0: can't find IRQ for PCI INT A; probably buggy MP table
+May 24 16:35:26 localhost kernel: [    0.583262] pcieport 0000:00:08.0: can't find IRQ for PCI INT A; probably buggy MP table
+May 24 16:35:26 localhost kernel: [    0.583419] pcieport 0000:00:09.0: can't find IRQ for PCI INT A; probably buggy MP table
+May 24 16:35:26 localhost kernel: [    0.583572] pcieport 0000:00:0a.0: can't find IRQ for PCI INT A; probably buggy MP table
+May 24 16:35:26 localhost kernel: [    0.583770] pcieport 0000:00:04.0: Signaling PME through PCIe PME interrupt
+May 24 16:35:26 localhost kernel: [    0.583800] pcieport 0000:00:08.0: Signaling PME through PCIe PME interrupt
+May 24 16:35:26 localhost kernel: [    0.583830] pcieport 0000:00:09.0: Signaling PME through PCIe PME interrupt
+May 24 16:35:26 localhost kernel: [    0.583833] pci 0000:04:00.0: Signaling PME through PCIe PME interrupt
+May 24 16:35:26 localhost kernel: [    0.583860] pcieport 0000:00:0a.0: Signaling PME through PCIe PME interrupt
+May 24 16:35:26 localhost kernel: [    0.584036] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+May 24 16:35:26 localhost kernel: [    0.584206] pcielw 0000:00:04.0:pcie004: link down
+May 24 16:35:26 localhost kernel: [    0.584209] pcielw 0000:00:04.0:pcie004: link down processing complete
+May 24 16:35:26 localhost kernel: [    0.584216] pcielw 0000:00:0a.0:pcie004: link down
+May 24 16:35:26 localhost kernel: [    0.584218] pcielw 0000:00:0a.0:pcie004: link down processing complete
+May 24 16:35:26 localhost kernel: [    0.584257] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+May 24 16:35:26 localhost kernel: [    0.604713] serial8250: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+May 24 16:35:26 localhost kernel: [    0.609503] loop: module loaded
+May 24 16:35:26 localhost kernel: [    0.609568] hv_vmbus: registering driver hv_storvsc
+May 24 16:35:26 localhost kernel: [    0.609756] ahci 0000:00:11.0: PCI->APIC IRQ transform: INT A -> IRQ 20
+May 24 16:35:26 localhost kernel: [    0.609864] ahci 0000:00:11.0: AHCI 0001.0200 32 slots 4 ports 6 Gbps 0xf impl SATA mode
+May 24 16:35:26 localhost kernel: [    0.609869] ahci 0000:00:11.0: flags: 64bit ncq sntf ilck led clo pio slum part 
+May 24 16:35:26 localhost kernel: [    0.610867] scsi host0: ahci
+May 24 16:35:26 localhost kernel: [    0.611289] scsi host1: ahci
+May 24 16:35:26 localhost kernel: [    0.611609] scsi host2: ahci
+May 24 16:35:26 localhost kernel: [    0.611917] scsi host3: ahci
+May 24 16:35:26 localhost kernel: [    0.612052] ata1: SATA max UDMA/133 abar m1024@0xe4113000 port 0xe4113100 irq 20
+May 24 16:35:26 localhost kernel: [    0.612055] ata2: SATA max UDMA/133 abar m1024@0xe4113000 port 0xe4113180 irq 20
+May 24 16:35:26 localhost kernel: [    0.612058] ata3: SATA max UDMA/133 abar m1024@0xe4113000 port 0xe4113200 irq 20
+May 24 16:35:26 localhost kernel: [    0.612061] ata4: SATA max UDMA/133 abar m1024@0xe4113000 port 0xe4113280 irq 20
+May 24 16:35:26 localhost kernel: [    0.612409] tg3.c:v3.137 (May 11, 2014)
+May 24 16:35:26 localhost kernel: [    0.632239] tg3 0000:00:14.6: PCI->APIC IRQ transform: INT C -> IRQ 21
+May 24 16:35:26 localhost kernel: [    0.633748] libphy: tg3 mdio bus: probed
+May 24 16:35:26 localhost kernel: [    0.704234] pcielw 0000:00:09.0:pcie004: Devices already exist and appear valid.
+May 24 16:35:26 localhost kernel: [    0.704252] pcielw 0000:00:08.0:pcie004: No devices found
+May 24 16:35:26 localhost kernel: [    0.728289] Broadcom BCM50610 a6:01: attached PHY driver [Broadcom BCM50610] (mii_bus:phy_addr=a6:01, irq=-1)
+May 24 16:35:26 localhost kernel: [    0.784219] tg3 0000:00:14.6: VPD access failed.  This is likely a firmware bug on this device.  Contact the card vendor for a firmware update
+May 24 16:35:26 localhost kernel: [    0.788651] tg3 0000:00:14.6 eth0: Tigon3 [partno(none) rev 5785041] (PCI Express) MAC address 00:10:18:00:00:00
+May 24 16:35:26 localhost kernel: [    0.788656] tg3 0000:00:14.6 eth0: RXcsums[1] LinkChgREG[0] MIirq[0] ASF[0] TSOcap[1]
+May 24 16:35:26 localhost kernel: [    0.788659] tg3 0000:00:14.6 eth0: dma_rwctrl[76180000] dma_mask[32-bit]
+May 24 16:35:26 localhost kernel: [    0.788727] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+May 24 16:35:26 localhost kernel: [    0.788729] e1000: Copyright (c) 1999-2006 Intel Corporation.
+May 24 16:35:26 localhost kernel: [    0.788764] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+May 24 16:35:26 localhost kernel: [    0.788766] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+May 24 16:35:26 localhost kernel: [    0.788799] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+May 24 16:35:26 localhost kernel: [    0.788800] igb: Copyright (c) 2007-2014 Intel Corporation.
+May 24 16:35:26 localhost kernel: [    0.788828] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+May 24 16:35:26 localhost kernel: [    0.788839] ehci-pci: EHCI PCI platform driver
+May 24 16:35:26 localhost kernel: [    0.788873] ehci-pci 0000:00:12.2: PCI->APIC IRQ transform: INT B -> IRQ 23
+May 24 16:35:26 localhost kernel: [    0.788910] ehci-pci 0000:00:12.2: EHCI Host Controller
+May 24 16:35:26 localhost kernel: [    0.788921] ehci-pci 0000:00:12.2: new USB bus registered, assigned bus number 1
+May 24 16:35:26 localhost kernel: [    0.788927] ehci-pci 0000:00:12.2: applying AMD SB700/SB800/Hudson-2/3 EHCI dummy qh workaround
+May 24 16:35:26 localhost kernel: [    0.788938] ehci-pci 0000:00:12.2: debug port 1
+May 24 16:35:26 localhost kernel: [    0.788994] ehci-pci 0000:00:12.2: irq 23, io mem 0xe4113400
+May 24 16:35:26 localhost kernel: [    0.804221] ehci-pci 0000:00:12.2: USB 2.0 started, EHCI 1.00
+May 24 16:35:26 localhost kernel: [    0.804322] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+May 24 16:35:26 localhost kernel: [    0.804325] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+May 24 16:35:26 localhost kernel: [    0.804327] usb usb1: Product: EHCI Host Controller
+May 24 16:35:26 localhost kernel: [    0.804330] usb usb1: Manufacturer: Linux 4.9.122.Ar-15576426.4224M ehci_hcd
+May 24 16:35:26 localhost kernel: [    0.804332] usb usb1: SerialNumber: 0000:00:12.2
+May 24 16:35:26 localhost kernel: [    0.804675] hub 1-0:1.0: USB hub found
+May 24 16:35:26 localhost kernel: [    0.804688] hub 1-0:1.0: 5 ports detected
+May 24 16:35:26 localhost kernel: [    0.804970] ehci-pci 0000:00:13.2: PCI->APIC IRQ transform: INT B -> IRQ 23
+May 24 16:35:26 localhost kernel: [    0.805001] ehci-pci 0000:00:13.2: EHCI Host Controller
+May 24 16:35:26 localhost kernel: [    0.805012] ehci-pci 0000:00:13.2: new USB bus registered, assigned bus number 2
+May 24 16:35:26 localhost kernel: [    0.805017] ehci-pci 0000:00:13.2: applying AMD SB700/SB800/Hudson-2/3 EHCI dummy qh workaround
+May 24 16:35:26 localhost kernel: [    0.805028] ehci-pci 0000:00:13.2: debug port 1
+May 24 16:35:26 localhost kernel: [    0.805070] ehci-pci 0000:00:13.2: irq 23, io mem 0xe4113500
+May 24 16:35:26 localhost kernel: [    0.820225] ehci-pci 0000:00:13.2: USB 2.0 started, EHCI 1.00
+May 24 16:35:26 localhost kernel: [    0.820337] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+May 24 16:35:26 localhost kernel: [    0.820340] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+May 24 16:35:26 localhost kernel: [    0.820342] usb usb2: Product: EHCI Host Controller
+May 24 16:35:26 localhost kernel: [    0.820345] usb usb2: Manufacturer: Linux 4.9.122.Ar-15576426.4224M ehci_hcd
+May 24 16:35:26 localhost kernel: [    0.820347] usb usb2: SerialNumber: 0000:00:13.2
+May 24 16:35:26 localhost kernel: [    0.820672] hub 2-0:1.0: USB hub found
+May 24 16:35:26 localhost kernel: [    0.820685] hub 2-0:1.0: 5 ports detected
+May 24 16:35:26 localhost kernel: [    0.820964] ehci-pci 0000:00:16.2: PCI->APIC IRQ transform: INT B -> IRQ 22
+May 24 16:35:26 localhost kernel: [    0.820994] ehci-pci 0000:00:16.2: EHCI Host Controller
+May 24 16:35:26 localhost kernel: [    0.821003] ehci-pci 0000:00:16.2: new USB bus registered, assigned bus number 3
+May 24 16:35:26 localhost kernel: [    0.821008] ehci-pci 0000:00:16.2: applying AMD SB700/SB800/Hudson-2/3 EHCI dummy qh workaround
+May 24 16:35:26 localhost kernel: [    0.821019] ehci-pci 0000:00:16.2: debug port 1
+May 24 16:35:26 localhost kernel: [    0.821072] ehci-pci 0000:00:16.2: irq 22, io mem 0xe4113600
+May 24 16:35:26 localhost kernel: [    0.836234] ehci-pci 0000:00:16.2: USB 2.0 started, EHCI 1.00
+May 24 16:35:26 localhost kernel: [    0.836334] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002
+May 24 16:35:26 localhost kernel: [    0.836338] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+May 24 16:35:26 localhost kernel: [    0.836340] usb usb3: Product: EHCI Host Controller
+May 24 16:35:26 localhost kernel: [    0.836343] usb usb3: Manufacturer: Linux 4.9.122.Ar-15576426.4224M ehci_hcd
+May 24 16:35:26 localhost kernel: [    0.836345] usb usb3: SerialNumber: 0000:00:16.2
+May 24 16:35:26 localhost kernel: [    0.836675] hub 3-0:1.0: USB hub found
+May 24 16:35:26 localhost kernel: [    0.836688] hub 3-0:1.0: 4 ports detected
+May 24 16:35:26 localhost kernel: [    0.836948] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+May 24 16:35:26 localhost kernel: [    0.836958] ohci-pci: OHCI PCI platform driver
+May 24 16:35:26 localhost kernel: [    0.836989] ohci-pci 0000:00:12.0: PCI->APIC IRQ transform: INT A -> IRQ 22
+May 24 16:35:26 localhost kernel: [    0.837012] ohci-pci 0000:00:12.0: OHCI PCI host controller
+May 24 16:35:26 localhost kernel: [    0.837022] ohci-pci 0000:00:12.0: new USB bus registered, assigned bus number 4
+May 24 16:35:26 localhost kernel: [    0.837055] ohci-pci 0000:00:12.0: irq 22, io mem 0xe4110000
+May 24 16:35:26 localhost kernel: [    0.904310] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001
+May 24 16:35:26 localhost kernel: [    0.904314] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+May 24 16:35:26 localhost kernel: [    0.904317] usb usb4: Product: OHCI PCI host controller
+May 24 16:35:26 localhost kernel: [    0.904319] usb usb4: Manufacturer: Linux 4.9.122.Ar-15576426.4224M ohci_hcd
+May 24 16:35:26 localhost kernel: [    0.904321] usb usb4: SerialNumber: 0000:00:12.0
+May 24 16:35:26 localhost kernel: [    0.904654] hub 4-0:1.0: USB hub found
+May 24 16:35:26 localhost kernel: [    0.904669] hub 4-0:1.0: 5 ports detected
+May 24 16:35:26 localhost kernel: [    0.904947] ohci-pci 0000:00:13.0: PCI->APIC IRQ transform: INT A -> IRQ 22
+May 24 16:35:26 localhost kernel: [    0.904968] ohci-pci 0000:00:13.0: OHCI PCI host controller
+May 24 16:35:26 localhost kernel: [    0.904977] ohci-pci 0000:00:13.0: new USB bus registered, assigned bus number 5
+May 24 16:35:26 localhost kernel: [    0.905025] ohci-pci 0000:00:13.0: irq 22, io mem 0xe4111000
+May 24 16:35:26 localhost kernel: [    0.928232] ata1: SATA link down (SStatus 0 SControl 300)
+May 24 16:35:26 localhost kernel: [    0.932240] ata2: SATA link down (SStatus 0 SControl 300)
+May 24 16:35:26 localhost kernel: [    0.936225] ata4: SATA link down (SStatus 0 SControl 300)
+May 24 16:35:26 localhost kernel: [    0.940232] ata3: SATA link down (SStatus 0 SControl 300)
+May 24 16:35:26 localhost kernel: [    0.972286] usb usb5: New USB device found, idVendor=1d6b, idProduct=0001
+May 24 16:35:26 localhost kernel: [    0.972290] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+May 24 16:35:26 localhost kernel: [    0.972292] usb usb5: Product: OHCI PCI host controller
+May 24 16:35:26 localhost kernel: [    0.972294] usb usb5: Manufacturer: Linux 4.9.122.Ar-15576426.4224M ohci_hcd
+May 24 16:35:26 localhost kernel: [    0.972296] usb usb5: SerialNumber: 0000:00:13.0
+May 24 16:35:26 localhost kernel: [    0.972633] hub 5-0:1.0: USB hub found
+May 24 16:35:26 localhost kernel: [    0.972654] hub 5-0:1.0: 5 ports detected
+May 24 16:35:26 localhost kernel: [    0.972938] ohci-pci 0000:00:16.0: PCI->APIC IRQ transform: INT A -> IRQ 23
+May 24 16:35:26 localhost kernel: [    0.972959] ohci-pci 0000:00:16.0: OHCI PCI host controller
+May 24 16:35:26 localhost kernel: [    0.972969] ohci-pci 0000:00:16.0: new USB bus registered, assigned bus number 6
+May 24 16:35:26 localhost kernel: [    0.973008] ohci-pci 0000:00:16.0: irq 23, io mem 0xe4112000
+May 24 16:35:26 localhost kernel: [    1.040287] usb usb6: New USB device found, idVendor=1d6b, idProduct=0001
+May 24 16:35:26 localhost kernel: [    1.040291] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+May 24 16:35:26 localhost kernel: [    1.040294] usb usb6: Product: OHCI PCI host controller
+May 24 16:35:26 localhost kernel: [    1.040296] usb usb6: Manufacturer: Linux 4.9.122.Ar-15576426.4224M ohci_hcd
+May 24 16:35:26 localhost kernel: [    1.040298] usb usb6: SerialNumber: 0000:00:16.0
+May 24 16:35:26 localhost kernel: [    1.040649] hub 6-0:1.0: USB hub found
+May 24 16:35:26 localhost kernel: [    1.040664] hub 6-0:1.0: 4 ports detected
+May 24 16:35:26 localhost kernel: [    1.040922] uhci_hcd: USB Universal Host Controller Interface driver
+May 24 16:35:26 localhost kernel: [    1.041051] usbcore: registered new interface driver usb-storage
+May 24 16:35:26 localhost kernel: [    1.041090] i8042: PNP: No PS/2 controller found. Probing ports directly.
+May 24 16:35:26 localhost kernel: [    2.064356] i8042: No controller found
+May 24 16:35:26 localhost kernel: [    2.064615] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+May 24 16:35:26 localhost kernel: [    2.064658] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+May 24 16:35:26 localhost kernel: [    2.064692] i2c /dev entries driver
+May 24 16:35:26 localhost kernel: [    2.064821] piix4_smbus 0000:00:14.0: SMBus Host Controller at 0x6000, revision 0
+May 24 16:35:26 localhost kernel: [    2.064828] piix4_smbus 0000:00:14.0: Using register 0x2c for SMBus port selection
+May 24 16:35:26 localhost kernel: [    2.065547] piix4_smbus 0000:00:14.0: Auxiliary SMBus Host Controller at 0xb20
+May 24 16:35:26 localhost kernel: [    2.065797] sdhci: Secure Digital Host Controller Interface driver
+May 24 16:35:26 localhost kernel: [    2.065799] sdhci: Copyright(c) Pierre Ossman
+May 24 16:35:26 localhost kernel: [    2.065860] hidraw: raw HID events driver (C) Jiri Kosina
+May 24 16:35:26 localhost kernel: [    2.065925] usbcore: registered new interface driver usbhid
+May 24 16:35:26 localhost kernel: [    2.065926] usbhid: USB HID core driver
+May 24 16:35:26 localhost kernel: [    2.066307] NET: Registered protocol family 10
+May 24 16:35:26 localhost kernel: [    2.067018] NET: Registered protocol family 17
+May 24 16:35:26 localhost kernel: [    2.067879] microcode: CPU0: patch_level=0x010000b6
+May 24 16:35:26 localhost kernel: [    2.067891] microcode: CPU1: patch_level=0x010000b6
+May 24 16:35:26 localhost kernel: [    2.068016] microcode: Microcode Update Driver: v2.01 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+May 24 16:35:26 localhost kernel: [    2.068332] registered taskstats version 1
+May 24 16:35:26 localhost kernel: [    2.068668] rtc_cmos rtc_cmos: setting system clock to 2020-05-24 16:34:45 UTC (1590338085)
+May 24 16:35:26 localhost kernel: [    2.070621] Freeing unused kernel memory: 1348K
+May 24 16:35:26 localhost kernel: [    2.070625] Write protecting the kernel read-only data: 12288k
+May 24 16:35:26 localhost kernel: [    2.071830] Freeing unused kernel memory: 1700K
+May 24 16:35:26 localhost kernel: [    2.081094] Freeing unused kernel memory: 1844K
+May 24 16:35:26 localhost kernel: [    2.081440] random: init: uninitialized urandom read (4 bytes read)
+May 24 16:35:26 localhost kernel: [    2.082040] random: sysinit: uninitialized urandom read (4 bytes read)
+May 24 16:35:26 localhost kernel: [    2.144185] usb 1-3: new high-speed USB device number 2 using ehci-pci
+May 24 16:35:26 localhost kernel: [    2.151737] random: busybox: uninitialized urandom read (4 bytes read)
+May 24 16:35:26 localhost kernel: [    2.285735] tg3 0000:00:14.6 ma1: renamed from eth0
+May 24 16:35:26 localhost kernel: [    2.294754] usb 1-3: New USB device found, idVendor=0e39, idProduct=2b00
+May 24 16:35:26 localhost kernel: [    2.294759] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+May 24 16:35:26 localhost kernel: [    2.294762] usb 1-3: Product: eUSB
+May 24 16:35:26 localhost kernel: [    2.294764] usb 1-3: Manufacturer: SMART
+May 24 16:35:26 localhost kernel: [    2.294766] usb 1-3: SerialNumber: 3E3B2F03125954190612
+May 24 16:35:26 localhost kernel: [    2.295342] usb-storage 1-3:1.0: USB Mass Storage device detected
+May 24 16:35:26 localhost kernel: [    2.296259] scsi host4: usb-storage 1-3:1.0
+May 24 16:35:26 localhost kernel: [    2.301541] scsi 4:0:0:0: Direct-Access     SMART    eUSB             883C PQ: 0 ANSI: 0 CCS
+May 24 16:35:26 localhost kernel: [    2.305468] sd 4:0:0:0: [sda] 4014080 512-byte logical blocks: (2.06 GB/1.91 GiB)
+May 24 16:35:26 localhost kernel: [    2.306388] sd 4:0:0:0: [sda] Write Protect is off
+May 24 16:35:26 localhost kernel: [    2.307261] sd 4:0:0:0: [sda] No Caching mode page found
+May 24 16:35:26 localhost kernel: [    2.307265] sd 4:0:0:0: [sda] Assuming drive cache: write through
+May 24 16:35:26 localhost kernel: [    2.310521]  sda: sda1 sda2
+May 24 16:35:26 localhost kernel: [    2.313842] sd 4:0:0:0: [sda] Attached SCSI disk
+May 24 16:35:26 localhost kernel: [    2.385185] random: fast init done
+May 24 16:35:26 localhost kernel: [    2.672189] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x159f9408f69, max_idle_ns: 440795262768 ns
+May 24 16:35:26 localhost kernel: [    2.672233] clocksource: Switched to clocksource tsc
+May 24 16:35:26 localhost kernel: [    7.640205] random: crng init done
+May 24 16:35:26 localhost kernel: [    7.640208] random: 7 urandom warning(s) missed due to ratelimiting
+May 24 16:35:26 localhost kernel: [   36.783091] aufs test_add:270:busybox[424]: uid/gid/perm /squashed-root 0/0/0555, 0/0/0755
+May 24 16:35:26 localhost kernel: [   38.489186] systemd[1]: systemd 201 running in system mode. (+PAM +LIBWRAP +AUDIT +SELINUX +IMA +SYSVINIT +LIBCRYPTSETUP +GCRYPT +ACL +XZ)
+May 24 16:35:26 localhost kernel: [   38.519630] systemd[1]: Failed to insert module 'autofs4'
+May 24 16:35:26 localhost kernel: [   38.520653] systemd[1]: No hostname configured.
+May 24 16:35:26 localhost kernel: [   38.520659] systemd[1]: Set hostname to <localhost>.
+May 24 16:35:26 localhost kernel: [   38.528113] systemd[1]: /etc/mtab is not a symlink or not pointing to /proc/self/mounts. This is not supported anymore. Please make sure to replace this file by a symlink to avoid incorrect or misleading mount(8) output.
+May 24 16:35:26 localhost kernel: [   38.705368] systemd[1]: Cannot add dependency job for unit display-manager.service, ignoring: Unit display-manager.service failed to load: No such file or directory. See system logs and 'systemctl status display-manager.service' for details.
+May 24 16:35:26 localhost kernel: [   38.705686] systemd[1]: Expecting device dev-ttyS0.device...
+May 24 16:35:26 localhost kernel: [   38.710408] systemd[1]: Starting Apply net.conf.ipv*.all workaround...
+May 24 16:35:26 localhost kernel: [   38.711357] systemd[1]: Starting Syslog Socket.
+May 24 16:35:26 localhost kernel: [   38.711430] systemd[1]: Listening on Syslog Socket.
+May 24 16:35:26 localhost kernel: [   38.989782] irqbypass loaded by (name modprobe | pid 484) < (name kvm.modules | pid 475) < (name fedora-loadmodu | pid 454) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 
+May 24 16:35:26 localhost kernel: [   39.061544] kvm loaded by (name modprobe | pid 484) < (name kvm.modules | pid 475) < (name fedora-loadmodu | pid 454) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 
+May 24 16:35:26 localhost kernel: [   39.072397] kvm_amd loaded by (name modprobe | pid 484) < (name kvm.modules | pid 475) < (name fedora-loadmodu | pid 454) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 
+May 24 16:35:26 localhost kernel: [   39.072705] kvm: Nested Virtualization enabled
+May 24 16:35:26 localhost kernel: [   39.072709] kvm: Nested Paging enabled
+May 24 16:35:26 localhost kernel: [   39.085974] systemd-udevd[507]: starting version 201
+May 24 16:35:26 localhost kernel: [   40.141585] k10temp loaded by (name systemd-udevd | pid 561) < (name systemd-udevd | pid 507) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pi
+May 24 16:35:26 localhost kernel: [   40.153530] kshim: loading out-of-tree module taints kernel.
+May 24 16:35:26 localhost kernel: [   40.153536] kshim: module license 'Proprietary' taints kernel.
+May 24 16:35:26 localhost kernel: [   40.153538] Disabling lock debugging due to kernel taint
+May 24 16:35:26 localhost kernel: [   40.153702] kshim loaded by (name systemd-udevd | pid 565) < (name systemd-udevd | pid 507) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pi
+May 24 16:35:26 localhost kernel: [   40.158222] uio loaded by (name systemd-udevd | pid 565) < (name systemd-udevd | pid 507) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pi
+May 24 16:35:26 localhost kernel: [   40.189159] amd64_edac_mod loaded by (name systemd-udevd | pid 660) < (name systemd-udevd | pid 507) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pi
+May 24 16:35:26 localhost kernel: [   40.189177] EDAC amd64: Node 0: DRAM ECC enabled.
+May 24 16:35:26 localhost kernel: [   40.189180] EDAC amd64: F10h detected (node 0).
+May 24 16:35:26 localhost kernel: [   40.189215] EDAC amd64: MC: 0:  2048MB 1:     0MB
+May 24 16:35:26 localhost kernel: [   40.189217] EDAC amd64: MC: 2:     0MB 3:     0MB
+May 24 16:35:26 localhost kernel: [   40.189219] EDAC amd64: MC: 4:     0MB 5:     0MB
+May 24 16:35:26 localhost kernel: [   40.189220] EDAC amd64: MC: 6:     0MB 7:     0MB
+May 24 16:35:26 localhost kernel: [   40.189223] EDAC amd64: MC: 0:  2048MB 1:     0MB
+May 24 16:35:26 localhost kernel: [   40.189225] EDAC amd64: MC: 2:     0MB 3:     0MB
+May 24 16:35:26 localhost kernel: [   40.189226] EDAC amd64: MC: 4:     0MB 5:     0MB
+May 24 16:35:26 localhost kernel: [   40.189228] EDAC amd64: MC: 6:     0MB 7:     0MB
+May 24 16:35:26 localhost kernel: [   40.189229] EDAC amd64: using x4 syndromes.
+May 24 16:35:26 localhost kernel: [   40.189231] EDAC amd64: MCT channel count: 2
+May 24 16:35:26 localhost kernel: [   40.189456] EDAC MC0: Giving out device to module amd64_edac controller F10h: DEV 0000:00:18.3 (INTERRUPT)
+May 24 16:35:26 localhost kernel: [   40.189484] EDAC PCI0: Giving out device to module amd64_edac controller EDAC PCI controller: DEV 0000:00:18.2 (POLLED)
+May 24 16:35:26 localhost kernel: [   40.189485] AMD64 EDAC driver v3.5.0
+May 24 16:35:26 localhost kernel: [   40.198060] scd loaded by (name systemd-udevd | pid 565) < (name systemd-udevd | pid 507) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pi
+May 24 16:35:26 localhost kernel: [   40.198064] scd module installed
+May 24 16:35:26 localhost kernel: [   40.198137] scd 0000:04:00.0: PCI->APIC IRQ transform: INT A -> IRQ 17
+May 24 16:35:26 localhost kernel: [   40.198171] pmd_set_huge: Cannot satisfy [mem 0xe0000000-0xe0200000] with a huge-page mapping due to MTRR override.
+May 24 16:35:26 localhost kernel: [   40.198625] scd 0000:04:00.0: scd detected
+May 24 16:35:26 localhost kernel: [   40.198625]    FPGA revision 38, board revision 865
+May 24 16:35:26 localhost kernel: [   42.655093] xfrm_algo loaded by (name modprobe | pid 1000) < (name starter | pid 920) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name 
+May 24 16:35:26 localhost kernel: [   42.676876] af_key loaded by (name modprobe | pid 1000) < (name starter | pid 920) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name 
+May 24 16:35:26 localhost kernel: [   42.676889] NET: Registered protocol family 15
+May 24 16:35:26 localhost kernel: [   42.681007] x_tables loaded by (name modprobe | pid 1014) < (name iptables-restor | pid 968) < (name iptables.init | pid 922) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper
+May 24 16:35:26 localhost kernel: [   42.707909] ip_tables loaded by (name modprobe | pid 1014) < (name iptables-restor | pid 968) < (name iptables.init | pid 922) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper
+May 24 16:35:26 localhost kernel: [   42.707926] ip_tables: (C) 2000-2006 Netfilter Core Team
+May 24 16:35:26 localhost kernel: [   42.718409] ip6_tables loaded by (name modprobe | pid 1013) < (name ip6tables-resto | pid 985) < (name ip6tables.init | pid 921) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swappe
+May 24 16:35:26 localhost kernel: [   42.718427] ip6_tables: (C) 2000-2006 Netfilter Core Team
+May 24 16:35:26 localhost kernel: [   42.736840] ip6table_filter loaded by (name modprobe | pid 1019) < (name kworker/u4:3 | pid 72) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(
+May 24 16:35:26 localhost kernel: [   42.742377] iptable_filter loaded by (name modprobe | pid 1017) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:35:26 localhost kernel: [   42.753833] ah4 loaded by (name modprobe | pid 1015) < (name starter | pid 920) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name 
+May 24 16:35:26 localhost kernel: [   42.793905] iptable_raw loaded by (name modprobe | pid 1026) < (name kworker/u4:3 | pid 72) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(
+May 24 16:35:26 localhost kernel: [   42.812904] esp4 loaded by (name modprobe | pid 1023) < (name starter | pid 920) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name 
+May 24 16:35:26 localhost kernel: [   42.842673] xt_mark loaded by (name modprobe | pid 1030) < (name kworker/u4:3 | pid 72) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(
+May 24 16:35:26 localhost kernel: [   42.844832] ip6table_raw loaded by (name modprobe | pid 1032) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:35:26 localhost kernel: [   42.860209] xfrm_ipcomp loaded by (name modprobe | pid 1029) < (name starter | pid 920) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name 
+May 24 16:35:26 localhost kernel: [   42.879569] nf_conntrack loaded by (name modprobe | pid 1036) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:35:26 localhost kernel: [   42.879716] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+May 24 16:35:26 localhost kernel: [   42.883455] ipcomp loaded by (name modprobe | pid 1029) < (name starter | pid 920) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name 
+May 24 16:35:26 localhost kernel: [   42.888347] xt_CT loaded by (name modprobe | pid 1036) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:35:26 localhost kernel: [   42.917523] tunnel4 loaded by (name modprobe | pid 1039) < (name starter | pid 920) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name 
+May 24 16:35:26 localhost kernel: [   42.920591] nf_conntrack_tftp loaded by (name modprobe | pid 1040) < (name iptables.init | pid 922) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:35:26 localhost kernel: [   42.924852] xfrm4_tunnel loaded by (name modprobe | pid 1039) < (name starter | pid 920) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name 
+May 24 16:35:26 localhost kernel: [   42.942866] xt_conntrack loaded by (name modprobe | pid 1044) < (name iptables.init | pid 922) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:35:26 localhost kernel: [   42.956905] nf_conntrack_ftp loaded by (name modprobe | pid 1048) < (name iptables.init | pid 922) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:35:26 localhost kernel: [   42.970418] nf_nat loaded by (name modprobe | pid 1049) < (name iptables.init | pid 922) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:35:26 localhost kernel: [   42.971177] nf_nat_ftp loaded by (name modprobe | pid 1049) < (name iptables.init | pid 922) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:35:26 localhost kernel: [   42.984310] nf_conntrack_sip loaded by (name modprobe | pid 1052) < (name iptables.init | pid 922) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:35:26 localhost kernel: [   42.989250] xfrm_user loaded by (name modprobe | pid 1045) < (name starter | pid 920) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name 
+May 24 16:35:26 localhost kernel: [   42.989255] Initializing XFRM netlink socket
+May 24 16:35:26 localhost kernel: [   43.096512] nf_nat_sip loaded by (name modprobe | pid 1056) < (name iptables.init | pid 922) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:35:26 localhost kernel: [   43.131276] xt_sctp loaded by (name modprobe | pid 1064) < (name iptables.init | pid 922) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:35:27 localhost kernel: [   44.345093] systemd[1]: Started Login Service.
+May 24 16:35:29 localhost kernel: [   46.008125] systemd[1]: Started Mount and fsck the SSD device for use by Arista..
+May 24 16:35:29 localhost kernel: [   46.008243] systemd[1]: Starting service to copy fossil files from temp storage to flash...
+May 24 16:35:29 localhost kernel: [   46.009166] systemd[1]: Starting Setup log archiving for EOS....
+May 24 16:35:29 localhost kernel: [   46.027019] systemd[1]: Started service to copy fossil files from temp storage to flash.
+May 24 16:35:29 localhost kernel: [   46.377731] systemd[1]: Started SsuRestore systemd service..
+May 24 16:35:29 localhost kernel: [   46.377808] systemd[1]: Starting AsuFastPktTransmit systemd service....
+May 24 16:35:29 localhost kernel: [   46.378692] systemd[1]: Started AsuFastPktTransmit systemd service..
+May 24 16:35:30 localhost kernel: [   46.839084] systemd[1]: Started Perform cEOS specific initialization if we're running cEOS.
+May 24 16:35:30 localhost archive-init: selecting archive: no valid candidate found
+May 24 16:35:30 localhost kernel: [   47.049234] systemd[1]: Started Setup log archiving for EOS..
+May 24 16:35:30 localhost python: %EXTENSION-6-INSTALLING: Installing extension TerminAttr-1.7.7-1.swix, version v1.7.7, SHA-1 9760e6e0ecee2cf7fe858ac4249d0949c7def0fd
+May 24 16:35:35 localhost python: %EXTENSION-6-INSTALLED: Extension TerminAttr-1.7.7-1.swix has been installed.
+May 24 16:35:35 localhost kernel: [   51.850932] systemd[1]: Started BootExtension systemd service..
+May 24 16:35:35 localhost kernel: [   51.851012] systemd[1]: Starting EosReadPrefdl systemd service, it reads prefdl and saves it as /etc/prefdl...
+May 24 16:35:40 localhost kernel: [   56.961915] systemd[1]: Started EosReadPrefdl systemd service, it reads prefdl and saves it as /etc/prefdl.
+May 24 16:35:40 localhost kernel: [   56.961999] systemd[1]: Starting SYSV: find out if I am deprecated and store it at /etc/deprecated...
+May 24 16:35:40 localhost kernel: [   56.962807] systemd[1]: Starting Removes any pkgs not needed by this platform, should be run before netnsd launch...
+May 24 16:35:40 localhost kernel: [   57.474744] systemd[1]: Started SYSV: find out if I am deprecated and store it at /etc/deprecated.
+May 24 16:35:40 localhost kernel: [   57.474819] systemd[1]: Starting SYSV: ConnMgr initiate socket connection to Sysdb...
+May 24 16:35:41 localhost kernel: [   58.099526] systemd[1]: Started SYSV: ConnMgr initiate socket connection to Sysdb.
+May 24 16:35:43 localhost kernel: [   60.181522] systemd[1]: Started Removes any pkgs not needed by this platform, should be run before netnsd launch.
+May 24 16:35:43 localhost kernel: [   60.181604] systemd[1]: Starting SYSV: ProcMgr is an Arastra tool that keeps our daemons running....
+May 24 16:36:09 localhost logEosStarted: %EOS-6-STARTED: EOS started.
+May 24 16:36:09 localhost kernel: [   85.890137] systemd[1]: Started SYSV: ProcMgr is an Arastra tool that keeps our daemons running..
+May 24 16:36:09 localhost kernel: [   85.890245] systemd[1]: Starting SYSV: Eos system stage 1 init script (runs after POST, as early as...
+May 24 16:36:09 localhost kernel: [   85.891091] systemd[1]: Starting watchdog service. This service stops watchdog before ProcMgr....
+May 24 16:36:09 localhost kernel: [   85.920816] systemd[1]: Started watchdog service. This service stops watchdog before ProcMgr..
+May 24 16:36:10 localhost kernel: [   86.857873] systemd[1]: Started SYSV: Eos system stage 1 init script (runs after POST, as early as.
+May 24 16:36:10 localhost kernel: [   86.857986] systemd[1]: Starting SYSV: EosCloudInit is used in vEOS for running in Cloud (AWS, Azure,..)...
+May 24 16:36:10 localhost kernel: [   86.991157] systemd[1]: Started SYSV: EosCloudInit is used in vEOS for running in Cloud (AWS, Azure,..).
+May 24 16:36:10 localhost kernel: [   86.991245] systemd[1]: Starting SYSV: Install test FDLs if any when running Autotest...
+May 24 16:36:10 localhost kernel: [   86.999064] systemd[1]: Started SYSV: Install test FDLs if any when running Autotest.
+May 24 16:36:10 localhost kernel: [   86.999146] systemd[1]: Starting NorCal systemd service....
+May 24 16:36:12 localhost kernel: [   89.055508] dmamem_mod loaded by (name modprobe | pid 1380) < (name python | pid 1365) < (name NorCal | pid 1362) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(na
+May 24 16:36:12 localhost kernel: [   89.055522] [dmamem] module loaded
+May 24 16:36:23 localhost kernel: [   99.704785] systemd[1]: Started NorCal systemd service..
+May 24 16:36:23 localhost kernel: [   99.704863] systemd[1]: Starting SYSV: Exclusive ssh service for internal mgmt i/f...
+May 24 16:36:23 localhost kernel: [   99.762312] systemd[1]: Started SYSV: Exclusive ssh service for internal mgmt i/f.
+May 24 16:36:23 localhost kernel: [   99.762394] systemd[1]: Starting SYSV: Adjusts the oom_score_adj score of non-procmanager processes so that...
+May 24 16:36:23 localhost kernel: [   99.784978] systemd[1]: Started SYSV: Adjusts the oom_score_adj score of non-procmanager processes so that.
+May 24 16:36:23 localhost kernel: [   99.785056] systemd[1]: Starting SYSV: Eos system init script (runs after POST, before ProcMgr)...
+May 24 16:36:23 localhost kernel: [  100.320584] tun loaded by (name modprobe | pid 1417) < (name python | pid 1416) < (name EosStage2 | pid 1413) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:36:23 localhost kernel: [  100.320589] tun: Universal TUN/TAP device driver, 1.6
+May 24 16:36:23 localhost kernel: [  100.320591] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+May 24 16:36:23 localhost kernel: [  100.328570] llc loaded by (name modprobe | pid 1420) < (name python | pid 1416) < (name EosStage2 | pid 1413) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:36:23 localhost kernel: [  100.328794] stp loaded by (name modprobe | pid 1420) < (name python | pid 1416) < (name EosStage2 | pid 1413) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:36:23 localhost kernel: [  100.329282] garp loaded by (name modprobe | pid 1420) < (name python | pid 1416) < (name EosStage2 | pid 1413) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:36:23 localhost kernel: [  100.329851] 8021q loaded by (name modprobe | pid 1420) < (name python | pid 1416) < (name EosStage2 | pid 1413) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:36:23 localhost kernel: [  100.329853] 8021q: 802.1Q VLAN Support v1.8
+May 24 16:36:23 localhost kernel: [  100.399453] rbfd loaded by (name modprobe | pid 1421) < (name python | pid 1416) < (name EosStage2 | pid 1413) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:36:23 localhost kernel: [  100.407183] nf_defrag_ipv6 loaded by (name modprobe | pid 1423) < (name python | pid 1416) < (name EosStage2 | pid 1413) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)
+May 24 16:36:24 localhost kernel: [  100.887933] systemd[1]: Started SYSV: Eos system init script (runs after POST, before ProcMgr).
+May 24 16:36:24 localhost kernel: [  100.888009] systemd[1]: Starting SYSV: NorCal Post script...
+May 24 16:36:24 localhost kernel: [  100.912919] systemd[1]: Started SYSV: NorCal Post script.
+May 24 16:36:24 localhost kernel: [  100.912998] systemd[1]: Starting Arista Aaa agent. On failure, only root login is enabled....
+May 24 16:36:31 localhost Sysdb: %AGENT-6-INITIALIZED: Agent 'Sysdb' initialized; pid=1463
+May 24 16:36:34 localhost ConfigAgent: %AGENT-6-INITIALIZED: Agent 'ConfigAgent' initialized; pid=1504
+May 24 16:37:14 localhost ConfigAgent: %SYS-5-CONFIG_E: Enter configuration mode from console by root on UnknownTty (UnknownIpAddr)
+May 24 16:37:17 localhost ConfigAgent: %SYS-5-CONFIG_I: Configured from console by root on UnknownTty (UnknownIpAddr)
+May 24 16:37:22 localhost Launcher: %AGENT-6-INITIALIZED: Agent 'Launcher' initialized; pid=1511
+May 24 16:37:22 localhost StageMgr: %AGENT-6-INITIALIZED: Agent 'StageMgr' initialized; pid=1503
+May 24 16:37:23 localhost Fru: %AGENT-6-INITIALIZED: Agent 'Fru' initialized; pid=1509
+May 24 16:37:23 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'TerminAttr' to start in role 'ActiveSupervisor'
+May 24 16:37:23 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'AgentMonitor' to start in role 'ActiveSupervisor'
+May 24 16:37:23 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'LacpTxAgent' to start in role 'ActiveSupervisor'
+May 24 16:37:24 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'IgmpSnooping' to start in role 'ActiveSupervisor'
+May 24 16:37:24 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Acl' to start in role 'AllSupervisors'
+May 24 16:37:24 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'SharedSecretProfile' to start in role 'ActiveSupervisor'
+May 24 16:37:24 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'KernelNetworkInfo' to start in role 'AllSupervisors'
+May 24 16:37:24 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'SuperServer' to start in role 'AllCells'
+May 24 16:37:24 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'EventMgr' to start in role 'ActiveSupervisor'
+May 24 16:37:24 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'TopoAgent' to start in role 'ActiveSupervisor'
+May 24 16:37:25 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Qos' to start in role 'ActiveSupervisor'
+May 24 16:37:25 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Ira' to start in role 'AllSupervisors'
+May 24 16:37:25 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Bfd' to start in role 'ActiveSupervisor'
+May 24 16:37:25 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'PowerManager' to start in role 'ActiveSupervisor'
+May 24 16:37:25 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'L2Rib' to start in role 'ActiveSupervisor'
+May 24 16:37:25 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'CapiApp' to start in role 'ActiveSupervisor'
+May 24 16:37:25 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Ebra' to start in role 'ActiveSupervisor'
+May 24 16:37:25 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'PortSec' to start in role 'ActiveSupervisor'
+May 24 16:37:25 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'LedPolicy' to start in role 'ActiveSupervisor'
+May 24 16:37:26 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Snmp' to start in role 'ActiveSupervisor'
+May 24 16:37:26 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Thermostat' to start in role 'ActiveSupervisor'
+May 24 16:37:26 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Arp' to start in role 'ActiveSupervisor'
+May 24 16:37:26 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'PowerFuse' to start in role 'ActiveSupervisor'
+May 24 16:37:26 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Aaa' to start in role 'AllSupervisors'
+May 24 16:37:26 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'ReloadCauseAgent' to start in role 'AllCells'
+May 24 16:37:26 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'McastCommon' to start in role 'ActiveSupervisor'
+May 24 16:37:27 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'StpTxRx' to start in role 'AllSupervisors'
+May 24 16:37:27 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'KernelFib' to start in role 'AllSupervisors'
+May 24 16:37:27 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Lag' to start in role 'ActiveSupervisor'
+May 24 16:37:27 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'StandbyCpld' to start in role 'ActiveSupervisor'
+May 24 16:37:27 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'StpTopology' to start in role 'ActiveSupervisor'
+May 24 16:37:27 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Stp' to start in role 'AllSupervisors'
+May 24 16:37:28 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'McastCommon6' to start in role 'ActiveSupervisor'
+May 24 16:37:28 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Tunnel' to start in role 'ActiveSupervisor'
+May 24 16:37:28 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Lldp' to start in role 'AllSupervisors'
+May 24 16:37:28 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'PciBus' to start in role 'AllCells'
+May 24 16:37:28 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Sb820' to start in role 'AllCells'
+May 24 16:37:28 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Scd' to start in role 'AllCells'
+May 24 16:37:28 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Smbus' to start in role 'AllSupervisors'
+May 24 16:37:28 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Chl822X' to start in role 'AllCells'
+May 24 16:37:28 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'PhyEthtool' to start in role 'AllCells'
+May 24 16:37:28 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Ucd9012' to start in role 'AllCells'
+May 24 16:37:28 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'FpgaAgent' to start in role 'ActiveSupervisor'
+May 24 16:37:29 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'PowerSupplyDetector' to start in role 'ActiveSupervisor'
+May 24 16:37:29 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Lm73' to start in role 'AllCells'
+May 24 16:37:29 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Max6658' to start in role 'AllCells'
+May 24 16:37:29 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Sol' to start in role 'AllSupervisors'
+May 24 16:37:29 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'FanDetector' to start in role 'ActiveSupervisor'
+May 24 16:37:29 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Xcvr' to start in role 'AllCells'
+May 24 16:37:29 localhost McastCommon: %AGENT-6-INITIALIZED: Agent 'McastCommon' initialized; pid=1824
+May 24 16:37:29 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'FocalPointV2' to start in role 'ActiveSupervisor'
+May 24 16:37:30 localhost Lldp: %AGENT-6-INITIALIZED: Agent 'Lldp' initialized; pid=1820
+May 24 16:37:30 localhost PortSec: %AGENT-6-INITIALIZED: Agent 'PortSec' initialized; pid=1828
+May 24 16:37:31 localhost Lag: %AGENT-6-INITIALIZED: Agent 'Lag' initialized; pid=1851
+May 24 16:37:32 localhost SuperServer: %AGENT-6-INITIALIZED: Agent 'SuperServer' initialized; pid=1853
+May 24 16:37:32 localhost Bfd: %AGENT-6-INITIALIZED: Agent 'Bfd' initialized; pid=1845
+May 24 16:37:33 localhost Ira: %AGENT-6-INITIALIZED: Agent 'Ira' initialized; pid=1859
+May 24 16:37:34 localhost LedPolicy: %AGENT-6-INITIALIZED: Agent 'LedPolicy' initialized; pid=1865
+May 24 16:37:34 localhost Snmp: %AGENT-6-INITIALIZED: Agent 'Snmp' initialized; pid=1846
+May 24 16:37:35 localhost EventMgr: %AGENT-6-INITIALIZED: Agent 'EventMgr' initialized; pid=1870
+May 24 16:37:35 localhost AgentMonitor: %AGENT-6-INITIALIZED: Agent 'AgentMonitor' initialized; pid=1888
+May 24 16:37:35 localhost StandbyCpld: %AGENT-6-INITIALIZED: Agent 'StandbyCpld' initialized; pid=1882
+May 24 16:37:36 localhost StpTxRx: %AGENT-6-INITIALIZED: Agent 'StpTxRx' initialized; pid=1877
+May 24 16:37:37 localhost Aaa: %AGENT-6-INITIALIZED: Agent 'Aaa' initialized; pid=1894
+May 24 16:37:37 localhost Tunnel: %AGENT-6-INITIALIZED: Agent 'Tunnel' initialized; pid=1892
+May 24 16:37:37 localhost Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Rib' to start in role 'AllSupervisors'
+May 24 16:37:38 localhost KernelNetworkInfo: %AGENT-6-INITIALIZED: Agent 'KernelNetworkInfo' initialized; pid=1918
+May 24 16:37:38 localhost StpTopology: %AGENT-6-INITIALIZED: Agent 'StpTopology' initialized; pid=1899
+May 24 16:37:39 localhost McastCommon6: %AGENT-6-INITIALIZED: Agent 'McastCommon6' initialized; pid=1923
+May 24 16:37:39 localhost PciBus: %AGENT-6-INITIALIZED: Agent 'PciBus' initialized; pid=1931
+May 24 16:37:39 localhost Acl: %AGENT-6-INITIALIZED: Agent 'Acl' initialized; pid=1906
+May 24 16:37:40 localhost LacpTxAgent: %AGENT-6-INITIALIZED: Agent 'LacpTxAgent' initialized; pid=1936
+May 24 16:37:40 localhost Stp: %AGENT-6-INITIALIZED: Agent 'Stp' initialized; pid=1911
+May 24 16:37:42 localhost KernelFib: %AGENT-6-INITIALIZED: Agent 'KernelFib' initialized; pid=1956
+May 24 16:37:42 localhost Arp: %AGENT-6-INITIALIZED: Agent 'Arp' initialized; pid=1945
+May 24 16:37:43 localhost Qos: %AGENT-6-INITIALIZED: Agent 'Qos' initialized; pid=1983
+May 24 16:37:43 localhost CapiApp: %AGENT-6-INITIALIZED: Agent 'CapiApp' initialized; pid=1873
+May 24 16:37:44 localhost TopoAgent: %AGENT-6-INITIALIZED: Agent 'TopoAgent' initialized; pid=2003
+May 24 16:37:44 localhost L2Rib: %AGENT-6-INITIALIZED: Agent 'L2Rib' initialized; pid=1996
+May 24 16:37:44 localhost kernel: [  179.057012] iptable_mangle loaded by (name modprobe | pid 1974) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:44 localhost kernel: [  181.556777] xt_tcpudp loaded by (name modprobe | pid 2050) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:45 localhost PowerFuse: %AGENT-6-INITIALIZED: Agent 'PowerFuse' initialized; pid=2019
+May 24 16:37:45 localhost Thermostat: %AGENT-6-INITIALIZED: Agent 'Thermostat' initialized; pid=1987
+May 24 16:37:45 localhost PowerManager: %AGENT-6-INITIALIZED: Agent 'PowerManager' initialized; pid=2025
+May 24 16:37:45 localhost kernel: [  181.823913] xt_multiport loaded by (name modprobe | pid 2056) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:45 localhost kernel: [  181.968323] xt_hl loaded by (name modprobe | pid 2060) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:45 localhost kernel: [  182.000337] nf_reject_ipv4 loaded by (name modprobe | pid 2061) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:45 localhost kernel: [  182.000571] ipt_REJECT loaded by (name modprobe | pid 2061) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:45 localhost kernel: [  182.012130] xt_limit loaded by (name modprobe | pid 2063) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:45 localhost kernel: [  182.024370] xt_LOG loaded by (name modprobe | pid 2064) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:45 localhost kernel: [  182.035137] nf_defrag_ipv4 loaded by (name modprobe | pid 2065) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:45 localhost kernel: [  182.035665] nf_conntrack_ipv4 loaded by (name modprobe | pid 2065) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:45 localhost kernel: [  182.048206] nf_log_common loaded by (name modprobe | pid 2067) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:45 localhost kernel: [  182.048674] nf_log_ipv4 loaded by (name modprobe | pid 2067) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:46 localhost ReloadCauseAgent: %AGENT-6-INITIALIZED: Agent 'ReloadCauseAgent' initialized; pid=2054
+May 24 16:37:46 localhost SharedSecretProfile: %AGENT-6-INITIALIZED: Agent 'SharedSecretProfile' initialized; pid=2069
+May 24 16:37:47 localhost IgmpSnooping: %AGENT-6-INITIALIZED: Agent 'IgmpSnooping' initialized; pid=2071
+May 24 16:37:47 localhost kernel: [  182.200416] ip6table_mangle loaded by (name modprobe | pid 2073) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:47 localhost kernel: [  184.376447] ip6t_ipv6header loaded by (name modprobe | pid 2159) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:47 localhost kernel: [  184.404275] nf_reject_ipv6 loaded by (name modprobe | pid 2160) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:47 localhost kernel: [  184.404794] ip6t_REJECT loaded by (name modprobe | pid 2160) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:47 localhost kernel: [  184.412477] nf_conntrack_ipv6 loaded by (name modprobe | pid 2162) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:47 localhost kernel: [  184.424342] nf_log_ipv6 loaded by (name modprobe | pid 2163) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:47 localhost kernel: [  184.436349] nfnetlink loaded by (name modprobe | pid 2164) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:47 localhost kernel: [  184.436354] Netfilter messages via NETLINK v0.30.
+May 24 16:37:48 localhost Max6658: %AGENT-6-INITIALIZED: Agent 'Max6658' initialized; pid=2112
+May 24 16:37:48 localhost Ebra: %AGENT-6-INITIALIZED: Agent 'Ebra' initialized; pid=2032
+May 24 16:37:48 localhost Sb820: %AGENT-6-INITIALIZED: Agent 'Sb820' initialized; pid=2142
+May 24 16:37:49 localhost FanDetector: %AGENT-6-INITIALIZED: Agent 'FanDetector' initialized; pid=2136
+May 24 16:37:50 localhost Ucd9012: %AGENT-6-INITIALIZED: Agent 'Ucd9012' initialized; pid=2120
+May 24 16:37:51 localhost Chl822X: %AGENT-6-INITIALIZED: Agent 'Chl822X' initialized; pid=2185
+May 24 16:37:51 localhost Smbus: %AGENT-6-INITIALIZED: Agent 'Smbus' initialized; pid=2178
+May 24 16:37:51 localhost Fru: %FRU-6-FAN_INSERTED: Fan tray 3 has been inserted. model: FAN-7000-F
+May 24 16:37:51 localhost Fru: %FRU-6-FAN_INSERTED: Fan tray 2 has been inserted. model: FAN-7000-F
+May 24 16:37:52 localhost Fru: %FRU-6-FAN_INSERTED: Fan tray 1 has been inserted. model: FAN-7000-F
+May 24 16:37:52 localhost Fru: %FRU-6-FAN_INSERTED: Fan tray 4 has been inserted. model: FAN-7000-F
+May 24 16:37:52 localhost Thermostat: %ENVMON-6-FAN_SPEED_UNSTABLE: The speed of the fan Fan3/1 is being stabilized
+May 24 16:37:52 localhost Thermostat: %ENVMON-6-FAN_SPEED_UNSTABLE: The speed of the fan Fan2/1 is being stabilized
+May 24 16:37:52 localhost Thermostat: %ENVMON-6-FAN_SPEED_UNSTABLE: The speed of the fan Fan1/1 is being stabilized
+May 24 16:37:52 localhost Thermostat: %ENVMON-6-FAN_SPEED_UNSTABLE: The speed of the fan Fan4/1 is being stabilized
+May 24 16:37:52 localhost PowerSupplyDetector: %AGENT-6-INITIALIZED: Agent 'PowerSupplyDetector' initialized; pid=2187
+May 24 16:37:52 localhost PhyEthtool: %AGENT-6-INITIALIZED: Agent 'PhyEthtool' initialized; pid=2173
+May 24 16:37:53 localhost XcvrAgent: %AGENT-6-INITIALIZED: Agent 'XcvrAgent' initialized; pid=2190
+May 24 16:37:53 localhost kernel: [  184.448492] nfnetlink_log loaded by (name modprobe | pid 2165) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:53 localhost kernel: [  189.748934] xt_u32 loaded by (name modprobe | pid 2219) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:54 localhost Lm73: %AGENT-6-INITIALIZED: Agent 'Lm73' initialized; pid=2207
+May 24 16:37:54 localhost FpgaAgent: %AGENT-6-INITIALIZED: Agent 'FpgaAgent' initialized; pid=2211
+May 24 16:37:54 localhost Sol: %AGENT-6-INITIALIZED: Agent 'Sol' initialized; pid=2202
+May 24 16:37:54 localhost kernel: [  189.916230] xt_HL loaded by (name modprobe | pid 2224) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:37:54 localhost kernel: [  191.552152] tg3 0000:00:14.6 ma1: Link is down
+May 24 16:37:55 localhost Scd: %AGENT-6-INITIALIZED: Agent 'Scd' initialized; pid=2198
+May 24 16:37:55 localhost kernel: [  192.365921] scd 0000:04:00.0: scd_finish_init
+May 24 16:37:55 localhost kernel: [  192.446281] scd 0000:04:00.0: scd device initialization complete
+May 24 16:37:57 localhost Fru: %FRU-6-TRANSCEIVER_INSERTED: A transceiver for interface Ethernet51 has been inserted. manufacturer: Arista Networks model: CAB-SFP-SFP-2M part number CAB-SFP-SFP-2M rev 0002 serial number XHC13262G2JQ
+May 24 16:37:57 localhost Fru: %FRU-6-TRANSCEIVER_INSERTED: A transceiver for interface Ethernet3 has been inserted. manufacturer: Arista Networks model: CAB-SFP-SFP-2M part number CAB-SFP-SFP-2M rev 0002 serial number XHC14082G31C
+May 24 16:37:57 localhost Fru: %FRU-6-TRANSCEIVER_INSERTED: A transceiver for interface Ethernet24 has been inserted. manufacturer: Arista Networks model: CAB-SFP-SFP-1M part number CAB-SFP-SFP-1M rev 0002 serial number XHC14031G171
+May 24 16:37:57 localhost Fru: %FRU-6-TRANSCEIVER_INSERTED: A transceiver for interface Ethernet50 has been inserted. manufacturer: Arista Networks model: CAB-SFP-SFP-3M part number CAB-SFP-SFP-3M rev 0002 serial number XHC13123G5TE
+May 24 16:37:57 localhost Fru: %FRU-6-TRANSCEIVER_INSERTED: A transceiver for interface Ethernet4 has been inserted. manufacturer: Arista Networks model: CAB-SFP-SFP-2M part number CAB-SFP-SFP-2M rev 0002 serial number XHC12422G2RG
+May 24 16:37:57 localhost Fru: %FRU-6-TRANSCEIVER_INSERTED: A transceiver for interface Ethernet52 has been inserted. manufacturer: Arista Networks model: CAB-SFP-SFP-2M part number CAB-SFP-SFP-2M rev 0002 serial number XHC103220413
+May 24 16:37:57 localhost Fru: %FRU-6-TRANSCEIVER_INSERTED: A transceiver for interface Ethernet1 has been inserted. manufacturer: Arista Networks model: CAB-SFP-SFP-2M part number CAB-SFP-SFP-2M rev 0002 serial number XHC14082G37V
+May 24 16:37:57 localhost Fru: %FRU-6-TRANSCEIVER_INSERTED: A transceiver for interface Ethernet49 has been inserted. manufacturer: Arista Networks model: CAB-SFP-SFP-3M part number CAB-SFP-SFP-3M rev 0002 serial number XHC16463G439
+May 24 16:37:57 localhost Fru: %FRU-6-TRANSCEIVER_INSERTED: A transceiver for interface Ethernet2 has been inserted. manufacturer: Arista Networks model: CAB-SFP-SFP-2M part number CAB-SFP-SFP-2M rev 0002 serial number XHC14082G317
+May 24 16:37:58 localhost kernel: [  194.609288] tg3 0000:00:14.6 ma1: Link is up at 1000 Mbps, full duplex
+May 24 16:37:58 localhost kernel: [  194.609293] tg3 0000:00:14.6 ma1: Flow control is on for TX and on for RX
+May 24 16:37:58 localhost Ebra: %LINEPROTO-5-UPDOWN: Line protocol on Interface Management1, changed state to up
+May 24 16:37:58 localhost FocalPointV2: %AGENT-6-INITIALIZED: Agent 'FocalPointV2' initialized; pid=2158
+May 24 16:37:59 localhost kernel: [  195.894421] systemd[1]: Stopped BESS Software Forwarding Service.
+May 24 16:37:59 localhost Lldp: %LLDP-5-NEIGHBOR_NEW: LLDP neighbor with chassisId 001c.738c.3971 and portId "Ethernet13" added on interface Management1
+May 24 16:38:00 localhost rsyslogd: [origin software="rsyslogd" swVersion="7.2.6" x-pid="929" x-info="http://www.rsyslog.com"] exiting on signal 15.
+May 24 16:38:00 s7152 rsyslogd: [origin software="rsyslogd" swVersion="7.2.6" x-pid="2399" x-info="http://www.rsyslog.com"] start
+May 24 16:38:00 s7152 kernel: [  196.811328] systemd[1]: Starting System Logging Service...
+May 24 16:38:00 s7152 kernel: [  196.812402] systemd[1]: Started System Logging Service.
+May 24 16:38:00 s7152 dnsmasq[2414]: Listening on namespace default, servers in namespace default
+May 24 16:38:00 s7152 dnsmasq[2419]: started, version 2.77 cachesize 150
+May 24 16:38:00 s7152 dnsmasq[2419]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN no-DHCP no-scripts no-TFTP no-conntrack ipset auth no-DNSSEC loop-detect inotify
+May 24 16:38:00 s7152 dnsmasq[2419]: using nameserver 10.83.29.222#53
+May 24 16:38:00 s7152 dnsmasq[2419]: using nameserver 10.83.28.52#53
+May 24 16:38:00 s7152 dnsmasq[2419]: read /etc/hosts - 3 addresses
+May 24 16:38:01 s7152 Rib: %AGENT-6-INITIALIZED: Agent 'Rib' initialized; pid=2212
+May 24 16:38:01 s7152 CROND[2442]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:38:02 s7152 Fru: %FRU-6-POWERSUPPLY_INSERTED: Power Supply in slot 1 has been inserted
+May 24 16:38:02 s7152 Fru: %FRU-6-POWERSUPPLY_INSERTED: Power Supply in slot 2 has been inserted
+May 24 16:38:03 s7152 snmpd[2439]: Turning on AgentX master support.
+May 24 16:38:03 s7152 snmpd[2471]: NET-SNMP version 5.8
+May 24 16:38:03 s7152 kernel: [  200.446184] pcielw 0000:00:04.0:pcie004: link down
+May 24 16:38:03 s7152 kernel: [  200.446191] pcielw 0000:00:04.0:pcie004: link down processing complete
+May 24 16:38:03 s7152 kernel: [  200.556603] pci 0000:02:00.0: BAR 0: assigned [mem 0xe2000000-0xe3ffffff 64bit]
+May 24 16:38:03 s7152 kernel: [  200.556670] pcielw 0000:00:04.0:pcie004: link up processing complete
+May 24 16:38:03 s7152 kernel: [  200.563976] fpdma loaded by (name systemd-udevd | pid 2491) < (name systemd-udevd | pid 507) < (name systemd | pid 1) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | p
+May 24 16:38:03 s7152 kernel: [  200.577582] fpdma 0000:02:00.0: PCI->APIC IRQ transform: INT B -> IRQ 16
+May 24 16:38:03 s7152 kernel: [  200.597970] fpdma: fpdma_module_init: module installed
+May 24 16:38:04 s7152 Rib: Commence routing updates
+May 24 16:38:04 s7152 ntpd[2490]: ntpd 4.2.6p3-RC10@1.2239-o Fri Feb 21 04:06:37 UTC 2020 (1)
+May 24 16:38:04 s7152 ntpd[2535]: proto: precision = 0.169 usec
+May 24 16:38:04 s7152 ntpd[2535]: 0.0.0.0 c01d 0d kern kernel time sync enabled
+May 24 16:38:04 s7152 ntpd[2535]: ntp_io: estimated max descriptors: 1048576, initial socket boundary: 16
+May 24 16:38:04 s7152 ntpd[2535]: Listen normally on 0 v4wildcard 0.0.0.0 UDP 123
+May 24 16:38:04 s7152 ntpd[2535]: Listen normally on 1 v6wildcard :: UDP 123
+May 24 16:38:04 s7152 ntpd[2535]: Listen normally on 2 lo 127.0.0.1 UDP 123
+May 24 16:38:04 s7152 ntpd[2535]: Listen normally on 4 lo ::1 UDP 123
+May 24 16:38:04 s7152 ntpd[2535]: Listening on routing socket on fd #20 for interface updates
+May 24 16:38:04 s7152 ntpd[2535]: 0.0.0.0 c016 06 restart
+May 24 16:38:04 s7152 ntpd[2535]: 0.0.0.0 c012 02 freq_set kernel -43.342 PPM
+May 24 16:38:05 s7152 snmpd[2471]: AgentX subagent AGENTX Ribd (netns: default) version ribd-2.0.14, built Nonce established session 0x57daac68/0x57daadf8/8
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/chargen-dgram [file=/etc/xinetd.conf] [line=56]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/chargen-stream [file=/etc/xinetd.d/chargen-stream] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/daytime-dgram [file=/etc/xinetd.d/daytime-dgram] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/daytime-stream [file=/etc/xinetd.d/daytime-stream] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/discard-dgram [file=/etc/xinetd.d/discard-dgram] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/discard-stream [file=/etc/xinetd.d/discard-stream] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/echo-dgram [file=/etc/xinetd.d/echo-dgram] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/echo-stream [file=/etc/xinetd.d/echo-stream] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/ssh [file=/etc/xinetd.d/ssh] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/ssh6 [file=/etc/xinetd.d/ssh6] [line=29]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/tcpmux-server [file=/etc/xinetd.d/tcpmux-server] [line=29]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/telnet [file=/etc/xinetd.d/telnet] [line=68]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/time-dgram [file=/etc/xinetd.d/time-dgram] [line=29]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/time-stream [file=/etc/xinetd.d/time-stream] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: removing chargen
+May 24 16:38:05 s7152 xinetd[2554]: removing chargen
+May 24 16:38:05 s7152 xinetd[2554]: removing daytime
+May 24 16:38:05 s7152 xinetd[2554]: removing daytime
+May 24 16:38:05 s7152 xinetd[2554]: removing discard
+May 24 16:38:05 s7152 xinetd[2554]: removing discard
+May 24 16:38:05 s7152 xinetd[2554]: removing echo
+May 24 16:38:05 s7152 xinetd[2554]: removing echo
+May 24 16:38:05 s7152 xinetd[2554]: removing tcpmux
+May 24 16:38:05 s7152 xinetd[2554]: removing telnet
+May 24 16:38:05 s7152 xinetd[2554]: removing time
+May 24 16:38:05 s7152 xinetd[2554]: removing time
+May 24 16:38:05 s7152 xinetd[2554]: xinetd Version 2.3.15 started with loadavg labeled-networking options compiled in.
+May 24 16:38:05 s7152 xinetd[2554]: Started working: 2 available services
+May 24 16:38:05 s7152 snmpd[2471]: AgentX subagent Net-SNMP AgentX sub-agent established session 0x57d9cca8/0x57dabad8/10
+May 24 16:38:05 s7152 xinetd[2554]: Starting reconfiguration
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/chargen-dgram [file=/etc/xinetd.conf] [line=56]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/chargen-stream [file=/etc/xinetd.d/chargen-stream] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/daytime-dgram [file=/etc/xinetd.d/daytime-dgram] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/daytime-stream [file=/etc/xinetd.d/daytime-stream] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/discard-dgram [file=/etc/xinetd.d/discard-dgram] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/discard-stream [file=/etc/xinetd.d/discard-stream] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/echo-dgram [file=/etc/xinetd.d/echo-dgram] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/echo-stream [file=/etc/xinetd.d/echo-stream] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/ssh [file=/etc/xinetd.d/ssh] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/ssh6 [file=/etc/xinetd.d/ssh6] [line=29]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/tcpmux-server [file=/etc/xinetd.d/tcpmux-server] [line=29]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/telnet [file=/etc/xinetd.d/telnet] [line=68]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/time-dgram [file=/etc/xinetd.d/time-dgram] [line=29]
+May 24 16:38:05 s7152 xinetd[2554]: Reading included configuration file: /etc/xinetd.d/time-stream [file=/etc/xinetd.d/time-stream] [line=67]
+May 24 16:38:05 s7152 xinetd[2554]: removing chargen
+May 24 16:38:05 s7152 xinetd[2554]: removing chargen
+May 24 16:38:05 s7152 xinetd[2554]: removing daytime
+May 24 16:38:05 s7152 xinetd[2554]: removing daytime
+May 24 16:38:05 s7152 xinetd[2554]: removing discard
+May 24 16:38:05 s7152 xinetd[2554]: removing discard
+May 24 16:38:05 s7152 xinetd[2554]: removing echo
+May 24 16:38:05 s7152 xinetd[2554]: removing echo
+May 24 16:38:05 s7152 xinetd[2554]: removing tcpmux
+May 24 16:38:05 s7152 xinetd[2554]: removing telnet
+May 24 16:38:05 s7152 xinetd[2554]: removing time
+May 24 16:38:05 s7152 xinetd[2554]: removing time
+May 24 16:38:05 s7152 xinetd[2554]: Swapping defaults
+May 24 16:38:05 s7152 xinetd[2554]: readjusting service ssh
+May 24 16:38:05 s7152 xinetd[2554]: readjusting service ssh6
+May 24 16:38:05 s7152 xinetd[2554]: Reconfigured: new=0 old=2 dropped=0 (services)
+May 24 16:38:06 s7152 Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'Pmbus' to start in role 'ActiveSupervisor'
+May 24 16:38:06 s7152 kernel: [  203.347438] systemd[1]: Started Arista Aaa agent. On failure, only root login is enabled..
+May 24 16:38:06 s7152 kernel: [  203.347517] systemd[1]: Starting This init script starts the console logger and reports to the console certain system and hardware properties....
+May 24 16:38:07 s7152 Pmbus: %AGENT-6-INITIALIZED: Agent 'Pmbus' initialized; pid=2582
+May 24 16:38:08 s7152 Thermostat: %ENVMON-6-FAN_SPEED_UNSTABLE: The speed of the fan FanP2/1 is being stabilized
+May 24 16:38:08 s7152 Thermostat: %ENVMON-6-FAN_SPEED_UNSTABLE: The speed of the fan FanP1/1 is being stabilized
+May 24 16:38:08 s7152 kernel: [  205.091306] systemd[1]: Started This init script starts the console logger and reports to the console certain system and hardware properties..
+May 24 16:38:08 s7152 kernel: [  205.091398] systemd[1]: Starting Getty on tty1...
+May 24 16:38:08 s7152 kernel: [  205.092573] systemd[1]: Started Getty on tty1.
+May 24 16:38:08 s7152 kernel: [  205.092624] systemd[1]: Starting Serial Getty on ttyS0...
+May 24 16:38:08 s7152 kernel: [  205.093689] systemd[1]: Started Serial Getty on ttyS0.
+May 24 16:38:08 s7152 kernel: [  205.093739] systemd[1]: Starting Login Prompts.
+May 24 16:38:08 s7152 kernel: [  205.093761] systemd[1]: Reached target Login Prompts.
+May 24 16:38:08 s7152 kernel: [  205.093794] systemd[1]: Starting Multi-User System.
+May 24 16:38:10 s7152 Thermostat: %ENVMON-6-FAN_SPEED_STABLE: The speed of the fan Fan2/1 has been stabilized
+May 24 16:38:10 s7152 Thermostat: %ENVMON-6-FAN_SPEED_STABLE: The speed of the fan Fan1/1 has been stabilized
+May 24 16:38:10 s7152 Thermostat: %ENVMON-6-FAN_SPEED_STABLE: The speed of the fan Fan3/1 has been stabilized
+May 24 16:38:10 s7152 Thermostat: %ENVMON-6-FAN_SPEED_STABLE: The speed of the fan Fan4/1 has been stabilized
+May 24 16:38:10 s7152 ntpd[2535]: ntpd exiting on signal 15
+May 24 16:38:11 s7152 ntpd[2701]: ntpd 4.2.6p3-RC10@1.2239-o Fri Feb 21 04:06:37 UTC 2020 (1)
+May 24 16:38:11 s7152 ntpd[2720]: proto: precision = 0.170 usec
+May 24 16:38:11 s7152 ntpd[2720]: 0.0.0.0 c01d 0d kern kernel time sync enabled
+May 24 16:38:11 s7152 ntpd[2720]: ntp_io: estimated max descriptors: 1048576, initial socket boundary: 16
+May 24 16:38:11 s7152 ntpd[2720]: Listen normally on 0 v4wildcard 0.0.0.0 UDP 123
+May 24 16:38:11 s7152 ntpd[2720]: Listen normally on 1 v6wildcard :: UDP 123
+May 24 16:38:11 s7152 ntpd[2720]: Listen normally on 2 lo 127.0.0.1 UDP 123
+May 24 16:38:11 s7152 ntpd[2720]: Listen normally on 4 lo ::1 UDP 123
+May 24 16:38:11 s7152 ntpd[2720]: Listening on routing socket on fd #20 for interface updates
+May 24 16:38:11 s7152 ntpd[2720]: 0.0.0.0 c016 06 restart
+May 24 16:38:11 s7152 ntpd[2720]: 0.0.0.0 c012 02 freq_set kernel -43.342 PPM
+May 24 16:38:11 s7152 Stp: %SPANTREE-6-STABLE_CHANGE: Stp state is now stable
+May 24 16:38:14 s7152 PowerManager: %PWRMGMT-4-INPUT_POWER_LOSS: PowerSupply1 has lost input power.
+May 24 16:38:16 s7152 Launcher: %LAUNCHER-6-PROCESS_START: Configuring process 'AltaLanz' to start in role 'ActiveSupervisor'
+May 24 16:38:16 s7152 ntpd[2720]: ntpd exiting on signal 15
+May 24 16:38:17 s7152 ntpd[2958]: ntpd 4.2.6p3-RC10@1.2239-o Fri Feb 21 04:06:37 UTC 2020 (1)
+May 24 16:38:17 s7152 ntpd[2962]: proto: precision = 0.187 usec
+May 24 16:38:17 s7152 ntpd[2962]: 0.0.0.0 c01d 0d kern kernel time sync enabled
+May 24 16:38:17 s7152 ntpd[2962]: ntp_io: estimated max descriptors: 1048576, initial socket boundary: 16
+May 24 16:38:17 s7152 ntpd[2962]: Listen normally on 0 v4wildcard 0.0.0.0 UDP 123
+May 24 16:38:17 s7152 ntpd[2962]: Listen normally on 1 v6wildcard :: UDP 123
+May 24 16:38:17 s7152 ntpd[2962]: Listen normally on 2 lo 127.0.0.1 UDP 123
+May 24 16:38:17 s7152 ntpd[2962]: Listen normally on 4 lo ::1 UDP 123
+May 24 16:38:17 s7152 ntpd[2962]: Listening on routing socket on fd #20 for interface updates
+May 24 16:38:17 s7152 ntpd[2962]: 0.0.0.0 c016 06 restart
+May 24 16:38:17 s7152 ntpd[2962]: 0.0.0.0 c012 02 freq_set kernel -43.342 PPM
+May 24 16:38:18 s7152 Thermostat: %ENVMON-6-FAN_SPEED_UNSTABLE: The speed of the fan Fan1/1 is being stabilized
+May 24 16:38:19 s7152 Rib: %RIB-5-IGP_CONVERGED: IGP protocols in VRF default have converged and their routes are in FIB
+May 24 16:38:19 s7152 Rib: %RIB-5-ROUTE_READY: Routes in VRF default are ready and available in FIB
+May 24 16:38:19 s7152 AltaLanz: %AGENT-6-INITIALIZED: Agent 'AltaLanz' initialized; pid=2960
+May 24 16:38:20 s7152 ntpd[2962]: ntpd exiting on signal 15
+May 24 16:38:20 s7152 ntpd[2989]: ntpd 4.2.6p3-RC10@1.2239-o Fri Feb 21 04:06:37 UTC 2020 (1)
+May 24 16:38:20 s7152 ntpd[2990]: proto: precision = 0.172 usec
+May 24 16:38:20 s7152 ntpd[2990]: 0.0.0.0 c01d 0d kern kernel time sync enabled
+May 24 16:38:20 s7152 ntpd[2990]: ntp_io: estimated max descriptors: 1048576, initial socket boundary: 16
+May 24 16:38:20 s7152 ntpd[2990]: Listen normally on 0 v4wildcard 0.0.0.0 UDP 123
+May 24 16:38:20 s7152 ntpd[2990]: Listen normally on 1 v6wildcard :: UDP 123
+May 24 16:38:20 s7152 ntpd[2990]: Listen normally on 2 lo 127.0.0.1 UDP 123
+May 24 16:38:20 s7152 ntpd[2990]: Listen normally on 4 lo ::1 UDP 123
+May 24 16:38:20 s7152 ntpd[2990]: Listening on routing socket on fd #20 for interface updates
+May 24 16:38:20 s7152 ntpd[2990]: 0.0.0.0 c016 06 restart
+May 24 16:38:20 s7152 ntpd[2990]: 0.0.0.0 c012 02 freq_set kernel -43.342 PPM
+May 24 16:38:24 s7152 Thermostat: %ENVMON-6-FAN_SPEED_UNSTABLE: The speed of the fan Fan2/1 is being stabilized
+May 24 16:38:28 s7152 Thermostat: %ENVMON-6-FAN_SPEED_UNSTABLE: The speed of the fan Fan3/1 is being stabilized
+May 24 16:38:28 s7152 Thermostat: %ENVMON-6-FAN_SPEED_UNSTABLE: The speed of the fan Fan4/1 is being stabilized
+May 24 16:38:32 s7152 Thermostat: %ENVMON-6-FAN_SPEED_STABLE: The speed of the fan Fan1/1 has been stabilized
+May 24 16:38:38 s7152 Thermostat: %ENVMON-6-FAN_SPEED_STABLE: The speed of the fan Fan2/1 has been stabilized
+May 24 16:38:42 s7152 Thermostat: %ENVMON-6-FAN_SPEED_STABLE: The speed of the fan Fan3/1 has been stabilized
+May 24 16:38:42 s7152 Thermostat: %ENVMON-6-FAN_SPEED_STABLE: The speed of the fan Fan4/1 has been stabilized
+May 24 16:39:01 s7152 CROND[3019]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:39:14 s7152 Thermostat: %ENVMON-6-FAN_SPEED_STABLE: The speed of the fan FanP1/1 has been stabilized
+May 24 16:39:20 s7152 Thermostat: %ENVMON-6-FAN_SPEED_STABLE: The speed of the fan FanP2/1 has been stabilized
+May 24 16:39:56 s7152 Thermostat: %ENVMON-6-FAN_SPEED_UNSTABLE: The speed of the fan FanP1/1 is being stabilized
+May 24 16:40:00 s7152 SuperServer: %SYS-5-SYSTEM_RESTARTED: System restarted
+May 24 16:40:01 s7152 CROND[3074]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:40:08 s7152 Thermostat: %ENVMON-6-FAN_SPEED_UNSTABLE: The speed of the fan FanP2/1 is being stabilized
+May 24 16:40:37 s7152 Thermostat: %ENVMON-6-FAN_SPEED_STABLE: The speed of the fan FanP1/1 has been stabilized
+May 24 16:40:49 s7152 Thermostat: %ENVMON-6-FAN_SPEED_STABLE: The speed of the fan FanP2/1 has been stabilized
+May 24 16:41:01 s7152 CROND[3161]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:41:34 s7152 ntpd[2990]: 0.0.0.0 c61c 0c clock_step -1.490436 s from NTP server 10.83.28.52
+May 24 16:41:34 s7152 ntpd[2990]: 0.0.0.0 c614 04 freq_mode
+May 24 16:41:34 s7152 kernel: [  205.272475] sch_prio loaded by (name modprobe | pid 2604) < (name kworker/u4:0 | pid 6) < (name kthreadd | pid 2) < (name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(name swapper/0 | pid 0)(n
+May 24 16:41:34 s7152 kernel: [  412.254288] systemd[1]: Time has been changed
+May 24 16:41:35 s7152 ntpd[2990]: 0.0.0.0 c618 08 no_sys_peer
+May 24 16:42:02 s7152 CROND[3189]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:43:02 s7152 CROND[3224]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:44:02 s7152 CROND[3252]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:45:01 s7152 CROND[3281]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 16:45:02 s7152 CROND[3285]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:46:01 s7152 CROND[3326]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:47:01 s7152 CROND[3354]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:48:01 s7152 CROND[3389]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:49:01 s7152 CROND[3417]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:50:01 s7152 CROND[3446]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:51:01 s7152 CROND[3475]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:52:01 s7152 CROND[3503]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:53:02 s7152 CROND[3537]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:54:02 s7152 CROND[3566]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:55:02 s7152 CROND[3594]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:56:01 s7152 CROND[3622]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:57:01 s7152 CROND[3651]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:57:11 s7152 ntpd[2990]: 0.0.0.0 c612 02 freq_set kernel 38.073 PPM
+May 24 16:57:11 s7152 ntpd[2990]: 0.0.0.0 c615 05 clock_sync
+May 24 16:58:01 s7152 CROND[3683]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 16:59:01 s7152 CROND[3711]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:00:01 s7152 CROND[3739]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:01:01 s7152 CROND[3768]: (root) CMD (run-parts /etc/cron.hourly)
+May 24 17:01:01 s7152 CROND[3771]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:01:01 s7152 run-parts(/etc/cron.hourly)[3768]: starting 0anacron
+May 24 17:01:01 s7152 anacron[3779]: Anacron started on 2020-05-24
+May 24 17:01:01 s7152 anacron[3779]: Will run job `cron.daily' in 35 min.
+May 24 17:01:01 s7152 anacron[3779]: Will run job `cron.weekly' in 55 min.
+May 24 17:01:01 s7152 anacron[3779]: Will run job `cron.monthly' in 75 min.
+May 24 17:01:01 s7152 anacron[3779]: Jobs will be executed sequentially
+May 24 17:01:01 s7152 run-parts(/etc/cron.hourly)[3781]: finished 0anacron
+May 24 17:01:01 s7152 run-parts(/etc/cron.hourly)[3768]: starting logrotate
+May 24 17:01:02 s7152 run-parts(/etc/cron.hourly)[3801]: finished logrotate
+May 24 17:02:01 s7152 CROND[3826]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:03:01 s7152 CROND[3855]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:04:00 s7152 xinetd[2554]: START: ssh pid=3877 from=10.83.28.54
+May 24 17:04:02 s7152 CROND[3905]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:04:06 s7152 ConfigAgent: %SYS-5-CONFIG_E: Enter configuration mode from console by admin on vty3 (10.83.28.54)
+May 24 17:04:10 s7152 ConfigAgent: %SYS-5-CONFIG_I: Configured from console by admin on vty3 (10.83.28.54)
+May 24 17:04:12 s7152 xinetd[2554]: EXIT: ssh status=255 pid=3877 duration=12(sec)
+May 24 17:05:02 s7152 CROND[3935]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:06:02 s7152 CROND[3961]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:07:02 s7152 CROND[3987]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:08:01 s7152 CROND[4016]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:09:01 s7152 CROND[4042]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:10:01 s7152 CROND[4068]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:11:01 s7152 CROND[4095]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:12:01 s7152 CROND[4117]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:13:01 s7152 CROND[4146]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:14:01 s7152 CROND[4173]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:15:02 s7152 CROND[4205]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 17:15:02 s7152 CROND[4217]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:16:02 s7152 CROND[4247]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:17:02 s7152 CROND[4273]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:18:02 s7152 CROND[4301]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:19:01 s7152 CROND[4327]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:20:01 s7152 CROND[4353]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:21:01 s7152 CROND[4380]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:22:01 s7152 CROND[4407]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:23:01 s7152 CROND[4437]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:24:01 s7152 CROND[4463]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:25:01 s7152 CROND[4489]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:26:01 s7152 CROND[4512]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:27:02 s7152 CROND[4543]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:28:02 s7152 CROND[4572]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:29:02 s7152 CROND[4598]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:30:01 s7152 CROND[4625]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:30:02 s7152 CROND[4627]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 17:31:01 s7152 CROND[4666]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:32:01 s7152 CROND[4691]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:33:01 s7152 CROND[4721]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:34:01 s7152 CROND[4747]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:35:01 s7152 CROND[4773]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:36:01 s7152 CROND[4800]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:36:01 s7152 anacron[3779]: Job `cron.daily' started
+May 24 17:36:01 s7152 run-parts(/etc/cron.daily)[4802]: starting logrotate
+May 24 17:36:02 s7152 run-parts(/etc/cron.daily)[4823]: finished logrotate
+May 24 17:36:02 s7152 run-parts(/etc/cron.daily)[4802]: starting tmpwatch
+May 24 17:36:02 s7152 run-parts(/etc/cron.daily)[4832]: finished tmpwatch
+May 24 17:36:02 s7152 anacron[3779]: Job `cron.daily' terminated
+May 24 17:37:01 s7152 CROND[4851]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:38:02 s7152 CROND[4889]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:39:02 s7152 CROND[4915]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:40:02 s7152 CROND[4973]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:41:01 s7152 CROND[5038]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:42:01 s7152 CROND[5064]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:43:01 s7152 CROND[5088]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:43:52 s7152 xinetd[2554]: START: ssh pid=5114 from=10.88.240.169
+May 24 17:44:01 s7152 CROND[5139]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:44:47 s7152 xinetd[2554]: EXIT: ssh status=0 pid=5114 duration=55(sec)
+May 24 17:45:01 s7152 CROND[5174]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:45:01 s7152 CROND[5176]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 17:46:01 s7152 CROND[5216]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:47:01 s7152 CROND[5243]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:48:02 s7152 CROND[5277]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:49:02 s7152 CROND[5298]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:50:02 s7152 CROND[5324]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:51:02 s7152 CROND[5351]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:52:01 s7152 CROND[5377]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:53:01 s7152 CROND[5410]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:54:01 s7152 CROND[5437]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:55:01 s7152 CROND[5463]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:56:01 s7152 CROND[5489]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:56:01 s7152 anacron[3779]: Job `cron.weekly' started
+May 24 17:56:01 s7152 anacron[3779]: Job `cron.weekly' terminated
+May 24 17:57:01 s7152 CROND[5517]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:58:01 s7152 CROND[5547]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 17:59:02 s7152 CROND[5573]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:00:02 s7152 CROND[5599]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:01:02 s7152 CROND[5626]: (root) CMD (run-parts /etc/cron.hourly)
+May 24 18:01:02 s7152 run-parts(/etc/cron.hourly)[5626]: starting 0anacron
+May 24 18:01:02 s7152 CROND[5630]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:01:02 s7152 run-parts(/etc/cron.hourly)[5637]: finished 0anacron
+May 24 18:01:02 s7152 run-parts(/etc/cron.hourly)[5626]: starting logrotate
+May 24 18:01:02 s7152 run-parts(/etc/cron.hourly)[5657]: finished logrotate
+May 24 18:02:02 s7152 CROND[5684]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:03:01 s7152 CROND[5713]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:04:01 s7152 CROND[5740]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:05:01 s7152 CROND[5766]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:06:01 s7152 CROND[5792]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:07:01 s7152 CROND[5818]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:08:01 s7152 CROND[5847]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:09:01 s7152 CROND[5873]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:10:02 s7152 CROND[5900]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:11:02 s7152 CROND[5926]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:12:02 s7152 CROND[5953]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:13:01 s7152 CROND[5985]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:14:01 s7152 CROND[6011]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:14:05 s7152 xinetd[2554]: START: ssh pid=6022 from=10.88.240.169
+May 24 18:14:37 s7152 xinetd[2554]: EXIT: ssh status=0 pid=6022 duration=32(sec)
+May 24 18:15:01 s7152 CROND[6069]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:15:01 s7152 CROND[6071]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 18:16:01 s7152 anacron[3779]: Job `cron.monthly' started
+May 24 18:16:01 s7152 anacron[3779]: Job `cron.monthly' terminated
+May 24 18:16:01 s7152 anacron[3779]: Normal exit (3 jobs run)
+May 24 18:16:01 s7152 CROND[6116]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:17:01 s7152 CROND[6144]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:18:01 s7152 CROND[6178]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:19:01 s7152 CROND[6206]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:20:02 s7152 CROND[6235]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:21:02 s7152 CROND[6263]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:22:02 s7152 CROND[6291]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:23:02 s7152 CROND[6326]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:24:01 s7152 CROND[6355]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:25:01 s7152 CROND[6383]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:26:01 s7152 CROND[6411]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:27:01 s7152 CROND[6439]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:28:01 s7152 CROND[6473]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:29:01 s7152 CROND[6502]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:30:02 s7152 CROND[6532]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 18:30:02 s7152 CROND[6544]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:31:02 s7152 CROND[6577]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:32:02 s7152 CROND[6606]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:33:02 s7152 CROND[6637]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:34:02 s7152 CROND[6665]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:35:01 s7152 CROND[6693]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:36:01 s7152 CROND[6722]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:37:01 s7152 CROND[6750]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:38:01 s7152 CROND[6781]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:39:01 s7152 CROND[6809]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:40:01 s7152 CROND[6868]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:41:02 s7152 CROND[6936]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:42:02 s7152 CROND[6965]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:43:02 s7152 CROND[7000]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:44:02 s7152 CROND[7028]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:45:01 s7152 CROND[7057]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:45:01 s7152 CROND[7059]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 18:46:01 s7152 CROND[7102]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:47:01 s7152 CROND[7130]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:48:01 s7152 CROND[7162]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:49:01 s7152 CROND[7190]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:50:01 s7152 CROND[7219]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:51:01 s7152 CROND[7248]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:52:02 s7152 CROND[7276]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:53:02 s7152 CROND[7307]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:54:02 s7152 CROND[7336]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:55:01 s7152 CROND[7364]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:56:01 s7152 CROND[7392]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:57:01 s7152 CROND[7420]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:58:01 s7152 CROND[7456]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 18:59:01 s7152 CROND[7484]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:00:01 s7152 CROND[7512]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:01:01 s7152 CROND[7543]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:01:01 s7152 CROND[7545]: (root) CMD (run-parts /etc/cron.hourly)
+May 24 19:01:01 s7152 run-parts(/etc/cron.hourly)[7545]: starting 0anacron
+May 24 19:01:01 s7152 run-parts(/etc/cron.hourly)[7554]: finished 0anacron
+May 24 19:01:01 s7152 run-parts(/etc/cron.hourly)[7545]: starting logrotate
+May 24 19:01:01 s7152 run-parts(/etc/cron.hourly)[7574]: finished logrotate
+May 24 19:02:02 s7152 CROND[7602]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:03:02 s7152 CROND[7636]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:04:02 s7152 CROND[7664]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:05:02 s7152 CROND[7693]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:06:01 s7152 CROND[7721]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:07:01 s7152 CROND[7749]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:08:01 s7152 CROND[7781]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:09:01 s7152 CROND[7810]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:10:01 s7152 CROND[7839]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:11:01 s7152 CROND[7867]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:12:02 s7152 CROND[7895]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:13:02 s7152 CROND[7926]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:14:02 s7152 CROND[7955]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:15:02 s7152 CROND[7985]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:15:02 s7152 CROND[7987]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 19:16:01 s7152 CROND[8031]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:17:01 s7152 CROND[8059]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:18:01 s7152 CROND[8090]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:19:01 s7152 CROND[8118]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:20:01 s7152 CROND[8146]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:21:01 s7152 CROND[8175]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:22:01 s7152 CROND[8203]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:23:02 s7152 CROND[8239]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:24:02 s7152 CROND[8267]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:25:02 s7152 CROND[8295]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:26:01 s7152 CROND[8323]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:27:01 s7152 CROND[8353]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:28:01 s7152 CROND[8384]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:29:01 s7152 CROND[8412]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:30:01 s7152 CROND[8442]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 19:30:01 s7152 CROND[8447]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:31:01 s7152 CROND[8486]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:32:01 s7152 CROND[8516]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:33:01 s7152 CROND[8548]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:34:02 s7152 CROND[8576]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:35:02 s7152 CROND[8604]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:36:02 s7152 CROND[8632]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:37:01 s7152 CROND[8660]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:38:01 s7152 CROND[8692]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:39:01 s7152 CROND[8726]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:40:01 s7152 CROND[8785]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:41:01 s7152 CROND[8853]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:42:01 s7152 CROND[8881]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:43:01 s7152 CROND[8915]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:44:02 s7152 CROND[8943]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:45:02 s7152 CROND[8973]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:45:02 s7152 CROND[8975]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 19:46:02 s7152 CROND[9018]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:47:01 s7152 CROND[9047]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:48:01 s7152 CROND[9078]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:49:01 s7152 CROND[9106]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:50:01 s7152 CROND[9134]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:51:01 s7152 CROND[9163]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:52:01 s7152 CROND[9192]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:53:01 s7152 CROND[9224]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:54:02 s7152 CROND[9252]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:55:02 s7152 CROND[9280]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:56:02 s7152 CROND[9308]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:57:02 s7152 CROND[9338]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:58:01 s7152 CROND[9372]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 19:59:01 s7152 CROND[9401]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:00:01 s7152 CROND[9430]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:01:01 s7152 CROND[9459]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:01:01 s7152 CROND[9461]: (root) CMD (run-parts /etc/cron.hourly)
+May 24 20:01:01 s7152 run-parts(/etc/cron.hourly)[9461]: starting 0anacron
+May 24 20:01:01 s7152 run-parts(/etc/cron.hourly)[9470]: finished 0anacron
+May 24 20:01:01 s7152 run-parts(/etc/cron.hourly)[9461]: starting logrotate
+May 24 20:01:02 s7152 run-parts(/etc/cron.hourly)[9490]: finished logrotate
+May 24 20:02:01 s7152 CROND[9518]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:03:01 s7152 CROND[9553]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:04:01 s7152 CROND[9581]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:05:02 s7152 CROND[9609]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:06:02 s7152 CROND[9638]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:07:02 s7152 CROND[9666]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:08:01 s7152 CROND[9701]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:09:01 s7152 CROND[9731]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:10:01 s7152 CROND[9759]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:11:01 s7152 CROND[9787]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:12:01 s7152 CROND[9816]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:13:01 s7152 CROND[9847]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:14:01 s7152 CROND[9875]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:15:02 s7152 CROND[9906]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:15:02 s7152 CROND[9908]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 20:16:02 s7152 CROND[9950]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:17:02 s7152 CROND[9978]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:18:02 s7152 CROND[10010]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:19:01 s7152 CROND[10038]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:20:01 s7152 CROND[10066]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:21:01 s7152 CROND[10094]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:22:01 s7152 CROND[10123]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:23:01 s7152 CROND[10155]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:24:01 s7152 CROND[10183]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:25:02 s7152 CROND[10211]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:26:02 s7152 CROND[10240]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:27:02 s7152 CROND[10268]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:28:02 s7152 CROND[10299]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:29:01 s7152 CROND[10328]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:30:01 s7152 CROND[10357]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:30:01 s7152 CROND[10359]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 20:31:01 s7152 CROND[10401]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:32:01 s7152 CROND[10430]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:33:01 s7152 CROND[10461]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:34:01 s7152 CROND[10489]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:35:01 s7152 CROND[10517]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:36:02 s7152 CROND[10545]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:37:02 s7152 CROND[10574]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:38:02 s7152 CROND[10605]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:39:01 s7152 CROND[10640]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:40:01 s7152 CROND[10698]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:41:01 s7152 CROND[10766]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:42:01 s7152 CROND[10794]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:43:01 s7152 CROND[10827]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:44:01 s7152 CROND[10856]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:45:01 s7152 CROND[10887]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 20:45:01 s7152 CROND[10899]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:46:01 s7152 CROND[10931]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:47:02 s7152 CROND[10960]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:48:02 s7152 CROND[10991]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:49:02 s7152 CROND[11019]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:50:01 s7152 CROND[11050]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:51:01 s7152 CROND[11077]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:52:01 s7152 CROND[11105]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:53:01 s7152 CROND[11137]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:54:01 s7152 CROND[11165]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:55:01 s7152 CROND[11193]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:56:01 s7152 CROND[11222]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:57:02 s7152 CROND[11251]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:58:02 s7152 CROND[11285]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 20:59:02 s7152 CROND[11312]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:00:02 s7152 CROND[11342]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:01:01 s7152 CROND[11372]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:01:01 s7152 CROND[11374]: (root) CMD (run-parts /etc/cron.hourly)
+May 24 21:01:01 s7152 run-parts(/etc/cron.hourly)[11374]: starting 0anacron
+May 24 21:01:01 s7152 run-parts(/etc/cron.hourly)[11383]: finished 0anacron
+May 24 21:01:01 s7152 run-parts(/etc/cron.hourly)[11374]: starting logrotate
+May 24 21:01:02 s7152 run-parts(/etc/cron.hourly)[11404]: finished logrotate
+May 24 21:02:01 s7152 CROND[11432]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:03:01 s7152 CROND[11463]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:04:01 s7152 CROND[11491]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:05:01 s7152 CROND[11519]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:06:01 s7152 CROND[11548]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:07:02 s7152 CROND[11576]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:08:02 s7152 CROND[11607]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:09:02 s7152 CROND[11635]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:10:02 s7152 CROND[11663]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:11:01 s7152 CROND[11693]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:12:01 s7152 CROND[11721]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:13:01 s7152 CROND[11756]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:14:01 s7152 CROND[11784]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:15:01 s7152 CROND[11813]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:15:01 s7152 CROND[11815]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 21:16:01 s7152 CROND[11857]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:17:01 s7152 CROND[11886]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:18:02 s7152 CROND[11918]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:19:02 s7152 CROND[11946]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:20:02 s7152 CROND[11975]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:21:01 s7152 CROND[12003]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:22:01 s7152 CROND[12031]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:23:01 s7152 CROND[12062]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:24:01 s7152 CROND[12091]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:25:01 s7152 CROND[12119]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:26:01 s7152 CROND[12148]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:27:01 s7152 CROND[12176]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:28:02 s7152 CROND[12210]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:29:02 s7152 CROND[12238]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:30:02 s7152 CROND[12268]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:30:02 s7152 CROND[12269]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 21:31:02 s7152 CROND[12313]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:32:01 s7152 CROND[12341]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:33:01 s7152 CROND[12375]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:34:01 s7152 CROND[12403]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:35:01 s7152 CROND[12431]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:36:01 s7152 CROND[12459]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:37:01 s7152 CROND[12488]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:38:02 s7152 CROND[12519]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:39:02 s7152 CROND[12553]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:40:02 s7152 CROND[12612]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:41:02 s7152 CROND[12681]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:42:01 s7152 CROND[12709]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:43:01 s7152 CROND[12745]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:44:01 s7152 CROND[12773]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:45:01 s7152 CROND[12802]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:45:01 s7152 CROND[12804]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 21:46:01 s7152 CROND[12846]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:47:01 s7152 CROND[12874]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:48:01 s7152 CROND[12905]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:49:02 s7152 CROND[12934]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:50:02 s7152 CROND[12963]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:51:02 s7152 CROND[12991]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:52:02 s7152 CROND[13019]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:53:01 s7152 CROND[13050]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:54:01 s7152 CROND[13078]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:55:01 s7152 CROND[13106]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:56:01 s7152 CROND[13134]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:57:01 s7152 CROND[13163]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:58:01 s7152 CROND[13197]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 21:59:02 s7152 CROND[13225]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:00:02 s7152 CROND[13253]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:01:02 s7152 CROND[13282]: (root) CMD (run-parts /etc/cron.hourly)
+May 24 22:01:02 s7152 run-parts(/etc/cron.hourly)[13282]: starting 0anacron
+May 24 22:01:02 s7152 CROND[13290]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:01:02 s7152 run-parts(/etc/cron.hourly)[13293]: finished 0anacron
+May 24 22:01:02 s7152 run-parts(/etc/cron.hourly)[13282]: starting logrotate
+May 24 22:01:02 s7152 run-parts(/etc/cron.hourly)[13313]: finished logrotate
+May 24 22:02:02 s7152 CROND[13342]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:02:48 s7152 ConfigAgent: %SYS-5-CONFIG_E: Enter configuration mode from console by arista on command-api (10.88.240.169)
+May 24 22:02:49 s7152 Ebra: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+May 24 22:02:49 s7152 rsyslogd: [origin software="rsyslogd" swVersion="7.2.6" x-pid="2399" x-info="http://www.rsyslog.com"] exiting on signal 15.
+May 24 22:02:49 switch2 rsyslogd: [origin software="rsyslogd" swVersion="7.2.6" x-pid="13403" x-info="http://www.rsyslog.com"] start
+May 24 22:02:49 switch2 kernel: [19687.019958] systemd[1]: Starting System Logging Service...
+May 24 22:02:49 switch2 kernel: [19687.021077] systemd[1]: Started System Logging Service.
+May 24 22:02:49 switch2 ConfigAgent: %SYS-5-CONFIG_I: Configured from console by arista on command-api (10.88.240.169)
+May 24 22:02:50 switch2 Ebra: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1 ("switch1 **** Ethernet1"), changed state to up
+May 24 22:02:51 switch2 Ebra: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet24 ("switch3 **** Ethernet24"), changed state to up
+May 24 22:02:52 switch2 ntpd[2990]: new interface(s) found: waking up resolver
+May 24 22:02:52 switch2 Lldp: %LLDP-5-NEIGHBOR_NEW: LLDP neighbor with chassisId 001c.7386.0069 and portId "Ethernet1" added on interface Ethernet1
+May 24 22:02:53 switch2 Lldp: %LLDP-5-NEIGHBOR_NEW: LLDP neighbor with chassisId 001c.731f.35e0 and portId "Ethernet24" added on interface Ethernet24
+May 24 22:02:55 switch2 Rib: %BGP-5-ADJCHANGE: peer 10.10.10.5 (AS 65003) old state OpenConfirm event RecvKeepAlive new state Established
+May 24 22:02:56 switch2 Rib: %BGP-5-ADJCHANGE: peer 10.10.10.0 (AS 65001) old state OpenConfirm event RecvKeepAlive new state Established
+May 24 22:02:56 switch2 Rib: %BGP-5-CONVERGED: BGP in VRF default has converged and its routes are in FIB
+May 24 22:03:01 switch2 CROND[13446]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:04:01 switch2 CROND[13494]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:05:01 switch2 CROND[13522]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:06:01 switch2 CROND[13550]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:07:01 switch2 CROND[13579]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:08:01 switch2 CROND[13610]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:09:01 switch2 CROND[13638]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:10:02 switch2 CROND[13667]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:11:02 switch2 CROND[13695]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:12:02 switch2 CROND[13723]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:13:01 switch2 CROND[13757]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:14:01 switch2 CROND[13786]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:15:01 switch2 CROND[13815]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:15:01 switch2 CROND[13817]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 22:16:01 switch2 CROND[13860]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:17:01 switch2 CROND[13889]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:18:01 switch2 CROND[13923]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:19:01 switch2 CROND[13951]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:20:02 switch2 CROND[13979]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:21:02 switch2 CROND[14007]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:22:02 switch2 CROND[14036]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:23:01 switch2 CROND[14070]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:24:01 switch2 CROND[14098]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:25:01 switch2 CROND[14126]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:26:01 switch2 CROND[14155]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:27:01 switch2 CROND[14184]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:28:01 switch2 CROND[14218]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:29:01 switch2 CROND[14247]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:30:02 switch2 CROND[14276]: (root) CMD (/etc/cron.hourly/logrotate)
+May 24 22:30:02 switch2 CROND[14288]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:31:02 switch2 CROND[14320]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:32:02 switch2 CROND[14348]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:33:02 switch2 CROND[14379]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:34:02 switch2 CROND[14407]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 24 22:34:27 switch2 xinetd[2554]: START: ssh pid=14419 from=10.88.240.169

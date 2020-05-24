@@ -1,0 +1,52 @@
+Reload Cause 1:
+-------------------
+The system rebooted due to a Power Loss
+
+Reload Time:
+------------
+Reload occurred at Sun May 24 16:38:03 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+-------------------------------
+None available.
+Ucd pre-reload persistent logs:
+-------------------------------
+
+Status Word Registers:
+----------------------
+Column 0: FixedSystemcpuCardPowerController, Time: 2020-05-23 19:59:18
+Column 1: FixedSystemswitchCardPowerController, Time: 2020-05-23 19:59:18
+
+noneOfTheAboveStatus       0 0
+commsLogicMemStatus        0 0
+temperatureStatus          0 0
+inputUnderVoltageFault     0 0
+outputOverCurrentFault     0 0
+outputOverVoltageFault     0 0
+deviceOffStatus            0 0
+deviceBusyFault            0 0
+unknownStatus              0 0
+otherStatus                0 0
+fanStatus                  0 0
+powerGoodFault             0 0
+manufacturerStatus         1 0
+inputStatus                0 0
+outputCurrentOrPowerStatus 0 0
+outputVoltageStatus        0 0
+
+All Rail Faults:
+----------------
+Card                                    Time                    Type                                    
+FixedSystemswitchCardPowerController    2020-05-23 20:00:03.110 Rail Type:mon Rail#16 (powerLoss)       
+FixedSystemswitchCardPowerController    1970-01-01 00:00:00.070 Rail Type:gpi Rail#6 (GPI)              
+
+Kernel Panic EEPROM crash data:
+-------------------------------
+EEPROM crash data: 0xffffffff
+crash-kernel sequence: 255
+crash-kernel bitmap: 0xff (not initialized)
+system-kernel bitmap: 0xff (not initialized)

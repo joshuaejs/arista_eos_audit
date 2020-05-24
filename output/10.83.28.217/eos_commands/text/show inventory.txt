@@ -1,0 +1,87 @@
+System information
+  Model                    Description                                          
+  ------------------------ ---------------------------------------------------- 
+  DCS-7150S-52-CL          52-port SFP+ 10GigE 1RU + Clock                      
+
+  HW Version  Serial Number  Mfg Date   Epoch 
+  ----------- -------------- ---------- ----- 
+  02.00       JPE13110630    2013-03-19 00.00 
+
+System has 2 power supply slots
+  Slot Model            Serial Number    
+  ---- ---------------- ---------------- 
+  1    PWR-460AC-F      K192KU01161CZ    
+  2    PWR-460AC-F      K192KU00JP1CZ    
+
+System has 4 fan modules
+  Module  Number of Fans  Model            Serial Number    
+  ------- --------------- ---------------- ---------------- 
+  1       1               FAN-7000-F       N/A              
+  2       1               FAN-7000-F       N/A              
+  3       1               FAN-7000-F       N/A              
+  4       1               FAN-7000-F       N/A              
+
+System has 53 ports
+  Type               Count
+  ------------------ ----
+  Management         1   
+  Switched           50  
+  SwitchedBootstrap  2   
+
+System has 52 transceiver slots
+  Port Manufacturer     Model            Serial Number    Rev 
+  ---- ---------------- ---------------- ---------------- ----
+  1    Arista Networks  CAB-SFP-SFP-3M   XHC16463G3XJ     0002
+  2    Arista Networks  CAB-SFP-SFP-2M   XHC14082G30U     0002
+  3    Arista Networks  CAB-SFP-SFP-2M   XHC103220395     0002
+  4    Arista Networks  CAB-SFP-SFP-2M   XHC14082G328     0002
+  5    Not Present                                            
+  6    Not Present                                            
+  7    Not Present                                            
+  8    Not Present                                            
+  9    Not Present                                            
+  10   Not Present                                            
+  11   Not Present                                            
+  12   Not Present                                            
+  13   Not Present                                            
+  14   Not Present                                            
+  15   Not Present                                            
+  16   Not Present                                            
+  17   Not Present                                            
+  18   Not Present                                            
+  19   Not Present                                            
+  20   Not Present                                            
+  21   Not Present                                            
+  22   Not Present                                            
+  23   Not Present                                            
+  24   Arista Networks  CAB-SFP-SFP-1M   XHC14031G171     0002
+  25   Not Present                                            
+  26   Not Present                                            
+  27   Not Present                                            
+  28   Not Present                                            
+  29   Not Present                                            
+  30   Not Present                                            
+  31   Not Present                                            
+  32   Not Present                                            
+  33   Not Present                                            
+  34   Not Present                                            
+  35   Not Present                                            
+  36   Not Present                                            
+  37   Not Present                                            
+  38   Not Present                                            
+  39   Not Present                                            
+  40   Not Present                                            
+  41   Not Present                                            
+  42   Not Present                                            
+  43   Not Present                                            
+  44   Not Present                                            
+  45   Not Present                                            
+  46   Not Present                                            
+  47   Not Present                                            
+  48   Not Present                                            
+  49   Arista Networks  CAB-SFP-SFP-3M   XHC103831115     0002
+  50   Arista Networks  CAB-SFP-SFP-3M   XHC103830714     0002
+  51   Arista Networks  CAB-SFP-SFP-2M   XHC12422G30R     0002
+  52   Arista Networks  CAB-SFP-SFP-2M   XHC103220422     0002
+
+System has precision clock

@@ -1,0 +1,123 @@
+------------- Report for device 10.83.28.122 -------------
+
+********** Device hostname **********
+
+Required EOS command: show hostname| json
+Failure conditions: This is a report without any test so there is no failure/passing condition
+
+Hostname: switch1
+FQDN: switch1.lab.local
+
+********** Device details **********
+
+Required EOS command: show version| json
+Failure conditions: This is a report without any test so there is no failure/passing condition
+
+Model: DCS-7150S-64-CL-F
+Serial number: JPE14210677
+Version: 4.22.4M-2GB
+Uptime: 5:58:30
+
+********** Inventory **********
+
+Required EOS command: show inventory| json
+Failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
+
+Device description: 48-port SFP+ 40GigE 1RU + Clock
+
+Power Supplies: 
+All tests successfully passed
+
+Fan modules: 
+The script doesnt run tests about the Fans modules ...
+
+Transceivers: 
+All tests successfully passed
+
+********** Power supplies **********
+
+Required EOS command: show system environment power| json
+Failure conditions: A test fails if the status of a power supply is not ok
+
+Power supply: 1 *** Status: powerLoss *** Result: FAIL
+The other tests succesfully passed
+
+********** Cooling **********
+
+Required EOS command: show system environment cooling| json
+Failure conditions: A test fails if the status of a fan is not ok
+
+Power supplies: 
+All tests successfully passed
+
+Fan modules: 
+All tests successfully passed
+
+********** Temperature **********
+
+Required EOS command: show system environment temperature| json
+Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
+
+System temperature: 
+All tests successfully passed
+
+Sensors: 
+All tests successfully passed
+
+Card Slot: 
+All tests successfully passed
+
+Power Supplies: 
+All tests successfully passed
+
+********** Temperature transceivers **********
+
+Required EOS command: show system environment temperature transceiver| json
+Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
+
+All tests successfully passed
+
+********** Reload cause history **********
+
+Required EOS command: show reload cause history| json
+Failure conditions: A test fails if a device reload was not requested by user
+
+Time: 24 May 2020 18:37:55 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 12 May 2020 14:02:28 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 06 May 2020 09:01:29 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 05 May 2020 10:01:52 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+The other tests succesfully passed
+
+********** Reload cause full **********
+
+Required EOS command: show reload cause full| json
+Failure conditions: The test fails if the device reload was not requested by user
+
+Time: 24 May 2020 18:37:55 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+The other tests succesfully passed
+
+********** LLDP topology **********
+
+Required EOS command: show lldp neighbors| json
+Failure conditions: This is a report without any test so there is no failure/passing condition
+
+Interface: Ethernet1 *** LLDP neighbor: switch2.lab.local *** LLDP remote port: Ethernet1
+Interface: Ethernet2 *** LLDP neighbor: switch3.lab.local *** LLDP remote port: Ethernet1
+Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port: Ethernet37
+
+********** BGP **********
+
+Required EOS command: show ip bgp summary vrf all| json
+Failure conditions: A test fails if a BGP session is not established
+
+vrf: default
+All tests successfully passed
+
+
+********** MLAG **********
+
+Required EOS command: show mlag detail| json
+Failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
+
+MLAG is disabled
+

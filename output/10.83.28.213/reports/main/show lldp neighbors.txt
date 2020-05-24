@@ -1,0 +1,7 @@
+********** LLDP topology **********
+
+Required EOS command: show lldp neighbors| json
+Failure conditions: This is a report without any test so there is no failure/passing condition
+
+Interface: Management1 *** LLDP neighbor: mgmt3.lab.local *** LLDP remote port: Ethernet20
+

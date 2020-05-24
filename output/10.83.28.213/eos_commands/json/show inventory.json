@@ -1,0 +1,680 @@
+{
+    "fpgas": {},
+    "storageDevices": {},
+    "xcvrSlots": {
+        "60": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "61": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "62": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "63": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "64": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "65": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "66": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "67": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "68": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "69": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "24": {
+            "modelName": "CAB-SFP-SFP-1M",
+            "serialNum": "XPV084130716",
+            "mfgName": "Arastra, Inc.",
+            "hardwareRev": "0001"
+        },
+        "25": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "26": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "27": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "20": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "21": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "22": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "23": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "28": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "29": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "2": {
+            "modelName": "CAB-SFP-SFP-2M",
+            "serialNum": "XHC103220395",
+            "mfgName": "Arista Networks",
+            "hardwareRev": "0002"
+        },
+        "4": {
+            "modelName": "CAB-SFP-SFP-2M",
+            "serialNum": "XHC14082G30T",
+            "mfgName": "Arista Networks",
+            "hardwareRev": "0002"
+        },
+        "6": {
+            "modelName": "CAB-SFP-SFP-2M",
+            "serialNum": "XHC14082G30W",
+            "mfgName": "Arista Networks",
+            "hardwareRev": "0002"
+        },
+        "8": {
+            "modelName": "CAB-Q-S-2M",
+            "serialNum": "XHC1133L0082",
+            "mfgName": "Arista Networks",
+            "hardwareRev": "0001"
+        },
+        "99": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "98": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "91": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "15": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "93": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "92": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "95": {
+            "modelName": "CAB-SFP-SFP-1M",
+            "serialNum": "XPV082830010",
+            "mfgName": "Arastra, Inc.",
+            "hardwareRev": "0001"
+        },
+        "94": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "97": {
+            "modelName": "CAB-Q-Q-1M",
+            "serialNum": "XHC1403BG18L",
+            "mfgName": "Arista Networks",
+            "hardwareRev": "01"
+        },
+        "96": {
+            "modelName": "CAB-SFP-SFP-1M",
+            "serialNum": "XPV094930079",
+            "mfgName": "Arista Networks",
+            "hardwareRev": "0002"
+        },
+        "11": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "10": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "13": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "12": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "59": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "58": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "17": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "16": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "19": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "54": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "57": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "56": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "51": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "50": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "53": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "52": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "55": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "18": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "90": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "88": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "89": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "82": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "83": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "80": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "81": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "86": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "87": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "84": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "85": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "48": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "49": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "46": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "47": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "44": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "45": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "42": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "43": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "40": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "41": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "1": {
+            "modelName": "CAB-SFP-SFP-2M",
+            "serialNum": "XHC14082G31C",
+            "mfgName": "Arista Networks",
+            "hardwareRev": "0002"
+        },
+        "3": {
+            "modelName": "CAB-SFP-SFP-2M",
+            "serialNum": "XHC12422G38E",
+            "mfgName": "Arista Networks",
+            "hardwareRev": "0002"
+        },
+        "5": {
+            "modelName": "CAB-SFP-SFP-3M",
+            "serialNum": "XHC16023G7F1",
+            "mfgName": "Arista Networks",
+            "hardwareRev": "0002"
+        },
+        "7": {
+            "modelName": "CAB-Q-S-2M",
+            "serialNum": "XHC1133L007Q",
+            "mfgName": "Arista Networks",
+            "hardwareRev": "0001"
+        },
+        "9": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "77": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "76": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "75": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "74": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "73": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "72": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "71": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "70": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "102": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "103": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "100": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "101": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "104": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "78": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "39": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "38": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "79": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "14": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "33": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "32": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "31": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "30": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "37": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "36": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "35": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        },
+        "34": {
+            "modelName": "",
+            "serialNum": "",
+            "mfgName": "Not Present",
+            "hardwareRev": ""
+        }
+    },
+    "portCount": 106,
+    "switchedBootstrapPortCount": 4,
+    "managementPortCount": 2,
+    "dataLinkPortCount": 0,
+    "emmcFlashDevices": {},
+    "cardSlots": {},
+    "internalPortCount": 0,
+    "powerSupplySlots": {
+        "1": {
+            "name": "PWR-750AC-F",
+            "serialNum": "K390M1003RAEP"
+        },
+        "2": {
+            "name": "PWR-750AC-F",
+            "serialNum": "K390M1003PAEP"
+        }
+    },
+    "fanTraySlots": {
+        "1": {
+            "serialNum": "N/A",
+            "numFans": 1,
+            "name": "FAN-7002-F"
+        },
+        "3": {
+            "serialNum": "N/A",
+            "numFans": 1,
+            "name": "FAN-7002-F"
+        },
+        "2": {
+            "serialNum": "N/A",
+            "numFans": 1,
+            "name": "FAN-7002-F"
+        },
+        "4": {
+            "serialNum": "N/A",
+            "numFans": 1,
+            "name": "FAN-7002-F"
+        }
+    },
+    "systemInformation": {
+        "name": "DCS-7050SX-128",
+        "description": "96x 10Gb SFP+ + 8x 40Gb QSFP+ 2RU",
+        "mfgDate": "2013-09-25",
+        "hardwareRev": "01.00",
+        "hwEpoch": "00.00",
+        "serialNum": "JPE13391937"
+    },
+    "unconnectedPortCount": 0,
+    "switchedPortCount": 100,
+    "switchedFortyGOnlyPortCount": 0
+}

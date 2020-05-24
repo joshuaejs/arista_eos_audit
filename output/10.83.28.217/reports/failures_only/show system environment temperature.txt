@@ -1,0 +1,17 @@
+********** Temperature **********
+
+Required EOS command: show system environment temperature| json
+Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
+
+System temperature: 
+All tests successfully passed
+
+Sensors: 
+All tests successfully passed
+
+Card Slot: 
+All tests successfully passed
+
+Power Supplies: 
+All tests successfully passed
+

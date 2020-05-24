@@ -1,0 +1,11 @@
+{
+    "resetCauses": [
+        {
+            "recommendedAction": "No action necessary.",
+            "description": "The system rebooted due to a Power Loss on the lower card",
+            "timestamp": 1590338421.0,
+            "debugInfoIsDir": false
+        }
+    ],
+    "full": true
+}

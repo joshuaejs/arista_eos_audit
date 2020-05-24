@@ -1,0 +1,12 @@
+System cooling status is: Ok
+Ambient temperature: 18C
+Airflow: port-side intake
+                      Config Actual         Speed      Stable
+Fan            Status  Speed  Speed  Uptime Stability  Uptime
+-------------- ------ ------ ------ ------- --------- -------
+1/1            Ok        60%    59% 5:57:03 Stable    5:56:23
+2/1            Ok        60%    59% 5:57:03 Stable    5:56:17
+3/1            Ok        60%    59% 5:57:03 Stable    5:56:13
+4/1            Ok        60%    59% 5:57:03 Stable    5:56:13
+PowerSupply1/1 Ok        60%    60% 5:56:40 Stable    5:54:17
+PowerSupply2/1 Ok        60%    60% 5:56:40 Stable    5:54:05

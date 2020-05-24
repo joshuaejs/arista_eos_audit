@@ -1,0 +1,6 @@
+********** BGP **********
+
+Required EOS command: show ip bgp summary vrf all| json
+Failure conditions: A test fails if a BGP session is not established
+
+

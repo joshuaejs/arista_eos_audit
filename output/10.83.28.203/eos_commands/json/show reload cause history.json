@@ -1,0 +1,104 @@
+{
+    "resetHistory": {
+        "1": {
+            "resetCauses": [
+                {
+                    "recommendedAction": "No action necessary.",
+                    "description": "Reload requested by the user.",
+                    "timestamp": 1590261818.0,
+                    "debugInfoIsDir": false
+                }
+            ]
+        },
+        "0": {
+            "resetCauses": [
+                {
+                    "recommendedAction": "No action necessary.",
+                    "description": "The system rebooted due to a Power Loss",
+                    "timestamp": 1590338281.0,
+                    "debugInfoIsDir": false
+                }
+            ]
+        },
+        "3": {
+            "resetCauses": [
+                {
+                    "recommendedAction": "No action necessary.",
+                    "description": "Reload requested by the user.",
+                    "timestamp": 1589883554.0,
+                    "debugInfoIsDir": false
+                }
+            ]
+        },
+        "2": {
+            "resetCauses": [
+                {
+                    "recommendedAction": "No action necessary.",
+                    "description": "The system rebooted due to a Power Loss",
+                    "timestamp": 1590058719.0,
+                    "debugInfoIsDir": false
+                }
+            ]
+        },
+        "5": {
+            "resetCauses": [
+                {
+                    "recommendedAction": "No action necessary.",
+                    "description": "Reload requested by the user.",
+                    "timestamp": 1589795222.0,
+                    "debugInfoIsDir": false
+                }
+            ]
+        },
+        "4": {
+            "resetCauses": [
+                {
+                    "recommendedAction": "No action necessary.",
+                    "description": "Reload requested by the user.",
+                    "timestamp": 1589870262.0,
+                    "debugInfoIsDir": false
+                }
+            ]
+        },
+        "7": {
+            "resetCauses": [
+                {
+                    "recommendedAction": "No action necessary.",
+                    "description": "Reload requested by the user.",
+                    "timestamp": 1589457800.0,
+                    "debugInfoIsDir": false
+                }
+            ]
+        },
+        "6": {
+            "resetCauses": [
+                {
+                    "recommendedAction": "No action necessary.",
+                    "description": "Reload requested by the user.",
+                    "timestamp": 1589642946.0,
+                    "debugInfoIsDir": false
+                }
+            ]
+        },
+        "9": {
+            "resetCauses": [
+                {
+                    "recommendedAction": "No action necessary.",
+                    "description": "The system rebooted due to a Power Loss",
+                    "timestamp": 1589366277.0,
+                    "debugInfoIsDir": false
+                }
+            ]
+        },
+        "8": {
+            "resetCauses": [
+                {
+                    "recommendedAction": "No action necessary.",
+                    "description": "The system rebooted due to a Power Loss",
+                    "timestamp": 1589442763.0,
+                    "debugInfoIsDir": false
+                }
+            ]
+        }
+    }
+}

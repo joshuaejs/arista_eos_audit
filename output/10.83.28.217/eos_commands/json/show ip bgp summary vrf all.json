@@ -1,0 +1,41 @@
+{
+    "vrfs": {
+        "default": {
+            "routerId": "172.16.0.3",
+            "peers": {
+                "10.10.10.4": {
+                    "prefixReceived": 6,
+                    "msgSent": 37,
+                    "inMsgQueue": 0,
+                    "underMaintenance": false,
+                    "prefixInBest": 2,
+                    "upDownTime": 1590357775.468229,
+                    "version": 4,
+                    "msgReceived": 37,
+                    "prefixAccepted": 6,
+                    "peerState": "Established",
+                    "outMsgQueue": 0,
+                    "prefixInBestEcmp": 0,
+                    "asn": "65002"
+                },
+                "10.10.10.2": {
+                    "prefixReceived": 6,
+                    "msgSent": 37,
+                    "inMsgQueue": 0,
+                    "underMaintenance": false,
+                    "prefixInBest": 4,
+                    "upDownTime": 1590357773.467403,
+                    "version": 4,
+                    "msgReceived": 37,
+                    "prefixAccepted": 6,
+                    "peerState": "Established",
+                    "outMsgQueue": 0,
+                    "prefixInBestEcmp": 0,
+                    "asn": "65001"
+                }
+            },
+            "vrf": "default",
+            "asn": "65003"
+        }
+    }
+}

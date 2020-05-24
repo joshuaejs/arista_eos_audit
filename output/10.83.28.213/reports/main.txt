@@ -1,0 +1,163 @@
+------------- Report for device 10.83.28.213 -------------
+
+********** Device hostname **********
+
+Required EOS command: show hostname| json
+Failure conditions: This is a report without any test so there is no failure/passing condition
+
+Hostname: s7054
+FQDN: s7054.lab.local
+
+********** Device details **********
+
+Required EOS command: show version| json
+Failure conditions: This is a report without any test so there is no failure/passing condition
+
+Model: DCS-7050SX-128-F
+Serial number: JPE13391937
+Version: 4.21.9M
+Uptime: 5:58:36
+
+********** Inventory **********
+
+Required EOS command: show inventory| json
+Failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
+
+Device description: 96x 10Gb SFP+ + 8x 40Gb QSFP+ 2RU
+
+Power Supplies: 
+Slot: 1 *** Model: PWR-750AC-F *** SN: K390M1003RAEP *** Result: PASS
+Slot: 2 *** Model: PWR-750AC-F *** SN: K390M1003PAEP *** Result: PASS
+
+Fan modules: 
+Module: 1 *** Model: FAN-7002-F
+Module: 3 *** Model: FAN-7002-F
+Module: 2 *** Model: FAN-7002-F
+Module: 4 *** Model: FAN-7002-F
+
+Transceivers: 
+Port: 1 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC14082G31C *** Result: PASS
+Port: 2 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC103220395 *** Result: PASS
+Port: 24 *** Manufacturer: Arastra, Inc. *** Model: CAB-SFP-SFP-1M *** SN: XPV084130716 *** Result: FAIL
+Port: 3 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC12422G38E *** Result: PASS
+Port: 4 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC14082G30T *** Result: PASS
+Port: 5 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-3M *** SN: XHC16023G7F1 *** Result: PASS
+Port: 6 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC14082G30W *** Result: PASS
+Port: 7 *** Manufacturer: Arista Networks *** Model: CAB-Q-S-2M *** SN: XHC1133L007Q *** Result: PASS
+Port: 8 *** Manufacturer: Arista Networks *** Model: CAB-Q-S-2M *** SN: XHC1133L0082 *** Result: PASS
+Port: 95 *** Manufacturer: Arastra, Inc. *** Model: CAB-SFP-SFP-1M *** SN: XPV082830010 *** Result: FAIL
+Port: 96 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-1M *** SN: XPV094930079 *** Result: PASS
+Port: 97 *** Manufacturer: Arista Networks *** Model: CAB-Q-Q-1M *** SN: XHC1403BG18L *** Result: PASS
+
+********** Power supplies **********
+
+Required EOS command: show system environment power| json
+Failure conditions: A test fails if the status of a power supply is not ok
+
+Power supply: 1 *** Status: powerLoss *** Result: FAIL
+Power supply: 2 *** Status: ok *** Result: PASS
+
+********** Cooling **********
+
+Required EOS command: show system environment cooling| json
+Failure conditions: A test fails if the status of a fan is not ok
+
+Power supplies: 
+Fan: PowerSupply1/1 *** Status: failed *** Result: FAIL
+Fan: PowerSupply2/1 *** Status: ok *** Result: PASS
+
+Fan modules: 
+Fan: 1/1 *** Status: ok *** Result: PASS
+Fan: 2/1 *** Status: ok *** Result: PASS
+Fan: 3/1 *** Status: ok *** Result: PASS
+Fan: 4/1 *** Status: ok *** Result: PASS
+
+********** Temperature **********
+
+Required EOS command: show system environment temperature| json
+Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
+
+System temperature: 
+Status: ok *** Result: PASS
+
+
+Sensors: 
+Sensor: TempSensor1 *** Description: Digital Temperature Sensor on cpu0 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 38 *** Max temperature last change: 24 May 2020 18:41:24 *** Result: PASS
+Sensor: TempSensor2 *** Description: Digital Temperature Sensor on cpu1 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 36 *** Max temperature last change: 24 May 2020 18:41:54 *** Result: PASS
+Sensor: TempSensor3 *** Description: Digital Temperature Sensor on cpu2 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 38 *** Max temperature last change: 24 May 2020 18:41:24 *** Result: PASS
+Sensor: TempSensor4 *** Description: Digital Temperature Sensor on cpu3 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 36 *** Max temperature last change: 24 May 2020 18:41:54 *** Result: PASS
+Sensor: TempSensor5 *** Description: Supervisor temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 26 *** Max temperature last change: 25 May 2020 00:36:06 *** Result: PASS
+Sensor: TempSensor6 *** Description: Supervisor front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 25 May 2020 00:13:58 *** Result: PASS
+Sensor: TempSensor7 *** Description: Supervisor back-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 24 May 2020 23:55:41 *** Result: PASS
+Sensor: TempSensor8 *** Description: CPU VRM temp sensor 0 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 28 *** Max temperature last change: 25 May 2020 00:36:06 *** Result: PASS
+Sensor: TempSensor9 *** Description: CPU VRM temp sensor 1 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 28 *** Max temperature last change: 25 May 2020 00:36:06 *** Result: PASS
+Sensor: TempSensor10 *** Description: Upper board sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 25 May 2020 00:36:04 *** Result: PASS
+Sensor: TempSensor11 *** Description: Upper front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 20 *** Max temperature last change: 25 May 2020 00:25:03 *** Result: PASS
+Sensor: TempSensor12 *** Description: Lower board sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 24 *** Max temperature last change: 25 May 2020 00:16:14 *** Result: PASS
+Sensor: TempSensor13 *** Description: Lower front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 25 May 2020 00:34:01 *** Result: PASS
+Sensor: TempSensor14 *** Description: Trident Bottom Right Outer *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 33 *** Max temperature last change: 25 May 2020 00:20:10 *** Result: PASS
+Sensor: TempSensor15 *** Description: Trident Bottom Left Outer *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 34 *** Max temperature last change: 25 May 2020 00:31:10 *** Result: PASS
+Sensor: TempSensor16 *** Description: Trident Top Left Outer *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 33 *** Max temperature last change: 25 May 2020 00:21:40 *** Result: PASS
+Sensor: TempSensor17 *** Description: Trident Top Right Outer *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 33 *** Max temperature last change: 25 May 2020 00:35:41 *** Result: PASS
+Sensor: TempSensor18 *** Description: Trident Bottom Right Inner *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 34 *** Max temperature last change: 25 May 2020 00:35:31 *** Result: PASS
+Sensor: TempSensor19 *** Description: Trident Bottom Left Inner *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 35 *** Max temperature last change: 24 May 2020 22:35:48 *** Result: PASS
+Sensor: TempSensor20 *** Description: Trident Top Left Inner *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 34 *** Max temperature last change: 25 May 2020 00:36:06 *** Result: PASS
+Sensor: TempSensor21 *** Description: Trident Top Right Inner *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 34 *** Max temperature last change: 25 May 2020 00:06:49 *** Result: PASS
+
+Card Slot: 
+
+Power Supplies: 
+Sensor: TempSensorP1/1 *** Description: Internal hot spot sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 0 *** Max temperature last change: 25 May 2020 00:36:05 *** Result: PASS
+Sensor: TempSensorP1/2 *** Description: Internal ambient sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 0 *** Max temperature last change: 25 May 2020 00:36:05 *** Result: PASS
+Sensor: TempSensorP2/1 *** Description: Internal hot spot sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 27 *** Max temperature last change: 24 May 2020 18:41:02 *** Result: PASS
+Sensor: TempSensorP2/2 *** Description: Internal ambient sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 13 *** Max temperature last change: 25 May 2020 00:21:02 *** Result: PASS
+
+********** Temperature transceivers **********
+
+Required EOS command: show system environment temperature transceiver| json
+Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
+
+
+********** Reload cause history **********
+
+Required EOS command: show reload cause history| json
+Failure conditions: A test fails if a device reload was not requested by user
+
+Time: 24 May 2020 18:40:21 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL
+Time: 04 May 2020 14:07:20 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 04 May 2020 13:40:54 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL
+Time: 03 May 2020 21:16:51 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL
+Time: 01 May 2020 21:47:40 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 29 Apr 2020 09:56:58 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 29 Apr 2020 09:29:50 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL
+Time: 28 Apr 2020 16:07:28 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 28 Apr 2020 10:07:09 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL
+Time: 24 Apr 2020 17:14:14 *** Reason: Reload requested by the user. *** Result: PASS
+
+********** Reload cause full **********
+
+Required EOS command: show reload cause full| json
+Failure conditions: The test fails if the device reload was not requested by user
+
+Time: 24 May 2020 18:40:21 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL
+
+********** LLDP topology **********
+
+Required EOS command: show lldp neighbors| json
+Failure conditions: This is a report without any test so there is no failure/passing condition
+
+Interface: Management1 *** LLDP neighbor: mgmt3.lab.local *** LLDP remote port: Ethernet20
+
+********** BGP **********
+
+Required EOS command: show ip bgp summary vrf all| json
+Failure conditions: A test fails if a BGP session is not established
+
+
+********** MLAG **********
+
+Required EOS command: show mlag detail| json
+Failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
+
+MLAG is disabled
+

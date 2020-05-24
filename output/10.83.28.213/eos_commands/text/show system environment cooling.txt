@@ -1,0 +1,12 @@
+System cooling status is: Failed or missing fan
+Ambient temperature: 21C
+Airflow: port-side intake
+                      Config Actual         Speed      Stable
+Fan            Status  Speed  Speed  Uptime Stability  Uptime
+-------------- ------ ------ ------ ------- --------- -------
+1/1            Ok       100%   100% 5:55:23 Stable    5:54:07
+2/1            Ok       100%   100% 5:55:23 Stable    5:54:07
+3/1            Ok       100%   100% 5:55:23 Stable    5:54:07
+4/1            Ok       100%   100% 5:55:23 Stable    5:54:07
+PowerSupply1/1 Failed   100%     0% Offline N/A           N/A
+PowerSupply2/1 Ok       100%    99% 5:55:10 Stable    5:54:27

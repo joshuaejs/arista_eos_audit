@@ -1,0 +1,149 @@
+{
+    "cardSlots": [],
+    "powerSupplySlots": [
+        {
+            "entPhysicalClass": "PowerSupply",
+            "tempSensors": [
+                {
+                    "maxTemperature": 17.25,
+                    "maxTemperatureLastChange": 1590359708.399502,
+                    "hwStatus": "ok",
+                    "alertCount": 0,
+                    "description": "Power supply sensor",
+                    "overheatThreshold": 60.0,
+                    "criticalThreshold": 70.0,
+                    "inAlertState": false,
+                    "relPos": "1",
+                    "currentTemperature": 17.25,
+                    "setPointTemperature": 39.0,
+                    "pidDriverCount": 0,
+                    "isPidDriver": false,
+                    "name": "TempSensorP1/1"
+                }
+            ],
+            "relPos": "1"
+        },
+        {
+            "entPhysicalClass": "PowerSupply",
+            "tempSensors": [
+                {
+                    "maxTemperature": 20.25,
+                    "maxTemperatureLastChange": 1590338299.3592684,
+                    "hwStatus": "ok",
+                    "alertCount": 0,
+                    "description": "Power supply sensor",
+                    "overheatThreshold": 60.0,
+                    "criticalThreshold": 70.0,
+                    "inAlertState": false,
+                    "relPos": "1",
+                    "currentTemperature": 18.25,
+                    "setPointTemperature": 39.0,
+                    "pidDriverCount": 0,
+                    "isPidDriver": false,
+                    "name": "TempSensorP2/1"
+                }
+            ],
+            "relPos": "2"
+        }
+    ],
+    "shutdownOnOverheat": true,
+    "tempSensors": [
+        {
+            "maxTemperature": 27.703518215613396,
+            "maxTemperatureLastChange": 1590338269.4337637,
+            "hwStatus": "ok",
+            "alertCount": 0,
+            "description": "Cpu temp sensor",
+            "overheatThreshold": 95.0,
+            "criticalThreshold": 100.0,
+            "inAlertState": false,
+            "relPos": "1",
+            "currentTemperature": 21.215236744662786,
+            "setPointTemperature": 61.75,
+            "pidDriverCount": 0,
+            "isPidDriver": false,
+            "name": "TempSensor1"
+        },
+        {
+            "maxTemperature": 22.625,
+            "maxTemperatureLastChange": 1590358788.3885329,
+            "hwStatus": "ok",
+            "alertCount": 0,
+            "description": "Rear temp sensor",
+            "overheatThreshold": 65.0,
+            "criticalThreshold": 75.0,
+            "inAlertState": false,
+            "relPos": "2",
+            "currentTemperature": 22.5,
+            "setPointTemperature": 42.25,
+            "pidDriverCount": 0,
+            "isPidDriver": false,
+            "name": "TempSensor2"
+        },
+        {
+            "maxTemperature": 21.0,
+            "maxTemperatureLastChange": 1590359335.6328583,
+            "hwStatus": "ok",
+            "alertCount": 0,
+            "description": "Board temp sensor",
+            "overheatThreshold": 55.0,
+            "criticalThreshold": 65.0,
+            "inAlertState": false,
+            "relPos": "3",
+            "currentTemperature": 20.0,
+            "setPointTemperature": 35.75,
+            "pidDriverCount": 0,
+            "isPidDriver": false,
+            "name": "TempSensor3"
+        },
+        {
+            "maxTemperature": 18.5,
+            "maxTemperatureLastChange": 1590359525.9937637,
+            "hwStatus": "ok",
+            "alertCount": 0,
+            "description": "Front-panel temp sensor",
+            "overheatThreshold": 55.0,
+            "criticalThreshold": 65.0,
+            "inAlertState": false,
+            "relPos": "4",
+            "currentTemperature": 18.375,
+            "setPointTemperature": 35.75,
+            "pidDriverCount": 0,
+            "isPidDriver": false,
+            "name": "TempSensor4"
+        },
+        {
+            "maxTemperature": 22.0,
+            "maxTemperatureLastChange": 1590359549.797669,
+            "hwStatus": "ok",
+            "alertCount": 0,
+            "description": "Board temp sensor",
+            "overheatThreshold": 75.0,
+            "criticalThreshold": 85.0,
+            "inAlertState": false,
+            "relPos": "5",
+            "currentTemperature": 21.0,
+            "setPointTemperature": 48.75,
+            "pidDriverCount": 0,
+            "isPidDriver": false,
+            "name": "TempSensor5"
+        },
+        {
+            "maxTemperature": 24.875,
+            "maxTemperatureLastChange": 1590358437.448792,
+            "hwStatus": "ok",
+            "alertCount": 0,
+            "description": "FM6000 temp sensor",
+            "overheatThreshold": 92.0,
+            "criticalThreshold": 100.0,
+            "inAlertState": false,
+            "relPos": "6",
+            "currentTemperature": 24.5,
+            "setPointTemperature": 59.8,
+            "pidDriverCount": 0,
+            "isPidDriver": false,
+            "name": "TempSensor6"
+        }
+    ],
+    "systemStatus": "temperatureOk"
+}

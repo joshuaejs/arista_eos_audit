@@ -1,0 +1,297 @@
+------------- show hostname -------------
+
+Hostname: switch1
+FQDN:     switch1.lab.local
+
+------------- show version -------------
+
+Arista DCS-7150S-64-CL-F
+Hardware version:    01.03
+Serial number:       JPE14210677
+System MAC address:  001c.7386.0069
+
+Software image version: 4.22.4M-2GB
+Architecture:           i686
+Internal build version: 4.22.4M-2GB-15583082.4224M
+Internal build ID:      523a3357-484c-4110-9019-39750ffa8af5
+
+Uptime:                 0 weeks, 0 days, 5 hours and 58 minutes
+Total memory:           4009188 kB
+Free memory:            2832232 kB
+
+
+------------- show reload cause history -------------
+
+Reboot Instance 0: Reload Cause 1:
+------------------------------------
+The system rebooted due to a Power Loss
+
+Reload Time:
+------------
+Reload occurred at Sun May 24 16:37:55 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 1: Reload Cause 1:
+------------------------------------
+Reload requested by the user.
+
+Reload Time:
+------------
+Reload occurred at Fri May 22 11:31:20 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 2: Reload Cause 1:
+------------------------------------
+Reload requested by the user.
+
+Reload Time:
+------------
+Reload occurred at Fri May 22 11:13:42 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 3: Reload Cause 1:
+------------------------------------
+Reload requested by the user.
+
+Reload Time:
+------------
+Reload occurred at Thu May 21 06:38:28 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 4: Reload Cause 1:
+------------------------------------
+Reload requested by the user.
+
+Reload Time:
+------------
+Reload occurred at Fri May 15 13:30:38 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 5: Reload Cause 1:
+------------------------------------
+The system rebooted due to a Power Loss
+
+Reload Time:
+------------
+Reload occurred at Tue May 12 12:02:28 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 6: Reload Cause 1:
+------------------------------------
+Reload requested by the user.
+
+Reload Time:
+------------
+Reload occurred at Mon May 11 15:30:10 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 7: Reload Cause 1:
+------------------------------------
+The system rebooted due to a Power Loss
+
+Reload Time:
+------------
+Reload occurred at Wed May 06 07:01:29 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 8: Reload Cause 1:
+------------------------------------
+Reload requested by the user.
+
+Reload Time:
+------------
+Reload occurred at Tue May 05 16:00:26 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 9: Reload Cause 1:
+------------------------------------
+The system rebooted due to a Power Loss
+
+Reload Time:
+------------
+Reload occurred at Tue May 05 08:01:52 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+------------- show inventory -------------
+
+System information
+  Model                    Description                                          
+  ------------------------ ---------------------------------------------------- 
+  DCS-7150S-64-CL          48-port SFP+ 40GigE 1RU + Clock                      
+
+  HW Version  Serial Number  Mfg Date   Epoch 
+  ----------- -------------- ---------- ----- 
+  01.03       JPE14210677    2014-06-11 00.00 
+
+System has 2 power supply slots
+  Slot Model            Serial Number    
+  ---- ---------------- ---------------- 
+  1    PWR-460AC-F      K192MD00A31CZ    
+  2    PWR-460AC-F      K192MD00A21CZ    
+
+System has 4 fan modules
+  Module  Number of Fans  Model            Serial Number    
+  ------- --------------- ---------------- ---------------- 
+  1       1               FAN-7000-F       N/A              
+  2       1               FAN-7000-F       N/A              
+  3       1               FAN-7000-F       N/A              
+  4       1               FAN-7000-F       N/A              
+
+System has 65 ports
+  Type               Count
+  ------------------ ----
+  Management         1   
+  Switched           62  
+  SwitchedBootstrap  2   
+
+System has 52 transceiver slots
+  Port Manufacturer     Model            Serial Number    Rev 
+  ---- ---------------- ---------------- ---------------- ----
+  1    Arista Networks  CAB-SFP-SFP-2M   XHC14082G37V     0002
+  2    Arista Networks  CAB-SFP-SFP-3M   XHC16463G3XJ     0002
+  3    Arista Networks  CAB-SFP-SFP-2M   XHC13262G2D1     0002
+  4    Arista Networks  CAB-SFP-SFP-2M   XHC12422G2EJ     0002
+  5    Arista Networks  CAB-SFP-SFP-3M   XHC110330104     0002
+  6    Arista Networks  CAB-SFP-SFP-2M   XHC103220430     0002
+  7    Arista Networks  CAB-Q-S-2M       XHC1133L007Q     0001
+  8    Arista Networks  CAB-Q-S-2M       XHC1133L0082     0001
+  9    Not Present                                            
+  10   Not Present                                            
+  11   Not Present                                            
+  12   Not Present                                            
+  13   Not Present                                            
+  14   Not Present                                            
+  15   Arista Networks  CAB-SFP-SFP-3M   XHC110330103     0002
+  16   Not Present                                            
+  17   Not Present                                            
+  18   Not Present                                            
+  19   Not Present                                            
+  20   Not Present                                            
+  21   Not Present                                            
+  22   Not Present                                            
+  23   Not Present                                            
+  24   Arista Networks  CAB-SFP-SFP-1M   XHC14031G1CX     0002
+  25   Not Present                                            
+  26   Not Present                                            
+  27   Not Present                                            
+  28   Not Present                                            
+  29   Not Present                                            
+  30   Not Present                                            
+  31   Not Present                                            
+  32   Not Present                                            
+  33   Not Present                                            
+  34   Not Present                                            
+  35   Not Present                                            
+  36   Not Present                                            
+  37   Not Present                                            
+  38   Not Present                                            
+  39   Not Present                                            
+  40   Not Present                                            
+  41   Not Present                                            
+  42   Not Present                                            
+  43   Not Present                                            
+  44   Not Present                                            
+  45   Not Present                                            
+  46   Not Present                                            
+  47   Arista Networks  CAB-SFP-SFP-1M   XHC105110215     0002
+  48   Arista Networks  CAB-SFP-SFP-1M   XHC14031G1DA     0002
+  49   Not Present                                            
+  50   Not Present                                            
+  51   Not Present                                            
+  52   Not Present                                            
+
+System has precision clock
+
+
+------------- show lldp neighbors -------------
+
+Last table change time   : 0:30:13 ago
+Number of table inserts  : 3
+Number of table deletes  : 0
+Number of table drops    : 0
+Number of table age-outs : 0
+
+Port       Neighbor Device ID               Neighbor Port ID           TTL
+Et1        switch2.lab.local                Ethernet1                  120
+Et2        switch3.lab.local                Ethernet1                  120
+Ma1        mgmt0a.lab.local                 Ethernet37                 120
+
+------------- show ip bgp summary vrf all -------------
+
+BGP summary information for VRF default
+Router identifier 172.16.0.1, local AS number 65001
+Neighbor Status Codes: m - Under maintenance
+  Neighbor         V  AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State   PfxRcd PfxAcc
+  10.10.10.1       4  65002             37        37    0    0 00:29:59 Estab   5      5
+  10.10.10.3       4  65003             36        36    0    0 00:30:02 Estab   5      5
+

@@ -1,0 +1,27 @@
+{
+    "tablesLastChangeTime": 1590357772.9157567,
+    "tablesAgeOuts": 0,
+    "tablesInserts": 3,
+    "lldpNeighbors": [
+        {
+            "ttl": 120,
+            "neighborDevice": "switch2.lab.local",
+            "neighborPort": "Ethernet1",
+            "port": "Ethernet1"
+        },
+        {
+            "ttl": 120,
+            "neighborDevice": "switch3.lab.local",
+            "neighborPort": "Ethernet1",
+            "port": "Ethernet2"
+        },
+        {
+            "ttl": 120,
+            "neighborDevice": "mgmt0a.lab.local",
+            "neighborPort": "Ethernet37",
+            "port": "Management1"
+        }
+    ],
+    "tablesDeletes": 0,
+    "tablesDrops": 0
+}

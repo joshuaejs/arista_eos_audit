@@ -1,0 +1,122 @@
+------------- Report for device 10.83.28.213 -------------
+
+********** Device hostname **********
+
+Required EOS command: show hostname| json
+Failure conditions: This is a report without any test so there is no failure/passing condition
+
+Hostname: s7054
+FQDN: s7054.lab.local
+
+********** Device details **********
+
+Required EOS command: show version| json
+Failure conditions: This is a report without any test so there is no failure/passing condition
+
+Model: DCS-7050SX-128-F
+Serial number: JPE13391937
+Version: 4.21.9M
+Uptime: 5:58:36
+
+********** Inventory **********
+
+Required EOS command: show inventory| json
+Failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
+
+Device description: 96x 10Gb SFP+ + 8x 40Gb QSFP+ 2RU
+
+Power Supplies: 
+All tests successfully passed
+
+Fan modules: 
+The script doesnt run tests about the Fans modules ...
+
+Transceivers: 
+Port: 24 *** Manufacturer: Arastra, Inc. *** Model: CAB-SFP-SFP-1M *** SN: XPV084130716 *** Result: FAIL
+Port: 95 *** Manufacturer: Arastra, Inc. *** Model: CAB-SFP-SFP-1M *** SN: XPV082830010 *** Result: FAIL
+The other tests succesfully passed
+
+********** Power supplies **********
+
+Required EOS command: show system environment power| json
+Failure conditions: A test fails if the status of a power supply is not ok
+
+Power supply: 1 *** Status: powerLoss *** Result: FAIL
+The other tests succesfully passed
+
+********** Cooling **********
+
+Required EOS command: show system environment cooling| json
+Failure conditions: A test fails if the status of a fan is not ok
+
+Power supplies: 
+Fan: PowerSupply1/1 *** Status: failed *** Result: FAIL
+The other tests succesfully passed
+
+Fan modules: 
+All tests successfully passed
+
+********** Temperature **********
+
+Required EOS command: show system environment temperature| json
+Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
+
+System temperature: 
+All tests successfully passed
+
+Sensors: 
+All tests successfully passed
+
+Card Slot: 
+All tests successfully passed
+
+Power Supplies: 
+All tests successfully passed
+
+********** Temperature transceivers **********
+
+Required EOS command: show system environment temperature transceiver| json
+Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
+
+All tests successfully passed
+
+********** Reload cause history **********
+
+Required EOS command: show reload cause history| json
+Failure conditions: A test fails if a device reload was not requested by user
+
+Time: 24 May 2020 18:40:21 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL
+Time: 04 May 2020 13:40:54 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL
+Time: 03 May 2020 21:16:51 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL
+Time: 29 Apr 2020 09:29:50 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL
+Time: 28 Apr 2020 10:07:09 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL
+The other tests succesfully passed
+
+********** Reload cause full **********
+
+Required EOS command: show reload cause full| json
+Failure conditions: The test fails if the device reload was not requested by user
+
+Time: 24 May 2020 18:40:21 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL
+The other tests succesfully passed
+
+********** LLDP topology **********
+
+Required EOS command: show lldp neighbors| json
+Failure conditions: This is a report without any test so there is no failure/passing condition
+
+Interface: Management1 *** LLDP neighbor: mgmt3.lab.local *** LLDP remote port: Ethernet20
+
+********** BGP **********
+
+Required EOS command: show ip bgp summary vrf all| json
+Failure conditions: A test fails if a BGP session is not established
+
+
+********** MLAG **********
+
+Required EOS command: show mlag detail| json
+Failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
+
+MLAG is disabled
+

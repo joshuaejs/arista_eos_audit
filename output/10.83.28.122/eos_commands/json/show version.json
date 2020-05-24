@@ -1,0 +1,16 @@
+{
+    "memTotal": 4009188,
+    "uptime": 21510.3,
+    "modelName": "DCS-7150S-64-CL-F",
+    "internalVersion": "4.22.4M-2GB-15583082.4224M",
+    "mfgName": "Arista",
+    "serialNumber": "JPE14210677",
+    "systemMacAddress": "00:1c:73:86:00:69",
+    "bootupTimestamp": 1590338080.0,
+    "memFree": 2832436,
+    "version": "4.22.4M-2GB",
+    "architecture": "i686",
+    "isIntlVersion": false,
+    "internalBuildId": "523a3357-484c-4110-9019-39750ffa8af5",
+    "hardwareRevision": "01.03"
+}

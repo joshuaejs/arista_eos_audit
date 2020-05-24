@@ -1,0 +1,10 @@
+********** Device details **********
+
+Required EOS command: show version| json
+Failure conditions: This is a report without any test so there is no failure/passing condition
+
+Model: DCS-7050SX-128-F
+Serial number: JPE13391937
+Version: 4.21.9M
+Uptime: 5:58:36
+

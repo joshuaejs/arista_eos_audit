@@ -1,0 +1,159 @@
+Reboot Instance 0: Reload Cause 1:
+------------------------------------
+The system rebooted due to a Power Loss
+
+Reload Time:
+------------
+Reload occurred at Sun May 24 16:38:01 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 1: Reload Cause 1:
+------------------------------------
+Reload requested by the user.
+
+Reload Time:
+------------
+Reload occurred at Sat May 23 19:23:38 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 2: Reload Cause 1:
+------------------------------------
+The system rebooted due to a Power Loss
+
+Reload Time:
+------------
+Reload occurred at Thu May 21 10:58:39 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 3: Reload Cause 1:
+------------------------------------
+Reload requested by the user.
+
+Reload Time:
+------------
+Reload occurred at Tue May 19 10:19:14 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 4: Reload Cause 1:
+------------------------------------
+Reload requested by the user.
+
+Reload Time:
+------------
+Reload occurred at Tue May 19 06:37:42 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 5: Reload Cause 1:
+------------------------------------
+Reload requested by the user.
+
+Reload Time:
+------------
+Reload occurred at Mon May 18 09:47:02 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 6: Reload Cause 1:
+------------------------------------
+Reload requested by the user.
+
+Reload Time:
+------------
+Reload occurred at Sat May 16 15:29:06 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 7: Reload Cause 1:
+------------------------------------
+Reload requested by the user.
+
+Reload Time:
+------------
+Reload occurred at Thu May 14 12:03:20 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 8: Reload Cause 1:
+------------------------------------
+The system rebooted due to a Power Loss
+
+Reload Time:
+------------
+Reload occurred at Thu May 14 07:52:43 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.
+
+Reboot Instance 9: Reload Cause 1:
+------------------------------------
+The system rebooted due to a Power Loss
+
+Reload Time:
+------------
+Reload occurred at Wed May 13 10:37:57 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+----------------------
+None available.

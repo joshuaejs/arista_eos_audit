@@ -1,0 +1,10 @@
+Last table change time   : 0:32:06 ago
+Number of table inserts  : 3
+Number of table deletes  : 0
+Number of table drops    : 0
+Number of table age-outs : 0
+
+Port       Neighbor Device ID               Neighbor Port ID           TTL
+Et1        switch1.lab.local                Ethernet1                  120
+Et24       switch3.lab.local                Ethernet24                 120
+Ma1        mgmt3.lab.local                  Ethernet13                 120

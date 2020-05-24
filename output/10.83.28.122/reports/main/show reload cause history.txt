@@ -1,0 +1,16 @@
+********** Reload cause history **********
+
+Required EOS command: show reload cause history| json
+Failure conditions: A test fails if a device reload was not requested by user
+
+Time: 24 May 2020 18:37:55 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 22 May 2020 13:31:20 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 22 May 2020 13:13:42 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 21 May 2020 08:38:28 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 15 May 2020 15:30:38 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 12 May 2020 14:02:28 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 11 May 2020 17:30:10 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 06 May 2020 09:01:29 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 05 May 2020 18:00:26 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 05 May 2020 10:01:52 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+

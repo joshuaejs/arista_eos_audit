@@ -1,0 +1,56 @@
+Reload Cause 1:
+-------------------
+The system rebooted due to a Power Loss on the lower card
+
+Reload Time:
+------------
+Reload occurred at Sun May 24 16:40:21 2020 UTC.
+
+Recommended Action:
+-------------------
+No action necessary.
+
+Debugging Information:
+-------------------------------
+None available.
+
+Ucd pre-reload persistent logs:
+-------------------------------
+
+Status Word Registers:
+----------------------
+Column 0: FixedSystempowerController1, Time: 2020-05-21 20:14:32
+Column 1: FixedSystempowerController2, Time: 2020-05-21 20:14:32
+Column 2: FixedSystempowerController3, Time: 2020-05-21 20:14:35
+Column 3: FixedSystempowerController4, Time: 2020-05-21 20:15:04
+
+noneOfTheAboveStatus       0 0 0 0
+commsLogicMemStatus        0 0 0 0
+temperatureStatus          0 0 0 0
+inputUnderVoltageFault     0 0 0 0
+outputOverCurrentFault     0 0 0 0
+outputOverVoltageFault     0 0 0 0
+deviceOffStatus            0 0 0 0
+deviceBusyFault            0 0 0 0
+unknownStatus              0 0 0 0
+otherStatus                0 0 0 0
+fanStatus                  0 0 0 0
+powerGoodFault             0 0 0 0
+manufacturerStatus         1 1 0 0
+inputStatus                0 0 0 0
+outputCurrentOrPowerStatus 0 0 0 0
+outputVoltageStatus        0 0 0 0
+
+All Rail Faults:
+----------------
+Card                                    Time                    Type                                    
+FixedSystempowerController2             2020-05-21 20:15:31.702 Rail Type:gpi Rail#3 (GPI)              
+FixedSystempowerController1             2020-05-21 20:15:31.700 Rail Type:mon Rail#7 (VOUT_UV)          
+FixedSystempowerController2             2020-05-21 20:15:31.704 Rail Type:gpi Rail#5 (GPI)              
+FixedSystempowerController1             2020-05-21 20:15:31.700 Rail Type:gpi Rail#1 (powerLoss)        
+FixedSystempowerController2             2020-05-21 20:15:31.705 Rail Type:mon Rail#6 (VOUT_UV)          
+FixedSystempowerController2             2020-05-21 20:15:31.705 Rail Type:mon Rail#5 (VOUT_UV)          
+FixedSystempowerController2             2020-05-21 20:15:31.705 Rail Type:mon Rail#2 (VOUT_UV)          
+FixedSystempowerController4             2020-05-24 16:40:21     none                                    
+FixedSystempowerController4             2020-05-24 16:40:21     internalRail                            
+FixedSystempowerController3             2020-05-24 16:40:21     powerLoss                               
