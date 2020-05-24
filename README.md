@@ -11,10 +11,15 @@
 This repo has python content to collect eos commands from Arista devices.  
 It also has python content to audit offine the data collected and to generate a report.  
 
+The file [input.yml](input.yml) has the required input for the files [collect_eos_commands.py](collect_eos_commands.py) and  [audit_eos_files.py](audit_eos_files.py)   
+
+The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect EOS show commands from devices.   
+
+The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit the collected files and to generate a report.   
+
 ## Repository details 
 
 The file [input.yml](input.yml) has the required input for the files [collect_eos_commands.py](collect_eos_commands.py) and  [audit_eos_files.py](audit_eos_files.py)   
-
 It is used to define the variables for the files [collect_eos_commands.py](collect_eos_commands.py) and [audit_eos_files.py](audit_eos_files.py):    
 - devices: list of EOS devices
 - username: devices username 
@@ -26,9 +31,8 @@ It is used to define the variables for the files [collect_eos_commands.py](colle
 - custom_show_tech_support: list of files (EOS show commands) to include in a custom show tech support file. 
 - audit: list of audit features to use. This repository currently supports   
 
-  
-
-The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect EOS show commands from devices.   
+The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect EOS show commands from devices.  
+It can be used to collect EOS show commands in text and JSON format.  
 
 The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit the collected files and to generate a report.   
 
