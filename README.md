@@ -9,7 +9,7 @@
 ## About this repository 
 
 This repo has python content to collect eos commands from Arista devices.  
-It also has python content to audit offine the data collected and to generate a report.  
+It also has python content to audit offline the data collected and to generate a report.  
 
 ## Repository details 
 
@@ -33,6 +33,11 @@ The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables d
 It supports collecting show commands in both text and JSON format.  
 The commands output is saved in this [directory](output/eos_commands)
 
+### [custom_show_tech_support.py](custom_show_tech_support.py)
+
+The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the variables defined in the file [input.yml](input.yml) to generate offline a custom show tech-support file.  
+For each devices, it assembles the files indicated in [input.yml](input.yml). It supports only the text format (no JSON format support). The output file is saved in this [directory](output/eos_commands/text). The name of the output file is `custom show tech-support.txt`. Here's an [example](output/eos_commands/text). 
+  
 ### [audit_eos_files.py](audit_eos_files.py) file 
 
 The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit offline some of the collected files and to generate a report.  
@@ -95,11 +100,7 @@ It currently support these features:
   - description: 
   - Failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
   
-### [custom_show_tech_support.py](custom_show_tech_support.py)
 
-The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the variables defined in the file [input.yml](input.yml) to generate offline a custom show tech-support file.  
-For each devices, it assembles the files indicated in [input.yml](input.yml). It supports only the text format (no JSON format support). The output file is saved in this [directory](output/eos_commands/text). The name of the output file is `custom show tech-support.txt`. Here's an [example](output/eos_commands/text). 
-  
  
 ## Requirements
 
