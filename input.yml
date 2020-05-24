@@ -6,7 +6,7 @@ password: arista
 
 text_cmds:
   - show logging system
-  - show running-configuration
+  - show running-config
 
 json_cmds: 
   
