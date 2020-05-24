@@ -14,22 +14,22 @@ It also has python content to audit offine the data collected and to generate a 
 ## Repository details 
 
 The file [input.yml](input.yml) has the required input for the files [collect_eos_commands.py](collect_eos_commands.py) and  [audit_eos_files.py](audit_eos_files.py)   
- It is used to define the variables for the files [collect_eos_commands.py](collect_eos_commands.py) and [audit_eos_files.py](audit_eos_files.py):    
+It is used to define these variables:    
 - devices: list of EOS devices
 - username: devices username 
 - password: devices password
 - text_cmds: list EOS commands to collect in text format
-- json_cmds: list EOS commands to collect in json format
+- json_cmds: list EOS commands to collect in JSON format
 - text_and_json_cmds: list EOS commands to collect in text and json format 
 - output_directory: directory to save the show commands collected and the reports generated
 - custom_show_tech_support: list of files (EOS show commands) to include in a custom show tech support file. 
-- audit: list of audit features to use. This repository currently supports   
+- audit: list of topics to audit.  
 
-The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect EOS show commands from devices.  
-It can be used to collect EOS show commands in text and JSON format.  
+The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices.  
+It supports collecting show commands in both text and JSON format.  
 
-The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit the collected files and to generate a report.  
-It currently support these features: 
+The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit some of the collected files and to generate a report.  
+It currently support these features. It works offline, each feature requires a file (show command with a JSON format).  
 - hostname
 - version
 - inventory 
@@ -43,7 +43,6 @@ It currently support these features:
 - bgp
 - mlag
   
-
 ## Requirements
 
 I am using this Python version
