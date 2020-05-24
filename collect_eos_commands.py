@@ -1,11 +1,3 @@
-"""
-python -V
-Python 3.7.7
-
-pip freeze | grep netmiko
-netmiko==3.1.1
-"""
-
 from netmiko import ConnectHandler
 import os
 import yaml
