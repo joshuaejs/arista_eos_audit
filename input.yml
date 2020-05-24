@@ -1,6 +1,29 @@
 ---
 output_directory: output
 
+username: arista
+password: arista 
+
+text_cmds:
+  - show logging system
+
+json_cmds: 
+  
+text_and_json_cmds: 
+  - show hostname 
+  - show version 
+  - show reload cause history
+  - show reload cause full 
+  - show inventory 
+  - show ip bgp summary vrf all 
+  - show system environment temperature 
+  - show system environment temperature transceiver 
+  - show system environment cooling 
+  - show system environment power 
+  - show mlag detail 
+  - show interfaces description 
+  - show lldp neighbors
+
 audit: 
   - hostname
   - version
@@ -20,5 +43,3 @@ devices:
   - 10.83.28.217
   - 10.83.28.203
   - 10.83.28.213
-  
-  
