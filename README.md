@@ -13,6 +13,8 @@ It also has python content to audit offine the data collected and to generate a 
 
 ## Repository details 
 
+### [input.yml](input.yml) file 
+
 The file [input.yml](input.yml) has the required input for the files [collect_eos_commands.py](collect_eos_commands.py) and  [audit_eos_files.py](audit_eos_files.py)   
 It is used to define these variables:    
 - devices: list of EOS devices
@@ -25,7 +27,13 @@ It is used to define these variables:
 - custom_show_tech_support: list of files (show commands) to include in a custom show tech-support file. 
 - audit: list of topics to audit and to include in the report.  
 
-The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices. It supports collecting show commands in both text and JSON format. The commands output is saved in this [directory](output/eos_commands)
+### [collect_eos_commands.py](collect_eos_commands.py) file 
+
+The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices.  
+It supports collecting show commands in both text and JSON format.  
+The commands output is saved in this [directory](output/eos_commands)
+
+### [audit_eos_files.py](audit_eos_files.py) file 
 
 The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit offline some of the collected files and to generate a report.  
 For each device it generates 2 reports: 
@@ -41,47 +49,47 @@ It currently support these features:
   - requirements: ```show hostname | json```
   - failure conditions: This is a report without any test so there is no failure/passing condition
 - version
-  - description: add to the reports some details regarding the device (HW model, SN, SW release, uptime)
+  - description: add to the report some details regarding the device (HW model, SN, SW release, uptime)
   - requirements: ```show version | json```
   - Failure conditions: This is a report without any test so there is no failure/passing condition
 - inventory 
   - requirements: ```show inventory | json```
   - requirements:
-  - Failure conditions: 
+  - Failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
 - power 
-  - requirements: ```| json```
+  - requirements: ```show system environment power| json```
   - requirements:
   - Failure conditions: 
 - cooling
-  - requirements: ```| json```
+  - requirements: ```show system environment cooling | json```
   - requirements:
   - Failure conditions: 
 - temperature
-  - requirements: ```| json```
+  - requirements: ```show system environment temperature | json```
   - requirements:
   - Failure conditions: 
 - temperature_transceivers
-  - requirements: ```| json```
+  - requirements: ```show system environment temperature transceiver | json```
   - requirements:
   - Failure conditions: 
 - reload_cause_history
-  - requirements: ```| json```
+  - requirements: ```show reload cause history | json```
   - requirements:
   - Failure conditions: 
 - reload_cause_full
-  - requirements: ```| json```
+  - requirements: ```show reload cause full | json```
   - requirements:
   - Failure conditions: 
 - lldp
-  - requirements: ```| json```
+  - requirements: ```show lldp neighbors | json```
   - requirements:
   - Failure conditions: 
 - bgp
-  - requirements: ```| json```
+  - requirements: ```show ip bgp summary vrf all | json```
   - requirements:
   - Failure conditions: 
 - mlag
-  - requirements: ```| json```
+  - requirements: ```show mlag detail | json```
   - requirements:
   - Failure conditions: 
   
