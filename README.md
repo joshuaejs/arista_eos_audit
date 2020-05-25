@@ -31,11 +31,11 @@ It is used to define these variables:
 
 The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices.  
 It supports collecting show commands in both text and JSON format.  
-The commands output is saved in this [directory](output/eos_commands)
+The commands output is saved in this [directory](output). For each device there is a dedicated directory.   
 
 ### [custom_show_tech_support.py](custom_show_tech_support.py)
 
-The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the variables defined in the file [input.yml](input.yml) to generate offline a custom show tech-support file.  
+The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the variables defined in the file [input.yml](input.yml) to generate offline a custom show tech-support text file.  
 For each devices, it assembles the files indicated in [input.yml](input.yml). It supports only the text format (no JSON format support). The output file is saved in this [directory](output/eos_commands/text). The name of the output file is `custom show tech-support.txt`. Here's an [example](output/eos_commands/text). 
   
 ### [audit_eos_files.py](audit_eos_files.py) file 
