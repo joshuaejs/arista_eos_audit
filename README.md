@@ -78,27 +78,63 @@ the file [audit_eos_files.py](audit_eos_files.py) currently supports the followi
   - required eos command: ```show hostname | json```
   - feature description: include the device hostname and fqdn
   - test failure conditions: This is a report without any test so there is no failure/passing condition
+  - output example: 
+```
+********** Device hostname **********
 
+Hostname: switch1
+FQDN: switch1.lab.local
+```
 - version
   - required eos command: ```show version | json```
   - feature description: include some details regarding the device (HW model, SN, SW release, uptime)
   - test failure conditions: This is a report without any test so there is no failure/passing condition
+  - output example: 
+```
+********** Device details **********
+
+Model: DCS-7150S-64-CL-F
+Serial number: JPE14210677
+Version: 4.22.4M-2GB
+Uptime: 1 day, 6:28:38
+```
 
 - inventory 
   - required eos command: ```show inventory | json```
   - feature description: include tests report about the hardware inventory
   - test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
+
   
 - power 
   - required eos command: ```show system environment power| json```
   - feature description: include tests report about the power status
   - test failure conditions: A test fails if the status of a power supply is not ok  
+  - output example: 
+```
+********** Power supplies **********
+
+Power supply: 1 *** Status: powerLoss *** Result: FAIL
+Power supply: 2 *** Status: ok *** Result: PASS
+```
 
 - cooling
   - required eos command: ```show system environment cooling | json```
   - feature description: include tests report about the cooling status
   - test failure conditions: A test fails if the status of a fan is not ok
-  
+  - output example: 
+```
+********** Cooling **********
+
+Power supplies: 
+Fan: PowerSupply1/1 *** Status: ok *** Result: PASS
+Fan: PowerSupply2/1 *** Status: ok *** Result: PASS
+
+Fan modules: 
+Fan: 1/1 *** Status: ok *** Result: PASS
+Fan: 2/1 *** Status: ok *** Result: PASS
+Fan: 3/1 *** Status: ok *** Result: PASS
+Fan: 4/1 *** Status: ok *** Result: PASS
+```
 - temperature
   - required eos command: ```show system environment temperature | json```
   - feature description: include tests report about the temperature status
@@ -123,6 +159,14 @@ the file [audit_eos_files.py](audit_eos_files.py) currently supports the followi
   - required eos command: ```show lldp neighbors | json```
   - feature description: include the lldp topology
   - test failure conditions: This is a report without any test so there is no failure/passing condition
+  - output examples
+```
+********** LLDP topology **********
+
+Interface: Ethernet1 *** LLDP neighbor: switch2.lab.local *** LLDP remote port: Ethernet1
+Interface: Ethernet2 *** LLDP neighbor: switch3.lab.local *** LLDP remote port: Ethernet1
+Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port: Ethernet37
+```
  
 - bgp
   - required eos command: ```show ip bgp summary vrf all | json```
@@ -133,6 +177,23 @@ the file [audit_eos_files.py](audit_eos_files.py) currently supports the followi
   - required eos command: ```show mlag detail | json```
   - feature description: include tests report about the mlag status
   - test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
+  - output examples: 
+ 
+```
+ ********** MLAG **********
+
+Peer: 192.168.10.2
+State: active
+Negotiation Status: connected
+Config Sanity: consistent
+
+Test result: PASS
+ ``` 
+ ```
+  ********** MLAG **********
+
+MLAG is disabled
+ ```
 
 For each device defined in the file [input.yml](input.yml), the file [audit_eos_files.py](audit_eos_files.py) generates 2 reports:
 - The file "main.txt" includes details regarding all the tests for this device. It is saved in device directory in the [output](output) directory. 
@@ -143,5 +204,5 @@ Then, the file [audit_eos_files.py](audit_eos_files.py) assembles the report of 
 - The file [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved at the root of the [output](output) directory.  
 
 
- 
 
+ 
