@@ -29,9 +29,13 @@ netmiko==3.1.1
 
 Install the requirements described in the above section.  
 
-Then update the file [input.yml](input.yml). This file has the required input for the files [collect_eos_commands.py](collect_eos_commands.py) and  [audit_eos_files.py](audit_eos_files.py)   
+Then update the file [input.yml](input.yml).  
+This file has the required input for the files: 
+- [collect_eos_commands.py](collect_eos_commands.py) 
+- [custom_show_tech_support.py](custom_show_tech_support.py) 
+- [audit_eos_files.py](audit_eos_files.py)   
 
-Then run the script [collect_eos_commands.py](collect_eos_commands.py) to collect commands output from EOS devices.  
+Then you can run the script [collect_eos_commands.py](collect_eos_commands.py) to collect commands output from EOS devices.  
 
 Once you collected the commands output, you can run this script [audit_eos_files.py](audit_eos_files.py) to generate reports.  
 
@@ -39,7 +43,7 @@ Once you collected the commands output, you can run this script [audit_eos_files
 
 ### [input.yml](input.yml) file 
 
-The file [input.yml](input.yml) has the required input for the files [collect_eos_commands.py](collect_eos_commands.py) and  [audit_eos_files.py](audit_eos_files.py)   
+The file [input.yml](input.yml) has the required input for the files [collect_eos_commands.py](collect_eos_commands.py) and [custom_show_tech_support.py](custom_show_tech_support.py) and [audit_eos_files.py](audit_eos_files.py)   
 It is used to define these variables:    
 - devices: list of EOS devices
 - username: devices username 
@@ -81,52 +85,99 @@ It currently support these features:
 - hostname
   - required eos command: ```show hostname | json```
   - feature description: include the device hostname and fqdn in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
-  - failure conditions: This is a report without any test so there is no failure/passing condition
+  - test failure conditions: This is a report without any test so there is no failure/passing condition
+  - output example: 
+ ```
+  ********** Device hostname **********
+
+Hostname: switch1
+FQDN: switch1.lab.local
+ ```
 - version
   - required eos command: ```show version | json```
   - feature description: include some details regarding the device (HW model, SN, SW release, uptime) in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt) 
-  - failure conditions: This is a report without any test so there is no failure/passing condition
+  - test failure conditions: This is a report without any test so there is no failure/passing condition
+  - output example 
+ ```
+ ********** Device details **********
+
+Model: DCS-7150S-64-CL-F
+Serial number: JPE14210677
+Version: 4.22.4M-2GB
+Uptime: 5:58:30
+ ```
 - inventory 
   - required eos command: ```show inventory | json```
   - feature description: include tests report about the hardware inventory in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
-  - failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
+  - test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
+  - output example: 
+ ```
+ ```
 - power 
   - required eos command: ```show system environment power| json```
   - feature description: include tests report about the power status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
-  - failure conditions: A test fails if the status of a power supply is not ok
+  - test failure conditions: A test fails if the status of a power supply is not ok
 - cooling
   - required eos command: ```show system environment cooling | json```
   - feature description: include tests report about the cooling status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
-  - failure conditions: A test fails if the status of a fan is not ok
+  - test failure conditions: A test fails if the status of a fan is not ok
+  - output example: 
+ ```
+ ```
 - temperature
   - required eos command: ```show system environment temperature | json```
   - feature description: include tests report about the temperature status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
-  - failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
+  - test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
+  - output example: 
+ ```
+ ```
 - temperature_transceivers
   - required eos command: ```show system environment temperature transceiver | json```
   - feature description: include tests report about the transceivers temperature status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
-  - failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
+  - test failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
+  - output example: 
+ ```
+ ```
 - reload_cause_history
   - required eos command: ```show reload cause history | json```
-  - feature description: include tests report about the cause for the last 10 reload. 
-  - failure conditions: A test fails if a device reload was not requested by user
+  - feature description: include tests report about the cause for the last 10 reload in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - test failure conditions: A test fails if a device reload was not requested by user
+  - output example: 
+ ```
+ ```
 - reload_cause_full
   - required eos command: ```show reload cause full | json```
-  - feature description: include tests report about the cause of the most recent reload. 
-  - failure conditions: The test fails if the device reload was not requested by user
+  - feature description: include tests report about the cause of the most recent reload in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - test failure conditions: The test fails if the device reload was not requested by user
+  - output example: 
+ ```
+ ```
 - lldp
   - required eos command: ```show lldp neighbors | json```
   - feature description: include the lldp topology in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
-  - failure conditions: This is a report without any test so there is no failure/passing condition
+  - test failure conditions: This is a report without any test so there is no failure/passing condition
+  - output example: 
+ ```
+ ********** LLDP topology **********
+
+Interface: Ethernet1 *** LLDP neighbor: switch2.lab.local *** LLDP remote port: Ethernet1
+Interface: Ethernet2 *** LLDP neighbor: switch3.lab.local *** LLDP remote port: Ethernet1
+Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port: Ethernet37
+ ```
 - bgp
   - required eos command: ```show ip bgp summary vrf all | json```
-  - feature description: 
-  - failure conditions: A test fails if a BGP session is not established
+  - feature description: include tests report about the bgp status for all configured vrf in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - test failure conditions: A test fails if a BGP session is not established
+  - output example: 
+ ```
+ ```
 - mlag
   - required eos command: ```show mlag detail | json```
-  - feature description: 
-  - failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
-  
-
+  - feature description: include tests report about the mlag status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
+  - output example: 
+ ```
+ ```
+ 
  
 
