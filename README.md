@@ -117,6 +117,9 @@ Uptime: 5:58:30
   - required eos command: ```show system environment power| json```
   - feature description: include tests report about the power status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - test failure conditions: A test fails if the status of a power supply is not ok
+  - output example: 
+ ```
+ ```
 - cooling
   - required eos command: ```show system environment cooling | json```
   - feature description: include tests report about the cooling status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
