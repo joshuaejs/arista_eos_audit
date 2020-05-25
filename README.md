@@ -24,7 +24,7 @@ It is used to define these variables:
 - json_cmds: list EOS commands to collect in JSON format
 - text_and_json_cmds: list EOS commands to collect in text and JSON format 
 - output_directory: directory to save the show commands collected and the reports generated
-- custom_show_tech_support: list of files (show commands) to include in a custom show tech-support file. 
+- custom_show_tech_support: list of files (show commands) to include in a custom show tech-support text file. 
 - audit: list of topics to audit and to include in the report.  
 
 ### [collect_eos_commands.py](collect_eos_commands.py) file 
