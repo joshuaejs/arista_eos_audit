@@ -82,7 +82,7 @@ It also assembles the devices report in one file:
 - The file [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved at the root of the [output](output) directory.  
 
 It currently support these features:  
-- hostname
+- **hostname**
   - required eos command: ```show hostname | json```
   - feature description: include the device hostname and fqdn in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - test failure conditions: This is a report without any test so there is no failure/passing condition
@@ -93,7 +93,7 @@ It currently support these features:
 Hostname: switch1
 FQDN: switch1.lab.local
  ```
-- version
+- **version**
   - required eos command: ```show version | json```
   - feature description: include some details regarding the device (HW model, SN, SW release, uptime) in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt) 
   - test failure conditions: This is a report without any test so there is no failure/passing condition
@@ -106,56 +106,70 @@ Serial number: JPE14210677
 Version: 4.22.4M-2GB
 Uptime: 5:58:30
  ```
-- inventory 
+- **inventory** 
   - required eos command: ```show inventory | json```
   - feature description: include tests report about the hardware inventory in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
   - output example: 
  ```
  ```
-- power 
+- **power** 
   - required eos command: ```show system environment power| json```
   - feature description: include tests report about the power status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
-  - test failure conditions: A test fails if the status of a power supply is not ok
+  - test failure conditions: A test fails if the status of a power supply is not ok  
   - output example: 
  ```
+********** Power supplies **********
+
+Power supply: 1 *** Status: ok *** Result: PASS
+Power supply: 3 *** Status: ok *** Result: PASS
+Power supply: 2 *** Status: powerLoss *** Result: FAIL
+Power supply: 4 *** Status: ok *** Result: PASS
+Power supply: 7 *** Status: ok *** Result: PASS
+Power supply: 6 *** Status: ok *** Result: PASS
  ```
-- cooling
+ ```
+********** Power supplies **********
+
+Power supply: 2 *** Status: powerLoss *** Result: FAIL
+The other tests succesfully passed
+ ```
+- **cooling**
   - required eos command: ```show system environment cooling | json```
   - feature description: include tests report about the cooling status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - test failure conditions: A test fails if the status of a fan is not ok
   - output example: 
  ```
  ```
-- temperature
+- **temperature**
   - required eos command: ```show system environment temperature | json```
   - feature description: include tests report about the temperature status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
   - output example: 
  ```
  ```
-- temperature_transceivers
+- **temperature_transceivers**
   - required eos command: ```show system environment temperature transceiver | json```
   - feature description: include tests report about the transceivers temperature status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - test failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
   - output example: 
  ```
  ```
-- reload_cause_history
+- **reload_cause_history**
   - required eos command: ```show reload cause history | json```
   - feature description: include tests report about the cause for the last 10 reload in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - test failure conditions: A test fails if a device reload was not requested by user
   - output example: 
  ```
  ```
-- reload_cause_full
+- **reload_cause_full**
   - required eos command: ```show reload cause full | json```
   - feature description: include tests report about the cause of the most recent reload in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - test failure conditions: The test fails if the device reload was not requested by user
   - output example: 
  ```
  ```
-- lldp
+- **lldp**
   - required eos command: ```show lldp neighbors | json```
   - feature description: include the lldp topology in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - test failure conditions: This is a report without any test so there is no failure/passing condition
@@ -167,14 +181,14 @@ Interface: Ethernet1 *** LLDP neighbor: switch2.lab.local *** LLDP remote port: 
 Interface: Ethernet2 *** LLDP neighbor: switch3.lab.local *** LLDP remote port: Ethernet1
 Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port: Ethernet37
  ```
-- bgp
+- **bgp**
   - required eos command: ```show ip bgp summary vrf all | json```
   - feature description: include tests report about the bgp status for all configured vrf in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - test failure conditions: A test fails if a BGP session is not established
   - output example: 
  ```
  ```
-- mlag
+- **mlag**
   - required eos command: ```show mlag detail | json```
   - feature description: include tests report about the mlag status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
