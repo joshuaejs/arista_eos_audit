@@ -44,7 +44,7 @@ It is used to define these variables:
 
 The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices.  
 It supports collecting show commands in both text and JSON format.  
-The commands output is saved in the [output](output). For each device there is a dedicated directory in the [output](output) directory.     
+The commands output is saved in device directory in the [output](output) directory. 
 
 ### [custom_show_tech_support.py](custom_show_tech_support.py)
 
@@ -52,21 +52,20 @@ The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the var
 
 For each devices indicated in [input.yml](input.yml), it assembles the files indicated in [input.yml](input.yml) file to generate offline a custom show tech-support text file.  
 It supports only the text format (no JSON format support).  
-The output file is saved in the [output](output). For each device there is a dedicated directory in the [output](output) directory.  
-The name of the output file is `custom show tech-support.txt`.  
-Here's an [example](output/eos_commands/text). 
+The name of the output file is "custom show tech-support.txt".  It is saved in device directory in the [output](output) directory. 
+
   
 ### [audit_eos_files.py](audit_eos_files.py) file 
 
 The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit offline some of the collected files and to generate a report.  
 
 For each device it generates 2 reports: 
-- The file ```main.txt``` includes all the tests. Here's an [example](main.txt) 
-- The file ```failures only.txt``` includes only the tests that failed. Here's an [example](failures only.txt).  
+- The file "main.txt" includes all the tests. It is saved in device directory in the [output](output) directory. 
+- The file "failures_only.txt" includes only the tests that failed. It is saved in device directory in the [output](output) directory. 
 
 It also assembles the devices report in one file: 
-- The file [main.txt](output/main.txt) includes for all the devices all the tests. 
-- The file [failures only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. 
+- The file [main.txt](output/main.txt) includes for all the devices all the tests. It is saved in the [output](output) directory. 
+- The file [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved in the [output](output) directory.  
 
 It currently support these features:  
 - hostname
