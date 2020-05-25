@@ -80,43 +80,43 @@ It also assembles the devices report in one file:
 It currently support these features:  
 - hostname
   - required eos command: ```show hostname | json```
-  - feature description: include the device hostname and fqdn in the report files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include the device hostname and fqdn in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - failure conditions: This is a report without any test so there is no failure/passing condition
 - version
   - required eos command: ```show version | json```
-  - feature description: include some details regarding the device (HW model, SN, SW release, uptime) in the report files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt) 
+  - feature description: include some details regarding the device (HW model, SN, SW release, uptime) in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt) 
   - failure conditions: This is a report without any test so there is no failure/passing condition
 - inventory 
   - required eos command: ```show inventory | json```
-  - feature description: include tests about the hardware inventory in the report files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include tests report about the hardware inventory in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
 - power 
   - required eos command: ```show system environment power| json```
-  - feature description: include tests about the power status in the report files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include tests report about the power status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - failure conditions: A test fails if the status of a power supply is not ok
 - cooling
   - required eos command: ```show system environment cooling | json```
-  - feature description: 
+  - feature description: include tests report about the cooling status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - failure conditions: A test fails if the status of a fan is not ok
 - temperature
   - required eos command: ```show system environment temperature | json```
-  - feature description: 
+  - feature description: include tests report about the temperature status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
 - temperature_transceivers
   - required eos command: ```show system environment temperature transceiver | json```
-  - feature description: 
+  - feature description: include tests report about the transceivers temperature status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
 - reload_cause_history
   - required eos command: ```show reload cause history | json```
-  - feature description: 
+  - feature description: include tests report about the cause for the last 10 reload. 
   - failure conditions: A test fails if a device reload was not requested by user
 - reload_cause_full
   - required eos command: ```show reload cause full | json```
-  - feature description: 
+  - feature description: include tests report about the cause of the most recent reload. 
   - failure conditions: The test fails if the device reload was not requested by user
 - lldp
   - required eos command: ```show lldp neighbors | json```
-  - feature description: 
+  - feature description: include the lldp topology in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - failure conditions: This is a report without any test so there is no failure/passing condition
 - bgp
   - required eos command: ```show ip bgp summary vrf all | json```
