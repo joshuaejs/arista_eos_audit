@@ -79,53 +79,53 @@ It also assembles the devices report in one file:
 
 It currently support these features:  
 - hostname
-  - eos command requirements: ```show hostname | json```
-  - description: add to the report the device hostname and fqdn 
+  - required eos command: ```show hostname | json```
+  - feature description: include the device hostname and fqdn in the report files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
   - failure conditions: This is a report without any test so there is no failure/passing condition
 - version
-  - eos command requirements: ```show version | json```
-  - description: add to the report some details regarding the device (HW model, SN, SW release, uptime)
-  - Failure conditions: This is a report without any test so there is no failure/passing condition
+  - required eos command: ```show version | json```
+  - feature description: include some details regarding the device (HW model, SN, SW release, uptime) in the report files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt) 
+  - failure conditions: This is a report without any test so there is no failure/passing condition
 - inventory 
-  - eos command requirements: ```show inventory | json```
-  - description: 
-  - Failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
+  - required eos command: ```show inventory | json```
+  - feature description: include tests about the hardware inventory in the report files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
 - power 
-  - eos command requirements: ```show system environment power| json```
-  - description: 
-  - Failure conditions: A test fails if the status of a power supply is not ok
+  - required eos command: ```show system environment power| json```
+  - feature description: include tests about the power status in the report files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - failure conditions: A test fails if the status of a power supply is not ok
 - cooling
-  - eos command requirements: ```show system environment cooling | json```
-  - description: 
-  - Failure conditions: A test fails if the status of a fan is not ok
+  - required eos command: ```show system environment cooling | json```
+  - feature description: 
+  - failure conditions: A test fails if the status of a fan is not ok
 - temperature
-  - eos command requirements: ```show system environment temperature | json```
-  - description: 
-  - Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
+  - required eos command: ```show system environment temperature | json```
+  - feature description: 
+  - failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
 - temperature_transceivers
-  - eos command requirements: ```show system environment temperature transceiver | json```
-  - description: 
-  - Failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
+  - required eos command: ```show system environment temperature transceiver | json```
+  - feature description: 
+  - failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
 - reload_cause_history
-  - eos command requirements: ```show reload cause history | json```
-  - description: 
-  - Failure conditions: A test fails if a device reload was not requested by user
+  - required eos command: ```show reload cause history | json```
+  - feature description: 
+  - failure conditions: A test fails if a device reload was not requested by user
 - reload_cause_full
-  - eos command requirements: ```show reload cause full | json```
-  - description: 
-  - Failure conditions: The test fails if the device reload was not requested by user
+  - required eos command: ```show reload cause full | json```
+  - feature description: 
+  - failure conditions: The test fails if the device reload was not requested by user
 - lldp
-  - eos command requirements: ```show lldp neighbors | json```
-  - description: 
-  - Failure conditions: This is a report without any test so there is no failure/passing condition
+  - required eos command: ```show lldp neighbors | json```
+  - feature description: 
+  - failure conditions: This is a report without any test so there is no failure/passing condition
 - bgp
-  - eos command requirements: ```show ip bgp summary vrf all | json```
-  - description: 
-  - Failure conditions: A test fails if a BGP session is not established
+  - required eos command: ```show ip bgp summary vrf all | json```
+  - feature description: 
+  - failure conditions: A test fails if a BGP session is not established
 - mlag
-  - eos command requirements: ```show mlag detail | json```
-  - description: 
-  - Failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
+  - required eos command: ```show mlag detail | json```
+  - feature description: 
+  - failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
   
 
  
