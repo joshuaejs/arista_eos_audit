@@ -244,7 +244,7 @@ def temperature (device):
         systemStatus = 'ok'
     for item in [main_report, failures_only_report]:
         item.write("System temperature: \n") 
-    message = "Status: " + systemStatus + ' *** Result: ' + result + '\n'*2
+    message = "Status: " + systemStatus + ' *** Result: ' + result + '\n'
     main_report.write(message)
     if result == 'FAIL': 
         failures_only_report.write(message)
@@ -549,9 +549,7 @@ def mlag (device):
     if state == "active": 
         negStatus = data_json["negStatus"]
         configSanity = data_json["configSanity"]
-        peerAddress = data_json["peerAddress"]
-        lastStateChangeTime_seconds = data_json["detail"]["lastStateChangeTime"]
-        lastStateChangeTime = str(datetime.timedelta(seconds = int(lastStateChangeTime_seconds))) 
+        peerAddress = data_json["peerAddress"] 
         if negStatus != 'connected': 
             result = 'FAIL'
             at_least_one_test_fail = True
@@ -563,18 +561,16 @@ def mlag (device):
                 item.write("State: " + state + "\n")
                 item.write("Negotiation Status: " + negStatus + "\n")
                 item.write("Config Sanity: " + configSanity + "\n")
-                item.write("Last state change: " +  str(lastStateChangeTime)+ "\n")
                 item.write("\nTest result: " + result + "\n")  
         elif result == 'PASS': 
             main_report.write("Peer: " + peerAddress + "\n")
             main_report.write("State: " + state + "\n")
             main_report.write("Negotiation Status: " + negStatus + "\n")
             main_report.write("Config Sanity: " + configSanity + "\n")
-            main_report.write("Last state change: " +  str(lastStateChangeTime)+ "\n")
             main_report.write("\nTest result: " + result + "\n")  
         if at_least_one_test_fail == False: 
             failures_only_report.write("All tests successfully passed\n")
-    elif state != "active": 
+    elif state == "disabled": 
         for item in [main_report, failures_only_report]:
             item.write("MLAG is " + state +  "\n")  
     for item in [main_report, failures_only_report]:
