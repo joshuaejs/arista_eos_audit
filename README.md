@@ -3,13 +3,26 @@
 ## Table of content
 
 [About this repository](#about-this-repository)  
+[Requirements](#requirements)   
 [Repository details](#repository-details)   
-[Requirements](#requirements)  
 
 ## About this repository 
 
 This repo has python content to collect eos commands from Arista devices.  
 It also has python content to audit offline the data collected and to generate a report.  
+
+## Requirements
+
+I am using this Python version
+```
+python -V
+Python 3.7.7
+```
+And I installed netmiko to interact with EOS devices.  
+```
+pip freeze | grep netmiko
+netmiko==3.1.1
+```
 
 ## Repository details 
 
@@ -31,12 +44,17 @@ It is used to define these variables:
 
 The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices.  
 It supports collecting show commands in both text and JSON format.  
-The commands output is saved in the [output](output). For each device there is a dedicated directory.   
+The commands output is saved in the [output](output). For each device there is a dedicated directory in the [output](output) directory.     
 
 ### [custom_show_tech_support.py](custom_show_tech_support.py)
 
 The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the variables defined in the file [input.yml](input.yml) to generate offline a custom show tech-support text file.  
-For each devices indicated in [input.yml](input.yml), it assembles the files indicated in [input.yml](input.yml). It supports only the text format (no JSON format support). The output file is saved in the [output](output). For each device there is a dedicated directory. The name of the output file is `custom show tech-support.txt`. Here's an [example](output/eos_commands/text). 
+
+For each devices indicated in [input.yml](input.yml), it assembles the files indicated in [input.yml](input.yml) file to generate offline a custom show tech-support text file.  
+It supports only the text format (no JSON format support).  
+The output file is saved in the [output](output). For each device there is a dedicated directory in the [output](output) directory.  
+The name of the output file is `custom show tech-support.txt`.  
+Here's an [example](output/eos_commands/text). 
   
 ### [audit_eos_files.py](audit_eos_files.py) file 
 
@@ -102,17 +120,4 @@ It currently support these features:
   
 
  
-## Requirements
-
-I am using this Python version
-```
-python -V
-Python 3.7.7
-```
-And I installed netmiko to interact with EOS devices.  
-```
-pip freeze | grep netmiko
-netmiko==3.1.1
-```
-
 
