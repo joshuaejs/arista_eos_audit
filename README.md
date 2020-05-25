@@ -61,7 +61,7 @@ The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables d
 It supports collecting show commands in both text and JSON format.  
 The commands output is saved in device directory in the [output](output) directory. 
 
-### [custom_show_tech_support.py](custom_show_tech_support.py)
+### [custom_show_tech_support.py](custom_show_tech_support.py) file
 
 The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the variables defined in the file [input.yml](input.yml) to generate offline a custom show tech-support text file.  
 For each devices indicated in [input.yml](input.yml), it assembles the files indicated in [input.yml](input.yml) file to generate offline a custom show tech-support text file.  
