@@ -29,21 +29,21 @@ netmiko==3.1.1
 
 Install the requirements described in the above section.  
 
-Then update the file [input.yml](input.yml).  
-This file has the required input for the files: 
-- [collect_eos_commands.py](collect_eos_commands.py) 
-- [custom_show_tech_support.py](custom_show_tech_support.py) 
-- [audit_eos_files.py](audit_eos_files.py)   
+Then update the file [input.yml](input.yml). It has the required input for the various scripts available in this repository.   
 
 Then you can run the script [collect_eos_commands.py](collect_eos_commands.py) to collect commands output from EOS devices.  
 
-Once you collected the commands output, you can run this script [audit_eos_files.py](audit_eos_files.py) to generate reports.  
+Once you collected the commands output, you can run the script [audit_eos_files.py](audit_eos_files.py) to generate reports.  
 
 ## Repository details 
 
 ### [input.yml](input.yml) file 
 
-The file [input.yml](input.yml) has the required input for the files [collect_eos_commands.py](collect_eos_commands.py) and [custom_show_tech_support.py](custom_show_tech_support.py) and [audit_eos_files.py](audit_eos_files.py)   
+The file [input.yml](input.yml) has the required input for the files
+- [collect_eos_commands.py](collect_eos_commands.py) 
+- [custom_show_tech_support.py](custom_show_tech_support.py) 
+- [audit_eos_files.py](audit_eos_files.py)   
+
 It is used to define these variables:    
 - devices: list of EOS devices
 - username: devices username 
@@ -64,7 +64,6 @@ The commands output is saved in device directory in the [output](output) directo
 ### [custom_show_tech_support.py](custom_show_tech_support.py)
 
 The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the variables defined in the file [input.yml](input.yml) to generate offline a custom show tech-support text file.  
-
 For each devices indicated in [input.yml](input.yml), it assembles the files indicated in [input.yml](input.yml) file to generate offline a custom show tech-support text file.  
 It supports only the text format (no JSON format support).  
 The name of the output file is "custom show tech-support.txt".  It is saved in device directory in the [output](output) directory. 
@@ -73,76 +72,76 @@ The name of the output file is "custom show tech-support.txt".  It is saved in d
 
 The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit offline some of the collected files and to generate a report.  
 
-For each device it generates 2 reports: 
-- The file "main.txt" includes all the tests. It is saved in device directory in the [output](output) directory. 
-- The file "failures_only.txt" includes only the tests that failed. It is saved in device directory in the [output](output) directory. 
-
-It also assembles the devices report in one file: 
-- The file [main.txt](output/main.txt) includes for all the devices all the tests. It is saved at the root of the [output](output) directory. 
-- The file [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved at the root of the [output](output) directory.  
-
-It currently support these features:  
+the file [audit_eos_files.py](audit_eos_files.py) currently supports the following features. To enable or disable them, update the file [input.yml](input.yml).
 
 - **hostname**
   - required eos command: ```show hostname | json```
-  - feature description: include the device hostname and fqdn in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include the device hostname and fqdn
   - test failure conditions: This is a report without any test so there is no failure/passing condition
 
 - **version**
   - required eos command: ```show version | json```
-  - feature description: include some details regarding the device (HW model, SN, SW release, uptime) in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt) 
+  - feature description: include some details regarding the device (HW model, SN, SW release, uptime)
   - test failure conditions: This is a report without any test so there is no failure/passing condition
 
 - **inventory** 
   - required eos command: ```show inventory | json```
-  - feature description: include tests report about the hardware inventory in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include tests report about the hardware inventory
   - test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
   
 - **power** 
   - required eos command: ```show system environment power| json```
-  - feature description: include tests report about the power status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include tests report about the power status
   - test failure conditions: A test fails if the status of a power supply is not ok  
 
 - **cooling**
   - required eos command: ```show system environment cooling | json```
-  - feature description: include tests report about the cooling status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include tests report about the cooling status
   - test failure conditions: A test fails if the status of a fan is not ok
   
 - **temperature**
   - required eos command: ```show system environment temperature | json```
-  - feature description: include tests report about the temperature status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include tests report about the temperature status
   - test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
-
+  
 - **temperature_transceivers**
   - required eos command: ```show system environment temperature transceiver | json```
-  - feature description: include tests report about the transceivers temperature status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include tests report about the transceivers temperature status
   - test failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
   
 - **reload_cause_history**
   - required eos command: ```show reload cause history | json```
-  - feature description: include tests report about the cause for the last 10 reload in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include tests report about the cause for the last 10 reload
   - test failure conditions: A test fails if a device reload was not requested by user
 
 - **reload_cause_full**
   - required eos command: ```show reload cause full | json```
-  - feature description: include tests report about the cause of the most recent reload in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include tests report about the cause of the most recent reload
   - test failure conditions: The test fails if the device reload was not requested by user
 
 - **lldp**
   - required eos command: ```show lldp neighbors | json```
-  - feature description: include the lldp topology in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include the lldp topology
   - test failure conditions: This is a report without any test so there is no failure/passing condition
  
 - **bgp**
   - required eos command: ```show ip bgp summary vrf all | json```
-  - feature description: include tests report about the bgp status for all configured vrf in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include tests report about the bgp status for all configured vrf
   - test failure conditions: A test fails if a BGP session is not established
 
 - **mlag**
   - required eos command: ```show mlag detail | json```
-  - feature description: include tests report about the mlag status in the files [main.txt](output/main.txt) and [failures_only.txt](output/failures_only.txt)
+  - feature description: include tests report about the mlag status
   - test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
 
- 
+For each device defined in the file [input.yml](input.yml), the file [audit_eos_files.py](audit_eos_files.py) generates 2 reports:
+- The file "main.txt" includes details regarding all the tests for this device. It is saved in device directory in the [output](output) directory. 
+- The file "failures_only.txt" includes only the tests that failed for this device. It is saved in device directory in the [output](output) directory. 
+
+Then, the file [audit_eos_files.py](audit_eos_files.py) assembles the report of each device into one file: 
+- The file [main.txt](output/main.txt) includes for all the devices all the tests. It is saved at the root of the [output](output) directory. 
+- The file [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved at the root of the [output](output) directory.  
+
+
  
 
