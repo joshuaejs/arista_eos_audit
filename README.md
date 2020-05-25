@@ -3,7 +3,8 @@
 ## Table of content
 
 [About this repository](#about-this-repository)  
-[Requirements](#requirements)   
+[Requirements](#requirements)  
+[How to use this repository](#how-to-use-this-repository)  
 [Repository details](#repository-details)   
 
 ## About this repository 
@@ -23,6 +24,16 @@ And I installed netmiko to interact with EOS devices.
 pip freeze | grep netmiko
 netmiko==3.1.1
 ```
+
+## How to use this repository 
+
+Install the requirements described in the above section.  
+
+Then update the file [input.yml](input.yml). This file has the required input for the files [collect_eos_commands.py](collect_eos_commands.py) and  [audit_eos_files.py](audit_eos_files.py)   
+
+Then run the script [collect_eos_commands.py](collect_eos_commands.py) to collect commands output from EOS devices.  
+
+Once you collected the commands output, you can run this script [audit_eos_files.py](audit_eos_files.py) to generate reports.  
 
 ## Repository details 
 
@@ -53,7 +64,6 @@ The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the var
 For each devices indicated in [input.yml](input.yml), it assembles the files indicated in [input.yml](input.yml) file to generate offline a custom show tech-support text file.  
 It supports only the text format (no JSON format support).  
 The name of the output file is "custom show tech-support.txt".  It is saved in device directory in the [output](output) directory. 
-
   
 ### [audit_eos_files.py](audit_eos_files.py) file 
 
@@ -64,56 +74,56 @@ For each device it generates 2 reports:
 - The file "failures_only.txt" includes only the tests that failed. It is saved in device directory in the [output](output) directory. 
 
 It also assembles the devices report in one file: 
-- The file [main.txt](output/main.txt) includes for all the devices all the tests. It is saved in the [output](output) directory. 
-- The file [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved in the [output](output) directory.  
+- The file [main.txt](output/main.txt) includes for all the devices all the tests. It is saved at the root of the [output](output) directory. 
+- The file [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved at the root of the [output](output) directory.  
 
 It currently support these features:  
 - hostname
-  - requirements: ```show hostname | json```
+  - eos command requirements: ```show hostname | json```
   - description: add to the report the device hostname and fqdn 
   - failure conditions: This is a report without any test so there is no failure/passing condition
 - version
-  - requirements: ```show version | json```
+  - eos command requirements: ```show version | json```
   - description: add to the report some details regarding the device (HW model, SN, SW release, uptime)
   - Failure conditions: This is a report without any test so there is no failure/passing condition
 - inventory 
-  - requirements: ```show inventory | json```
+  - eos command requirements: ```show inventory | json```
   - description: 
   - Failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
 - power 
-  - requirements: ```show system environment power| json```
+  - eos command requirements: ```show system environment power| json```
   - description: 
   - Failure conditions: A test fails if the status of a power supply is not ok
 - cooling
-  - requirements: ```show system environment cooling | json```
+  - eos command requirements: ```show system environment cooling | json```
   - description: 
   - Failure conditions: A test fails if the status of a fan is not ok
 - temperature
-  - requirements: ```show system environment temperature | json```
+  - eos command requirements: ```show system environment temperature | json```
   - description: 
   - Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
 - temperature_transceivers
-  - requirements: ```show system environment temperature transceiver | json```
+  - eos command requirements: ```show system environment temperature transceiver | json```
   - description: 
   - Failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
 - reload_cause_history
-  - requirements: ```show reload cause history | json```
+  - eos command requirements: ```show reload cause history | json```
   - description: 
   - Failure conditions: A test fails if a device reload was not requested by user
 - reload_cause_full
-  - requirements: ```show reload cause full | json```
+  - eos command requirements: ```show reload cause full | json```
   - description: 
   - Failure conditions: The test fails if the device reload was not requested by user
 - lldp
-  - requirements: ```show lldp neighbors | json```
+  - eos command requirements: ```show lldp neighbors | json```
   - description: 
   - Failure conditions: This is a report without any test so there is no failure/passing condition
 - bgp
-  - requirements: ```show ip bgp summary vrf all | json```
+  - eos command requirements: ```show ip bgp summary vrf all | json```
   - description: 
   - Failure conditions: A test fails if a BGP session is not established
 - mlag
-  - requirements: ```show mlag detail | json```
+  - eos command requirements: ```show mlag detail | json```
   - description: 
   - Failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
   
