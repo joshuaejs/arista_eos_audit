@@ -121,47 +121,123 @@ Uptime: 1 day, 6:28:38
   - feature description: include tests report about the power status
   - required eos command: ```show system environment power| json```
   - test failure conditions: A test fails if the status of a power supply is not ok  
-  - output example: 
+  - output examples: 
+```
+********** Power supplies status **********
+
+Power supply: 1 *** Status: ok *** Result: PASS
+Power supply: 3 *** Status: ok *** Result: PASS
+Power supply: 2 *** Status: ok *** Result: PASS
+Power supply: 4 *** Status: ok *** Result: PASS
+Power supply: 7 *** Status: ok *** Result: PASS
+Power supply: 6 *** Status: ok *** Result: PASS
+```
 ```
 ********** Power supplies **********
 
-Power supply: 1 *** Status: powerLoss *** Result: FAIL
-Power supply: 2 *** Status: ok *** Result: PASS
+All tests successfully passed
 ```
-
 - check_cooling
   - feature description: include tests report about the cooling status
   - required eos command: ```show system environment cooling | json```
   - test failure conditions: A test fails if the status of a fan is not ok
-  - output example: 
+  - output examples: 
 ```
-********** Cooling **********
+********** Cooling status **********
 
 Power supplies: 
 Fan: PowerSupply1/1 *** Status: ok *** Result: PASS
 Fan: PowerSupply2/1 *** Status: ok *** Result: PASS
+Fan: PowerSupply3/1 *** Status: ok *** Result: PASS
+Fan: PowerSupply4/1 *** Status: ok *** Result: PASS
+Fan: PowerSupply6/1 *** Status: ok *** Result: PASS
+Fan: PowerSupply7/1 *** Status: ok *** Result: PASS
 
 Fan modules: 
 Fan: 1/1 *** Status: ok *** Result: PASS
+Fan: 1/2 *** Status: ok *** Result: PASS
+Fan: 1/3 *** Status: ok *** Result: PASS
+Fan: 1/4 *** Status: ok *** Result: PASS
+Fan: 1/5 *** Status: ok *** Result: PASS
 Fan: 2/1 *** Status: ok *** Result: PASS
+Fan: 2/2 *** Status: ok *** Result: PASS
+Fan: 2/3 *** Status: ok *** Result: PASS
+Fan: 2/4 *** Status: ok *** Result: PASS
+Fan: 2/5 *** Status: ok *** Result: PASS
 Fan: 3/1 *** Status: ok *** Result: PASS
+Fan: 3/2 *** Status: ok *** Result: PASS
+Fan: 3/3 *** Status: ok *** Result: PASS
+Fan: 3/4 *** Status: ok *** Result: PASS
+Fan: 3/5 *** Status: ok *** Result: PASS
 Fan: 4/1 *** Status: ok *** Result: PASS
+Fan: 4/2 *** Status: ok *** Result: PASS
+Fan: 4/3 *** Status: ok *** Result: PASS
+Fan: 4/4 *** Status: ok *** Result: PASS
+Fan: 4/5 *** Status: ok *** Result: PASS
+Fan: 5/1 *** Status: ok *** Result: PASS
+Fan: 5/2 *** Status: ok *** Result: PASS
+Fan: 5/3 *** Status: ok *** Result: PASS
+Fan: 5/4 *** Status: ok *** Result: PASS
+Fan: 5/5 *** Status: ok *** Result: PASS
+Fan: 6/1 *** Status: ok *** Result: PASS
+Fan: 6/2 *** Status: ok *** Result: PASS
+Fan: 6/3 *** Status: ok *** Result: PASS
+Fan: 6/4 *** Status: ok *** Result: PASS
+Fan: 6/5 *** Status: ok *** Result: PASS
+```
+```
+********** Cooling **********
+
+Power supplies: 
+All tests successfully passed
+
+Fan modules: 
+All tests successfully passed
 ```
 - check_temperature
   - feature description: include tests report about the temperature status
   - required eos command: ```show system environment temperature | json```
   - test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
+  - output example: 
+```
+********** Temperature status **********
+
+System temperature: 
+Status: ok *** Result: PASS
+
+Sensors: 
+Sensor: TempSensor1 *** Description: Cpu temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 30 *** Max temperature last change: 24 May 2020 18:37:45 *** Result: PASS
+Sensor: TempSensor2 *** Description: Rear temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 24 *** Max temperature last change: 25 May 2020 21:36:35 *** Result: PASS
+Sensor: TempSensor3 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 25 *** Max temperature last change: 26 May 2020 02:29:30 *** Result: PASS
+Sensor: TempSensor4 *** Description: Front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 25 May 2020 22:58:06 *** Result: PASS
+Sensor: TempSensor5 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 25 *** Max temperature last change: 26 May 2020 02:29:42 *** Result: PASS
+Sensor: TempSensor6 *** Description: FM6000 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 25 *** Max temperature last change: 25 May 2020 20:37:38 *** Result: PASS
+
+Power Supplies: 
+Sensor: TempSensorP1/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 21 *** Max temperature last change: 24 May 2020 18:38:15 *** Result: PASS
+Sensor: TempSensorP2/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 24 *** Max temperature last change: 24 May 2020 18:38:15 *** Result: PASS
+```
   
 - check_temperature_transceivers
   - feature description: include tests report about the transceivers temperature status
   - required eos command: ```show system environment temperature transceiver | json```
   - test failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
-  
+  - output example: 
+```
+********** Temperature transceivers status **********
+
+Description: Xcvr25 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 52 *** Max temperature last change: 16 May 2020 07:41:02 *** Result: PASS
+Description: Xcvr26 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 50 *** Max temperature last change: 16 May 2020 07:44:32 *** Result: PASS
+Description: Xcvr49 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 48 *** Max temperature last change: 16 May 2020 07:37:06 *** Result: PASS
+Description: Xcvr50 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 47 *** Max temperature last change: 16 May 2020 07:44:07 *** Result: PASS
+Description: Xcvr51 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 48 *** Max temperature last change: 16 May 2020 07:44:55 *** Result: PASS
+Description: Xcvr52 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 47 *** Max temperature last change: 16 May 2020 07:37:40 *** Result: PASS
+```
 - check_reload_cause_history
   - feature description: include tests report about the cause for the last 10 reload
   - required eos command: ```show reload cause history | json```
   - test failure conditions: A test fails if a device reload was not requested by user
-  - output example: 
+  - output examples: 
 ```
 ********** Reload cause history **********
 
@@ -175,6 +251,20 @@ Time: 11 May 2020 17:30:10 *** Reason: Reload requested by the user. *** Result:
 Time: 06 May 2020 09:01:29 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
 Time: 05 May 2020 18:00:26 *** Reason: Reload requested by the user. *** Result: PASS
 Time: 05 May 2020 10:01:52 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+```
+```
+********** Reload cause history **********
+
+Description: include tests report about the cause for the last 10 reload
+Required EOS command: show reload cause history | json
+Test failure conditions: A test fails if a device reload was not requested by user
+
+Time: 24 May 2020 18:38:03 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 21 May 2020 12:58:43 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 19 May 2020 23:02:10 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 12 May 2020 14:01:54 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+The other tests succesfully passed
+
 ```
 - check_reload_cause_full
   - feature description: include tests report about the cause of the most recent reload
