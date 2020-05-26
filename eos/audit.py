@@ -34,6 +34,26 @@ def device_directories (device, root_dir):
     result = device_directory, eos_commands_directory, json_directory, text_directory, reports_directory, main_reports_directory, failures_only_reports_directory
     return result
 
+def str_to_function (audit_str_list):
+    """map a list of string into a list of functions 
+
+    Parameters
+    ----------
+    audit_str_list : list
+        list of string
+
+    Returns
+    -------
+    list
+        list of functions
+    """
+    map = {'print_hostname': print_hostname, 'print_version': print_version, 'check_inventory': check_inventory, 'check_power': check_power, 'check_cooling': check_cooling, 'check_temperature': check_temperature, 'check_temperature_transceivers': check_temperature_transceivers, 'check_reload_cause_history': check_reload_cause_history, 'check_reload_cause_full': check_reload_cause_full, 'print_lldp': print_lldp, 'check_bgp': check_bgp, 'check_mlag': check_mlag} 
+    audit_func_list = []
+    for item in audit_str_list : 
+        audit_func_list.append(map[item])
+    return audit_func_list
+
+
 def init (device, root_dir):
     """Generates files with the device IP address or hostname.
 
