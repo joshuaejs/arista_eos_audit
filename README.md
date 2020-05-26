@@ -6,6 +6,13 @@
 [Requirements](#requirements)  
 [How to use this repository](#how-to-use-this-repository)  
 [Repository details](#repository-details)   
+&nbsp;&nbsp;&nbsp;&nbsp;[Repository input](#repository-input)    
+&nbsp;&nbsp;&nbsp;&nbsp;[Collect EOS commands](#collect-eos-commands)  
+&nbsp;&nbsp;&nbsp;&nbsp;[Build a custom show tech-support file](build-a-custom-show-tech-support-file)  
+&nbsp;&nbsp;&nbsp;&nbsp;[Generate audit reports](#generate-audit-reports)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Overview](#overview)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Supported features](#supported-features)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Report files](#report-files)  
 
 ## About this repository 
 
@@ -61,14 +68,14 @@ The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables d
 It supports collecting show commands in both text and JSON format.  
 The commands output is saved in device directory in the [output](output) directory. 
 
-### Build custom show tech-support text file 
+### Build a custom show tech-support file 
 
 The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the variables defined in the file [input.yml](input.yml) to generate offline a custom show tech-support text file.  
 For each devices indicated in [input.yml](input.yml), it assembles the files indicated in [input.yml](input.yml) file to generate offline a custom show tech-support text file.  
 It supports only the text format (no JSON format support).  
 The name of the output file is "custom show tech-support.txt".  It is saved in device directory in the [output](output) directory. 
   
-### Generate audit report
+### Generate audit reports
 
 #### Overview 
 
