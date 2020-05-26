@@ -5,7 +5,8 @@
 [About this repository](#about-this-repository)  
 [Requirements](#requirements)  
 [How to use this repository](#how-to-use-this-repository)  
-[Repository details](#repository-details)   
+[Repository details](#repository-details)  
+&nbsp;&nbsp;&nbsp;&nbsp;[eos python library](eos-python-library)   
 &nbsp;&nbsp;&nbsp;&nbsp;[Repository input](#repository-input)    
 &nbsp;&nbsp;&nbsp;&nbsp;[Collect EOS commands](#collect-eos-commands)  
 &nbsp;&nbsp;&nbsp;&nbsp;[Build a custom show tech-support file](#build-a-custom-show-tech-support-file)  
@@ -44,6 +45,10 @@ Then you can run the script [collect_eos_commands.py](collect_eos_commands.py) t
 Once you collected the commands output, you can run the script [generate_audit_report.py](generate_audit_report.py) to generate reports.  
 
 ## Repository details 
+
+### eos python library
+
+The python library [eos](eos) has python functions imported in the pythons scritps of this repository
 
 ### Repository input 
 
