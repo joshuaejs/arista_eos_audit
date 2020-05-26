@@ -8,7 +8,7 @@
 [Repository details](#repository-details)   
 &nbsp;&nbsp;&nbsp;&nbsp;[Repository input](#repository-input)    
 &nbsp;&nbsp;&nbsp;&nbsp;[Collect EOS commands](#collect-eos-commands)  
-&nbsp;&nbsp;&nbsp;&nbsp;[Build a custom show tech-support file](build-a-custom-show-tech-support-file)  
+&nbsp;&nbsp;&nbsp;&nbsp;[Build a custom show tech-support file](#build-a-custom-show-tech-support-file)  
 &nbsp;&nbsp;&nbsp;&nbsp;[Generate audit reports](#generate-audit-reports)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Overview](#overview)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Supported features](#supported-features)  
