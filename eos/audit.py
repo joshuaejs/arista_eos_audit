@@ -1,22 +1,57 @@
-
 import datetime
 import os
 import json
-import yaml 
 
-def init (device):
+def device_directories (device, root_dir):
+    """Create directories for the device
+
+    Create the directories root_dir/device, root_dirdevice/eos_commands, root_dir/device/eos_commands/json, root_dir/device/eos_commands/text, root_dir/device/reports, root_dir/device/reports/main, root_dir/device/reports/failures_only. 
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+    root: str
+        Root directory for all the outputs.
+
+    Returns
+    -------
+    tuple
+        name of the the directories for the device. 
+    """ 
+    cwd = os.getcwd()
+    output_directory = os.path.dirname(cwd + "/" + root_dir + "/")
+    device_directory = output_directory + '/' + device
+    eos_commands_directory = device_directory + '/' + "eos_commands"
+    json_directory = eos_commands_directory + '/' + "json"    
+    text_directory = eos_commands_directory + '/' + "text"  
+    reports_directory = device_directory + '/' + "reports"
+    main_reports_directory = reports_directory + '/' + "main"
+    failures_only_reports_directory = reports_directory + '/' + "failures_only"
+    for directory in [output_directory, device_directory, eos_commands_directory, json_directory, text_directory, reports_directory, main_reports_directory, failures_only_reports_directory]: 
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    result = device_directory, eos_commands_directory, json_directory, text_directory, reports_directory, main_reports_directory, failures_only_reports_directory
+    return result
+
+def init (device, root_dir):
     """Generates files with the device IP address or hostname.
 
     Parameters
     ----------
     device : str
         Device IP address or hostname.
+    root: str
+        Root directory for all the outputs.
 
     Returns
     -------
     tuple
         name of the two generated files. 
     """
+    directories = device_directories(device, root_dir)
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     main_report = open(main_reports_directory + '/init.txt', 'w') 
     failures_only_report = open(failures_only_reports_directory + '/init.txt', 'w') 
     for item in [main_report, failures_only_report]:
@@ -25,7 +60,7 @@ def init (device):
     result = main_reports_directory + '/init.txt', failures_only_reports_directory + '/init.txt' 
     return result
 
-def print_hostname (device):
+def print_hostname (device, root_dir):
     """Generates files with the device hostname and fqdn.
 
     Required EOS command: show hostname | json
@@ -34,12 +69,18 @@ def print_hostname (device):
     ----------
     device : str
         Device IP address or hostname.
+    root: str
+        Root directory for all the outputs.
 
     Returns
     -------
     tuple
         name of the two generated files. 
     """
+    directories = device_directories(device, root_dir)
+    json_directory = directories[2]
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     command = "show hostname"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -62,7 +103,7 @@ def print_hostname (device):
     result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
     return result
 
-def print_version (device):
+def print_version (device, root_dir):
     """Generates files with some details regarding the device (HW model, SN, SW release, uptime).
 
     Required EOS command: show version | json
@@ -71,12 +112,18 @@ def print_version (device):
     ----------
     device : str
         Device IP address or hostname.
+    root: str
+        Root directory for all the outputs.
 
     Returns
     -------
     tuple
         name of the two generated files. 
     """
+    directories = device_directories(device, root_dir)
+    json_directory = directories[2]
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     command = "show version"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -104,7 +151,7 @@ def print_version (device):
     result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
     return result
 
-def check_inventory (device):
+def check_inventory (device, root_dir):
     """Check the hardware inventory and generates files with the tests result.
 
     Required EOS command: show version | json
@@ -112,12 +159,18 @@ def check_inventory (device):
 
     device : str
         Device IP address or hostname.
+    root: str
+        Root directory for all the outputs.
 
     Returns
     -------
     tuple
         The name of the main report file and the name of the failures_only report file.  
     """
+    directories = device_directories(device, root_dir)
+    json_directory = directories[2]
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     command = "show inventory"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -193,7 +246,7 @@ def check_inventory (device):
     result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
     return result
 
-def check_power (device):
+def check_power (device, root_dir):
     """Check the power status and generates files with the tests result.
 
     Required EOS command: show system environment power | json
@@ -203,12 +256,18 @@ def check_power (device):
     ----------
     device : str
         Device IP address or hostname.
+    root: str
+        Root directory for all the outputs.
 
     Returns
     -------
     tuple
         The name of the main report file and the name of the failures_only report file.  
     """
+    directories = device_directories(device, root_dir)
+    json_directory = directories[2]
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     command = "show system environment power"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -243,7 +302,7 @@ def check_power (device):
     result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
     return result
 
-def check_cooling (device):
+def check_cooling (device, root_dir):
     """Check the cooling status and generates files with the tests result.
 
     Required EOS command: show system environment cooling | json
@@ -253,12 +312,18 @@ def check_cooling (device):
     ----------
     device : str
         Device IP address or hostname.
+    root: str
+        Root directory for all the outputs.
 
     Returns
     -------
     tuple
         The name of the main report file and the name of the failures_only report file. 
     """
+    directories = device_directories(device, root_dir)
+    json_directory = directories[2]
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     command = "show system environment cooling"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -317,7 +382,7 @@ def check_cooling (device):
     result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
     return result
 
-def check_temperature (device):
+def check_temperature (device, root_dir):
     """Check the temperature status and generates files with the tests result.
 
     Required EOS command: show system environment temperature | json
@@ -327,12 +392,18 @@ def check_temperature (device):
     ----------
     device : str
         Device IP address or hostname.
+    root: str
+        Root directory for all the outputs.
 
     Returns
     -------
     tuple
         The name of the main report file and the name of the failures_only report file. 
     """
+    directories = device_directories(device, root_dir)
+    json_directory = directories[2]
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     command = "show system environment temperature"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -446,7 +517,7 @@ def check_temperature (device):
     result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
     return result
 
-def check_temperature_transceivers (device):
+def check_temperature_transceivers (device, root_dir):
     """Check the transceivers temperature status and generates files with the tests result.
 
     Required EOS command: show system environment temperature transceiver | json
@@ -456,12 +527,18 @@ def check_temperature_transceivers (device):
     ----------
     device : str
         Device IP address or hostname.
-
+    root: str
+        Root directory for all the outputs.
+    
     Returns
     -------
     tuple
         The name of the main report file and the name of the failures_only report file. 
     """
+    directories = device_directories(device, root_dir)
+    json_directory = directories[2]
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     command = "show system environment temperature transceiver"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -522,7 +599,7 @@ def check_temperature_transceivers (device):
     result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt'
     return result
 
-def check_reload_cause_history (device):
+def check_reload_cause_history (device, root_dir):
     """Check the cause for the last 10 reload and generates files with the tests result.
 
     Required EOS command: show reload cause history | json
@@ -532,12 +609,18 @@ def check_reload_cause_history (device):
     ----------
     device : str
         Device IP address or hostname.
-
+    root: str
+        Root directory for all the outputs.
+    
     Returns
     -------
     tuple
         The name of the main report file and the name of the failures_only report file. 
     """
+    directories = device_directories(device, root_dir)
+    json_directory = directories[2]
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     command = "show reload cause history"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -577,7 +660,7 @@ def check_reload_cause_history (device):
     result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
     return result
 
-def check_reload_cause_full (device):
+def check_reload_cause_full (device, root_dir):
     """Check the cause for the most recent reload and generates files with the tests result.
 
     Required EOS command: show reload cause full | json
@@ -587,12 +670,18 @@ def check_reload_cause_full (device):
     ----------
     device : str
         Device IP address or hostname.
-
+    root: str
+        Root directory for all the outputs.
+    
     Returns
     -------
     tuple
         The name of the main report file and the name of the failures_only report file. 
     """
+    directories = device_directories(device, root_dir)
+    json_directory = directories[2]
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     command = "show reload cause full"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -629,7 +718,7 @@ def check_reload_cause_full (device):
     result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
     return result
 
-def print_lldp (device):
+def print_lldp (device, root_dir):
     """Generates files with the LLDP topology.
 
     Required EOS command: show lldp neighbors | json
@@ -638,12 +727,18 @@ def print_lldp (device):
     ----------
     device : str
         Device IP address or hostname.
-
+    root: str
+        Root directory for all the outputs.
+    
     Returns
     -------
     tuple
         name of the two generated files. 
     """
+    directories = device_directories(device, root_dir)
+    json_directory = directories[2]
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     command = "show lldp neighbors"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -668,7 +763,7 @@ def print_lldp (device):
     result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt'
     return result
 
-def check_bgp (device):
+def check_bgp (device, root_dir):
     """Check BGP status for all configured vrf and generates files with the tests result.
 
     Required EOS command: show ip bgp summary vrf all | json
@@ -678,12 +773,18 @@ def check_bgp (device):
     ----------
     device : str
         Device IP address or hostname.
+    root: str
+        Root directory for all the outputs.
 
     Returns
     -------
     tuple
         The name of the main report file and the name of the failures_only report file. 
     """
+    directories = device_directories(device, root_dir)
+    json_directory = directories[2]
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     command = "show ip bgp summary vrf all"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -727,7 +828,7 @@ def check_bgp (device):
     result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt'
     return result
 
-def check_mlag (device):
+def check_mlag (device, root_dir):
     """Check MLAG state and generates files with the tests result.
 
     Required EOS command: show mlag detail | json
@@ -737,12 +838,18 @@ def check_mlag (device):
     ----------
     device : str
         Device IP address or hostname.
+    root: str
+        Root directory for all the outputs.
 
     Returns
     -------
     tuple
         The name of the main report file and the name of the failures_only report file. 
     """
+    directories = device_directories(device, root_dir)
+    json_directory = directories[2]
+    main_reports_directory = directories[5]
+    failures_only_reports_directory = directories[6]
     command = "show mlag detail"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -790,7 +897,7 @@ def check_mlag (device):
     result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
     return result
 
-def generate_main_report(dev, topic): 
+def generate_main_report(dev, topic, root_dir): 
     """Generate the main report for a device
 
     Parameters
@@ -799,20 +906,24 @@ def generate_main_report(dev, topic):
         Device IP address or hostname.
     topic : list
         The list of functions to use to generate the device report 
+    root: str
+        Root directory for all the outputs.
     """
+    directories = device_directories(dev, root_dir)
+    reports_directory = directories[4]
     outfile = open(reports_directory + "/main.txt", "w")
-    infile = open(init(dev)[0], "r")
+    infile = open(init(dev, root_dir)[0], "r")
     for line in infile:  
         outfile.write(line)
     infile.close()
     for item in topic:
-        infile = open(item(device)[0], "r")
+        infile = open(item(dev, root_dir)[0], "r")
         for line in infile:  
             outfile.write(line)
         infile.close()
     outfile.close()
 
-def generate_failures_only_report(dev, topic): 
+def generate_failures_only_report(dev, topic, root_dir): 
     """Generate the failure_only report for a device
 
     Parameters
@@ -821,93 +932,73 @@ def generate_failures_only_report(dev, topic):
         Device IP address or hostname.
     topic : list
         The list of functions to use to generate the device report 
+    root: str
+        Root directory for all the outputs.
     """
+    directories = device_directories(dev, root_dir)
+    reports_directory = directories[4]
     outfile = open(reports_directory + "/failures only.txt", "w")
-    infile = open(init(dev)[1], "r")
+    infile = open(init(dev, root_dir)[1], "r")
     for line in infile:  
         outfile.write(line)
     infile.close()
     for item in topic:
-        infile = open(item(device)[1], "r")
+        infile = open(item(dev, root_dir)[1], "r")
         for line in infile:  
             outfile.write(line)
         infile.close()
     outfile.close()
 
-def generate_network_main_report(devices):
+def generate_network_main_report(devices, root_dir, audit_str_list):
     """Assembles the generated main report of each device into one report for all devices
 
     Parameters
     ----------
     devices : list
         List of devices IP addresses or hostnames. 
+    root: str
+        Root directory for all the outputs.
+    audit_str_list: list
+        List of audited topics 
     """    
-    network_report = open(output_directory + "/main.txt", "w")
+    network_report = open(root_dir + "/main.txt", "w")
     network_report.write('Report generated using Python the ' + str(datetime.datetime.now().strftime("%d %b %Y at %H:%M:%S")) + "\n"*2)
     network_report.write ('The list of devices audited is: ' + str(devices) + '\n')
     network_report.write ('The list of topics audited is: ' + str(audit_str_list) + '\n'*2)
     network_report.write('The file main.txt shows the details for all the tests.\n')
     network_report.write("The file failures_only.txt shows only the tests that failed." + "\n"*2)
     for device in devices:
-        device_directory = output_directory + '/' + device
-        reports_directory = device_directory + '/' + "reports"
+        directories = device_directories(device, root_dir)
+        reports_directory = directories[4]
         device_report = open(reports_directory + "/main.txt", "r")
         for line in device_report:  
             network_report.write(line)
         device_report.close()
 
-def generate_network_failures_only_report(devices): 
+def generate_network_failures_only_report(devices, root_dir, audit_str_list): 
     """Assembles the generated failures_only report of each device into one report for all devices
 
     Parameters
     ----------
     devices : list
         List of devices IP addresses or hostnames. 
+    root: str
+        Root directory for all the outputs.
+    audit_str_list: list
+        List of audited topics 
     """ 
-    network_report_failures_only = open(output_directory + "/failures_only.txt", "w")
+    network_report_failures_only = open(root_dir + "/failures_only.txt", "w")
     network_report_failures_only.write('Report generated using Python the ' + str(datetime.datetime.now().strftime("%d %b %Y at %H:%M:%S")) + "\n"*2)
     network_report_failures_only.write ('The list of devices audited is: ' + str(devices) + '\n')
     network_report_failures_only.write ('The list of topics audited is: ' + str(audit_str_list) + '\n'*2)
     network_report_failures_only.write('The file failures_only.txt shows only the tests that failed.\n')
     network_report_failures_only.write("The file main.txt shows the details for all the tests." + "\n"*2)
     for device in devices:
-        device_directory = output_directory + '/' + device
-        reports_directory = device_directory + '/' + "reports"
+        directories = device_directories(device, root_dir)
+        reports_directory = directories[4]
         device_report = open(reports_directory + "/failures only.txt", "r")
         for line in device_report:  
             network_report_failures_only.write(line)
         device_report.close()
 
-input_f = open('input.yml', 'r')
-input_s = input_f.read()
-input_f.close()
-input = yaml.load(input_s, Loader=yaml.FullLoader)
 
-devices = input['devices']
-output_directory = input['output_directory'] 
-
-audit_str_list = input['audit']
-str_to_function = {'print_hostname': print_hostname, 'print_version': print_version, 'check_inventory': check_inventory, 'check_power': check_power, 'check_cooling': check_cooling, 'check_temperature': check_temperature, 'check_temperature_transceivers': check_temperature_transceivers, 'check_reload_cause_history': check_reload_cause_history, 'check_reload_cause_full': check_reload_cause_full, 'print_lldp': print_lldp, 'check_bgp': check_bgp, 'check_mlag': check_mlag} 
-audit_func_list = []
-for item in audit_str_list : 
-    audit_func_list.append(str_to_function[item])
-
-cwd = os.getcwd()
-output_directory = os.path.dirname(cwd + "/" + output_directory + "/")
-
-for device in devices:
-    device_directory = output_directory + '/' + device
-    eos_commands_directory = device_directory + '/' + "eos_commands"
-    json_directory = eos_commands_directory + '/' + "json"    
-    text_directory = eos_commands_directory + '/' + "text"  
-    reports_directory = device_directory + '/' + "reports"
-    main_reports_directory = reports_directory + '/' + "main"
-    failures_only_reports_directory = reports_directory + '/' + "failures_only"
-    for directory in [output_directory, device_directory, eos_commands_directory, json_directory, text_directory, reports_directory, main_reports_directory, failures_only_reports_directory]: 
-        if not os.path.exists(directory):
-            os.makedirs(directory)
-    generate_main_report(device, audit_func_list)
-    generate_failures_only_report(device, audit_func_list)
-
-generate_network_main_report(devices)
-generate_network_failures_only_report(devices)
