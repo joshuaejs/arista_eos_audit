@@ -83,7 +83,8 @@ The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in 
 
 #### Supported features 
 
-The file [audit_eos_files.py](audit_eos_files.py) currently supports the following features. To enable or disable them, update the file [input.yml](input.yml).
+The file [audit_eos_files.py](audit_eos_files.py) currently supports the following features.  
+To enable or disable them, update the file [input.yml](input.yml).
 
 - print_hostname
   - feature description: include the device hostname and fqdn
@@ -160,12 +161,30 @@ Fan: 4/1 *** Status: ok *** Result: PASS
   - feature description: include tests report about the cause for the last 10 reload
   - required eos command: ```show reload cause history | json```
   - test failure conditions: A test fails if a device reload was not requested by user
+  - output example: 
+```
+********** Reload cause history **********
 
+Time: 24 May 2020 18:37:55 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 22 May 2020 13:31:20 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 22 May 2020 13:13:42 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 21 May 2020 08:38:28 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 15 May 2020 15:30:38 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 12 May 2020 14:02:28 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 11 May 2020 17:30:10 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 06 May 2020 09:01:29 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 05 May 2020 18:00:26 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 05 May 2020 10:01:52 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+```
 - check_reload_cause_full
   - feature description: include tests report about the cause of the most recent reload
   - required eos command: ```show reload cause full | json```
   - test failure conditions: The test fails if the device reload was not requested by user
-
+  - output example: 
+```
+********** Reload cause full **********
+Time: 24 May 2020 18:37:55 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+```
 - print_lldp
   - feature description: include the lldp topology
   - required eos command: ```show lldp neighbors | json```
@@ -178,20 +197,25 @@ Interface: Ethernet1 *** LLDP neighbor: switch2.lab.local *** LLDP remote port: 
 Interface: Ethernet2 *** LLDP neighbor: switch3.lab.local *** LLDP remote port: Ethernet1
 Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port: Ethernet37
 ```
- 
 - check_bgp
   - feature description: include tests report about the bgp status for all configured vrf
   - required eos command: ```show ip bgp summary vrf all | json```
   - test failure conditions: A test fails if a BGP session is not established
+  - output example: 
+```
+********** BGP sessions state **********
 
+vrf: default
+Peer: 10.10.10.1 *** ASN: 65002 *** State: Established *** Up/Down: 25 May 2020 00:02:57 *** Result: PASS
+Peer: 10.10.10.3 *** ASN: 65003 *** State: Established *** Up/Down: 25 May 2020 00:02:54 *** Result: PASS
+```
 - check_mlag
   - feature description: include tests report about the mlag status
   - required eos command: ```show mlag detail | json```
   - test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
   - output examples: 
- 
 ```
- ********** MLAG **********
+********** MLAG **********
 
 Peer: 192.168.10.2
 State: active
@@ -199,12 +223,12 @@ Negotiation Status: connected
 Config Sanity: consistent
 
 Test result: PASS
- ``` 
- ```
-  ********** MLAG **********
+``` 
+```
+********** MLAG **********
 
 MLAG is disabled
- ```
+```
 
 #### Report files
 
