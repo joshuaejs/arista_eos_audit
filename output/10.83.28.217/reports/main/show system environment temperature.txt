@@ -1,7 +1,7 @@
 ********** Temperature status **********
 
-Required EOS command: show system environment temperature| json
 Description: include tests report about the temperature status
+Required EOS command: show system environment temperature | json
 Test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
 
 System temperature: 

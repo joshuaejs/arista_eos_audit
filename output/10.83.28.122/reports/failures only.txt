@@ -2,8 +2,8 @@
 
 ********** Device hostname **********
 
-Required EOS command: show hostname| json
 Description: include the device hostname and fqdn
+Required EOS command: show hostname | json
 Test failure conditions: This is a report without any test so there is no failure/passing condition
 
 Hostname: switch1
@@ -11,8 +11,8 @@ FQDN: switch1.lab.local
 
 ********** Device details **********
 
-Required EOS command: show version| json
 Description: include some details regarding the device (HW model, SN, SW release, uptime
+Required EOS command: show version | json
 Test failure conditions: This is a report without any test so there is no failure/passing condition
 
 Model: DCS-7150S-64-CL-F
@@ -22,8 +22,8 @@ Uptime: 1 day, 7:55:01
 
 ********** Device inventory **********
 
-Required EOS command: show inventory| json
 Description: include tests report about the hardware inventory
+Required EOS command: show inventory | json
 Test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
 
 Device description: 48-port SFP+ 40GigE 1RU + Clock
@@ -39,8 +39,8 @@ All tests successfully passed
 
 ********** Power supplies status **********
 
-Required EOS command: show system environment power| json
 Description: include tests report about the power status
+Required EOS command: show system environment power | json
 Test failure conditions: A test fails if the status of a power supply is not ok
 
 Power supply: 1 *** Status: powerLoss *** Result: FAIL
@@ -48,8 +48,8 @@ The other tests succesfully passed
 
 ********** Cooling status **********
 
-Required EOS command: show system environment cooling| json
 Description: include tests report about the cooling status
+Required EOS command: show system environment cooling | json
 Test failure conditions: A test fails if the status of a fan is not ok
 
 Power supplies: 
@@ -60,8 +60,8 @@ All tests successfully passed
 
 ********** Temperature status **********
 
-Required EOS command: show system environment temperature| json
 Description: include tests report about the temperature status
+Required EOS command: show system environment temperature | json
 Test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
 
 System temperature: 
@@ -78,16 +78,16 @@ All tests successfully passed
 
 ********** transceivers temperature status **********
 
-Required EOS command: show system environment temperature transceiver| json
 Description: include tests report about the transceivers temperature status
+Required EOS command: show system environment temperature transceiver | json
 Test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
 
 All tests successfully passed
 
 ********** Reload cause history **********
 
-Required EOS command: show reload cause history| json
 Description: include tests report about the cause for the last 10 reload
+Required EOS command: show reload cause history | json
 Test failure conditions: A test fails if a device reload was not requested by user
 
 Time: 24 May 2020 18:37:55 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
@@ -98,8 +98,8 @@ The other tests succesfully passed
 
 ********** Reload cause full **********
 
-Required EOS command: show reload cause full| json
 Description: include tests report about the cause of the most recent reload
+Required EOS command: show reload cause full | json
 Test failure conditions: The test fails if the device reload was not requested by user
 
 Time: 24 May 2020 18:37:55 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
@@ -107,8 +107,8 @@ The other tests succesfully passed
 
 ********** LLDP topology **********
 
-Required EOS command: show lldp neighbors| json
 Description: include the lldp topology
+Required EOS command: show lldp neighbors | json
 Test failure conditions: This is a report without any test so there is no failure/passing condition
 
 Interface: Ethernet1 *** LLDP neighbor: switch2.lab.local *** LLDP remote port: Ethernet1
@@ -117,8 +117,8 @@ Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port:
 
 ********** BGP sessions state **********
 
-Required EOS command: show ip bgp summary vrf all| json
 Description: include tests report about the bgp status for all configured vrf
+Required EOS command: show ip bgp summary vrf all | json
 Test failure conditions: A test fails if a BGP session is not established
 
 vrf: default
@@ -127,8 +127,8 @@ All tests successfully passed
 
 ********** MLAG state **********
 
-Required EOS command: show mlag detail| json
 Description: include tests report about the mlag status
+Required EOS command: show mlag detail | json
 Test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
 
 MLAG is disabled

@@ -1,7 +1,7 @@
 ********** Reload cause history **********
 
-Required EOS command: show reload cause history| json
 Description: include tests report about the cause for the last 10 reload
+Required EOS command: show reload cause history | json
 Test failure conditions: A test fails if a device reload was not requested by user
 
 Time: 24 May 2020 18:40:21 *** Reason: The system rebooted due to a Power Loss on the lower card *** Result: FAIL

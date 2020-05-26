@@ -18,8 +18,8 @@ def print_hostname (device):
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Device hostname " + '*'*10 + "\n"*2)
-        item.write("Required EOS command: " + command + '| json\n')
         item.write('Description: include the device hostname and fqdn\n')
+        item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: This is a report without any test so there is no failure/passing condition\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
@@ -40,8 +40,8 @@ def print_version (device):
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Device details " + '*'*10 + "\n"*2)
-        item.write("Required EOS command: " + command + '| json\n')
         item.write('Description: include some details regarding the device (HW model, SN, SW release, uptime\n')
+        item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: This is a report without any test so there is no failure/passing condition\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
@@ -67,8 +67,8 @@ def check_inventory (device):
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Device inventory " + '*'*10 + "\n"*2)
-        item.write("Required EOS command: " + command + '| json\n')
         item.write('Description: include tests report about the hardware inventory\n')
+        item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
@@ -142,8 +142,8 @@ def check_power (device):
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Power supplies status " + '*'*10 + "\n"*2)
-        item.write("Required EOS command: " + command + '| json\n')
         item.write('Description: include tests report about the power status\n')
+        item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: A test fails if the status of a power supply is not ok\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
@@ -176,8 +176,8 @@ def check_cooling (device):
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Cooling status " + '*'*10 + "\n"*2)
-        item.write("Required EOS command: " + command + '| json\n')
         item.write('Description: include tests report about the cooling status\n')
+        item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: A test fails if the status of a fan is not ok\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
@@ -234,8 +234,8 @@ def check_temperature (device):
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Temperature status " + '*'*10 + "\n"*2)
-        item.write("Required EOS command: " + command + '| json\n')
         item.write('Description: include tests report about the temperature status\n')
+        item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
@@ -347,8 +347,8 @@ def check_temperature_transceivers (device):
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " transceivers temperature status " + '*'*10 + "\n"*2)
-        item.write("Required EOS command: " + command + '| json\n')
         item.write('Description: include tests report about the transceivers temperature status\n')
+        item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
@@ -407,8 +407,8 @@ def check_reload_cause_history (device):
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Reload cause history " + '*'*10 + "\n"*2)
-        item.write("Required EOS command: " + command + '| json\n')
         item.write('Description: include tests report about the cause for the last 10 reload\n')
+        item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: A test fails if a device reload was not requested by user\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
@@ -446,8 +446,8 @@ def check_reload_cause_full (device):
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Reload cause full " + '*'*10 + "\n"*2)
-        item.write("Required EOS command: " + command + '| json\n')
         item.write('Description: include tests report about the cause of the most recent reload\n')
+        item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: The test fails if the device reload was not requested by user\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
@@ -482,8 +482,8 @@ def print_lldp (device):
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " LLDP topology " + '*'*10 + "\n"*2)
-        item.write("Required EOS command: " + command + '| json\n')
         item.write('Description: include the lldp topology\n')
+        item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: This is a report without any test so there is no failure/passing condition\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
@@ -506,8 +506,8 @@ def check_bgp (device):
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " BGP sessions state " + '*'*10 + "\n"*2)
-        item.write("Required EOS command: " + command + '| json\n')
         item.write('Description: include tests report about the bgp status for all configured vrf\n')
+        item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: A test fails if a BGP session is not established\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
@@ -549,8 +549,8 @@ def check_mlag (device):
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " MLAG state " + '*'*10 + "\n"*2)
-        item.write("Required EOS command: " + command + '| json\n')
         item.write('Description: include tests report about the mlag status\n')
+        item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()

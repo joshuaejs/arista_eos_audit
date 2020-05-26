@@ -1,7 +1,7 @@
 ********** MLAG state **********
 
-Required EOS command: show mlag detail| json
 Description: include tests report about the mlag status
+Required EOS command: show mlag detail | json
 Test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
 
 Peer: 192.168.10.1
