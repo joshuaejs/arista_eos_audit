@@ -41,7 +41,7 @@ Then update the file [input.yml](input.yml). It has the required input for the v
 
 Then you can run the script [collect_eos_commands.py](collect_eos_commands.py) to collect commands output from EOS devices.  
 
-Once you collected the commands output, you can run the script [audit_eos_files.py](audit_eos_files.py) to generate reports.  
+Once you collected the commands output, you can run the script [generate_audit_report.py](generate_audit_report.py) to generate reports.  
 
 ## Repository details 
 
@@ -50,7 +50,7 @@ Once you collected the commands output, you can run the script [audit_eos_files.
 The file [input.yml](input.yml) has the required input for the files
 - [collect_eos_commands.py](collect_eos_commands.py) 
 - [custom_show_tech_support.py](custom_show_tech_support.py) 
-- [audit_eos_files.py](audit_eos_files.py)   
+- [generate_audit_report.py](generate_audit_report.py)   
 
 It is used to define these variables:    
 - devices: list of EOS devices
@@ -80,21 +80,21 @@ The name of the output file is "custom show tech-support.txt".  It is saved in d
 
 #### Overview 
 
-The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit offline some of the collected files and to generate a report.  
+The file [generate_audit_report.py](generate_audit_report.py) uses the variables defined in the file [input.yml](input.yml) to audit offline some of the collected files and to generate a report.  
 
 #### Report files
 
-For each device defined in the file [input.yml](input.yml), the file [audit_eos_files.py](audit_eos_files.py) generates 2 reports:
+For each device defined in the file [input.yml](input.yml), the file [generate_audit_report.py](generate_audit_report.py) generates 2 reports:
 - The file "main.txt" includes details regarding all the tests for this device. It is saved in device directory in the [output](output) directory. 
 - The file "failures_only.txt" includes only the tests that failed for this device. It is saved in device directory in the [output](output) directory. 
 
-Then, the file [audit_eos_files.py](audit_eos_files.py) assembles the report of each device into one file: 
+Then, the file [generate_audit_report.py](generate_audit_report.py) assembles the report of each device into one file: 
 - The file [main.txt](output/main.txt) includes for all the devices all the tests. It is saved at the root of the [output](output) directory. 
 - The file [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved at the root of the [output](output) directory.  
 
 #### Supported features 
 
-The file [audit_eos_files.py](audit_eos_files.py) currently supports the following features.  
+The file [generate_audit_report.py](generate_audit_report.py) currently supports the following features.  
 To enable or disable them, update the file [input.yml](input.yml).
 
 - print_hostname
