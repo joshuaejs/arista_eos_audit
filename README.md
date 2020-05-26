@@ -113,61 +113,172 @@ FQDN: switch1.lab.local
   - required eos command: ```show version | json```
   - test failure conditions: This is a report without any test so there is no failure/passing condition
   - output example: 
+```
+********** Device details **********
 
-
+Model: DCS-7150S-64-CL-F
+Serial number: JPE14210677
+Version: 4.22.4M-2GB
+Uptime: 1 day, 19:56:35
+```
 - check_inventory 
   - feature description: include tests report about the hardware inventory
   - required eos command: ```show inventory | json```
   - test failure conditions: A test fails if the manufacturer of a transceiver is neither "Arista Networks" nor "Arastra, Inc", or if a power supply slot has no power supply unit inserted
-  - 
+  - output exemple: 
 ```
+********** Device inventory **********
+
+Device description: 48-port SFP+ 40GigE 1RU + Clock
+
+Power Supplies: 
+Slot: 1 *** Model: PWR-460AC-F *** SN: K192MD00A31CZ *** Result: PASS
+Slot: 2 *** Model: PWR-460AC-F *** SN: K192MD00A21CZ *** Result: PASS
+
+Fan modules: 
+Module: 1 *** Model: FAN-7000-F
+Module: 3 *** Model: FAN-7000-F
+Module: 2 *** Model: FAN-7000-F
+Module: 4 *** Model: FAN-7000-F
+
+Transceivers: 
+Port: 1 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC14082G37V *** Result: PASS
+Port: 15 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-3M *** SN: XHC110330103 *** Result: PASS
+Port: 2 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-3M *** SN: XHC16463G3XJ *** Result: PASS
+Port: 24 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-1M *** SN: XHC14031G1CX *** Result: PASS
+Port: 3 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC13262G2D1 *** Result: PASS
+Port: 4 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC12422G2EJ *** Result: PASS
+Port: 47 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-1M *** SN: XHC105110215 *** Result: PASS
+Port: 48 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-1M *** SN: XHC14031G1DA *** Result: PASS
+Port: 5 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-3M *** SN: XHC110330104 *** Result: PASS
+Port: 6 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC103220430 *** Result: PASS
+Port: 7 *** Manufacturer: Arista Networks *** Model: CAB-Q-S-2M *** SN: XHC1133L007Q *** Result: PASS
+Port: 8 *** Manufacturer: Arista Networks *** Model: CAB-Q-S-2M *** SN: XHC1133L0082 *** Result: PASS
 ```
-  
 - check_power 
   - feature description: include tests report about the power status
   - required eos command: ```show system environment power| json```
   - test failure conditions: A test fails if the status of a power supply is not ok  
-  - some output examples (main report and failures_only report): 
+  - output example
+```
+********** Power supplies status **********
+
+Power supply: 1 *** Status: powerLoss *** Result: FAIL
+Power supply: 2 *** Status: ok *** Result: PASS
+```  
 
 - check_cooling
   - feature description: include tests report about the cooling status
   - required eos command: ```show system environment cooling | json```
   - test failure conditions: A test fails if the status of a fan is not ok
-  - some output examples (main report and failures_only report): 
+  - output example
+```
+********** Cooling status **********
 
+Power supplies: 
+Fan: PowerSupply1/1 *** Status: ok *** Result: PASS
+Fan: PowerSupply2/1 *** Status: ok *** Result: PASS
+
+Fan modules: 
+Fan: 1/1 *** Status: ok *** Result: PASS
+Fan: 2/1 *** Status: ok *** Result: PASS
+Fan: 3/1 *** Status: ok *** Result: PASS
+Fan: 4/1 *** Status: ok *** Result: PASS
+```
 - check_temperature
   - feature description: include tests report about the temperature status
   - required eos command: ```show system environment temperature | json```
   - test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
-  - some output examples (main report and failures_only report): 
+  - output example
+```
+********** Temperature status **********
 
+System temperature: 
+Status: ok *** Result: PASS
+
+Sensors: 
+Sensor: TempSensor1 *** Description: Cpu temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 30 *** Max temperature last change: 24 May 2020 18:37:45 *** Result: PASS
+Sensor: TempSensor2 *** Description: Rear temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 26 *** Max temperature last change: 26 May 2020 11:27:55 *** Result: PASS
+Sensor: TempSensor3 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 27 *** Max temperature last change: 26 May 2020 11:39:07 *** Result: PASS
+Sensor: TempSensor4 *** Description: Front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 23 *** Max temperature last change: 26 May 2020 11:38:01 *** Result: PASS
+Sensor: TempSensor5 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 27 *** Max temperature last change: 26 May 2020 11:38:01 *** Result: PASS
+Sensor: TempSensor6 *** Description: FM6000 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 28 *** Max temperature last change: 26 May 2020 11:12:32 *** Result: PASS
+
+Power Supplies: 
+Sensor: TempSensorP1/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 26 May 2020 11:39:06 *** Result: PASS
+Sensor: TempSensorP2/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 24 *** Max temperature last change: 24 May 2020 18:38:15 *** Result: PASS
+```
 - check_temperature_transceivers
   - feature description: include tests report about the transceivers temperature status
   - required eos command: ```show system environment temperature transceiver | json```
   - test failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
-  - some output examples (main report and failures_only report): 
+  - output example 
+```
+
+********** Temperature transceivers status **********
+
+Description: Xcvr25 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 43 *** Max temperature last change: 14 May 2020 05:41:12 *** Result: PASS
+Description: Xcvr26 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 54 *** Max temperature last change: 14 May 2020 05:30:17 *** Result: PASS
+Description: Xcvr50 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 46 *** Max temperature last change: 14 May 2020 05:45:23 *** Result: PASS
+Description: Xcvr51 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 48 *** Max temperature last change: 14 May 2020 05:36:20 *** Result: PASS
+Description: Xcvr52 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 47 *** Max temperature last change: 14 May 2020 04:24:51 *** Result: PASS
+Description: Xcvr54 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 43 *** Max temperature last change: 14 May 2020 05:43:38 *** Result: PASS
+```
 
 - check_reload_cause_history
   - feature description: include tests report about the cause for the last 10 reload
   - required eos command: ```show reload cause history | json```
   - test failure conditions: A test fails if a device reload was not requested by user
-  - some output examples (main report and failures_only report): 
+  - output example
+```
+********** Reload cause history **********
+
+Time: 24 May 2020 18:37:55 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 22 May 2020 13:31:20 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 22 May 2020 13:13:42 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 21 May 2020 08:38:28 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 15 May 2020 15:30:38 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 12 May 2020 14:02:28 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 11 May 2020 17:30:10 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 06 May 2020 09:01:29 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+Time: 05 May 2020 18:00:26 *** Reason: Reload requested by the user. *** Result: PASS
+Time: 05 May 2020 10:01:52 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+```
+
 - check_reload_cause_full
   - feature description: include tests report about the cause of the most recent reload
   - required eos command: ```show reload cause full | json```
   - test failure conditions: The test fails if the device reload was not requested by user
-  - output example: 
+  - output example
+```
+********** Reload cause full **********
+
+Time: 24 May 2020 18:37:55 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+```
 - print_lldp
   - feature description: include the lldp topology
   - required eos command: ```show lldp neighbors | json```
   - test failure conditions: This is a report without any test so there is no failure/passing condition
-  - output examples
+  - output example
+```
+********** LLDP topology **********
 
+Interface: Ethernet1 *** LLDP neighbor: switch2.lab.local *** LLDP remote port: Ethernet1
+Interface: Ethernet2 *** LLDP neighbor: switch3.lab.local *** LLDP remote port: Ethernet1
+Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port: Ethernet37
+```
 - check_bgp
   - feature description: include tests report about the bgp status for all configured vrf
   - required eos command: ```show ip bgp summary vrf all | json```
   - test failure conditions: A test fails if a BGP session is not established
-  - some output examples (main report and failures_only report): 
+  - output example
+```
+********** BGP sessions state **********
+
+vrf: default
+Peer: 10.10.10.1 *** ASN: 65002 *** State: Established *** Up/Down: 25 May 2020 00:02:57 *** Result: PASS
+Peer: 10.10.10.3 *** ASN: 65003 *** State: Established *** Up/Down: 25 May 2020 00:02:54 *** Result: PASS
+```
 - check_mlag
   - feature description: include tests report about the mlag status
   - required eos command: ```show mlag detail | json```
