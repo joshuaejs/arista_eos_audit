@@ -1,6 +1,6 @@
 Power                        Input  Output  Output
-Supply Model       Capacity Current Current  Power Status             Uptime
------- ----------- -------- ------- ------- ------ ---------- --------------
-1      PWR-460AC-F     460W   0.00A   0.00A   0.0W Power Loss        Offline
-2      PWR-460AC-F     460W   0.42A   7.12A  85.0W Ok         1 day, 7:51:24
-Total  --              460W      --      --  85.0W --                     --
+Supply Model       Capacity Current Current  Power Status              Uptime
+------ ----------- -------- ------- ------- ------ ---------- ---------------
+1      PWR-460AC-F     460W   0.00A   0.00A   0.0W Power Loss         Offline
+2      PWR-460AC-F     460W   0.42A   7.00A  85.0W Ok         1 day, 19:42:26
+Total  --              460W      --      --  85.0W --                      --

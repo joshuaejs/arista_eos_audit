@@ -66,9 +66,9 @@
             "lineProtocolStatus": "down"
         },
         "Port-Channel1000": {
-            "interfaceStatus": "up",
+            "interfaceStatus": "down",
             "description": "",
-            "lineProtocolStatus": "up"
+            "lineProtocolStatus": "lowerLayerDown"
         },
         "Port-Channel10": {
             "interfaceStatus": "down",
@@ -272,7 +272,7 @@
         },
         "Ethernet24": {
             "interfaceStatus": "up",
-            "description": "",
+            "description": "\"switch3 **** Ethernet24\"",
             "lineProtocolStatus": "up"
         },
         "Ethernet27": {

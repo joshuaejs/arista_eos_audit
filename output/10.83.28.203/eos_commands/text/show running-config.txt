@@ -122,7 +122,9 @@ interface Ethernet23
    shutdown
 !
 interface Ethernet24
-   channel-group 1000 mode active
+   description "switch3 **** Ethernet24"
+   no switchport
+   ip address 10.10.10.4/31
 !
 interface Ethernet25
    shutdown
@@ -222,15 +224,11 @@ ip route 0.0.0.0/0 10.83.28.1
 !
 ip routing
 !
-mlag configuration
-   domain-id arista
-   local-interface Vlan4094
-   peer-address 192.168.10.1
-   peer-link Port-Channel1000
-!
 router bgp 65002
    neighbor 10.10.10.0 remote-as 65001
    neighbor 10.10.10.0 maximum-routes 12000
+   neighbor 10.10.10.5 remote-as 65003
+   neighbor 10.10.10.5 maximum-routes 12000
    redistribute connected
 !
 management api http-commands

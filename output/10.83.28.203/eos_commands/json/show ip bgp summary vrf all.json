@@ -3,15 +3,30 @@
         "default": {
             "routerId": "172.16.0.2",
             "peers": {
-                "10.10.10.0": {
-                    "prefixReceived": 5,
-                    "msgSent": 1599,
+                "10.10.10.5": {
+                    "prefixReceived": 7,
+                    "msgSent": 54,
                     "inMsgQueue": 0,
                     "underMaintenance": false,
-                    "prefixInBest": 5,
-                    "upDownTime": 1590357777.210158,
+                    "prefixInBest": 3,
+                    "upDownTime": 1590495411.427362,
                     "version": 4,
-                    "msgReceived": 1600,
+                    "msgReceived": 52,
+                    "prefixAccepted": 7,
+                    "peerState": "Established",
+                    "outMsgQueue": 0,
+                    "prefixInBestEcmp": 0,
+                    "asn": "65003"
+                },
+                "10.10.10.0": {
+                    "prefixReceived": 5,
+                    "msgSent": 2315,
+                    "inMsgQueue": 0,
+                    "underMaintenance": false,
+                    "prefixInBest": 4,
+                    "upDownTime": 1590357777.426535,
+                    "version": 4,
+                    "msgReceived": 2312,
                     "prefixAccepted": 5,
                     "peerState": "Established",
                     "outMsgQueue": 0,

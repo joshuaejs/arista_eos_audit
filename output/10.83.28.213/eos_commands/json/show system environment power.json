@@ -26,7 +26,7 @@
             }
         },
         "2": {
-            "outputPower": 161.5,
+            "outputPower": 159.0,
             "state": "ok",
             "modelName": "PWR-750AC-F",
             "capacity": 750.0,
@@ -34,7 +34,7 @@
             "tempSensors": {
                 "TempSensorP2/1": {
                     "status": "ok",
-                    "temperature": 26.0
+                    "temperature": 25.0
                 },
                 "TempSensorP2/2": {
                     "status": "ok",
@@ -47,7 +47,7 @@
                     "speed": 99
                 }
             },
-            "outputCurrent": 13.453125,
+            "outputCurrent": 13.328125,
             "uptime": 1590338439.0246353,
             "managed": true
         }

@@ -1,12 +1,12 @@
 System cooling status is: Ok
 Ambient temperature: 21C
 Airflow: port-side intake
-                      Config Actual                Speed             Stable
-Fan            Status  Speed  Speed         Uptime Stability         Uptime
--------------- ------ ------ ------ -------------- --------- --------------
-1/1            Ok        65%    63% 1 day, 7:51:45 Stable    1 day, 7:50:58
-2/1            Ok        65%    64% 1 day, 7:51:45 Stable    1 day, 7:50:56
-3/1            Ok        65%    64% 1 day, 7:51:45 Stable    1 day, 7:50:56
-4/1            Ok        65%    64% 1 day, 7:51:45 Stable    1 day, 7:50:54
-PowerSupply1/1 Ok        65%    65% 1 day, 7:51:23 Stable    1 day, 7:48:58
-PowerSupply2/1 Ok        65%    66% 1 day, 7:51:23 Stable    1 day, 7:48:53
+                      Config Actual                 Speed              Stable
+Fan            Status  Speed  Speed          Uptime Stability          Uptime
+-------------- ------ ------ ------ --------------- --------- ---------------
+1/1            Ok        65%    65% 1 day, 19:42:47 Stable    1 day, 19:42:00
+2/1            Ok        65%    65% 1 day, 19:42:47 Stable    1 day, 19:41:58
+3/1            Ok        65%    65% 1 day, 19:42:47 Stable    1 day, 19:41:58
+4/1            Ok        65%    64% 1 day, 19:42:47 Stable    1 day, 19:41:56
+PowerSupply1/1 Ok        65%    65% 1 day, 19:42:25 Stable    1 day, 19:40:00
+PowerSupply2/1 Ok        65%    65% 1 day, 19:42:25 Stable    1 day, 19:39:55

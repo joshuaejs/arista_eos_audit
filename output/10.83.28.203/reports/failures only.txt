@@ -18,13 +18,13 @@ Test failure conditions: This is a report without any test so there is no failur
 Model: DCS-7150S-52-CL-F
 Serial number: JPE12370337
 Version: 4.22.4M-2GB
-Uptime: 1 day, 7:56:48
+Uptime: 1 day, 19:46:56
 
 ********** Device inventory **********
 
 Description: include tests report about the hardware inventory
 Required EOS command: show inventory | json
-Test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
+Test failure conditions: A test fails if the manufacturer of a transceiver is neither "Arista Networks" nor "Arastra, Inc", or if a power supply slot has no power supply unit inserted
 
 Device description: 52-port SFP+ 10GigE 1RU + Clock
 
@@ -131,5 +131,5 @@ Description: include tests report about the mlag status
 Required EOS command: show mlag detail | json
 Test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
 
-All tests successfully passed
+MLAG is disabled
 

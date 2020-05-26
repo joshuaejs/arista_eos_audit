@@ -18,13 +18,13 @@ Test failure conditions: This is a report without any test so there is no failur
 Model: DCS-7150S-64-CL-F
 Serial number: JPE14210677
 Version: 4.22.4M-2GB
-Uptime: 1 day, 7:55:01
+Uptime: 1 day, 19:46:03
 
 ********** Device inventory **********
 
 Description: include tests report about the hardware inventory
 Required EOS command: show inventory | json
-Test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
+Test failure conditions: A test fails if the manufacturer of a transceiver is neither "Arista Networks" nor "Arastra, Inc", or if a power supply slot has no power supply unit inserted
 
 Device description: 48-port SFP+ 40GigE 1RU + Clock
 

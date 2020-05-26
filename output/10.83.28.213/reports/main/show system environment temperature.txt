@@ -8,33 +8,33 @@ System temperature:
 Status: ok *** Result: PASS
 
 Sensors: 
-Sensor: TempSensor1 *** Description: Digital Temperature Sensor on cpu0 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 38 *** Max temperature last change: 24 May 2020 18:41:24 *** Result: PASS
+Sensor: TempSensor1 *** Description: Digital Temperature Sensor on cpu0 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 38 *** Max temperature last change: 26 May 2020 11:19:28 *** Result: PASS
 Sensor: TempSensor2 *** Description: Digital Temperature Sensor on cpu1 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 36 *** Max temperature last change: 24 May 2020 18:41:54 *** Result: PASS
-Sensor: TempSensor3 *** Description: Digital Temperature Sensor on cpu2 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 38 *** Max temperature last change: 24 May 2020 18:41:24 *** Result: PASS
+Sensor: TempSensor3 *** Description: Digital Temperature Sensor on cpu2 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 38 *** Max temperature last change: 26 May 2020 11:19:28 *** Result: PASS
 Sensor: TempSensor4 *** Description: Digital Temperature Sensor on cpu3 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 36 *** Max temperature last change: 24 May 2020 18:41:54 *** Result: PASS
-Sensor: TempSensor5 *** Description: Supervisor temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 27 *** Max temperature last change: 26 May 2020 00:25:07 *** Result: PASS
-Sensor: TempSensor6 *** Description: Supervisor front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 25 May 2020 08:36:06 *** Result: PASS
-Sensor: TempSensor7 *** Description: Supervisor back-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 26 May 2020 02:27:32 *** Result: PASS
-Sensor: TempSensor8 *** Description: CPU VRM temp sensor 0 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 28 *** Max temperature last change: 26 May 2020 02:32:29 *** Result: PASS
-Sensor: TempSensor9 *** Description: CPU VRM temp sensor 1 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 28 *** Max temperature last change: 26 May 2020 02:32:29 *** Result: PASS
-Sensor: TempSensor10 *** Description: Upper board sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 26 May 2020 02:32:33 *** Result: PASS
-Sensor: TempSensor11 *** Description: Upper front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 21 *** Max temperature last change: 26 May 2020 00:31:44 *** Result: PASS
-Sensor: TempSensor12 *** Description: Lower board sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 24 *** Max temperature last change: 26 May 2020 02:32:05 *** Result: PASS
-Sensor: TempSensor13 *** Description: Lower front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 25 May 2020 08:39:39 *** Result: PASS
-Sensor: TempSensor14 *** Description: Trident Bottom Right Outer *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 33 *** Max temperature last change: 25 May 2020 22:42:52 *** Result: PASS
-Sensor: TempSensor15 *** Description: Trident Bottom Left Outer *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 34 *** Max temperature last change: 25 May 2020 22:58:19 *** Result: PASS
-Sensor: TempSensor16 *** Description: Trident Top Left Outer *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 33 *** Max temperature last change: 25 May 2020 23:26:36 *** Result: PASS
-Sensor: TempSensor17 *** Description: Trident Top Right Outer *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 34 *** Max temperature last change: 25 May 2020 17:27:15 *** Result: PASS
-Sensor: TempSensor18 *** Description: Trident Bottom Right Inner *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 34 *** Max temperature last change: 26 May 2020 02:25:13 *** Result: PASS
-Sensor: TempSensor19 *** Description: Trident Bottom Left Inner *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 35 *** Max temperature last change: 25 May 2020 22:00:19 *** Result: PASS
-Sensor: TempSensor20 *** Description: Trident Top Left Inner *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 34 *** Max temperature last change: 26 May 2020 02:28:23 *** Result: PASS
-Sensor: TempSensor21 *** Description: Trident Top Right Inner *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 34 *** Max temperature last change: 25 May 2020 20:58:04 *** Result: PASS
+Sensor: TempSensor5 *** Description: Supervisor temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 28 *** Max temperature last change: 26 May 2020 11:42:14 *** Result: PASS
+Sensor: TempSensor6 *** Description: Supervisor front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 23 *** Max temperature last change: 26 May 2020 11:37:41 *** Result: PASS
+Sensor: TempSensor7 *** Description: Supervisor back-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 23 *** Max temperature last change: 26 May 2020 11:41:44 *** Result: PASS
+Sensor: TempSensor8 *** Description: CPU VRM temp sensor 0 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 30 *** Max temperature last change: 26 May 2020 11:44:54 *** Result: PASS
+Sensor: TempSensor9 *** Description: CPU VRM temp sensor 1 *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 30 *** Max temperature last change: 26 May 2020 11:44:48 *** Result: PASS
+Sensor: TempSensor10 *** Description: Upper board sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 24 *** Max temperature last change: 26 May 2020 11:41:38 *** Result: PASS
+Sensor: TempSensor11 *** Description: Upper front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 26 May 2020 11:36:08 *** Result: PASS
+Sensor: TempSensor12 *** Description: Lower board sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 25 *** Max temperature last change: 26 May 2020 11:42:43 *** Result: PASS
+Sensor: TempSensor13 *** Description: Lower front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 23 *** Max temperature last change: 26 May 2020 11:39:27 *** Result: PASS
+Sensor: TempSensor14 *** Description: Trident Bottom Right Outer *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 34 *** Max temperature last change: 26 May 2020 11:38:54 *** Result: PASS
+Sensor: TempSensor15 *** Description: Trident Bottom Left Outer *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 35 *** Max temperature last change: 26 May 2020 11:38:44 *** Result: PASS
+Sensor: TempSensor16 *** Description: Trident Top Left Outer *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 34 *** Max temperature last change: 26 May 2020 11:38:29 *** Result: PASS
+Sensor: TempSensor17 *** Description: Trident Top Right Outer *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 34 *** Max temperature last change: 26 May 2020 11:39:09 *** Result: PASS
+Sensor: TempSensor18 *** Description: Trident Bottom Right Inner *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 35 *** Max temperature last change: 26 May 2020 11:39:34 *** Result: PASS
+Sensor: TempSensor19 *** Description: Trident Bottom Left Inner *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 36 *** Max temperature last change: 26 May 2020 11:37:19 *** Result: PASS
+Sensor: TempSensor20 *** Description: Trident Top Left Inner *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 35 *** Max temperature last change: 26 May 2020 11:39:24 *** Result: PASS
+Sensor: TempSensor21 *** Description: Trident Top Right Inner *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 35 *** Max temperature last change: 26 May 2020 11:37:04 *** Result: PASS
 
 Card Slot: 
 
 Power Supplies: 
-Sensor: TempSensorP1/1 *** Description: Internal hot spot sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 0 *** Max temperature last change: 26 May 2020 02:32:28 *** Result: PASS
-Sensor: TempSensorP1/2 *** Description: Internal ambient sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 0 *** Max temperature last change: 26 May 2020 02:32:28 *** Result: PASS
-Sensor: TempSensorP2/1 *** Description: Internal hot spot sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 27 *** Max temperature last change: 24 May 2020 18:41:02 *** Result: PASS
-Sensor: TempSensorP2/2 *** Description: Internal ambient sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 13 *** Max temperature last change: 25 May 2020 22:04:47 *** Result: PASS
+Sensor: TempSensorP1/1 *** Description: Internal hot spot sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 0 *** Max temperature last change: 26 May 2020 14:22:42 *** Result: PASS
+Sensor: TempSensorP1/2 *** Description: Internal ambient sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 0 *** Max temperature last change: 26 May 2020 14:22:42 *** Result: PASS
+Sensor: TempSensorP2/1 *** Description: Internal hot spot sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 27 *** Max temperature last change: 26 May 2020 11:42:41 *** Result: PASS
+Sensor: TempSensorP2/2 *** Description: Internal ambient sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 14 *** Max temperature last change: 26 May 2020 11:41:42 *** Result: PASS
 

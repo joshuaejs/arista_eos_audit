@@ -9,7 +9,7 @@
             "tempSensors": {
                 "TempSensorP1/1": {
                     "status": "ok",
-                    "temperature": 16.75
+                    "temperature": 17.25
                 }
             },
             "managed": true,

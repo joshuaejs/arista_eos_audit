@@ -15,9 +15,9 @@ Architecture:           i386
 Internal build version: 4.21.9M-14549425.4219M
 Internal build ID:      f4f33ad2-defa-44be-bf52-2611c2fab621
 
-Uptime:                 0 weeks, 0 days, 5 hours and 58 minutes
+Uptime:                 0 weeks, 1 days, 19 hours and 44 minutes
 Total memory:           8177456 kB
-Free memory:            6586136 kB
+Free memory:            6511372 kB
 
 
 ------------- show reload cause history -------------
@@ -325,7 +325,7 @@ System has 104 transceiver slots
 
 ------------- show lldp neighbors -------------
 
-Last table change time   : 5:55:20 ago
+Last table change time   : 1 day, 19:41:58 ago
 Number of table inserts  : 1
 Number of table deletes  : 0
 Number of table drops    : 0

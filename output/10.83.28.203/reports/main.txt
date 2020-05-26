@@ -18,13 +18,13 @@ Test failure conditions: This is a report without any test so there is no failur
 Model: DCS-7150S-52-CL-F
 Serial number: JPE12370337
 Version: 4.22.4M-2GB
-Uptime: 1 day, 7:56:48
+Uptime: 1 day, 19:46:56
 
 ********** Device inventory **********
 
 Description: include tests report about the hardware inventory
 Required EOS command: show inventory | json
-Test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
+Test failure conditions: A test fails if the manufacturer of a transceiver is neither "Arista Networks" nor "Arastra, Inc", or if a power supply slot has no power supply unit inserted
 
 Device description: 52-port SFP+ 10GigE 1RU + Clock
 
@@ -85,16 +85,16 @@ Status: ok *** Result: PASS
 
 Sensors: 
 Sensor: TempSensor1 *** Description: Cpu temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 27 *** Max temperature last change: 24 May 2020 18:37:49 *** Result: PASS
-Sensor: TempSensor2 *** Description: Rear temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 25 May 2020 03:41:03 *** Result: PASS
-Sensor: TempSensor3 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 21 *** Max temperature last change: 26 May 2020 02:28:02 *** Result: PASS
-Sensor: TempSensor4 *** Description: Front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 18 *** Max temperature last change: 25 May 2020 04:01:23 *** Result: PASS
-Sensor: TempSensor5 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 26 May 2020 02:26:09 *** Result: PASS
-Sensor: TempSensor6 *** Description: FM6000 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 24 *** Max temperature last change: 25 May 2020 05:55:18 *** Result: PASS
+Sensor: TempSensor2 *** Description: Rear temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 23 *** Max temperature last change: 26 May 2020 11:36:43 *** Result: PASS
+Sensor: TempSensor3 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 26 May 2020 11:40:05 *** Result: PASS
+Sensor: TempSensor4 *** Description: Front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 20 *** Max temperature last change: 26 May 2020 11:34:56 *** Result: PASS
+Sensor: TempSensor5 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 23 *** Max temperature last change: 26 May 2020 11:39:35 *** Result: PASS
+Sensor: TempSensor6 *** Description: FM6000 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 26 *** Max temperature last change: 26 May 2020 11:35:49 *** Result: PASS
 
 Card Slot: 
 
 Power Supplies: 
-Sensor: TempSensorP1/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 17 *** Max temperature last change: 25 May 2020 03:33:14 *** Result: PASS
+Sensor: TempSensorP1/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 18 *** Max temperature last change: 26 May 2020 11:37:52 *** Result: PASS
 Sensor: TempSensorP2/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 20 *** Max temperature last change: 24 May 2020 18:38:19 *** Result: PASS
 
 ********** transceivers temperature status **********
@@ -146,6 +146,7 @@ Required EOS command: show ip bgp summary vrf all | json
 Test failure conditions: A test fails if a BGP session is not established
 
 vrf: default
+Peer: 10.10.10.5 *** ASN: 65003 *** State: Established *** Up/Down: 26 May 2020 14:16:51 *** Result: PASS
 Peer: 10.10.10.0 *** ASN: 65001 *** State: Established *** Up/Down: 25 May 2020 00:02:57 *** Result: PASS
 
 
@@ -155,10 +156,5 @@ Description: include tests report about the mlag status
 Required EOS command: show mlag detail | json
 Test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
 
-Peer: 192.168.10.1
-State: active
-Negotiation Status: connected
-Config Sanity: consistent
-
-Test result: PASS
+MLAG is disabled
 

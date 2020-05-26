@@ -69,7 +69,7 @@ def check_inventory (device):
         item.write('*'*10 + " Device inventory " + '*'*10 + "\n"*2)
         item.write('Description: include tests report about the hardware inventory\n')
         item.write("Required EOS command: " + command + ' | json\n')
-        item.write("Test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted\n\n")
+        item.write('Test failure conditions: A test fails if the manufacturer of a transceiver is neither "Arista Networks" nor "Arastra, Inc", or if a power supply slot has no power supply unit inserted\n\n')
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
     f.close()
@@ -115,7 +115,7 @@ def check_inventory (device):
         mfgName = data_json['xcvrSlots'][transceiver]['mfgName']
         serialNum = data_json['xcvrSlots'][transceiver]['serialNum']
         modelName = data_json['xcvrSlots'][transceiver]['modelName']
-        if mfgName == 'Arista Networks':
+        if mfgName == 'Arista Networks' or 'Arastra, Inc':
             result = 'PASS'
         elif mfgName == 'Not Present': 
             result = 'PASS'

@@ -1,30 +1,30 @@
 MLAG Configuration:   
-domain-id              :              arista
-local-interface        :            Vlan4094
-peer-address           :        192.168.10.1
-peer-link              :    Port-Channel1000
-peer-config            :          consistent
+domain-id              :                    
+local-interface        :                    
+peer-address           :             0.0.0.0
+peer-link              :                    
+peer-config            :                    
                                             
 MLAG Status:          
-state                  :              Active
-negotiation status     :           Connected
-peer-link status       :                  Up
-local-int status       :                  Up
-system-id              :   02:1c:73:1e:e5:ee
+state                  :            Disabled
+negotiation status     :                    
+peer-link status       :                    
+local-int status       :                    
+system-id              :   00:00:00:00:00:00
 dual-primary detection :            Disabled
                                             
 MLAG Ports:           
-Disabled               :                   0
+Disabled               :                   1
 Configured             :                   0
-Inactive               :                   1
+Inactive               :                   0
 Active-partial         :                   0
 Active-full            :                   0
 
 MLAG Detailed Status:
-State                           :             primary
-Peer State                      :           secondary
-State changes                   :                   2
-Last state change time          :         1:47:58 ago
+State                           :            disabled
+Peer State                      :             unknown
+State changes                   :                   5
+Last state change time          :         1:26:25 ago
 Hardware ready                  :                True
 Failover                        :               False
 Failover Cause(s)               :             Unknown
@@ -34,16 +34,16 @@ Peer MAC address                :   00:1c:73:1f:35:e0
 Peer MAC routing supported      :               False
 Reload delay                    :         300 seconds
 Non-MLAG reload delay           :         300 seconds
-Peer ports errdisabled          :               False
+Ports errdisabled               :               False
 Lacp standby                    :               False
 Configured heartbeat interval   :             4000 ms
 Effective heartbeat interval    :             4000 ms
 Heartbeat timeout               :            60000 ms
 Last heartbeat timeout          :               never
 Heartbeat timeouts since reboot :                   0
-UDP heartbeat alive             :                True
-Heartbeats sent/received        :           1813/1620
-Peer monotonic clock offset     :   -3.730682 seconds
-Agent should be running         :                True
-P2p mount state changes         :                   1
+UDP heartbeat alive             :               False
+Heartbeats sent/received        :         11170/10963
+Peer monotonic clock offset     :             unknown
+Agent should be running         :               False
+P2p mount state changes         :                   3
 Fast MAC redirection enabled    :               False

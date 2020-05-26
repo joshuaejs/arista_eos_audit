@@ -1,7 +1,7 @@
 {
-    "tablesLastChangeTime": 1590446606.364794,
+    "tablesLastChangeTime": 1590492762.9952667,
     "tablesAgeOuts": 0,
-    "tablesInserts": 3,
+    "tablesInserts": 4,
     "lldpNeighbors": [
         {
             "ttl": 120,
@@ -22,6 +22,6 @@
             "port": "Management1"
         }
     ],
-    "tablesDeletes": 0,
+    "tablesDeletes": 1,
     "tablesDrops": 0
 }

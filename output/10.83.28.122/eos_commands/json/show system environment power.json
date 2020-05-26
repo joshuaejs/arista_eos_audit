@@ -18,12 +18,12 @@
             "fans": {
                 "FanP1/1": {
                     "status": "ok",
-                    "speed": 67
+                    "speed": 65
                 }
             }
         },
         "2": {
-            "outputPower": 79.0,
+            "outputPower": 85.0,
             "uptime": 1590338289.1956027,
             "modelName": "PWR-460AC-F",
             "capacity": 460.0,
@@ -43,7 +43,7 @@
             "inputCurrent": 0.421875,
             "managed": true,
             "inputVoltage": 227.5,
-            "outputCurrent": 6.875
+            "outputCurrent": 7.0
         }
     }
 }
