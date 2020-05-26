@@ -5,14 +5,41 @@ import json
 import yaml 
 
 def init (device):
+    """Generates files with the device IP address or hostname.
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        name of the two generated files. 
+    """
     main_report = open(main_reports_directory + '/init.txt', 'w') 
     failures_only_report = open(failures_only_reports_directory + '/init.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write ('-'*13 + ' Report for device ' + device + ' ' + '-'*13 + "\n"*2)
         item.close()
-    return(main_reports_directory + '/init.txt', failures_only_reports_directory + '/init.txt')
+    result = main_reports_directory + '/init.txt', failures_only_reports_directory + '/init.txt' 
+    return result
 
 def print_hostname (device):
+    """Generates files with the device hostname and fqdn.
+
+    Required EOS command: show hostname | json
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        name of the two generated files. 
+    """
     command = "show hostname"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -32,15 +59,30 @@ def print_hostname (device):
         item.write('FQDN: ' + fqdn + '\n')
         item.write('\n')
         item.close()
-    return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
+    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    return result
 
 def print_version (device):
+    """Generates files with some details regarding the device (HW model, SN, SW release, uptime).
+
+    Required EOS command: show version | json
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        name of the two generated files. 
+    """
     command = "show version"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Device details " + '*'*10 + "\n"*2)
-        item.write('Description: include some details regarding the device (HW model, SN, SW release, uptime\n')
+        item.write('Description: include some details regarding the device (HW model, SN, SW release, uptime)\n')
         item.write("Required EOS command: " + command + ' | json\n')
         item.write("Test failure conditions: This is a report without any test so there is no failure/passing condition\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
@@ -59,9 +101,23 @@ def print_version (device):
         item.write('Uptime: ' + uptime + '\n')
         item.write('\n')
         item.close()
-    return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
+    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    return result
 
 def check_inventory (device):
+    """Check the hardware inventory and generates files with the tests result.
+
+    Required EOS command: show version | json
+    Test failure conditions: A transceiver test fails if its manufacturer is neither "Arista Networks" nor "Arastra, Inc". A power supply test fails if a power supply slot has no power supply unit inserted. 
+
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        The name of the main report file and the name of the failures_only report file.  
+    """
     command = "show inventory"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -134,9 +190,25 @@ def check_inventory (device):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
+    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    return result
 
 def check_power (device):
+    """Check the power status and generates files with the tests result.
+
+    Required EOS command: show system environment power | json
+    Test failure conditions: A test fails if the status of a power supply is not ok. 
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        The name of the main report file and the name of the failures_only report file.  
+    """
     command = "show system environment power"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -168,9 +240,25 @@ def check_power (device):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
+    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    return result
 
 def check_cooling (device):
+    """Check the cooling status and generates files with the tests result.
+
+    Required EOS command: show system environment cooling | json
+    Test failure conditions: A test fails if the status of a fan is not ok.
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        The name of the main report file and the name of the failures_only report file. 
+    """
     command = "show system environment cooling"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -226,9 +314,25 @@ def check_cooling (device):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
+    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    return result
 
 def check_temperature (device):
+    """Check the temperature status and generates files with the tests result.
+
+    Required EOS command: show system environment temperature | json
+    Test failure conditions: A sensor test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK.
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        The name of the main report file and the name of the failures_only report file. 
+    """
     command = "show system environment temperature"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -339,9 +443,25 @@ def check_temperature (device):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
+    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    return result
 
 def check_temperature_transceivers (device):
+    """Check the transceivers temperature status and generates files with the tests result.
+
+    Required EOS command: show system environment temperature transceiver | json
+    Test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state.
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        The name of the main report file and the name of the failures_only report file. 
+    """
     command = "show system environment temperature transceiver"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -399,9 +519,25 @@ def check_temperature_transceivers (device):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
+    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt'
+    return result
 
 def check_reload_cause_history (device):
+    """Check the cause for the last 10 reload and generates files with the tests result.
+
+    Required EOS command: show reload cause history | json
+    Test failure conditions: A test fails if a device reload was not requested by user.
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        The name of the main report file and the name of the failures_only report file. 
+    """
     command = "show reload cause history"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -409,7 +545,7 @@ def check_reload_cause_history (device):
         item.write('*'*10 + " Reload cause history " + '*'*10 + "\n"*2)
         item.write('Description: include tests report about the cause for the last 10 reload\n')
         item.write("Required EOS command: " + command + ' | json\n')
-        item.write("Test failure conditions: A test fails if a device reload was not requested by user\n\n")
+        item.write("Test failure conditions: A test fails if the device reload was not requested by user\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
     data = f.read()
     f.close()
@@ -438,9 +574,25 @@ def check_reload_cause_history (device):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
+    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    return result
 
 def check_reload_cause_full (device):
+    """Check the cause for the most recent reload and generates files with the tests result.
+
+    Required EOS command: show reload cause full | json
+    Test failure conditions: The test fails if the device reload was not requested by user.
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        The name of the main report file and the name of the failures_only report file. 
+    """
     command = "show reload cause full"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -474,9 +626,24 @@ def check_reload_cause_full (device):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
+    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    return result
 
 def print_lldp (device):
+    """Generates files with the LLDP topology.
+
+    Required EOS command: show lldp neighbors | json
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        name of the two generated files. 
+    """
     command = "show lldp neighbors"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -498,9 +665,25 @@ def print_lldp (device):
     for f in [main_report, failures_only_report]:
         f.write('\n')
         f.close()
-    return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
+    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt'
+    return result
 
 def check_bgp (device):
+    """Check BGP status for all configured vrf and generates files with the tests result.
+
+    Required EOS command: show ip bgp summary vrf all | json
+    Test failure conditions: A test fails if a BGP session is not established.
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        The name of the main report file and the name of the failures_only report file. 
+    """
     command = "show ip bgp summary vrf all"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -541,9 +724,25 @@ def check_bgp (device):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
+    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt'
+    return result
 
 def check_mlag (device):
+    """Check MLAG state and generates files with the tests result.
+
+    Required EOS command: show mlag detail | json
+    Test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected.
+
+    Parameters
+    ----------
+    device : str
+        Device IP address or hostname.
+
+    Returns
+    -------
+    tuple
+        The name of the main report file and the name of the failures_only report file. 
+    """
     command = "show mlag detail"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -588,9 +787,19 @@ def check_mlag (device):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
+    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    return result
 
 def generate_main_report(dev, topic): 
+    """Generate the main report for a device
+
+    Parameters
+    ----------
+    dev : str
+        Device IP address or hostname.
+    topic : list
+        The list of functions to use to generate the device report 
+    """
     outfile = open(reports_directory + "/main.txt", "w")
     infile = open(init(dev)[0], "r")
     for line in infile:  
@@ -604,6 +813,15 @@ def generate_main_report(dev, topic):
     outfile.close()
 
 def generate_failures_only_report(dev, topic): 
+    """Generate the failure_only report for a device
+
+    Parameters
+    ----------
+    dev : str
+        Device IP address or hostname.
+    topic : list
+        The list of functions to use to generate the device report 
+    """
     outfile = open(reports_directory + "/failures only.txt", "w")
     infile = open(init(dev)[1], "r")
     for line in infile:  
@@ -616,7 +834,14 @@ def generate_failures_only_report(dev, topic):
         infile.close()
     outfile.close()
 
-def generate_network_main_report(devices):    
+def generate_network_main_report(devices):
+    """Assembles the generated main report of each device into one report for all devices
+
+    Parameters
+    ----------
+    devices : list
+        List of devices IP addresses or hostnames. 
+    """    
     network_report = open(output_directory + "/main.txt", "w")
     network_report.write('Report generated using Python the ' + str(datetime.datetime.now().strftime("%d %b %Y at %H:%M:%S")) + "\n"*2)
     network_report.write ('The list of devices audited is: ' + str(devices) + '\n')
@@ -632,6 +857,13 @@ def generate_network_main_report(devices):
         device_report.close()
 
 def generate_network_failures_only_report(devices): 
+    """Assembles the generated failures_only report of each device into one report for all devices
+
+    Parameters
+    ----------
+    devices : list
+        List of devices IP addresses or hostnames. 
+    """ 
     network_report_failures_only = open(output_directory + "/failures_only.txt", "w")
     network_report_failures_only.write('Report generated using Python the ' + str(datetime.datetime.now().strftime("%d %b %Y at %H:%M:%S")) + "\n"*2)
     network_report_failures_only.write ('The list of devices audited is: ' + str(devices) + '\n')

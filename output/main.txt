@@ -1,4 +1,4 @@
-Report generated using Python the 26 May 2020 at 14:36:30
+Report generated using Python the 26 May 2020 at 22:19:23
 
 The list of devices audited is: ['10.83.28.122', '10.83.28.217', '10.83.28.203']
 The list of topics audited is: ['print_hostname', 'print_version', 'check_inventory', 'check_power', 'check_cooling', 'check_temperature', 'check_temperature_transceivers', 'check_reload_cause_history', 'check_reload_cause_full', 'print_lldp', 'check_bgp', 'check_mlag']
@@ -19,7 +19,7 @@ FQDN: switch1.lab.local
 
 ********** Device details **********
 
-Description: include some details regarding the device (HW model, SN, SW release, uptime
+Description: include some details regarding the device (HW model, SN, SW release, uptime)
 Required EOS command: show version | json
 Test failure conditions: This is a report without any test so there is no failure/passing condition
 
@@ -119,7 +119,7 @@ Test failure conditions: A test fails if a sensor HW status is not OK or if a se
 
 Description: include tests report about the cause for the last 10 reload
 Required EOS command: show reload cause history | json
-Test failure conditions: A test fails if a device reload was not requested by user
+Test failure conditions: A test fails if the device reload was not requested by user
 
 Time: 24 May 2020 18:37:55 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
 Time: 22 May 2020 13:31:20 *** Reason: Reload requested by the user. *** Result: PASS
@@ -182,7 +182,7 @@ FQDN: switch3.lab.local
 
 ********** Device details **********
 
-Description: include some details regarding the device (HW model, SN, SW release, uptime
+Description: include some details regarding the device (HW model, SN, SW release, uptime)
 Required EOS command: show version | json
 Test failure conditions: This is a report without any test so there is no failure/passing condition
 
@@ -279,7 +279,7 @@ Test failure conditions: A test fails if a sensor HW status is not OK or if a se
 
 Description: include tests report about the cause for the last 10 reload
 Required EOS command: show reload cause history | json
-Test failure conditions: A test fails if a device reload was not requested by user
+Test failure conditions: A test fails if the device reload was not requested by user
 
 Time: 24 May 2020 18:38:03 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
 Time: 23 May 2020 21:23:18 *** Reason: Reload requested by the user. *** Result: PASS
@@ -342,7 +342,7 @@ FQDN: switch2.lab.local
 
 ********** Device details **********
 
-Description: include some details regarding the device (HW model, SN, SW release, uptime
+Description: include some details regarding the device (HW model, SN, SW release, uptime)
 Required EOS command: show version | json
 Test failure conditions: This is a report without any test so there is no failure/passing condition
 
@@ -439,7 +439,7 @@ Test failure conditions: A test fails if a sensor HW status is not OK or if a se
 
 Description: include tests report about the cause for the last 10 reload
 Required EOS command: show reload cause history | json
-Test failure conditions: A test fails if a device reload was not requested by user
+Test failure conditions: A test fails if the device reload was not requested by user
 
 Time: 24 May 2020 18:38:01 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
 Time: 23 May 2020 21:23:38 *** Reason: Reload requested by the user. *** Result: PASS

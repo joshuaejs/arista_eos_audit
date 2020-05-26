@@ -1,6 +1,6 @@
 ********** Device details **********
 
-Description: include some details regarding the device (HW model, SN, SW release, uptime
+Description: include some details regarding the device (HW model, SN, SW release, uptime)
 Required EOS command: show version | json
 Test failure conditions: This is a report without any test so there is no failure/passing condition
 

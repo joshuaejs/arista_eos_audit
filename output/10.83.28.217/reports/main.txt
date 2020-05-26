@@ -11,7 +11,7 @@ FQDN: switch3.lab.local
 
 ********** Device details **********
 
-Description: include some details regarding the device (HW model, SN, SW release, uptime
+Description: include some details regarding the device (HW model, SN, SW release, uptime)
 Required EOS command: show version | json
 Test failure conditions: This is a report without any test so there is no failure/passing condition
 
@@ -108,7 +108,7 @@ Test failure conditions: A test fails if a sensor HW status is not OK or if a se
 
 Description: include tests report about the cause for the last 10 reload
 Required EOS command: show reload cause history | json
-Test failure conditions: A test fails if a device reload was not requested by user
+Test failure conditions: A test fails if the device reload was not requested by user
 
 Time: 24 May 2020 18:38:03 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
 Time: 23 May 2020 21:23:18 *** Reason: Reload requested by the user. *** Result: PASS
