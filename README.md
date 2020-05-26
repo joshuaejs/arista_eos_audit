@@ -121,7 +121,7 @@ Uptime: 1 day, 6:28:38
   - feature description: include tests report about the power status
   - required eos command: ```show system environment power| json```
   - test failure conditions: A test fails if the status of a power supply is not ok  
-  - output examples: 
+  - some output examples: 
 ```
 ********** Power supplies status **********
 
@@ -133,7 +133,7 @@ Power supply: 7 *** Status: ok *** Result: PASS
 Power supply: 6 *** Status: ok *** Result: PASS
 ```
 ```
-********** Power supplies **********
+********** Power supplies status **********
 
 All tests successfully passed
 ```
@@ -141,7 +141,7 @@ All tests successfully passed
   - feature description: include tests report about the cooling status
   - required eos command: ```show system environment cooling | json```
   - test failure conditions: A test fails if the status of a fan is not ok
-  - output examples: 
+  - some output examples: 
 ```
 ********** Cooling status **********
 
@@ -186,7 +186,7 @@ Fan: 6/4 *** Status: ok *** Result: PASS
 Fan: 6/5 *** Status: ok *** Result: PASS
 ```
 ```
-********** Cooling **********
+********** Cooling status **********
 
 Power supplies: 
 All tests successfully passed
@@ -198,7 +198,7 @@ All tests successfully passed
   - feature description: include tests report about the temperature status
   - required eos command: ```show system environment temperature | json```
   - test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
-  - output example: 
+  - some output examples: 
 ```
 ********** Temperature status **********
 
@@ -217,12 +217,26 @@ Power Supplies:
 Sensor: TempSensorP1/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 21 *** Max temperature last change: 24 May 2020 18:38:15 *** Result: PASS
 Sensor: TempSensorP2/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 24 *** Max temperature last change: 24 May 2020 18:38:15 *** Result: PASS
 ```
-  
+```
+********** Temperature status **********
+
+System temperature: 
+All tests successfully passed
+
+Sensors: 
+All tests successfully passed
+
+Card Slot: 
+All tests successfully passed
+
+Power Supplies: 
+All tests successfully passed
+```
 - check_temperature_transceivers
   - feature description: include tests report about the transceivers temperature status
   - required eos command: ```show system environment temperature transceiver | json```
   - test failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
-  - output example: 
+  - some output examples: 
 ```
 ********** Temperature transceivers status **********
 
@@ -233,11 +247,16 @@ Description: Xcvr50 temp sensor *** HW status: ok *** Alert count: 0 *** In aler
 Description: Xcvr51 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 48 *** Max temperature last change: 16 May 2020 07:44:55 *** Result: PASS
 Description: Xcvr52 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 47 *** Max temperature last change: 16 May 2020 07:37:40 *** Result: PASS
 ```
+```
+********** Temperature transceivers status **********
+
+All tests successfully passed
+```
 - check_reload_cause_history
   - feature description: include tests report about the cause for the last 10 reload
   - required eos command: ```show reload cause history | json```
   - test failure conditions: A test fails if a device reload was not requested by user
-  - output examples: 
+  - some output examples: 
 ```
 ********** Reload cause history **********
 
@@ -254,10 +273,6 @@ Time: 05 May 2020 10:01:52 *** Reason: The system rebooted due to a Power Loss *
 ```
 ```
 ********** Reload cause history **********
-
-Description: include tests report about the cause for the last 10 reload
-Required EOS command: show reload cause history | json
-Test failure conditions: A test fails if a device reload was not requested by user
 
 Time: 24 May 2020 18:38:03 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
 Time: 21 May 2020 12:58:43 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
@@ -291,19 +306,26 @@ Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port:
   - feature description: include tests report about the bgp status for all configured vrf
   - required eos command: ```show ip bgp summary vrf all | json```
   - test failure conditions: A test fails if a BGP session is not established
-  - output example: 
+  - some output examples: 
 ```
 ********** BGP sessions state **********
 
 vrf: default
-Peer: 10.10.10.1 *** ASN: 65002 *** State: Established *** Up/Down: 25 May 2020 00:02:57 *** Result: PASS
-Peer: 10.10.10.3 *** ASN: 65003 *** State: Established *** Up/Down: 25 May 2020 00:02:54 *** Result: PASS
+Peer: 10.10.10.1 *** ASN: 65002 *** State: Established *** Up/Down: 25 May 2020 00:02:56 *** Result: PASS
+Peer: 10.10.10.3 *** ASN: 65003 *** State: Established *** Up/Down: 25 May 2020 00:02:53 *** Result: PASS
+```
+```
+********** BGP sessions state **********
+
+vrf: default
+Peer: 10.10.10.5 *** ASN: 65003 *** State: Active *** Up/Down: 26 May 2020 13:32:27 *** Result: FAIL
+The other tests succesfully passed
 ```
 - check_mlag
   - feature description: include tests report about the mlag status
   - required eos command: ```show mlag detail | json```
   - test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
-  - output examples: 
+  - some output examples: 
 ```
 ********** MLAG **********
 
