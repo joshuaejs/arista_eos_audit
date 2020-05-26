@@ -1,0 +1,23 @@
+********** Temperature status **********
+
+Description: include tests report about the temperature status
+Required EOS command: show system environment temperature | json
+Test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
+
+System temperature: 
+Status: ok *** Result: PASS
+
+Sensors: 
+Sensor: TempSensor1 *** Description: Cpu temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 31 *** Max temperature last change: 24 May 2020 18:38:38 *** Result: PASS
+Sensor: TempSensor2 *** Description: Rear temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 23 *** Max temperature last change: 26 May 2020 11:31:20 *** Result: PASS
+Sensor: TempSensor3 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 23 *** Max temperature last change: 26 May 2020 11:41:49 *** Result: PASS
+Sensor: TempSensor4 *** Description: Front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 20 *** Max temperature last change: 26 May 2020 11:35:56 *** Result: PASS
+Sensor: TempSensor5 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 24 *** Max temperature last change: 26 May 2020 11:39:01 *** Result: PASS
+Sensor: TempSensor6 *** Description: FM6000 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 27 *** Max temperature last change: 26 May 2020 11:29:20 *** Result: PASS
+
+Card Slot: 
+
+Power Supplies: 
+Sensor: TempSensorP1/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 17 *** Max temperature last change: 26 May 2020 11:40:30 *** Result: PASS
+Sensor: TempSensorP2/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 19 *** Max temperature last change: 24 May 2020 18:38:21 *** Result: PASS
+

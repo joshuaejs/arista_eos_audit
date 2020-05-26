@@ -1,2 +1,0 @@
-Hostname: s7054
-FQDN:     s7054.lab.local

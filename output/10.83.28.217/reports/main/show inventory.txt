@@ -1,0 +1,29 @@
+********** Device inventory **********
+
+Description: include tests report about the hardware inventory
+Required EOS command: show inventory | json
+Test failure conditions: A test fails if the manufacturer of a transceiver is neither "Arista Networks" nor "Arastra, Inc", or if a power supply slot has no power supply unit inserted
+
+Device description: 52-port SFP+ 10GigE 1RU + Clock
+
+Power Supplies: 
+Slot: 1 *** Model: PWR-460AC-F *** SN: K192KU01161CZ *** Result: PASS
+Slot: 2 *** Model: PWR-460AC-F *** SN: K192KU00JP1CZ *** Result: PASS
+
+Fan modules: 
+Module: 1 *** Model: FAN-7000-F
+Module: 3 *** Model: FAN-7000-F
+Module: 2 *** Model: FAN-7000-F
+Module: 4 *** Model: FAN-7000-F
+
+Transceivers: 
+Port: 1 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-3M *** SN: XHC16463G3XJ *** Result: PASS
+Port: 2 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC14082G30U *** Result: PASS
+Port: 24 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-1M *** SN: XHC14031G171 *** Result: PASS
+Port: 3 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC103220395 *** Result: PASS
+Port: 4 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC14082G328 *** Result: PASS
+Port: 49 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-3M *** SN: XHC103831115 *** Result: PASS
+Port: 50 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-3M *** SN: XHC103830714 *** Result: PASS
+Port: 51 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC12422G30R *** Result: PASS
+Port: 52 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC103220422 *** Result: PASS
+

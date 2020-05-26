@@ -3955,3 +3955,18 @@ May 26 12:19:01 switch1 xinetd[2559]: START: ssh pid=23412 from=10.83.28.54
 May 26 12:19:01 switch1 CROND[23413]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
 May 26 12:20:01 switch1 CROND[23465]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
 May 26 12:20:07 switch1 xinetd[2559]: START: ssh pid=23478 from=10.88.240.169
+May 26 12:21:01 switch1 xinetd[2559]: EXIT: ssh status=0 pid=23478 duration=54(sec)
+May 26 12:21:01 switch1 CROND[23524]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 26 12:22:01 switch1 CROND[23553]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 26 12:23:01 switch1 CROND[23584]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 26 12:24:01 switch1 CROND[23612]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 26 12:25:02 switch1 CROND[23641]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 26 12:26:02 switch1 CROND[23669]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 26 12:27:02 switch1 CROND[23697]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 26 12:28:02 switch1 CROND[23732]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 26 12:28:47 switch1 xinetd[2559]: EXIT: ssh status=255 pid=23412 duration=586(sec)
+May 26 12:29:01 switch1 CROND[23762]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 26 12:30:01 switch1 CROND[23791]: (root) CMD (/etc/cron.hourly/logrotate)
+May 26 12:30:01 switch1 CROND[23794]: (root) CMD (/usr/bin/archivecheck.py &> /dev/null)
+May 26 12:30:02 switch1 rsyslogd: [origin software="rsyslogd" swVersion="7.2.6" x-pid="13648" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+May 26 12:30:38 switch1 xinetd[2559]: START: ssh pid=23832 from=10.88.240.169

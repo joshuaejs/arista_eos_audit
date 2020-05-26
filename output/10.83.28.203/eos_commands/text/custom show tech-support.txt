@@ -5,6 +5,7 @@ FQDN:     switch2.lab.local
 
 ------------- show version -------------
 
+
 Arista DCS-7150S-52-CL-F
 Hardware version:    00.00
 Serial number:       JPE12370337
@@ -15,9 +16,9 @@ Architecture:           i686
 Internal build version: 4.22.4M-2GB-15583082.4224M
 Internal build ID:      523a3357-484c-4110-9019-39750ffa8af5
 
-Uptime:                 0 weeks, 1 days, 19 hours and 46 minutes
+Uptime:                 0 weeks, 1 days, 19 hours and 58 minutes
 Total memory:           4009188 kB
-Free memory:            2805140 kB
+Free memory:            2811116 kB
 
 
 ------------- show reload cause history -------------
@@ -276,7 +277,7 @@ System has precision clock
 
 ------------- show lldp neighbors -------------
 
-Last table change time   : 0:48:52 ago
+Last table change time   : 1:00:22 ago
 Number of table inserts  : 4
 Number of table deletes  : 1
 Number of table drops    : 0
@@ -293,6 +294,6 @@ BGP summary information for VRF default
 Router identifier 172.16.0.2, local AS number 65002
 Neighbor Status Codes: m - Under maintenance
   Neighbor         V  AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State   PfxRcd PfxAcc
-  10.10.10.0       4  65001           2312      2315    0    0    1d14h Estab   5      5
-  10.10.10.5       4  65003             52        54    0    0 00:04:34 Estab   7      7
+  10.10.10.0       4  65001           2323      2326    0    0    1d14h Estab   5      5
+  10.10.10.5       4  65003             64        66    0    0 00:16:05 Estab   7      7
 

@@ -2,8 +2,8 @@
 # list of EOS devices
 devices: 
   - 10.83.28.122
+  - 10.83.28.217
   - 10.83.28.203
-  - 10.83.28.213
 
 # devices username
 username: arista

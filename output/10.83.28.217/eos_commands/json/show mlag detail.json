@@ -1,0 +1,46 @@
+{
+    "localInterface": "",
+    "state": "disabled",
+    "reloadDelay": 300,
+    "peerLink": "",
+    "dualPrimaryDetectionState": "disabled",
+    "reloadDelayNonMlag": 300,
+    "mlagPorts": {
+        "Disabled": 1,
+        "Active-partial": 0,
+        "Inactive": 0,
+        "Configured": 0,
+        "Active-full": 0
+    },
+    "portsErrdisabled": false,
+    "detail": {
+        "failoverCauseList": [
+            "Unknown"
+        ],
+        "udpHeartbeatsSent": 11169,
+        "lacpStandby": false,
+        "mlagState": "disabled",
+        "heartbeatInterval": 4000,
+        "effectiveHeartbeatInterval": 4000,
+        "heartbeatTimeout": 60000,
+        "stateChanges": 4,
+        "peerMonotonicClockOffset": 3.7310212558495204,
+        "peerPortsErrdisabled": false,
+        "mlagHwReady": true,
+        "udpHeartbeatAlive": false,
+        "failoverInitiated": false,
+        "peerMlagState": "unknown",
+        "secondaryFromFailover": false,
+        "primaryPriority": 32767,
+        "failover": false,
+        "enabled": false,
+        "peerMacRoutingSupported": false,
+        "peerPrimaryPriority": 32767,
+        "udpHeartbeatsReceived": 10964,
+        "fastMacRedirectionEnabled": false,
+        "lastStateChangeTime": 152369.012399313,
+        "peerMacAddress": "00:1c:73:1e:e5:ee",
+        "mountChanges": 1,
+        "heartbeatTimeoutsSinceReboot": 0
+    }
+}

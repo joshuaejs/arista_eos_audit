@@ -7,9 +7,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338293.408785,
+                    "uptime": 1590338293.4087849,
                     "maxSpeed": 18000,
-                    "lastSpeedStableChangeTime": 1590338436.3848166,
+                    "lastSpeedStableChangeTime": 1590338436.384817,
                     "configuredSpeed": 60,
                     "actualSpeed": 60,
                     "speedHwOverride": false,
@@ -47,7 +47,7 @@
                     "status": "ok",
                     "uptime": 1590338270.5899737,
                     "maxSpeed": 17500,
-                    "lastSpeedStableChangeTime": 1590338310.9496639,
+                    "lastSpeedStableChangeTime": 1590338310.9496644,
                     "configuredSpeed": 60,
                     "actualSpeed": 59,
                     "speedHwOverride": false,
@@ -63,9 +63,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338270.5898888,
+                    "uptime": 1590338270.5898883,
                     "maxSpeed": 17500,
-                    "lastSpeedStableChangeTime": 1590338316.950939,
+                    "lastSpeedStableChangeTime": 1590338316.9509394,
                     "configuredSpeed": 60,
                     "actualSpeed": 59,
                     "speedHwOverride": false,
@@ -81,9 +81,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338270.5898051,
+                    "uptime": 1590338270.589805,
                     "maxSpeed": 17500,
-                    "lastSpeedStableChangeTime": 1590338320.9517317,
+                    "lastSpeedStableChangeTime": 1590338320.951732,
                     "configuredSpeed": 60,
                     "actualSpeed": 59,
                     "speedHwOverride": false,
@@ -99,9 +99,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338270.8646858,
+                    "uptime": 1590338270.8646865,
                     "maxSpeed": 17500,
-                    "lastSpeedStableChangeTime": 1590338320.9517424,
+                    "lastSpeedStableChangeTime": 1590338320.9517426,
                     "configuredSpeed": 60,
                     "actualSpeed": 59,
                     "speedHwOverride": false,

@@ -4,9 +4,9 @@ Airflow: port-side intake
                       Config Actual                 Speed              Stable
 Fan            Status  Speed  Speed          Uptime Stability          Uptime
 -------------- ------ ------ ------ --------------- --------- ---------------
-1/1            Ok        65%    65% 1 day, 19:42:47 Stable    1 day, 19:42:00
-2/1            Ok        65%    65% 1 day, 19:42:47 Stable    1 day, 19:41:58
-3/1            Ok        65%    65% 1 day, 19:42:47 Stable    1 day, 19:41:58
-4/1            Ok        65%    64% 1 day, 19:42:47 Stable    1 day, 19:41:56
-PowerSupply1/1 Ok        65%    65% 1 day, 19:42:25 Stable    1 day, 19:40:00
-PowerSupply2/1 Ok        65%    65% 1 day, 19:42:25 Stable    1 day, 19:39:55
+1/1            Ok        65%    64% 1 day, 19:53:18 Stable    1 day, 19:52:32
+2/1            Ok        65%    64% 1 day, 19:53:18 Stable    1 day, 19:52:30
+3/1            Ok        65%    64% 1 day, 19:53:19 Stable    1 day, 19:52:30
+4/1            Ok        65%    64% 1 day, 19:53:18 Stable    1 day, 19:52:28
+PowerSupply1/1 Ok        65%    62% 1 day, 19:52:57 Stable    1 day, 19:50:32
+PowerSupply2/1 Ok        65%    64% 1 day, 19:52:57 Stable    1 day, 19:50:26

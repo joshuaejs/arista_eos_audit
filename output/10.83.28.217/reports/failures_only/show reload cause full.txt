@@ -1,0 +1,9 @@
+********** Reload cause full **********
+
+Description: include tests report about the cause of the most recent reload
+Required EOS command: show reload cause full | json
+Test failure conditions: The test fails if the device reload was not requested by user
+
+Time: 24 May 2020 18:38:03 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
+The other tests succesfully passed
+
