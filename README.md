@@ -37,7 +37,7 @@ Once you collected the commands output, you can run the script [audit_eos_files.
 
 ## Repository details 
 
-### [input.yml](input.yml) file 
+### Repository input 
 
 The file [input.yml](input.yml) has the required input for the files
 - [collect_eos_commands.py](collect_eos_commands.py) 
@@ -55,24 +55,28 @@ It is used to define these variables:
 - custom_show_tech_support: list of files (show commands) to include in a custom show tech-support text file. 
 - audit: list of topics to audit and to include in the report.  
 
-### [collect_eos_commands.py](collect_eos_commands.py) file 
+### Collect EOS commands
 
 The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices.  
 It supports collecting show commands in both text and JSON format.  
 The commands output is saved in device directory in the [output](output) directory. 
 
-### [custom_show_tech_support.py](custom_show_tech_support.py) file
+### Build custom show tech-support text file 
 
 The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the variables defined in the file [input.yml](input.yml) to generate offline a custom show tech-support text file.  
 For each devices indicated in [input.yml](input.yml), it assembles the files indicated in [input.yml](input.yml) file to generate offline a custom show tech-support text file.  
 It supports only the text format (no JSON format support).  
 The name of the output file is "custom show tech-support.txt".  It is saved in device directory in the [output](output) directory. 
   
-### [audit_eos_files.py](audit_eos_files.py) file 
+### Generate audit report
+
+#### Overview 
 
 The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit offline some of the collected files and to generate a report.  
 
-the file [audit_eos_files.py](audit_eos_files.py) currently supports the following features. To enable or disable them, update the file [input.yml](input.yml).
+#### Supported features 
+
+The file [audit_eos_files.py](audit_eos_files.py) currently supports the following features. To enable or disable them, update the file [input.yml](input.yml).
 
 - print_hostname
   - feature description: include the device hostname and fqdn
@@ -194,6 +198,8 @@ Test result: PASS
 
 MLAG is disabled
  ```
+
+#### Report files
 
 For each device defined in the file [input.yml](input.yml), the file [audit_eos_files.py](audit_eos_files.py) generates 2 reports:
 - The file "main.txt" includes details regarding all the tests for this device. It is saved in device directory in the [output](output) directory. 
