@@ -12,7 +12,7 @@ def init (device):
         item.close()
     return(main_reports_directory + '/init.txt', failures_only_reports_directory + '/init.txt')
 
-def hostname (device):
+def print_hostname (device):
     command = "show hostname"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -33,7 +33,7 @@ def hostname (device):
         item.close()
     return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
 
-def version (device):
+def print_version (device):
     command = "show version"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -59,12 +59,12 @@ def version (device):
         item.close()
     return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
 
-def inventory (device):
+def check_inventory (device):
     command = "show inventory"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
-        item.write('*'*10 + " Inventory " + '*'*10 + "\n"*2)
+        item.write('*'*10 + " Device inventory " + '*'*10 + "\n"*2)
         item.write("Required EOS command: " + command + '| json\n')
         item.write("Failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
@@ -133,12 +133,12 @@ def inventory (device):
         item.close()
     return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
 
-def power (device):
+def check_power (device):
     command = "show system environment power"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
-        item.write('*'*10 + " Power supplies " + '*'*10 + "\n"*2)
+        item.write('*'*10 + " Power supplies status " + '*'*10 + "\n"*2)
         item.write("Required EOS command: " + command + '| json\n')
         item.write("Failure conditions: A test fails if the status of a power supply is not ok\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
@@ -166,12 +166,12 @@ def power (device):
         item.close()
     return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
 
-def cooling (device):
+def check_cooling (device):
     command = "show system environment cooling"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
-        item.write('*'*10 + " Cooling " + '*'*10 + "\n"*2)
+        item.write('*'*10 + " Cooling status " + '*'*10 + "\n"*2)
         item.write("Required EOS command: " + command + '| json\n')
         item.write("Failure conditions: A test fails if the status of a fan is not ok\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
@@ -223,12 +223,12 @@ def cooling (device):
         item.close()
     return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
 
-def temperature (device):
+def check_temperature (device):
     command = "show system environment temperature"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
-        item.write('*'*10 + " Temperature " + '*'*10 + "\n"*2)
+        item.write('*'*10 + " Temperature status " + '*'*10 + "\n"*2)
         item.write("Required EOS command: " + command + '| json\n')
         item.write("Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
@@ -335,12 +335,12 @@ def temperature (device):
         item.close()
     return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
 
-def temperature_transceivers (device):
+def check_temperature_transceivers (device):
     command = "show system environment temperature transceiver"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
-        item.write('*'*10 + " Temperature transceivers " + '*'*10 + "\n"*2)
+        item.write('*'*10 + " transceivers temperature status " + '*'*10 + "\n"*2)
         item.write("Required EOS command: " + command + '| json\n')
         item.write("Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
@@ -394,7 +394,7 @@ def temperature_transceivers (device):
         item.close()
     return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
 
-def reload_cause_history (device):
+def check_reload_cause_history (device):
     command = "show reload cause history"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -432,7 +432,7 @@ def reload_cause_history (device):
         item.close()
     return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
 
-def reload_cause_full (device):
+def check_reload_cause_full (device):
     command = "show reload cause full"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -467,7 +467,7 @@ def reload_cause_full (device):
         item.close()
     return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
 
-def lldp (device):
+def print_lldp (device):
     command = "show lldp neighbors"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
@@ -490,12 +490,12 @@ def lldp (device):
         f.close()
     return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
 
-def bgp (device):
+def check_bgp (device):
     command = "show ip bgp summary vrf all"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
-        item.write('*'*10 + " BGP " + '*'*10 + "\n"*2)
+        item.write('*'*10 + " BGP sessions state " + '*'*10 + "\n"*2)
         item.write("Required EOS command: " + command + '| json\n')
         item.write("Failure conditions: A test fails if a BGP session is not established\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
@@ -532,12 +532,12 @@ def bgp (device):
         item.close()
     return(main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt')
 
-def mlag (device):
+def check_mlag (device):
     command = "show mlag detail"
     main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
     failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
     for item in [main_report, failures_only_report]:
-        item.write('*'*10 + " MLAG " + '*'*10 + "\n"*2)
+        item.write('*'*10 + " MLAG state " + '*'*10 + "\n"*2)
         item.write("Required EOS command: " + command + '| json\n')
         item.write("Failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected\n\n")
     f = open(json_directory + '/' + command + '.json', 'r') 
@@ -643,7 +643,7 @@ devices = input['devices']
 output_directory = input['output_directory'] 
 
 audit_str_list = input['audit']
-str_to_function = {'hostname': hostname, 'version': version, 'inventory': inventory, 'power': power, 'cooling': cooling, 'temperature': temperature, 'temperature_transceivers': temperature_transceivers, 'reload_cause_history': reload_cause_history, 'reload_cause_full': reload_cause_full, 'lldp': lldp, 'bgp': bgp, 'mlag': mlag} 
+str_to_function = {'print_hostname': print_hostname, 'print_version': print_version, 'check_inventory': check_inventory, 'check_power': check_power, 'check_cooling': check_cooling, 'check_temperature': check_temperature, 'check_temperature_transceivers': check_temperature_transceivers, 'check_reload_cause_history': check_reload_cause_history, 'check_reload_cause_full': check_reload_cause_full, 'print_lldp': print_lldp, 'check_bgp': check_bgp, 'check_mlag': check_mlag} 
 audit_func_list = []
 for item in audit_str_list : 
     audit_func_list.append(str_to_function[item])
