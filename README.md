@@ -75,8 +75,8 @@ The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in 
 the file [audit_eos_files.py](audit_eos_files.py) currently supports the following features. To enable or disable them, update the file [input.yml](input.yml).
 
 - print_hostname
-  - required eos command: ```show hostname | json```
   - feature description: include the device hostname and fqdn
+  - required eos command: ```show hostname | json```
   - test failure conditions: This is a report without any test so there is no failure/passing condition
   - output example: 
 ```
@@ -86,8 +86,8 @@ Hostname: switch1
 FQDN: switch1.lab.local
 ```
 - print_version
-  - required eos command: ```show version | json```
   - feature description: include some details regarding the device (HW model, SN, SW release, uptime)
+  - required eos command: ```show version | json```
   - test failure conditions: This is a report without any test so there is no failure/passing condition
   - output example: 
 ```
@@ -100,14 +100,14 @@ Uptime: 1 day, 6:28:38
 ```
 
 - check_inventory 
-  - required eos command: ```show inventory | json```
   - feature description: include tests report about the hardware inventory
+  - required eos command: ```show inventory | json```
   - test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
 
   
 - check_power 
-  - required eos command: ```show system environment power| json```
   - feature description: include tests report about the power status
+  - required eos command: ```show system environment power| json```
   - test failure conditions: A test fails if the status of a power supply is not ok  
   - output example: 
 ```
@@ -118,8 +118,8 @@ Power supply: 2 *** Status: ok *** Result: PASS
 ```
 
 - check_cooling
-  - required eos command: ```show system environment cooling | json```
   - feature description: include tests report about the cooling status
+  - required eos command: ```show system environment cooling | json```
   - test failure conditions: A test fails if the status of a fan is not ok
   - output example: 
 ```
@@ -136,28 +136,28 @@ Fan: 3/1 *** Status: ok *** Result: PASS
 Fan: 4/1 *** Status: ok *** Result: PASS
 ```
 - check_temperature
-  - required eos command: ```show system environment temperature | json```
   - feature description: include tests report about the temperature status
+  - required eos command: ```show system environment temperature | json```
   - test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
   
 - check_temperature_transceivers
-  - required eos command: ```show system environment temperature transceiver | json```
   - feature description: include tests report about the transceivers temperature status
+  - required eos command: ```show system environment temperature transceiver | json```
   - test failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
   
 - check_reload_cause_history
-  - required eos command: ```show reload cause history | json```
   - feature description: include tests report about the cause for the last 10 reload
+  - required eos command: ```show reload cause history | json```
   - test failure conditions: A test fails if a device reload was not requested by user
 
 - check_reload_cause_full
-  - required eos command: ```show reload cause full | json```
   - feature description: include tests report about the cause of the most recent reload
+  - required eos command: ```show reload cause full | json```
   - test failure conditions: The test fails if the device reload was not requested by user
 
 - print_lldp
-  - required eos command: ```show lldp neighbors | json```
   - feature description: include the lldp topology
+  - required eos command: ```show lldp neighbors | json```
   - test failure conditions: This is a report without any test so there is no failure/passing condition
   - output examples
 ```
@@ -169,13 +169,13 @@ Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port:
 ```
  
 - check_bgp
-  - required eos command: ```show ip bgp summary vrf all | json```
   - feature description: include tests report about the bgp status for all configured vrf
+  - required eos command: ```show ip bgp summary vrf all | json```
   - test failure conditions: A test fails if a BGP session is not established
 
 - check_mlag
-  - required eos command: ```show mlag detail | json```
   - feature description: include tests report about the mlag status
+  - required eos command: ```show mlag detail | json```
   - test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
   - output examples: 
  
