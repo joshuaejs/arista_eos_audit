@@ -1,3 +1,4 @@
+
 {
     "powerSupplies": {
         "1": {
@@ -9,7 +10,7 @@
             "tempSensors": {
                 "TempSensorP1/1": {
                     "status": "ok",
-                    "temperature": 16.75
+                    "temperature": 15.75
                 }
             },
             "managed": true,
@@ -24,13 +25,13 @@
         },
         "2": {
             "outputPower": 79.0,
-            "uptime": 1590338295.697511,
+            "uptime": 1590338295.6975107,
             "modelName": "PWR-460AC-F",
             "capacity": 460.0,
             "tempSensors": {
                 "TempSensorP2/1": {
                     "status": "ok",
-                    "temperature": 17.25
+                    "temperature": 17.75
                 }
             },
             "fans": {
@@ -42,7 +43,7 @@
             "state": "ok",
             "inputCurrent": 0.421875,
             "managed": true,
-            "inputVoltage": 223.5,
+            "inputVoltage": 222.5,
             "outputCurrent": 6.5
         }
     }

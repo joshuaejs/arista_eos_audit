@@ -1,4 +1,4 @@
-Report generated using Python the 27 May 2020 at 00:19:03
+Report generated using Python the 27 May 2020 at 00:35:07
 
 The list of devices audited is: ['10.83.28.122', '10.83.28.217', '10.83.28.203']
 The list of topics audited is: ['print_hostname', 'print_version', 'check_inventory', 'check_power', 'check_cooling', 'check_temperature', 'check_temperature_transceivers', 'check_reload_cause_history', 'check_reload_cause_full', 'print_lldp', 'check_bgp', 'check_mlag']
@@ -26,7 +26,7 @@ Test failure conditions: This is a report without any test so there is no failur
 Model: DCS-7150S-64-CL-F
 Serial number: JPE14210677
 Version: 4.22.4M-2GB
-Uptime: 1 day, 19:56:35
+Uptime: 2 days, 5:57:08
 
 ********** Device inventory **********
 
@@ -161,7 +161,7 @@ Test failure conditions: This is a report without any test so there is no failur
 Model: DCS-7150S-52-CL-F
 Serial number: JPE13110630
 Version: 4.22.4M-2GB
-Uptime: 1 day, 19:57:24
+Uptime: 2 days, 5:57:57
 
 ********** Device inventory **********
 
@@ -296,7 +296,7 @@ Test failure conditions: This is a report without any test so there is no failur
 Model: DCS-7150S-52-CL-F
 Serial number: JPE12370337
 Version: 4.22.4M-2GB
-Uptime: 1 day, 19:58:25
+Uptime: 2 days, 5:58:57
 
 ********** Device inventory **********
 

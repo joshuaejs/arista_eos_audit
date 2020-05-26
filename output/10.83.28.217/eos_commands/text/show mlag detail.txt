@@ -24,7 +24,7 @@ MLAG Detailed Status:
 State                           :            disabled
 Peer State                      :             unknown
 State changes                   :                   4
-Last state change time          :         1:37:48 ago
+Last state change time          :        11:38:22 ago
 Hardware ready                  :                True
 Failover                        :               False
 Failover Cause(s)               :             Unknown

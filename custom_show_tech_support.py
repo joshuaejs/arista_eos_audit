@@ -1,5 +1,6 @@
 import os
 import yaml
+from eos.audit import device_directories
 
 input_f = open('input.yml', 'r')
 input_s = input_f.read()
@@ -10,14 +11,13 @@ devices = input['devices']
 output_directory = input['output_directory'] 
 custom_show_tech_support = input['custom_show_tech_support']
 
-cwd = os.getcwd()
-output_directory = os.path.dirname(cwd + "/" + output_directory + "/")
 
 # assemble some of the collected txt files into one large file
 for device in devices: 
-    device_directory = output_directory + '/' + device
-    eos_commands_directory = device_directory + '/' + "eos_commands"   
-    text_directory = eos_commands_directory + '/' + "text"  
+    directories = device_directories(device, output_directory)
+    device_directory = directories[0]
+    eos_commands_directory = directories[1]
+    text_directory = directories[3]
     outfile = open(text_directory + "/custom show tech-support.txt", "w")   
     for item in custom_show_tech_support: 
         infile = open(text_directory + "/" + item + ".txt", "r")

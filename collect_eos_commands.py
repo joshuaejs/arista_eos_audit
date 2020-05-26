@@ -1,6 +1,7 @@
 from netmiko import ConnectHandler
 import os
 import yaml
+from eos.audit import device_directories
 
 input_f = open('input.yml', 'r')
 input_s = input_f.read()
@@ -15,17 +16,13 @@ text_cmds = input['text_cmds']
 json_cmds = input['json_cmds'] 
 text_and_json_cmds = input['text_and_json_cmds']
 
-# Create directories to save the commands output
-cwd = os.getcwd()
-output_directory = os.path.dirname(cwd + "/" + output_directory + "/")
 for device in devices:
-    device_directory = output_directory + '/' + device
-    eos_commands_directory = device_directory + '/' + "eos_commands"
-    json_directory = eos_commands_directory + '/' + "json"    
-    text_directory = eos_commands_directory + '/' + "text"  
-    for directory in [output_directory, device_directory, eos_commands_directory, json_directory, text_directory]: 
-        if not os.path.exists(directory):
-            os.makedirs(directory)
+    # Create directories to save the commands output
+    directories = device_directories(device, output_directory)
+    device_directory = directories[0]
+    eos_commands_directory = directories[1]
+    json_directory = directories[2]
+    text_directory = directories[3]
     # collect show commands
     print("opening connection to " + device)
     switch = {'device_type': 'arista_eos', 'host': device, 'username': username, 'password': password, 'port': '22', 'timeout': 180}

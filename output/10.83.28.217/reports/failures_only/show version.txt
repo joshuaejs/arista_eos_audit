@@ -7,5 +7,5 @@ Test failure conditions: This is a report without any test so there is no failur
 Model: DCS-7150S-52-CL-F
 Serial number: JPE13110630
 Version: 4.22.4M-2GB
-Uptime: 1 day, 19:57:24
+Uptime: 2 days, 5:57:57
 

@@ -14,7 +14,7 @@
                     "criticalThreshold": 70.0,
                     "inAlertState": false,
                     "relPos": "1",
-                    "currentTemperature": 16.75,
+                    "currentTemperature": 16.25,
                     "setPointTemperature": 39.0,
                     "pidDriverCount": 0,
                     "isPidDriver": false,
@@ -28,7 +28,7 @@
             "tempSensors": [
                 {
                     "maxTemperature": 19.75,
-                    "maxTemperatureLastChange": 1590338301.6947923,
+                    "maxTemperatureLastChange": 1590338301.694793,
                     "hwStatus": "ok",
                     "alertCount": 0,
                     "description": "Power supply sensor",
@@ -50,7 +50,7 @@
     "tempSensors": [
         {
             "maxTemperature": 31.746149105737423,
-            "maxTemperatureLastChange": 1590338318.020826,
+            "maxTemperatureLastChange": 1590338318.0208266,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Cpu temp sensor",
@@ -58,7 +58,7 @@
             "criticalThreshold": 100.0,
             "inAlertState": false,
             "relPos": "1",
-            "currentTemperature": 27.65208952885674,
+            "currentTemperature": 27.47164047313044,
             "setPointTemperature": 61.75,
             "pidDriverCount": 0,
             "isPidDriver": false,
@@ -82,7 +82,7 @@
         },
         {
             "maxTemperature": 23.0,
-            "maxTemperatureLastChange": 1590486109.8263395,
+            "maxTemperatureLastChange": 1590486109.8263392,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Board temp sensor",
@@ -98,7 +98,7 @@
         },
         {
             "maxTemperature": 20.25,
-            "maxTemperatureLastChange": 1590485756.1101186,
+            "maxTemperatureLastChange": 1590485756.1101189,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Front-panel temp sensor",
@@ -106,7 +106,7 @@
             "criticalThreshold": 65.0,
             "inAlertState": false,
             "relPos": "4",
-            "currentTemperature": 18.5,
+            "currentTemperature": 18.25,
             "setPointTemperature": 35.75,
             "pidDriverCount": 0,
             "isPidDriver": false,
@@ -114,7 +114,7 @@
         },
         {
             "maxTemperature": 24.0,
-            "maxTemperatureLastChange": 1590485941.9615283,
+            "maxTemperatureLastChange": 1590485941.9615278,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Board temp sensor",

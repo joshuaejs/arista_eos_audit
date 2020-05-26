@@ -7,9 +7,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338295.6872475,
+                    "uptime": 1590338295.6872482,
                     "maxSpeed": 18000,
-                    "lastSpeedStableChangeTime": 1590338439.7557747,
+                    "lastSpeedStableChangeTime": 1590338439.755774,
                     "configuredSpeed": 60,
                     "actualSpeed": 59,
                     "speedHwOverride": false,
@@ -45,11 +45,11 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338273.3286126,
+                    "uptime": 1590338273.3285906,
                     "maxSpeed": 17500,
-                    "lastSpeedStableChangeTime": 1590338321.061119,
+                    "lastSpeedStableChangeTime": 1590338321.0611184,
                     "configuredSpeed": 60,
-                    "actualSpeed": 59,
+                    "actualSpeed": 60,
                     "speedHwOverride": false,
                     "speedStable": true,
                     "label": "1/1"
@@ -63,9 +63,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338273.3285077,
+                    "uptime": 1590338273.328508,
                     "maxSpeed": 17500,
-                    "lastSpeedStableChangeTime": 1590338323.0612595,
+                    "lastSpeedStableChangeTime": 1590338323.061259,
                     "configuredSpeed": 60,
                     "actualSpeed": 59,
                     "speedHwOverride": false,
@@ -83,7 +83,7 @@
                     "status": "ok",
                     "uptime": 1590338273.3284197,
                     "maxSpeed": 17500,
-                    "lastSpeedStableChangeTime": 1590338317.060755,
+                    "lastSpeedStableChangeTime": 1590338317.0607548,
                     "configuredSpeed": 60,
                     "actualSpeed": 60,
                     "speedHwOverride": false,
@@ -99,7 +99,7 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338273.3286567,
+                    "uptime": 1590338273.3286572,
                     "maxSpeed": 17500,
                     "lastSpeedStableChangeTime": 1590338321.061142,
                     "configuredSpeed": 60,
@@ -115,7 +115,7 @@
     ],
     "minFanSpeed": 0,
     "shutdownOnInsufficientFans": true,
-    "ambientTemperature": 18.5,
+    "ambientTemperature": 18.375,
     "systemStatus": "coolingOk",
     "airflowDirection": "frontToBackAirflow"
 }

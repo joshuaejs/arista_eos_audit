@@ -7,9 +7,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338293.4087849,
+                    "uptime": 1590338293.408785,
                     "maxSpeed": 18000,
-                    "lastSpeedStableChangeTime": 1590338436.384817,
+                    "lastSpeedStableChangeTime": 1590338436.3848166,
                     "configuredSpeed": 60,
                     "actualSpeed": 60,
                     "speedHwOverride": false,
@@ -25,9 +25,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338293.40967,
+                    "uptime": 1590338293.4096704,
                     "maxSpeed": 18000,
-                    "lastSpeedStableChangeTime": 1590338448.3533537,
+                    "lastSpeedStableChangeTime": 1590338448.3533545,
                     "configuredSpeed": 60,
                     "actualSpeed": 60,
                     "speedHwOverride": false,
@@ -45,11 +45,11 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338270.5899737,
+                    "uptime": 1590338270.5899742,
                     "maxSpeed": 17500,
-                    "lastSpeedStableChangeTime": 1590338310.9496644,
+                    "lastSpeedStableChangeTime": 1590338310.949664,
                     "configuredSpeed": 60,
-                    "actualSpeed": 59,
+                    "actualSpeed": 60,
                     "speedHwOverride": false,
                     "speedStable": true,
                     "label": "1/1"
@@ -65,7 +65,7 @@
                     "status": "ok",
                     "uptime": 1590338270.5898883,
                     "maxSpeed": 17500,
-                    "lastSpeedStableChangeTime": 1590338316.9509394,
+                    "lastSpeedStableChangeTime": 1590338316.9509392,
                     "configuredSpeed": 60,
                     "actualSpeed": 59,
                     "speedHwOverride": false,
@@ -81,9 +81,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338270.589805,
+                    "uptime": 1590338270.5898051,
                     "maxSpeed": 17500,
-                    "lastSpeedStableChangeTime": 1590338320.951732,
+                    "lastSpeedStableChangeTime": 1590338320.9517322,
                     "configuredSpeed": 60,
                     "actualSpeed": 59,
                     "speedHwOverride": false,
@@ -99,9 +99,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338270.8646865,
+                    "uptime": 1590338270.8646863,
                     "maxSpeed": 17500,
-                    "lastSpeedStableChangeTime": 1590338320.9517426,
+                    "lastSpeedStableChangeTime": 1590338320.951743,
                     "configuredSpeed": 60,
                     "actualSpeed": 59,
                     "speedHwOverride": false,
@@ -115,7 +115,7 @@
     ],
     "minFanSpeed": 0,
     "shutdownOnInsufficientFans": true,
-    "ambientTemperature": 18.125,
+    "ambientTemperature": 18.0,
     "systemStatus": "coolingOk",
     "airflowDirection": "frontToBackAirflow"
 }
