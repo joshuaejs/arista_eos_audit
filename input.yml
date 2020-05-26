@@ -49,6 +49,7 @@ custom_show_tech_support:
   - show ip bgp summary vrf all 
 
 # list of topics to audit and to include in the report
+# list of currently supported are print_hostname, print_version, check_inventory, check_power, check_cooling, check_temperature, check_temperature_transceivers, check_reload_cause_history, check_reload_cause_full, print_lldp, check_bgp, check_mlag
 audit: 
   - print_hostname
   - print_version
