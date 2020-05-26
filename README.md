@@ -11,8 +11,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;[Build a custom show tech-support file](#build-a-custom-show-tech-support-file)  
 &nbsp;&nbsp;&nbsp;&nbsp;[Generate audit reports](#generate-audit-reports)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Overview](#overview)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Supported features](#supported-features)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Report files](#report-files)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Supported features](#supported-features)  
+
 
 ## About this repository 
 
@@ -74,12 +75,22 @@ The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the var
 For each devices indicated in [input.yml](input.yml), it assembles the files indicated in [input.yml](input.yml) file to generate offline a custom show tech-support text file.  
 It supports only the text format (no JSON format support).  
 The name of the output file is "custom show tech-support.txt".  It is saved in device directory in the [output](output) directory. 
-  
+
 ### Generate audit reports
 
 #### Overview 
 
 The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in the file [input.yml](input.yml) to audit offline some of the collected files and to generate a report.  
+
+#### Report files
+
+For each device defined in the file [input.yml](input.yml), the file [audit_eos_files.py](audit_eos_files.py) generates 2 reports:
+- The file "main.txt" includes details regarding all the tests for this device. It is saved in device directory in the [output](output) directory. 
+- The file "failures_only.txt" includes only the tests that failed for this device. It is saved in device directory in the [output](output) directory. 
+
+Then, the file [audit_eos_files.py](audit_eos_files.py) assembles the report of each device into one file: 
+- The file [main.txt](output/main.txt) includes for all the devices all the tests. It is saved at the root of the [output](output) directory. 
+- The file [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved at the root of the [output](output) directory.  
 
 #### Supported features 
 
@@ -115,13 +126,17 @@ Uptime: 1 day, 6:28:38
   - feature description: include tests report about the hardware inventory
   - required eos command: ```show inventory | json```
   - test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
+  - 
+```
+
+```
 
   
 - check_power 
   - feature description: include tests report about the power status
   - required eos command: ```show system environment power| json```
   - test failure conditions: A test fails if the status of a power supply is not ok  
-  - some output examples: 
+  - some output examples (main report and failures_only report): 
 ```
 ********** Power supplies status **********
 
@@ -141,7 +156,7 @@ All tests successfully passed
   - feature description: include tests report about the cooling status
   - required eos command: ```show system environment cooling | json```
   - test failure conditions: A test fails if the status of a fan is not ok
-  - some output examples: 
+  - some output examples (main report and failures_only report): 
 ```
 ********** Cooling status **********
 
@@ -164,26 +179,6 @@ Fan: 2/2 *** Status: ok *** Result: PASS
 Fan: 2/3 *** Status: ok *** Result: PASS
 Fan: 2/4 *** Status: ok *** Result: PASS
 Fan: 2/5 *** Status: ok *** Result: PASS
-Fan: 3/1 *** Status: ok *** Result: PASS
-Fan: 3/2 *** Status: ok *** Result: PASS
-Fan: 3/3 *** Status: ok *** Result: PASS
-Fan: 3/4 *** Status: ok *** Result: PASS
-Fan: 3/5 *** Status: ok *** Result: PASS
-Fan: 4/1 *** Status: ok *** Result: PASS
-Fan: 4/2 *** Status: ok *** Result: PASS
-Fan: 4/3 *** Status: ok *** Result: PASS
-Fan: 4/4 *** Status: ok *** Result: PASS
-Fan: 4/5 *** Status: ok *** Result: PASS
-Fan: 5/1 *** Status: ok *** Result: PASS
-Fan: 5/2 *** Status: ok *** Result: PASS
-Fan: 5/3 *** Status: ok *** Result: PASS
-Fan: 5/4 *** Status: ok *** Result: PASS
-Fan: 5/5 *** Status: ok *** Result: PASS
-Fan: 6/1 *** Status: ok *** Result: PASS
-Fan: 6/2 *** Status: ok *** Result: PASS
-Fan: 6/3 *** Status: ok *** Result: PASS
-Fan: 6/4 *** Status: ok *** Result: PASS
-Fan: 6/5 *** Status: ok *** Result: PASS
 ```
 ```
 ********** Cooling status **********
@@ -198,7 +193,7 @@ All tests successfully passed
   - feature description: include tests report about the temperature status
   - required eos command: ```show system environment temperature | json```
   - test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
-  - some output examples: 
+  - some output examples (main report and failures_only report): 
 ```
 ********** Temperature status **********
 
@@ -226,9 +221,6 @@ All tests successfully passed
 Sensors: 
 All tests successfully passed
 
-Card Slot: 
-All tests successfully passed
-
 Power Supplies: 
 All tests successfully passed
 ```
@@ -236,7 +228,7 @@ All tests successfully passed
   - feature description: include tests report about the transceivers temperature status
   - required eos command: ```show system environment temperature transceiver | json```
   - test failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
-  - some output examples: 
+  - some output examples (main report and failures_only report): 
 ```
 ********** Temperature transceivers status **********
 
@@ -256,7 +248,7 @@ All tests successfully passed
   - feature description: include tests report about the cause for the last 10 reload
   - required eos command: ```show reload cause history | json```
   - test failure conditions: A test fails if a device reload was not requested by user
-  - some output examples: 
+  - some output examples (main report and failures_only report): 
 ```
 ********** Reload cause history **********
 
@@ -306,13 +298,13 @@ Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port:
   - feature description: include tests report about the bgp status for all configured vrf
   - required eos command: ```show ip bgp summary vrf all | json```
   - test failure conditions: A test fails if a BGP session is not established
-  - some output examples: 
+  - some output examples (main report and failures_only report): 
 ```
 ********** BGP sessions state **********
 
 vrf: default
-Peer: 10.10.10.1 *** ASN: 65002 *** State: Established *** Up/Down: 25 May 2020 00:02:56 *** Result: PASS
-Peer: 10.10.10.3 *** ASN: 65003 *** State: Established *** Up/Down: 25 May 2020 00:02:53 *** Result: PASS
+Peer: 10.10.10.5 *** ASN: 65003 *** State: Active *** Up/Down: 26 May 2020 13:32:27 *** Result: FAIL
+Peer: 10.10.10.0 *** ASN: 65001 *** State: Established *** Up/Down: 25 May 2020 00:02:57 *** Result: PASS
 ```
 ```
 ********** BGP sessions state **********
@@ -341,17 +333,6 @@ Test result: PASS
 
 MLAG is disabled
 ```
-
-#### Report files
-
-For each device defined in the file [input.yml](input.yml), the file [audit_eos_files.py](audit_eos_files.py) generates 2 reports:
-- The file "main.txt" includes details regarding all the tests for this device. It is saved in device directory in the [output](output) directory. 
-- The file "failures_only.txt" includes only the tests that failed for this device. It is saved in device directory in the [output](output) directory. 
-
-Then, the file [audit_eos_files.py](audit_eos_files.py) assembles the report of each device into one file: 
-- The file [main.txt](output/main.txt) includes for all the devices all the tests. It is saved at the root of the [output](output) directory. 
-- The file [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved at the root of the [output](output) directory.  
-
 
 
  
