@@ -1,7 +1,8 @@
-********** Cooling **********
+********** Cooling status **********
 
 Required EOS command: show system environment cooling| json
-Failure conditions: A test fails if the status of a fan is not ok
+Description: include tests report about the cooling status
+Test failure conditions: A test fails if the status of a fan is not ok
 
 Power supplies: 
 Fan: PowerSupply1/1 *** Status: failed *** Result: FAIL

@@ -6,7 +6,7 @@
             "tempSensors": [
                 {
                     "maxTemperature": 21.5,
-                    "maxTemperatureLastChange": 1590338295.1908576,
+                    "maxTemperatureLastChange": 1590338295.19084,
                     "hwStatus": "ok",
                     "alertCount": 0,
                     "description": "Power supply sensor",
@@ -14,7 +14,7 @@
                     "criticalThreshold": 70.0,
                     "inAlertState": false,
                     "relPos": "1",
-                    "currentTemperature": 19.25,
+                    "currentTemperature": 19.75,
                     "setPointTemperature": 39.0,
                     "pidDriverCount": 0,
                     "isPidDriver": false,
@@ -28,7 +28,7 @@
             "tempSensors": [
                 {
                     "maxTemperature": 24.0,
-                    "maxTemperatureLastChange": 1590338295.190766,
+                    "maxTemperatureLastChange": 1590338295.1907654,
                     "hwStatus": "ok",
                     "alertCount": 0,
                     "description": "Power supply sensor",
@@ -58,15 +58,15 @@
             "criticalThreshold": 100.0,
             "inAlertState": false,
             "relPos": "1",
-            "currentTemperature": 24.60622709383452,
+            "currentTemperature": 25.47213838197566,
             "setPointTemperature": 61.75,
             "pidDriverCount": 0,
             "isPidDriver": false,
             "name": "TempSensor1"
         },
         {
-            "maxTemperature": 23.875,
-            "maxTemperatureLastChange": 1590358785.4636462,
+            "maxTemperature": 24.0,
+            "maxTemperatureLastChange": 1590435395.0112486,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Rear temp sensor",
@@ -74,7 +74,7 @@
             "criticalThreshold": 75.0,
             "inAlertState": false,
             "relPos": "2",
-            "currentTemperature": 23.375,
+            "currentTemperature": 23.5,
             "setPointTemperature": 42.25,
             "pidDriverCount": 0,
             "isPidDriver": false,
@@ -82,7 +82,7 @@
         },
         {
             "maxTemperature": 25.0,
-            "maxTemperatureLastChange": 1590359540.755028,
+            "maxTemperatureLastChange": 1590452970.8528705,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Board temp sensor",
@@ -97,8 +97,8 @@
             "name": "TempSensor3"
         },
         {
-            "maxTemperature": 21.5,
-            "maxTemperatureLastChange": 1590359306.9549518,
+            "maxTemperature": 22.0,
+            "maxTemperatureLastChange": 1590440286.5821042,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Front-panel temp sensor",
@@ -106,7 +106,7 @@
             "criticalThreshold": 65.0,
             "inAlertState": false,
             "relPos": "4",
-            "currentTemperature": 21.25,
+            "currentTemperature": 21.5,
             "setPointTemperature": 35.75,
             "pidDriverCount": 0,
             "isPidDriver": false,
@@ -114,7 +114,7 @@
         },
         {
             "maxTemperature": 25.0,
-            "maxTemperatureLastChange": 1590358995.242045,
+            "maxTemperatureLastChange": 1590452982.8371818,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Board temp sensor",
@@ -129,8 +129,8 @@
             "name": "TempSensor5"
         },
         {
-            "maxTemperature": 25.375,
-            "maxTemperatureLastChange": 1590358629.6436248,
+            "maxTemperature": 25.5,
+            "maxTemperatureLastChange": 1590431858.1953466,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "FM6000 temp sensor",

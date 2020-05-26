@@ -1,6 +1,6 @@
 Power                        Input  Output  Output
-Supply Model       Capacity Current Current  Power Status      Uptime
------- ----------- -------- ------- ------- ------ ---------- -------
-1      PWR-750AC-F     750W   0.00A   0.00A   0.0W Power Loss Offline
-2      PWR-750AC-F     750W   0.79A  13.30A 159.5W Ok         5:55:11
-Total  --              750W      --      -- 159.5W --              --
+Supply Model       Capacity Current Current  Power Status             Uptime
+------ ----------- -------- ------- ------- ------ ---------- --------------
+1      PWR-750AC-F     750W   0.00A   0.00A   0.0W Power Loss        Offline
+2      PWR-750AC-F     750W   0.79A  13.44A 161.2W Ok         1 day, 7:51:38
+Total  --              750W      --      -- 161.2W --                     --

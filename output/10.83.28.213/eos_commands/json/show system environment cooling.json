@@ -21,9 +21,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338439.0245273,
+                    "uptime": 1590338439.024527,
                     "maxSpeed": 18000,
-                    "lastSpeedStableChangeTime": 1590338481.961382,
+                    "lastSpeedStableChangeTime": 1590338481.9613812,
                     "configuredSpeed": 100,
                     "actualSpeed": 99,
                     "speedHwOverride": false,
@@ -41,9 +41,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338426.4656055,
+                    "uptime": 1590338426.4656045,
                     "maxSpeed": 9200,
-                    "lastSpeedStableChangeTime": 1590338501.5294788,
+                    "lastSpeedStableChangeTime": 1590338501.5294785,
                     "configuredSpeed": 100,
                     "actualSpeed": 100,
                     "speedHwOverride": false,
@@ -59,9 +59,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338426.4652257,
+                    "uptime": 1590338426.4652255,
                     "maxSpeed": 9200,
-                    "lastSpeedStableChangeTime": 1590338501.5294175,
+                    "lastSpeedStableChangeTime": 1590338501.529418,
                     "configuredSpeed": 100,
                     "actualSpeed": 100,
                     "speedHwOverride": false,
@@ -77,9 +77,9 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338426.465801,
+                    "uptime": 1590338426.4658005,
                     "maxSpeed": 9200,
-                    "lastSpeedStableChangeTime": 1590338501.5295048,
+                    "lastSpeedStableChangeTime": 1590338501.5295007,
                     "configuredSpeed": 100,
                     "actualSpeed": 100,
                     "speedHwOverride": false,
@@ -95,11 +95,11 @@
             "fans": [
                 {
                     "status": "ok",
-                    "uptime": 1590338426.4654195,
+                    "uptime": 1590338426.46542,
                     "maxSpeed": 9200,
-                    "lastSpeedStableChangeTime": 1590338501.5295222,
+                    "lastSpeedStableChangeTime": 1590338501.5295234,
                     "configuredSpeed": 100,
-                    "actualSpeed": 100,
+                    "actualSpeed": 99,
                     "speedHwOverride": false,
                     "speedStable": true,
                     "label": "4/1"

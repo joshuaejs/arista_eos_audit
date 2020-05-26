@@ -1,10 +1,11 @@
 ********** Device details **********
 
 Required EOS command: show version| json
-Failure conditions: This is a report without any test so there is no failure/passing condition
+Description: include some details regarding the device (HW model, SN, SW release, uptime
+Test failure conditions: This is a report without any test so there is no failure/passing condition
 
 Model: DCS-7150S-52-CL-F
 Serial number: JPE12370337
 Version: 4.22.4M-2GB
-Uptime: 6:00:19
+Uptime: 1 day, 7:56:48
 

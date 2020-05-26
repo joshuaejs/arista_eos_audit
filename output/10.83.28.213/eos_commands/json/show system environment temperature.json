@@ -1,4 +1,3 @@
-
 {
     "cardSlots": [],
     "powerSupplySlots": [
@@ -7,7 +6,7 @@
             "tempSensors": [
                 {
                     "maxTemperature": 0.0,
-                    "maxTemperatureLastChange": 1590359765.5536158,
+                    "maxTemperatureLastChange": 1590453148.9460003,
                     "hwStatus": "ok",
                     "alertCount": 0,
                     "description": "Internal hot spot sensor",
@@ -24,7 +23,7 @@
                 },
                 {
                     "maxTemperature": 0.0,
-                    "maxTemperatureLastChange": 1590359765.5536094,
+                    "maxTemperatureLastChange": 1590453148.945994,
                     "hwStatus": "ok",
                     "alertCount": 0,
                     "description": "Internal ambient sensor",
@@ -47,7 +46,7 @@
             "tempSensors": [
                 {
                     "maxTemperature": 27.0,
-                    "maxTemperatureLastChange": 1590338462.7253592,
+                    "maxTemperatureLastChange": 1590338462.725359,
                     "hwStatus": "ok",
                     "alertCount": 0,
                     "description": "Internal hot spot sensor",
@@ -64,7 +63,7 @@
                 },
                 {
                     "maxTemperature": 13.0,
-                    "maxTemperatureLastChange": 1590358862.6558614,
+                    "maxTemperatureLastChange": 1590437087.2611933,
                     "hwStatus": "ok",
                     "alertCount": 0,
                     "description": "Internal ambient sensor",
@@ -87,7 +86,7 @@
     "tempSensors": [
         {
             "maxTemperature": 38.0,
-            "maxTemperatureLastChange": 1590338484.6026897,
+            "maxTemperatureLastChange": 1590338484.60269,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Digital Temperature Sensor on cpu0",
@@ -96,7 +95,7 @@
             "inAlertState": false,
             "targetTemperature": 80.0,
             "relPos": "1",
-            "currentTemperature": 34.0,
+            "currentTemperature": 32.0,
             "setPointTemperature": 78.75,
             "pidDriverCount": 0,
             "isPidDriver": false,
@@ -104,7 +103,7 @@
         },
         {
             "maxTemperature": 36.0,
-            "maxTemperatureLastChange": 1590338514.6076458,
+            "maxTemperatureLastChange": 1590338514.6076462,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Digital Temperature Sensor on cpu1",
@@ -113,7 +112,7 @@
             "inAlertState": false,
             "targetTemperature": 80.0,
             "relPos": "2",
-            "currentTemperature": 29.0,
+            "currentTemperature": 28.0,
             "setPointTemperature": 78.75,
             "pidDriverCount": 0,
             "isPidDriver": false,
@@ -130,7 +129,7 @@
             "inAlertState": false,
             "targetTemperature": 80.0,
             "relPos": "3",
-            "currentTemperature": 34.0,
+            "currentTemperature": 32.0,
             "setPointTemperature": 78.75,
             "pidDriverCount": 0,
             "isPidDriver": false,
@@ -138,7 +137,7 @@
         },
         {
             "maxTemperature": 36.0,
-            "maxTemperatureLastChange": 1590338514.6075017,
+            "maxTemperatureLastChange": 1590338514.607501,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Digital Temperature Sensor on cpu3",
@@ -147,18 +146,18 @@
             "inAlertState": false,
             "targetTemperature": 80.0,
             "relPos": "4",
-            "currentTemperature": 29.0,
+            "currentTemperature": 28.0,
             "setPointTemperature": 78.75,
             "pidDriverCount": 0,
             "isPidDriver": false,
             "name": "TempSensor4"
         },
         {
-            "maxTemperature": 26.0,
-            "maxTemperatureLastChange": 1590359766.020585,
+            "maxTemperature": 27.0,
+            "maxTemperatureLastChange": 1590445507.623818,
             "hwStatus": "ok",
             "alertCount": 0,
-            "lastPidDriverTime": 1590338454.5211709,
+            "lastPidDriverTime": 1590338454.5211713,
             "description": "Supervisor temp sensor",
             "overheatThreshold": 75.0,
             "criticalThreshold": 85.0,
@@ -172,8 +171,8 @@
             "name": "TempSensor5"
         },
         {
-            "maxTemperature": 22.25,
-            "maxTemperatureLastChange": 1590358438.21563,
+            "maxTemperature": 22.5,
+            "maxTemperatureLastChange": 1590388566.0401413,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Supervisor front-panel temp sensor",
@@ -182,7 +181,7 @@
             "inAlertState": false,
             "targetTemperature": 55.0,
             "relPos": "6",
-            "currentTemperature": 21.75,
+            "currentTemperature": 21.875,
             "setPointTemperature": 53.75,
             "pidDriverCount": 0,
             "isPidDriver": false,
@@ -190,7 +189,7 @@
         },
         {
             "maxTemperature": 22.0,
-            "maxTemperatureLastChange": 1590357341.6359262,
+            "maxTemperatureLastChange": 1590452852.8495617,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Supervisor back-panel temp sensor",
@@ -207,7 +206,7 @@
         },
         {
             "maxTemperature": 28.0,
-            "maxTemperatureLastChange": 1590359766.0297966,
+            "maxTemperatureLastChange": 1590453149.4103627,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "CPU VRM temp sensor 0",
@@ -224,7 +223,7 @@
         },
         {
             "maxTemperature": 28.0,
-            "maxTemperatureLastChange": 1590359766.0298045,
+            "maxTemperatureLastChange": 1590453149.4103699,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "CPU VRM temp sensor 1",
@@ -241,7 +240,7 @@
         },
         {
             "maxTemperature": 22.0,
-            "maxTemperatureLastChange": 1590359764.0296938,
+            "maxTemperatureLastChange": 1590453153.5126543,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Upper board sensor",
@@ -257,8 +256,8 @@
             "name": "TempSensor10"
         },
         {
-            "maxTemperature": 20.75,
-            "maxTemperatureLastChange": 1590359103.2430725,
+            "maxTemperature": 21.125,
+            "maxTemperatureLastChange": 1590445904.6564581,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Upper front-panel temp sensor",
@@ -275,7 +274,7 @@
         },
         {
             "maxTemperature": 24.0,
-            "maxTemperatureLastChange": 1590358574.1473749,
+            "maxTemperatureLastChange": 1590453125.285476,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Lower board sensor",
@@ -291,8 +290,8 @@
             "name": "TempSensor12"
         },
         {
-            "maxTemperature": 22.0,
-            "maxTemperatureLastChange": 1590359641.19908,
+            "maxTemperature": 22.375,
+            "maxTemperatureLastChange": 1590388779.0506155,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Lower front-panel temp sensor",
@@ -309,7 +308,7 @@
         },
         {
             "maxTemperature": 33.574400000000004,
-            "maxTemperatureLastChange": 1590358810.1638381,
+            "maxTemperatureLastChange": 1590439372.246015,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Trident Bottom Right Outer",
@@ -326,7 +325,7 @@
         },
         {
             "maxTemperature": 34.659200000000006,
-            "maxTemperatureLastChange": 1590359470.6835566,
+            "maxTemperatureLastChange": 1590440299.3044763,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Trident Bottom Left Outer",
@@ -343,7 +342,7 @@
         },
         {
             "maxTemperature": 33.574400000000004,
-            "maxTemperatureLastChange": 1590358900.2147331,
+            "maxTemperatureLastChange": 1590441996.0449026,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Trident Top Left Outer",
@@ -359,8 +358,8 @@
             "name": "TempSensor16"
         },
         {
-            "maxTemperature": 33.574400000000004,
-            "maxTemperatureLastChange": 1590359741.0581264,
+            "maxTemperature": 34.116800000000005,
+            "maxTemperatureLastChange": 1590420435.6822288,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Trident Top Right Outer",
@@ -377,7 +376,7 @@
         },
         {
             "maxTemperature": 34.659200000000006,
-            "maxTemperatureLastChange": 1590359731.0555613,
+            "maxTemperatureLastChange": 1590452713.5523922,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Trident Bottom Right Inner",
@@ -386,7 +385,7 @@
             "inAlertState": false,
             "targetTemperature": 80.0,
             "relPos": "18",
-            "currentTemperature": 34.116800000000005,
+            "currentTemperature": 33.574400000000004,
             "setPointTemperature": 78.75,
             "pidDriverCount": 0,
             "isPidDriver": false,
@@ -394,7 +393,7 @@
         },
         {
             "maxTemperature": 35.74400000000001,
-            "maxTemperatureLastChange": 1590352548.5836926,
+            "maxTemperatureLastChange": 1590436819.3003166,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Trident Bottom Left Inner",
@@ -411,7 +410,7 @@
         },
         {
             "maxTemperature": 34.659200000000006,
-            "maxTemperatureLastChange": 1590359766.095509,
+            "maxTemperatureLastChange": 1590452903.8152773,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Trident Top Left Inner",
@@ -420,15 +419,15 @@
             "inAlertState": false,
             "targetTemperature": 80.0,
             "relPos": "20",
-            "currentTemperature": 34.659200000000006,
+            "currentTemperature": 34.116800000000005,
             "setPointTemperature": 78.75,
             "pidDriverCount": 0,
             "isPidDriver": false,
             "name": "TempSensor20"
         },
         {
-            "maxTemperature": 34.116800000000005,
-            "maxTemperatureLastChange": 1590358009.278959,
+            "maxTemperature": 34.659200000000006,
+            "maxTemperatureLastChange": 1590433084.8107216,
             "hwStatus": "ok",
             "alertCount": 0,
             "description": "Trident Top Right Inner",

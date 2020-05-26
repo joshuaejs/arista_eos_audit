@@ -3,40 +3,40 @@ System temperature status is: Ok
                                                Temp    Setpoint  Limit     Limit
 Sensor  Description                             (C)         (C)    (C)       (C)
 ------- ----------------------------------- ------- ----------- ------ ---------
-1       Digital Temperature Sensor on cpu0     33.0   (80) 78.7     95       105
-2       Digital Temperature Sensor on cpu1     30.0   (80) 78.7     95       105
-3       Digital Temperature Sensor on cpu2     33.0   (80) 78.7     95       105
-4       Digital Temperature Sensor on cpu3     31.0   (80) 78.7     95       105
-5       Supervisor temp sensor                 26.0   (55) 53.7     75        85
-6       Supervisor front-panel temp sensor     21.9   (55) 53.7     75        85
-7       Supervisor back-panel temp sensor      21.0   (55) 53.7     75        85
-8       CPU VRM temp sensor 0                  28.0   (60) 58.7    105       110
-9       CPU VRM temp sensor 1                  28.0   (60) 58.7    105       110
-10      Upper board sensor                     21.0   (55) 53.7     65        75
-11      Upper front-panel temp sensor          20.5   (55) 53.7     65        75
-12      Lower board sensor                     23.0   (55) 53.7     65        75
-13      Lower front-panel temp sensor          21.8   (55) 53.7     65        75
-14      Trident Bottom Right Outer             32.5   (80) 78.7    100       120
-15      Trident Bottom Left Outer              33.6   (80) 78.7    100       120
-16      Trident Top Left Outer                 32.5   (80) 78.7    100       120
-17      Trident Top Right Outer                33.0   (80) 78.7    100       120
-18      Trident Bottom Right Inner             34.1   (80) 78.7    100       120
-19      Trident Bottom Left Inner              34.1   (80) 78.7    100       120
-20      Trident Top Left Inner                 34.1   (80) 78.7    100       120
-21      Trident Top Right Inner                33.6   (80) 78.7    100       120
+1       Digital Temperature Sensor on cpu0     32.0   (80) 78.8     95       105
+2       Digital Temperature Sensor on cpu1     28.0   (80) 78.8     95       105
+3       Digital Temperature Sensor on cpu2     32.0   (80) 78.8     95       105
+4       Digital Temperature Sensor on cpu3     28.0   (80) 78.8     95       105
+5       Supervisor temp sensor                 26.0   (55) 53.9     75        85
+6       Supervisor front-panel temp sensor     22.1   (55) 53.9     75        85
+7       Supervisor back-panel temp sensor      21.0   (55) 53.9     75        85
+8       CPU VRM temp sensor 0                  28.0   (60) 58.9    105       110
+9       CPU VRM temp sensor 1                  28.0   (60) 58.9    105       110
+10      Upper board sensor                     22.0   (55) 53.9     65        75
+11      Upper front-panel temp sensor          20.6   (55) 53.9     65        75
+12      Lower board sensor                     23.0   (55) 53.9     65        75
+13      Lower front-panel temp sensor          22.1   (55) 53.9     65        75
+14      Trident Bottom Right Outer             32.5   (80) 78.8    100       120
+15      Trident Bottom Left Outer              33.6   (80) 78.8    100       120
+16      Trident Top Left Outer                 32.5   (80) 78.8    100       120
+17      Trident Top Right Outer                32.5   (80) 78.8    100       120
+18      Trident Bottom Right Inner             33.6   (80) 78.8    100       120
+19      Trident Bottom Left Inner              34.1   (80) 78.8    100       120
+20      Trident Top Left Inner                 34.1   (80) 78.8    100       120
+21      Trident Top Right Inner                33.0   (80) 78.8    100       120
 
 PowerSupply 1:
                                                                  Alert  Critical
                                                Temp    Setpoint  Limit     Limit
 Sensor  Description                             (C)         (C)    (C)       (C)
 ------- ----------------------------------- ------- ----------- ------ ---------
-1       Internal hot spot sensor                0.0   (85) 83.7    100       105
-2       Internal ambient sensor                 0.0   (55) 53.7     70        75
+1       Internal hot spot sensor                0.0   (85) 83.8    100       105
+2       Internal ambient sensor                 0.0   (55) 53.9     70        75
 
 PowerSupply 2:
                                                                  Alert  Critical
                                                Temp    Setpoint  Limit     Limit
 Sensor  Description                             (C)         (C)    (C)       (C)
 ------- ----------------------------------- ------- ----------- ------ ---------
-1       Internal hot spot sensor               26.0   (85) 83.7    100       105
-2       Internal ambient sensor                12.0   (55) 53.7     70        75
+1       Internal hot spot sensor               26.0   (85) 83.8    100       105
+2       Internal ambient sensor                12.0   (55) 53.9     70        75

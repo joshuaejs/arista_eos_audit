@@ -16,7 +16,7 @@
             "lineProtocolStatus": "down"
         },
         "Ethernet3": {
-            "interfaceStatus": "adminDown",
+            "interfaceStatus": "down",
             "description": "",
             "lineProtocolStatus": "down"
         },
@@ -64,6 +64,16 @@
             "interfaceStatus": "adminDown",
             "description": "",
             "lineProtocolStatus": "down"
+        },
+        "Port-Channel1000": {
+            "interfaceStatus": "up",
+            "description": "",
+            "lineProtocolStatus": "up"
+        },
+        "Port-Channel10": {
+            "interfaceStatus": "down",
+            "description": "",
+            "lineProtocolStatus": "lowerLayerDown"
         },
         "Ethernet38": {
             "interfaceStatus": "adminDown",
@@ -124,6 +134,11 @@
             "interfaceStatus": "adminDown",
             "description": "",
             "lineProtocolStatus": "notPresent"
+        },
+        "Vlan4094": {
+            "interfaceStatus": "up",
+            "description": "",
+            "lineProtocolStatus": "up"
         },
         "Ethernet14": {
             "interfaceStatus": "adminDown",
@@ -257,7 +272,7 @@
         },
         "Ethernet24": {
             "interfaceStatus": "up",
-            "description": "\"switch3 **** Ethernet24\"",
+            "description": "",
             "lineProtocolStatus": "up"
         },
         "Ethernet27": {

@@ -3,7 +3,8 @@
 ********** Device hostname **********
 
 Required EOS command: show hostname| json
-Failure conditions: This is a report without any test so there is no failure/passing condition
+Description: include the device hostname and fqdn
+Test failure conditions: This is a report without any test so there is no failure/passing condition
 
 Hostname: switch3
 FQDN: switch3.lab.local
@@ -11,17 +12,19 @@ FQDN: switch3.lab.local
 ********** Device details **********
 
 Required EOS command: show version| json
-Failure conditions: This is a report without any test so there is no failure/passing condition
+Description: include some details regarding the device (HW model, SN, SW release, uptime
+Test failure conditions: This is a report without any test so there is no failure/passing condition
 
 Model: DCS-7150S-52-CL-F
 Serial number: JPE13110630
 Version: 4.22.4M-2GB
-Uptime: 5:59:19
+Uptime: 1 day, 7:55:50
 
-********** Inventory **********
+********** Device inventory **********
 
 Required EOS command: show inventory| json
-Failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
+Description: include tests report about the hardware inventory
+Test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
 
 Device description: 52-port SFP+ 10GigE 1RU + Clock
 
@@ -46,18 +49,20 @@ Port: 50 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-3M *** SN: XHC
 Port: 51 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC12422G30R *** Result: PASS
 Port: 52 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC103220422 *** Result: PASS
 
-********** Power supplies **********
+********** Power supplies status **********
 
 Required EOS command: show system environment power| json
-Failure conditions: A test fails if the status of a power supply is not ok
+Description: include tests report about the power status
+Test failure conditions: A test fails if the status of a power supply is not ok
 
 Power supply: 1 *** Status: powerLoss *** Result: FAIL
 Power supply: 2 *** Status: ok *** Result: PASS
 
-********** Cooling **********
+********** Cooling status **********
 
 Required EOS command: show system environment cooling| json
-Failure conditions: A test fails if the status of a fan is not ok
+Description: include tests report about the cooling status
+Test failure conditions: A test fails if the status of a fan is not ok
 
 Power supplies: 
 Fan: PowerSupply1/1 *** Status: ok *** Result: PASS
@@ -69,22 +74,22 @@ Fan: 2/1 *** Status: ok *** Result: PASS
 Fan: 3/1 *** Status: ok *** Result: PASS
 Fan: 4/1 *** Status: ok *** Result: PASS
 
-********** Temperature **********
+********** Temperature status **********
 
 Required EOS command: show system environment temperature| json
-Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
+Description: include tests report about the temperature status
+Test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
 
 System temperature: 
 Status: ok *** Result: PASS
 
-
 Sensors: 
 Sensor: TempSensor1 *** Description: Cpu temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 31 *** Max temperature last change: 24 May 2020 18:38:38 *** Result: PASS
-Sensor: TempSensor2 *** Description: Rear temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 25 May 2020 00:20:58 *** Result: PASS
-Sensor: TempSensor3 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 25 May 2020 00:33:39 *** Result: PASS
-Sensor: TempSensor4 *** Description: Front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 18 *** Max temperature last change: 24 May 2020 23:16:31 *** Result: PASS
-Sensor: TempSensor5 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 23 *** Max temperature last change: 25 May 2020 00:29:09 *** Result: PASS
-Sensor: TempSensor6 *** Description: FM6000 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 26 *** Max temperature last change: 25 May 2020 00:17:22 *** Result: PASS
+Sensor: TempSensor2 *** Description: Rear temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 25 May 2020 01:27:48 *** Result: PASS
+Sensor: TempSensor3 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 26 May 2020 02:28:32 *** Result: PASS
+Sensor: TempSensor4 *** Description: Front-panel temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 18 *** Max temperature last change: 26 May 2020 01:50:52 *** Result: PASS
+Sensor: TempSensor5 *** Description: Board temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 23 *** Max temperature last change: 26 May 2020 00:39:56 *** Result: PASS
+Sensor: TempSensor6 *** Description: FM6000 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 26 *** Max temperature last change: 25 May 2020 02:20:51 *** Result: PASS
 
 Card Slot: 
 
@@ -92,16 +97,18 @@ Power Supplies:
 Sensor: TempSensorP1/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 17 *** Max temperature last change: 24 May 2020 18:38:21 *** Result: PASS
 Sensor: TempSensorP2/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 19 *** Max temperature last change: 24 May 2020 18:38:21 *** Result: PASS
 
-********** Temperature transceivers **********
+********** transceivers temperature status **********
 
 Required EOS command: show system environment temperature transceiver| json
-Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
+Description: include tests report about the transceivers temperature status
+Test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
 
 
 ********** Reload cause history **********
 
 Required EOS command: show reload cause history| json
-Failure conditions: A test fails if a device reload was not requested by user
+Description: include tests report about the cause for the last 10 reload
+Test failure conditions: A test fails if a device reload was not requested by user
 
 Time: 24 May 2020 18:38:03 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
 Time: 23 May 2020 21:23:18 *** Reason: Reload requested by the user. *** Result: PASS
@@ -117,33 +124,41 @@ Time: 11 May 2020 21:42:28 *** Reason: Reload requested by the user. *** Result:
 ********** Reload cause full **********
 
 Required EOS command: show reload cause full| json
-Failure conditions: The test fails if the device reload was not requested by user
+Description: include tests report about the cause of the most recent reload
+Test failure conditions: The test fails if the device reload was not requested by user
 
 Time: 24 May 2020 18:38:03 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
 
 ********** LLDP topology **********
 
 Required EOS command: show lldp neighbors| json
-Failure conditions: This is a report without any test so there is no failure/passing condition
+Description: include the lldp topology
+Test failure conditions: This is a report without any test so there is no failure/passing condition
 
 Interface: Ethernet1 *** LLDP neighbor: switch1.lab.local *** LLDP remote port: Ethernet2
 Interface: Ethernet24 *** LLDP neighbor: switch2.lab.local *** LLDP remote port: Ethernet24
 Interface: Management1 *** LLDP neighbor: mgmt3.lab.local *** LLDP remote port: Ethernet12
 
-********** BGP **********
+********** BGP sessions state **********
 
 Required EOS command: show ip bgp summary vrf all| json
-Failure conditions: A test fails if a BGP session is not established
+Description: include tests report about the bgp status for all configured vrf
+Test failure conditions: A test fails if a BGP session is not established
 
 vrf: default
-Peer: 10.10.10.4 *** ASN: 65002 *** State: Established *** Up/Down: 25 May 2020 00:02:55 *** Result: PASS
-Peer: 10.10.10.2 *** ASN: 65001 *** State: Established *** Up/Down: 25 May 2020 00:02:53 *** Result: PASS
+Peer: 10.10.10.2 *** ASN: 65001 *** State: Established *** Up/Down: 25 May 2020 00:02:54 *** Result: PASS
 
 
-********** MLAG **********
+********** MLAG state **********
 
 Required EOS command: show mlag detail| json
-Failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
+Description: include tests report about the mlag status
+Test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
 
-MLAG is disabled
+Peer: 192.168.10.2
+State: active
+Negotiation Status: connected
+Config Sanity: consistent
+
+Test result: PASS
 

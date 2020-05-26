@@ -1,3 +1,4 @@
+
 Reboot Instance 0: Reload Cause 1:
 ------------------------------------
 The system rebooted due to a Power Loss

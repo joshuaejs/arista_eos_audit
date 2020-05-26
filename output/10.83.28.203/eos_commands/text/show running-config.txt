@@ -25,7 +25,8 @@ ntp server 10.83.28.52
 snmp-server community private rw
 snmp-server community public ro
 !
-spanning-tree mode none
+spanning-tree mode mstp
+no spanning-tree vlan 4094
 !
 aaa authorization exec default local
 !
@@ -38,6 +39,17 @@ username cvp-infra privilege 15 secret sha512 $6$.I7/ZR/zlLIUv8fr$vR/JvLTbq5amMt
 username switch-infra privilege 15 nopassword
 username telemetry secret 5 $1$7ksxaeUt$.JJMVbNtjZVxakZqvo0dy1
 !
+vlan 4094
+   trunk group mlagPeer
+!
+interface Port-Channel10
+   switchport mode trunk
+   mlag 10
+!
+interface Port-Channel1000
+   switchport mode trunk
+   switchport trunk group mlagPeer
+!
 interface Ethernet1
    description "switch1 **** Ethernet1"
    no switchport
@@ -47,7 +59,7 @@ interface Ethernet2
    shutdown
 !
 interface Ethernet3
-   shutdown
+   channel-group 10 mode active
 !
 interface Ethernet4
    shutdown
@@ -110,9 +122,7 @@ interface Ethernet23
    shutdown
 !
 interface Ethernet24
-   description "switch3 **** Ethernet24"
-   no switchport
-   ip address 10.10.10.4/31
+   channel-group 1000 mode active
 !
 interface Ethernet25
    shutdown
@@ -204,15 +214,23 @@ interface Loopback0
 interface Management1
    ip address 10.83.28.203/22
 !
+interface Vlan4094
+   no autostate
+   ip address 192.168.10.2/30
+!
 ip route 0.0.0.0/0 10.83.28.1
 !
 ip routing
 !
+mlag configuration
+   domain-id arista
+   local-interface Vlan4094
+   peer-address 192.168.10.1
+   peer-link Port-Channel1000
+!
 router bgp 65002
    neighbor 10.10.10.0 remote-as 65001
    neighbor 10.10.10.0 maximum-routes 12000
-   neighbor 10.10.10.5 remote-as 65003
-   neighbor 10.10.10.5 maximum-routes 12000
    redistribute connected
 !
 management api http-commands

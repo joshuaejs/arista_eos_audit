@@ -22,7 +22,7 @@ Et20                           down           notpresent
 Et21                           down           notpresent         
 Et22                           down           notpresent         
 Et23                           down           notpresent         
-Et24                           up             up                 "switch2 **** Ethernet24"
+Et24                           up             up                 
 Et25                           down           notpresent         
 Et26                           down           notpresent         
 Et27                           down           notpresent         
@@ -53,3 +53,6 @@ Et51                           down           down
 Et52                           down           down               
 Lo0                            up             up                 
 Ma1                            up             up                 
+Po10                           down           lowerlayerdown     
+Po1000                         up             up                 
+Vl4094                         up             up                 

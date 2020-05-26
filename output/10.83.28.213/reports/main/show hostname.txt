@@ -1,7 +1,8 @@
 ********** Device hostname **********
 
 Required EOS command: show hostname| json
-Failure conditions: This is a report without any test so there is no failure/passing condition
+Description: include the device hostname and fqdn
+Test failure conditions: This is a report without any test so there is no failure/passing condition
 
 Hostname: s7054
 FQDN: s7054.lab.local
