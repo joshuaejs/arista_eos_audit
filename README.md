@@ -74,7 +74,7 @@ The file [audit_eos_files.py](audit_eos_files.py) uses the variables defined in 
 
 the file [audit_eos_files.py](audit_eos_files.py) currently supports the following features. To enable or disable them, update the file [input.yml](input.yml).
 
-- hostname
+- print_hostname
   - required eos command: ```show hostname | json```
   - feature description: include the device hostname and fqdn
   - test failure conditions: This is a report without any test so there is no failure/passing condition
@@ -85,7 +85,7 @@ the file [audit_eos_files.py](audit_eos_files.py) currently supports the followi
 Hostname: switch1
 FQDN: switch1.lab.local
 ```
-- version
+- print_version
   - required eos command: ```show version | json```
   - feature description: include some details regarding the device (HW model, SN, SW release, uptime)
   - test failure conditions: This is a report without any test so there is no failure/passing condition
@@ -99,13 +99,13 @@ Version: 4.22.4M-2GB
 Uptime: 1 day, 6:28:38
 ```
 
-- inventory 
+- check_inventory 
   - required eos command: ```show inventory | json```
   - feature description: include tests report about the hardware inventory
   - test failure conditions: A test fails if the manufacturer of a transceiver is not Arista Networks or if a power supply slot has no power supply unit inserted
 
   
-- power 
+- check_power 
   - required eos command: ```show system environment power| json```
   - feature description: include tests report about the power status
   - test failure conditions: A test fails if the status of a power supply is not ok  
@@ -117,7 +117,7 @@ Power supply: 1 *** Status: powerLoss *** Result: FAIL
 Power supply: 2 *** Status: ok *** Result: PASS
 ```
 
-- cooling
+- check_cooling
   - required eos command: ```show system environment cooling | json```
   - feature description: include tests report about the cooling status
   - test failure conditions: A test fails if the status of a fan is not ok
@@ -135,27 +135,27 @@ Fan: 2/1 *** Status: ok *** Result: PASS
 Fan: 3/1 *** Status: ok *** Result: PASS
 Fan: 4/1 *** Status: ok *** Result: PASS
 ```
-- temperature
+- check_temperature
   - required eos command: ```show system environment temperature | json```
   - feature description: include tests report about the temperature status
   - test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
   
-- temperature_transceivers
+- check_temperature_transceivers
   - required eos command: ```show system environment temperature transceiver | json```
   - feature description: include tests report about the transceivers temperature status
   - test failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
   
-- reload_cause_history
+- check_reload_cause_history
   - required eos command: ```show reload cause history | json```
   - feature description: include tests report about the cause for the last 10 reload
   - test failure conditions: A test fails if a device reload was not requested by user
 
-- reload_cause_full
+- check_reload_cause_full
   - required eos command: ```show reload cause full | json```
   - feature description: include tests report about the cause of the most recent reload
   - test failure conditions: The test fails if the device reload was not requested by user
 
-- lldp
+- print_lldp
   - required eos command: ```show lldp neighbors | json```
   - feature description: include the lldp topology
   - test failure conditions: This is a report without any test so there is no failure/passing condition
@@ -168,12 +168,12 @@ Interface: Ethernet2 *** LLDP neighbor: switch3.lab.local *** LLDP remote port: 
 Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port: Ethernet37
 ```
  
-- bgp
+- check_bgp
   - required eos command: ```show ip bgp summary vrf all | json```
   - feature description: include tests report about the bgp status for all configured vrf
   - test failure conditions: A test fails if a BGP session is not established
 
-- mlag
+- check_mlag
   - required eos command: ```show mlag detail | json```
   - feature description: include tests report about the mlag status
   - test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
