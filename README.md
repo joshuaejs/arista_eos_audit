@@ -327,23 +327,31 @@ To enable or disable audit features on [generate_audit_report.py](generate_audit
 
 The following audit features are currently supported: 
 
+##### print_hostname
 
-- print_hostname
-  - description: include the device hostname and fqdn
-  - required eos command: ```show hostname | json```
-  - test failure conditions: This is a report without any test so there is no failure/passing condition
-  - output example: 
+Description: include the device hostname and fqdn  
+Required eos command: ```show hostname | json```  
+Test failure conditions: This is a report without any test so there is no failure/passing condition  
+<details><summary>click me to see an output example</summary>
+<p>
+
 ```
 ********** Device hostname **********
 
 Hostname: switch1
 FQDN: switch1.lab.local
 ```
-- print_version
-  - description: include some details regarding the device (HW model, SN, SW release, uptime)
-  - required eos command: ```show version | json```
-  - test failure conditions: This is a report without any test so there is no failure/passing condition
-  - output example: 
+</p>
+</details>
+
+##### print_version
+
+Description: include some details regarding the device (HW model, SN, SW release, uptime)  
+Required eos command: ```show version | json```  
+Test failure conditions: This is a report without any test so there is no failure/passing condition  
+<details><summary>click me to see an output example</summary>
+<p>
+
 ```
 ********** Device details **********
 
@@ -352,11 +360,17 @@ Serial number: JPE14210677
 Version: 4.22.4M-2GB
 Uptime: 1 day, 19:56:35
 ```
-- check_inventory 
-  - description: include tests report about the hardware inventory
-  - required eos command: ```show inventory | json```
-  - test failure conditions: A test fails if the manufacturer of a transceiver is neither "Arista Networks" nor "Arastra, Inc", or if a power supply slot has no power supply unit inserted
-  - output exemple: 
+</p>
+</details>
+
+##### check_inventory 
+
+Description: include tests report about the hardware inventory  
+Required eos command: ```show inventory | json```  
+Test failure conditions: A test fails if the manufacturer of a transceiver is neither "Arista Networks" nor "Arastra, Inc", or if a power supply slot has no power supply unit inserted  
+<details><summary>click me to see an output example</summary>
+<p>
+
 ```
 ********** Device inventory **********
 
@@ -386,23 +400,34 @@ Port: 6 *** Manufacturer: Arista Networks *** Model: CAB-SFP-SFP-2M *** SN: XHC1
 Port: 7 *** Manufacturer: Arista Networks *** Model: CAB-Q-S-2M *** SN: XHC1133L007Q *** Result: PASS
 Port: 8 *** Manufacturer: Arista Networks *** Model: CAB-Q-S-2M *** SN: XHC1133L0082 *** Result: PASS
 ```
-- check_power 
-  - description: include tests report about the power status
-  - required eos command: ```show system environment power| json```
-  - test failure conditions: A test fails if the status of a power supply is not ok  
-  - output example
+</p>
+</details>
+
+##### check_power 
+
+Description: include tests report about the power status  
+Required eos command: ```show system environment power| json```  
+Test failure conditions: A test fails if the status of a power supply is not ok   
+<details><summary>click me to see an output example</summary>
+<p>
+
 ```
 ********** Power supplies status **********
 
 Power supply: 1 *** Status: powerLoss *** Result: FAIL
 Power supply: 2 *** Status: ok *** Result: PASS
 ```  
+</p>
+</details>
 
-- check_cooling
-  - description: include tests report about the cooling status
-  - required eos command: ```show system environment cooling | json```
-  - test failure conditions: A test fails if the status of a fan is not ok
-  - output example
+##### check_cooling
+
+Description: include tests report about the cooling status  
+Required eos command: ```show system environment cooling | json```  
+Test failure conditions: A test fails if the status of a fan is not ok  
+<details><summary>click me to see an output example</summary>
+<p>
+
 ```
 ********** Cooling status **********
 
@@ -416,11 +441,17 @@ Fan: 2/1 *** Status: ok *** Result: PASS
 Fan: 3/1 *** Status: ok *** Result: PASS
 Fan: 4/1 *** Status: ok *** Result: PASS
 ```
-- check_temperature
-  - description: include tests report about the temperature status
-  - required eos command: ```show system environment temperature | json```
-  - test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
-  - output example
+</p>
+</details>
+
+##### check_temperature
+  
+Description: include tests report about the temperature status  
+Required eos command: ```show system environment temperature | json```  
+Test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK  
+<details><summary>click me to see an output example</summary>
+<p>
+
 ```
 ********** Temperature status **********
 
@@ -439,11 +470,17 @@ Power Supplies:
 Sensor: TempSensorP1/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 22 *** Max temperature last change: 26 May 2020 11:39:06 *** Result: PASS
 Sensor: TempSensorP2/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 24 *** Max temperature last change: 24 May 2020 18:38:15 *** Result: PASS
 ```
-- check_temperature_transceivers
-  - description: include tests report about the transceivers temperature status
-  - required eos command: ```show system environment temperature transceiver | json```
-  - test failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
-  - output example 
+</p>
+</details>
+
+##### check_temperature_transceivers
+
+Description: include tests report about the transceivers temperature status  
+Required eos command: ```show system environment temperature transceiver | json```  
+Test failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state  
+<details><summary>click me to see an output example</summary>
+<p>
+
 ```
 
 ********** Temperature transceivers status **********
@@ -455,12 +492,18 @@ Description: Xcvr51 temp sensor *** HW status: ok *** Alert count: 0 *** In aler
 Description: Xcvr52 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 47 *** Max temperature last change: 14 May 2020 04:24:51 *** Result: PASS
 Description: Xcvr54 temp sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 43 *** Max temperature last change: 14 May 2020 05:43:38 *** Result: PASS
 ```
+</p>
+</details>
 
-- check_reload_cause_history
-  - description: include tests report about the cause for the last 10 reload
-  - required eos command: ```show reload cause history | json```
-  - test failure conditions: A test fails if a device reload was not requested by user
-  - output example
+##### check_reload_cause_history
+
+Description: include tests report about the cause for the last 10 reload  
+Required eos command: ```show reload cause history | json```  
+Test failure conditions: A test fails if a device reload was not requested by user  
+
+<details><summary>click me to see an output example</summary>
+<p>
+
 ```
 ********** Reload cause history **********
 
@@ -475,22 +518,33 @@ Time: 06 May 2020 09:01:29 *** Reason: The system rebooted due to a Power Loss *
 Time: 05 May 2020 18:00:26 *** Reason: Reload requested by the user. *** Result: PASS
 Time: 05 May 2020 10:01:52 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
 ```
+</p>
+</details>
 
-- check_reload_cause_full
-  - description: include tests report about the cause of the most recent reload
-  - required eos command: ```show reload cause full | json```
-  - test failure conditions: The test fails if the device reload was not requested by user
-  - output example
+##### check_reload_cause_full
+
+Description: include tests report about the cause of the most recent reload  
+Required eos command: ```show reload cause full | json```  
+Test failure conditions: The test fails if the device reload was not requested by user  
+<details><summary>click me to see an output example</summary>
+<p>
+
 ```
 ********** Reload cause full **********
 
 Time: 24 May 2020 18:37:55 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
 ```
-- print_lldp
-  - description: include the lldp topology
-  - required eos command: ```show lldp neighbors | json```
-  - test failure conditions: This is a report without any test so there is no failure/passing condition
-  - output example
+</p>
+</details>
+
+##### print_lldp
+
+Description: include the lldp topology  
+Required eos command: ```show lldp neighbors | json```  
+Test failure conditions: This is a report without any test so there is no failure/passing condition  
+<details><summary>click me to see an output example</summary>
+<p>
+
 ```
 ********** LLDP topology **********
 
@@ -498,11 +552,17 @@ Interface: Ethernet1 *** LLDP neighbor: switch2.lab.local *** LLDP remote port: 
 Interface: Ethernet2 *** LLDP neighbor: switch3.lab.local *** LLDP remote port: Ethernet1
 Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port: Ethernet37
 ```
-- check_bgp
-  - description: include tests report about the bgp status for all configured vrf
-  - required eos command: ```show ip bgp summary vrf all | json```
-  - test failure conditions: A test fails if a BGP session is not established
-  - output example
+</p>
+</details>
+
+##### check_bgp
+
+Description: include tests report about the bgp status for all configured vrf  
+Required eos command: ```show ip bgp summary vrf all | json```  
+Test failure conditions: A test fails if a BGP session is not established  
+<details><summary>click me to see an output example</summary>
+<p>
+
 ```
 ********** BGP sessions state **********
 
@@ -510,11 +570,17 @@ vrf: default
 Peer: 10.10.10.1 *** ASN: 65002 *** State: Established *** Up/Down: 25 May 2020 00:02:57 *** Result: PASS
 Peer: 10.10.10.3 *** ASN: 65003 *** State: Established *** Up/Down: 25 May 2020 00:02:54 *** Result: PASS
 ```
-- check_mlag
-  - description: include tests report about the mlag status
-  - required eos command: ```show mlag detail | json```
-  - test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
-  - some output examples: 
+</p>
+</details>
+
+##### check_mlag
+
+Description: include tests report about the mlag status  
+Required eos command: ```show mlag detail | json```  
+Test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected  
+<details><summary>click me to see an output example</summary>
+<p>
+
 ```
 ********** MLAG **********
 
@@ -530,6 +596,7 @@ Test result: PASS
 
 MLAG is disabled
 ```
-
+</p>
+</details>
 
  
