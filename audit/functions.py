@@ -436,11 +436,9 @@ def check_temperature (device, root_dir):
     data = f.read()
     f.close()
     data_json = json.loads(data) 
-    at_least_one_test_fail = False
     systemStatus = json.loads(data)['systemStatus']
     if systemStatus != 'temperatureOk': 
         result = 'FAIL'
-        at_least_one_test_fail = True
     else:
         result = 'PASS'
         systemStatus = 'ok'
@@ -450,7 +448,7 @@ def check_temperature (device, root_dir):
     main_report.write(message)
     if result == 'FAIL': 
         failures_only_report.write(message)
-    if at_least_one_test_fail == False: 
+    if result == 'PASS': 
         failures_only_report.write("All tests successfully passed\n")
     for item in [main_report, failures_only_report]:
         item.write("\nSensors: \n" ) 
