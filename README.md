@@ -46,219 +46,9 @@ If you want to generate offline a custom show tech-support text file, run the sc
 
 Once you collected the commands output, you can run the script [generate_audit_report.py](generate_audit_report.py) to generate reports.  
 
-## Repository output 
-
-<details><summary>click me</summary>
-<p>
-
-```          
-output
-├── 10.83.28.122
-│   ├── eos_commands
-│   │   ├── json
-│   │   │   ├── show\ hostname.json
-│   │   │   ├── show\ interfaces\ description.json
-│   │   │   ├── show\ inventory.json
-│   │   │   ├── show\ ip\ bgp\ summary\ vrf\ all.json
-│   │   │   ├── show\ lldp\ neighbors.json
-│   │   │   ├── show\ mlag\ detail.json
-│   │   │   ├── show\ reload\ cause\ full.json
-│   │   │   ├── show\ reload\ cause\ history.json
-│   │   │   ├── show\ system\ environment\ cooling.json
-│   │   │   ├── show\ system\ environment\ power.json
-│   │   │   ├── show\ system\ environment\ temperature\ transceiver.json
-│   │   │   ├── show\ system\ environment\ temperature.json
-│   │   │   └── show\ version.json
-│   │   └── text
-│   │       ├── custom\ show\ tech-support.txt
-│   │       ├── show\ hostname.txt
-│   │       ├── show\ interfaces\ description.txt
-│   │       ├── show\ inventory.txt
-│   │       ├── show\ ip\ bgp\ summary\ vrf\ all.txt
-│   │       ├── show\ lldp\ neighbors.txt
-│   │       ├── show\ logging\ system.txt
-│   │       ├── show\ mlag\ detail.txt
-│   │       ├── show\ reload\ cause\ full.txt
-│   │       ├── show\ reload\ cause\ history.txt
-│   │       ├── show\ running-config.txt
-│   │       ├── show\ system\ environment\ cooling.txt
-│   │       ├── show\ system\ environment\ power.txt
-│   │       ├── show\ system\ environment\ temperature\ transceiver.txt
-│   │       ├── show\ system\ environment\ temperature.txt
-│   │       └── show\ version.txt
-│   └── reports
-│       ├── failures_only
-│       │   ├── check_bgp.txt
-│       │   ├── check_cooling.txt
-│       │   ├── check_inventory.txt
-│       │   ├── check_mlag.txt
-│       │   ├── check_power.txt
-│       │   ├── check_reload_cause_full.txt
-│       │   ├── check_reload_cause_history.txt
-│       │   ├── check_temperature.txt
-│       │   ├── check_temperature_transceivers.txt
-│       │   ├── init.txt
-│       │   ├── print_hostname.txt
-│       │   ├── print_lldp.txt
-│       │   └── print_version.txt
-│       ├── failures_only.txt
-│       ├── main
-│       │   ├── check_bgp.txt
-│       │   ├── check_cooling.txt
-│       │   ├── check_inventory.txt
-│       │   ├── check_mlag.txt
-│       │   ├── check_power.txt
-│       │   ├── check_reload_cause_full.txt
-│       │   ├── check_reload_cause_history.txt
-│       │   ├── check_temperature.txt
-│       │   ├── check_temperature_transceivers.txt
-│       │   ├── init.txt
-│       │   ├── print_hostname.txt
-│       │   ├── print_lldp.txt
-│       │   └── print_version.txt
-│       └── main.txt
-├── 10.83.28.203
-│   ├── eos_commands
-│   │   ├── json
-│   │   │   ├── show\ hostname.json
-│   │   │   ├── show\ interfaces\ description.json
-│   │   │   ├── show\ inventory.json
-│   │   │   ├── show\ ip\ bgp\ summary\ vrf\ all.json
-│   │   │   ├── show\ lldp\ neighbors.json
-│   │   │   ├── show\ mlag\ detail.json
-│   │   │   ├── show\ reload\ cause\ full.json
-│   │   │   ├── show\ reload\ cause\ history.json
-│   │   │   ├── show\ system\ environment\ cooling.json
-│   │   │   ├── show\ system\ environment\ power.json
-│   │   │   ├── show\ system\ environment\ temperature\ transceiver.json
-│   │   │   ├── show\ system\ environment\ temperature.json
-│   │   │   └── show\ version.json
-│   │   └── text
-│   │       ├── custom\ show\ tech-support.txt
-│   │       ├── show\ hostname.txt
-│   │       ├── show\ interfaces\ description.txt
-│   │       ├── show\ inventory.txt
-│   │       ├── show\ ip\ bgp\ summary\ vrf\ all.txt
-│   │       ├── show\ lldp\ neighbors.txt
-│   │       ├── show\ logging\ system.txt
-│   │       ├── show\ mlag\ detail.txt
-│   │       ├── show\ reload\ cause\ full.txt
-│   │       ├── show\ reload\ cause\ history.txt
-│   │       ├── show\ running-config.txt
-│   │       ├── show\ system\ environment\ cooling.txt
-│   │       ├── show\ system\ environment\ power.txt
-│   │       ├── show\ system\ environment\ temperature\ transceiver.txt
-│   │       ├── show\ system\ environment\ temperature.txt
-│   │       └── show\ version.txt
-│   └── reports
-│       ├── failures_only
-│       │   ├── check_bgp.txt
-│       │   ├── check_cooling.txt
-│       │   ├── check_inventory.txt
-│       │   ├── check_mlag.txt
-│       │   ├── check_power.txt
-│       │   ├── check_reload_cause_full.txt
-│       │   ├── check_reload_cause_history.txt
-│       │   ├── check_temperature.txt
-│       │   ├── check_temperature_transceivers.txt
-│       │   ├── init.txt
-│       │   ├── print_hostname.txt
-│       │   ├── print_lldp.txt
-│       │   └── print_version.txt
-│       ├── failures_only.txt
-│       ├── main
-│       │   ├── check_bgp.txt
-│       │   ├── check_cooling.txt
-│       │   ├── check_inventory.txt
-│       │   ├── check_mlag.txt
-│       │   ├── check_power.txt
-│       │   ├── check_reload_cause_full.txt
-│       │   ├── check_reload_cause_history.txt
-│       │   ├── check_temperature.txt
-│       │   ├── check_temperature_transceivers.txt
-│       │   ├── init.txt
-│       │   ├── print_hostname.txt
-│       │   ├── print_lldp.txt
-│       │   └── print_version.txt
-│       └── main.txt
-├── 10.83.28.217
-│   ├── eos_commands
-│   │   ├── json
-│   │   │   ├── show\ hostname.json
-│   │   │   ├── show\ interfaces\ description.json
-│   │   │   ├── show\ inventory.json
-│   │   │   ├── show\ ip\ bgp\ summary\ vrf\ all.json
-│   │   │   ├── show\ lldp\ neighbors.json
-│   │   │   ├── show\ mlag\ detail.json
-│   │   │   ├── show\ reload\ cause\ full.json
-│   │   │   ├── show\ reload\ cause\ history.json
-│   │   │   ├── show\ system\ environment\ cooling.json
-│   │   │   ├── show\ system\ environment\ power.json
-│   │   │   ├── show\ system\ environment\ temperature\ transceiver.json
-│   │   │   ├── show\ system\ environment\ temperature.json
-│   │   │   └── show\ version.json
-│   │   └── text
-│   │       ├── custom\ show\ tech-support.txt
-│   │       ├── show\ hostname.txt
-│   │       ├── show\ interfaces\ description.txt
-│   │       ├── show\ inventory.txt
-│   │       ├── show\ ip\ bgp\ summary\ vrf\ all.txt
-│   │       ├── show\ lldp\ neighbors.txt
-│   │       ├── show\ logging\ system.txt
-│   │       ├── show\ mlag\ detail.txt
-│   │       ├── show\ reload\ cause\ full.txt
-│   │       ├── show\ reload\ cause\ history.txt
-│   │       ├── show\ running-config.txt
-│   │       ├── show\ system\ environment\ cooling.txt
-│   │       ├── show\ system\ environment\ power.txt
-│   │       ├── show\ system\ environment\ temperature\ transceiver.txt
-│   │       ├── show\ system\ environment\ temperature.txt
-│   │       └── show\ version.txt
-│   └── reports
-│       ├── failures_only
-│       │   ├── check_bgp.txt
-│       │   ├── check_cooling.txt
-│       │   ├── check_inventory.txt
-│       │   ├── check_mlag.txt
-│       │   ├── check_power.txt
-│       │   ├── check_reload_cause_full.txt
-│       │   ├── check_reload_cause_history.txt
-│       │   ├── check_temperature.txt
-│       │   ├── check_temperature_transceivers.txt
-│       │   ├── init.txt
-│       │   ├── print_hostname.txt
-│       │   ├── print_lldp.txt
-│       │   └── print_version.txt
-│       ├── failures_only.txt
-│       ├── main
-│       │   ├── check_bgp.txt
-│       │   ├── check_cooling.txt
-│       │   ├── check_inventory.txt
-│       │   ├── check_mlag.txt
-│       │   ├── check_power.txt
-│       │   ├── check_reload_cause_full.txt
-│       │   ├── check_reload_cause_history.txt
-│       │   ├── check_temperature.txt
-│       │   ├── check_temperature_transceivers.txt
-│       │   ├── init.txt
-│       │   ├── print_hostname.txt
-│       │   ├── print_lldp.txt
-│       │   └── print_version.txt
-│       └── main.txt
-├── failures_only.txt
-└── main.txt
-```
-</p>
-</details>
-
 ## Repository details 
 
-### directory audit
-
-The [audit](audit) directory is a python package that has python functions.  
-Some of these functions are imported by the pythons scritps of this repository ([collect_eos_commands.py](collect_eos_commands.py), [custom_show_tech_support.py](custom_show_tech_support.py), [generate_audit_report.py](generate_audit_report.py))
-
-### file [input.yml](input.yml)
+### [input.yml](input.yml) file 
 
 This is the repository input.   
 
@@ -278,24 +68,140 @@ It is used to define these variables:
 - custom_show_tech_support: list of files (show commands) to include in a custom show tech-support text file. 
 - audit: list of topics to audit and to include in the report.  
 
-### file [collect_eos_commands.py](collect_eos_commands.py) 
+### audit directory 
+
+The [audit](audit) directory is a python package that has python functions.  
+Some of these functions are imported by the pythons scritps of this repository ([collect_eos_commands.py](collect_eos_commands.py), [custom_show_tech_support.py](custom_show_tech_support.py), [generate_audit_report.py](generate_audit_report.py))
+
+### [collect_eos_commands.py](collect_eos_commands.py) file 
 
 It is used to collect EOS commands.  
 
-The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices.  
+It uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices.  
 It supports collecting show commands in both text and JSON format.  
 The commands output is saved in device directory in the [output](output) directory. 
 
-### file [custom_show_tech_support.py](custom_show_tech_support.py) 
+<details><summary>click me to see the output structure</summary>
+<p>
+
+```
+output/10.83.28.122/eos_commands
+├── json
+│   ├── show\ hostname.json
+│   ├── show\ interfaces\ description.json
+│   ├── show\ inventory.json
+│   ├── show\ ip\ bgp\ summary\ vrf\ all.json
+│   ├── show\ lldp\ neighbors.json
+│   ├── show\ mlag\ detail.json
+│   ├── show\ reload\ cause\ full.json
+│   ├── show\ reload\ cause\ history.json
+│   ├── show\ system\ environment\ cooling.json
+│   ├── show\ system\ environment\ power.json
+│   ├── show\ system\ environment\ temperature\ transceiver.json
+│   ├── show\ system\ environment\ temperature.json
+│   └── show\ version.json
+└── text
+    ├── custom\ show\ tech-support.txt
+    ├── show\ hostname.txt
+    ├── show\ interfaces\ description.txt
+    ├── show\ inventory.txt
+    ├── show\ ip\ bgp\ summary\ vrf\ all.txt
+    ├── show\ lldp\ neighbors.txt
+    ├── show\ logging\ system.txt
+    ├── show\ mlag\ detail.txt
+    ├── show\ reload\ cause\ full.txt
+    ├── show\ reload\ cause\ history.txt
+    ├── show\ running-config.txt
+    ├── show\ system\ environment\ cooling.txt
+    ├── show\ system\ environment\ power.txt
+    ├── show\ system\ environment\ temperature\ transceiver.txt
+    ├── show\ system\ environment\ temperature.txt
+    └── show\ version.txt
+output/10.83.28.203/eos_commands
+├── json
+│   ├── show\ hostname.json
+│   ├── show\ interfaces\ description.json
+│   ├── show\ inventory.json
+│   ├── show\ ip\ bgp\ summary\ vrf\ all.json
+│   ├── show\ lldp\ neighbors.json
+│   ├── show\ mlag\ detail.json
+│   ├── show\ reload\ cause\ full.json
+│   ├── show\ reload\ cause\ history.json
+│   ├── show\ system\ environment\ cooling.json
+│   ├── show\ system\ environment\ power.json
+│   ├── show\ system\ environment\ temperature\ transceiver.json
+│   ├── show\ system\ environment\ temperature.json
+│   └── show\ version.json
+└── text
+    ├── custom\ show\ tech-support.txt
+    ├── show\ hostname.txt
+    ├── show\ interfaces\ description.txt
+    ├── show\ inventory.txt
+    ├── show\ ip\ bgp\ summary\ vrf\ all.txt
+    ├── show\ lldp\ neighbors.txt
+    ├── show\ logging\ system.txt
+    ├── show\ mlag\ detail.txt
+    ├── show\ reload\ cause\ full.txt
+    ├── show\ reload\ cause\ history.txt
+    ├── show\ running-config.txt
+    ├── show\ system\ environment\ cooling.txt
+    ├── show\ system\ environment\ power.txt
+    ├── show\ system\ environment\ temperature\ transceiver.txt
+    ├── show\ system\ environment\ temperature.txt
+    └── show\ version.txt
+output/10.83.28.217/eos_commands
+├── json
+│   ├── show\ hostname.json
+│   ├── show\ interfaces\ description.json
+│   ├── show\ inventory.json
+│   ├── show\ ip\ bgp\ summary\ vrf\ all.json
+│   ├── show\ lldp\ neighbors.json
+│   ├── show\ mlag\ detail.json
+│   ├── show\ reload\ cause\ full.json
+│   ├── show\ reload\ cause\ history.json
+│   ├── show\ system\ environment\ cooling.json
+│   ├── show\ system\ environment\ power.json
+│   ├── show\ system\ environment\ temperature\ transceiver.json
+│   ├── show\ system\ environment\ temperature.json
+│   └── show\ version.json
+└── text
+    ├── custom\ show\ tech-support.txt
+    ├── show\ hostname.txt
+    ├── show\ interfaces\ description.txt
+    ├── show\ inventory.txt
+    ├── show\ ip\ bgp\ summary\ vrf\ all.txt
+    ├── show\ lldp\ neighbors.txt
+    ├── show\ logging\ system.txt
+    ├── show\ mlag\ detail.txt
+    ├── show\ reload\ cause\ full.txt
+    ├── show\ reload\ cause\ history.txt
+    ├── show\ running-config.txt
+    ├── show\ system\ environment\ cooling.txt
+    ├── show\ system\ environment\ power.txt
+    ├── show\ system\ environment\ temperature\ transceiver.txt
+    ├── show\ system\ environment\ temperature.txt
+    └── show\ version.txt
+```
+</p>
+</details>
+
+### [custom_show_tech_support.py](custom_show_tech_support.py) file 
 
 It is used to build a custom show tech-support file.  
 
-The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the variables defined in the file [input.yml](input.yml) to generate offline a custom show tech-support text file.  
-For each devices indicated in [input.yml](input.yml), it assembles the files indicated in [input.yml](input.yml) file to generate offline a custom show tech-support text file.  
+It uses the variables defined in the file [input.yml](input.yml) to generate offline a custom show tech-support text file.  
+For each devices indicated in [input.yml](input.yml), it assembles the files (based on what is indicated in [input.yml](input.yml) file) to generate offline a custom show tech-support text file.  
 It supports only the text format (no JSON format support).  
 The name of the output file is "custom show tech-support.txt".  It is saved in device directory in the [output](output) directory. 
 
-### file [generate_audit_report.py](generate_audit_report.py) 
+```
+tree output/*/eos_commands/text -f  | grep custom
+├── output/10.83.28.122/eos_commands/text/custom\ show\ tech-support.txt
+├── output/10.83.28.203/eos_commands/text/custom\ show\ tech-support.txt
+├── output/10.83.28.217/eos_commands/text/custom\ show\ tech-support.txt
+```
+
+### [generate_audit_report.py](generate_audit_report.py) file 
 
 It is used to generate audit reports.  
 
@@ -305,11 +211,11 @@ The file [generate_audit_report.py](generate_audit_report.py) uses the variables
 
 #### Report files
 
-For each device defined in the file [input.yml](input.yml), the file [generate_audit_report.py](generate_audit_report.py) generates 2 reports:
-- The file "main.txt" includes details regarding all the tests for this device. It is saved in device directory in the [output](output) directory. 
-- The file "failures_only.txt" includes only the tests that failed for this device. It is saved in device directory in the [output](output) directory. 
+For each device defined in the file [input.yml](input.yml), the file [generate_audit_report.py](generate_audit_report.py) generates 2 reports in the "report" directory:
+- The file "main.txt" includes details regarding all the tests [generate_audit_report.py](generate_audit_report.py) ran for this device. 
+- The file "failures_only.txt" includes only the tests that failed for this device. 
 
-<details><summary>click me</summary>
+<details><summary>click me to see the output structure</summary>
 <p>
 
 ```
@@ -410,17 +316,21 @@ output/10.83.28.217/reports
 </p>
 </details>
 
-Then, the file [generate_audit_report.py](generate_audit_report.py) assembles the report of each device into one file: 
-- The file [main.txt](output/main.txt) includes for all the devices all the tests. It is saved at the root of the [output](output) directory. 
-- The file [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved at the root of the [output](output) directory.  
+Then, the file [generate_audit_report.py](generate_audit_report.py): 
+- Assembles the "main.txt" report of each device into one [main.txt](output/main.txt) file. So [main.txt](output/main.txt) includes all the tests [generate_audit_report.py](generate_audit_report.py) ran for all the devices. It is saved at the root of the [output](output) directory.  
+- Assembles the "failures_only.txt" report of each device into one [failures_only.txt](output/failures_only.txt) file. So [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved at the root of the [output](output) directory. 
 
 #### Supported features 
 
-The file [generate_audit_report.py](generate_audit_report.py) currently supports the following features.  
-To enable or disable them, update the file [input.yml](input.yml).
+The file [generate_audit_report.py](generate_audit_report.py) imports python functions from the [audit](audit) python package
+
+To enable or disable audit features on [generate_audit_report.py](generate_audit_report.py), update the file [input.yml](input.yml).  
+
+The following audit features are currently supported: 
+
 
 - print_hostname
-  - feature description: include the device hostname and fqdn
+  - description: include the device hostname and fqdn
   - required eos command: ```show hostname | json```
   - test failure conditions: This is a report without any test so there is no failure/passing condition
   - output example: 
@@ -431,7 +341,7 @@ Hostname: switch1
 FQDN: switch1.lab.local
 ```
 - print_version
-  - feature description: include some details regarding the device (HW model, SN, SW release, uptime)
+  - description: include some details regarding the device (HW model, SN, SW release, uptime)
   - required eos command: ```show version | json```
   - test failure conditions: This is a report without any test so there is no failure/passing condition
   - output example: 
@@ -444,7 +354,7 @@ Version: 4.22.4M-2GB
 Uptime: 1 day, 19:56:35
 ```
 - check_inventory 
-  - feature description: include tests report about the hardware inventory
+  - description: include tests report about the hardware inventory
   - required eos command: ```show inventory | json```
   - test failure conditions: A test fails if the manufacturer of a transceiver is neither "Arista Networks" nor "Arastra, Inc", or if a power supply slot has no power supply unit inserted
   - output exemple: 
@@ -478,7 +388,7 @@ Port: 7 *** Manufacturer: Arista Networks *** Model: CAB-Q-S-2M *** SN: XHC1133L
 Port: 8 *** Manufacturer: Arista Networks *** Model: CAB-Q-S-2M *** SN: XHC1133L0082 *** Result: PASS
 ```
 - check_power 
-  - feature description: include tests report about the power status
+  - description: include tests report about the power status
   - required eos command: ```show system environment power| json```
   - test failure conditions: A test fails if the status of a power supply is not ok  
   - output example
@@ -490,7 +400,7 @@ Power supply: 2 *** Status: ok *** Result: PASS
 ```  
 
 - check_cooling
-  - feature description: include tests report about the cooling status
+  - description: include tests report about the cooling status
   - required eos command: ```show system environment cooling | json```
   - test failure conditions: A test fails if the status of a fan is not ok
   - output example
@@ -508,7 +418,7 @@ Fan: 3/1 *** Status: ok *** Result: PASS
 Fan: 4/1 *** Status: ok *** Result: PASS
 ```
 - check_temperature
-  - feature description: include tests report about the temperature status
+  - description: include tests report about the temperature status
   - required eos command: ```show system environment temperature | json```
   - test failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state. The system temperature test fails if the system status is not OK
   - output example
@@ -531,7 +441,7 @@ Sensor: TempSensorP1/1 *** Description: Power supply sensor *** HW status: ok **
 Sensor: TempSensorP2/1 *** Description: Power supply sensor *** HW status: ok *** Alert count: 0 *** In alert state: False *** Max temperature (C): 24 *** Max temperature last change: 24 May 2020 18:38:15 *** Result: PASS
 ```
 - check_temperature_transceivers
-  - feature description: include tests report about the transceivers temperature status
+  - description: include tests report about the transceivers temperature status
   - required eos command: ```show system environment temperature transceiver | json```
   - test failure conditions: Failure conditions: A test fails if a sensor HW status is not OK or if a sensor alert count is > 0 or if a sensor is currently in alert state
   - output example 
@@ -548,7 +458,7 @@ Description: Xcvr54 temp sensor *** HW status: ok *** Alert count: 0 *** In aler
 ```
 
 - check_reload_cause_history
-  - feature description: include tests report about the cause for the last 10 reload
+  - description: include tests report about the cause for the last 10 reload
   - required eos command: ```show reload cause history | json```
   - test failure conditions: A test fails if a device reload was not requested by user
   - output example
@@ -568,7 +478,7 @@ Time: 05 May 2020 10:01:52 *** Reason: The system rebooted due to a Power Loss *
 ```
 
 - check_reload_cause_full
-  - feature description: include tests report about the cause of the most recent reload
+  - description: include tests report about the cause of the most recent reload
   - required eos command: ```show reload cause full | json```
   - test failure conditions: The test fails if the device reload was not requested by user
   - output example
@@ -578,7 +488,7 @@ Time: 05 May 2020 10:01:52 *** Reason: The system rebooted due to a Power Loss *
 Time: 24 May 2020 18:37:55 *** Reason: The system rebooted due to a Power Loss *** Result: FAIL
 ```
 - print_lldp
-  - feature description: include the lldp topology
+  - description: include the lldp topology
   - required eos command: ```show lldp neighbors | json```
   - test failure conditions: This is a report without any test so there is no failure/passing condition
   - output example
@@ -590,7 +500,7 @@ Interface: Ethernet2 *** LLDP neighbor: switch3.lab.local *** LLDP remote port: 
 Interface: Management1 *** LLDP neighbor: mgmt0a.lab.local *** LLDP remote port: Ethernet37
 ```
 - check_bgp
-  - feature description: include tests report about the bgp status for all configured vrf
+  - description: include tests report about the bgp status for all configured vrf
   - required eos command: ```show ip bgp summary vrf all | json```
   - test failure conditions: A test fails if a BGP session is not established
   - output example
@@ -602,7 +512,7 @@ Peer: 10.10.10.1 *** ASN: 65002 *** State: Established *** Up/Down: 25 May 2020 
 Peer: 10.10.10.3 *** ASN: 65003 *** State: Established *** Up/Down: 25 May 2020 00:02:54 *** Result: PASS
 ```
 - check_mlag
-  - feature description: include tests report about the mlag status
+  - description: include tests report about the mlag status
   - required eos command: ```show mlag detail | json```
   - test failure conditions: The test fails if the MLAG state is active and the negotiation status is not connected
   - some output examples: 
