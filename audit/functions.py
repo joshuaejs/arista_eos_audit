@@ -244,7 +244,7 @@ def check_inventory (device, root_dir):
         mfgName = data_json['xcvrSlots'][transceiver]['mfgName']
         serialNum = data_json['xcvrSlots'][transceiver]['serialNum']
         modelName = data_json['xcvrSlots'][transceiver]['modelName']
-        if mfgName == 'Arista Networks' or 'Arastra, Inc':
+        if (mfgName == 'Arista Networks') or (mfgName == 'Arastra, Inc'):
             result = 'PASS'
         elif mfgName == 'Not Present': 
             result = 'PASS'
