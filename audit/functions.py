@@ -882,14 +882,14 @@ def check_mlag (device, root_dir):
     f.close()
     data_json = json.loads(data) 
     state = data_json["state"] 
-    at_least_one_test_fail = False
+#    at_least_one_test_fail = False
     if state == "active": 
         negStatus = data_json["negStatus"]
         configSanity = data_json["configSanity"]
         peerAddress = data_json["peerAddress"] 
         if negStatus != 'connected': 
             result = 'FAIL'
-            at_least_one_test_fail = True
+#            at_least_one_test_fail = True
         elif negStatus == 'connected':
             result = 'PASS' 
         if result == 'FAIL':
@@ -905,7 +905,7 @@ def check_mlag (device, root_dir):
             main_report.write("Negotiation Status: " + negStatus + "\n")
             main_report.write("Config Sanity: " + configSanity + "\n")
             main_report.write("\nTest result: " + result + "\n")  
-        if at_least_one_test_fail == False: 
+#        if at_least_one_test_fail == False: 
             failures_only_report.write("All tests successfully passed\n")
     elif state == "disabled": 
         for item in [main_report, failures_only_report]:
