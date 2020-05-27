@@ -48,6 +48,9 @@ Once you collected the commands output, you can run the script [generate_audit_r
 
 ## Repository output 
 
+<details><summary>click me</summary>
+<p>
+
 ```          
 output
 ├── 10.83.28.122
@@ -245,6 +248,8 @@ output
 ├── failures_only.txt
 └── main.txt
 ```
+</p>
+</details>
 
 ## Repository details 
 
@@ -303,6 +308,9 @@ The file [generate_audit_report.py](generate_audit_report.py) uses the variables
 For each device defined in the file [input.yml](input.yml), the file [generate_audit_report.py](generate_audit_report.py) generates 2 reports:
 - The file "main.txt" includes details regarding all the tests for this device. It is saved in device directory in the [output](output) directory. 
 - The file "failures_only.txt" includes only the tests that failed for this device. It is saved in device directory in the [output](output) directory. 
+
+<details><summary>click me</summary>
+<p>
 
 ```
 output/10.83.28.122/reports
@@ -399,6 +407,8 @@ output/10.83.28.217/reports
 │   └── print_version.txt
 └── main.txt
 ```
+</p>
+</details>
 
 Then, the file [generate_audit_report.py](generate_audit_report.py) assembles the report of each device into one file: 
 - The file [main.txt](output/main.txt) includes for all the devices all the tests. It is saved at the root of the [output](output) directory. 
