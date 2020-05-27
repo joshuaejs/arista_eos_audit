@@ -6,7 +6,7 @@
 [Requirements](#requirements)  
 [How to use this repository](#how-to-use-this-repository)  
 [Repository details](#repository-details)  
-&nbsp;&nbsp;&nbsp;&nbsp;[audit python package](audit-python-package)   
+&nbsp;&nbsp;&nbsp;&nbsp;[audit directory](audit-directory)   
 &nbsp;&nbsp;&nbsp;&nbsp;[Repository input](#repository-input)    
 &nbsp;&nbsp;&nbsp;&nbsp;[Collect EOS commands](#collect-eos-commands)  
 &nbsp;&nbsp;&nbsp;&nbsp;[Build a custom show tech-support file](#build-a-custom-show-tech-support-file)  
@@ -46,9 +46,10 @@ Once you collected the commands output, you can run the script [generate_audit_r
 
 ## Repository details 
 
-### audit package
+### audit directory
 
-The python package [audit](audit) has python functions imported by the pythons scritps of this repository
+The [audit](audit) directory is a python package that has python functions.  
+Some of these functions are imported by the pythons scritps of this repository ([collect_eos_commands.py](collect_eos_commands.py), [custom_show_tech_support.py](custom_show_tech_support.py), [generate_audit_report.py](generate_audit_report.py))
 
 ### Repository input 
 
