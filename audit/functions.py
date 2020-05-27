@@ -209,23 +209,23 @@ def check_inventory (device, root_dir):
         item.write('\n')
     for item in [main_report, failures_only_report]:
         item.write('Power Supplies: \n')
-    at_least_one_test_fail = False
+    at_least_one_test_in_the_loop_failed = False
     for ps in data_json['powerSupplySlots']: 
         slot = str(ps)
         name = data_json['powerSupplySlots'][ps]['name']
         serialNum = data_json['powerSupplySlots'][ps]['serialNum']
         if name == 'Not Inserted': 
             result = 'FAIL'
-            at_least_one_test_fail = True
+            at_least_one_test_in_the_loop_failed = True
         else:
             result = 'PASS'
         message = 'Slot: ' + slot + ' *** Model: ' + name + ' *** SN: ' + serialNum + ' *** Result: ' + result + '\n'
         main_report.write(message)
         if result == 'FAIL':
             failures_only_report.write(message)
-    if at_least_one_test_fail == True: 
+    if at_least_one_test_in_the_loop_failed == True: 
         failures_only_report.write("The other tests succesfully passed\n")
-    if at_least_one_test_fail == False: 
+    if at_least_one_test_in_the_loop_failed == False: 
         failures_only_report.write("All tests successfully passed\n")
     for item in [main_report, failures_only_report]:
         item.write('\n')
@@ -238,7 +238,7 @@ def check_inventory (device, root_dir):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.write('Transceivers: \n')
-    at_least_one_test_fail = False
+    at_least_one_test_in_the_loop_failed = False
     for transceiver in sorted(data_json["xcvrSlots"]):
         transceiver = str(transceiver)
         mfgName = data_json['xcvrSlots'][transceiver]['mfgName']
@@ -250,15 +250,15 @@ def check_inventory (device, root_dir):
             result = 'PASS'
         else:
             result = 'FAIL'
-            at_least_one_test_fail = True
+            at_least_one_test_in_the_loop_failed = True
         if mfgName != "Not Present": 
             message = "Port: " + transceiver + ' *** Manufacturer: ' + mfgName + ' *** Model: ' + modelName + ' *** SN: ' + serialNum + ' *** Result: ' + result + "\n"
             main_report.write(message)
             if result == 'FAIL':
                 failures_only_report.write(message)
-    if at_least_one_test_fail == True: 
+    if at_least_one_test_in_the_loop_failed == True: 
         failures_only_report.write("The other tests succesfully passed\n")
-    if at_least_one_test_fail == False: 
+    if at_least_one_test_in_the_loop_failed == False: 
         failures_only_report.write("All tests successfully passed\n")
     for item in [main_report, failures_only_report]:
         item.write('\n')
@@ -300,21 +300,21 @@ def check_power (device, root_dir):
     data = f.read()
     f.close()
     data_json = json.loads(data) 
-    at_least_one_test_fail = False
+    at_least_one_test_in_the_loop_failed = False
     for powersupply in data_json['powerSupplies']:
         state = data_json['powerSupplies'][powersupply]['state']
         if state == 'ok': 
             result = 'PASS'
         else:
             result = 'FAIL'
-            at_least_one_test_fail = True
+            at_least_one_test_in_the_loop_failed = True
         message = "Power supply: " + powersupply + ' *** Status: ' + state + ' *** Result: ' + result + "\n"
         main_report.write(message)
         if result == 'FAIL':
             failures_only_report.write(message)
-    if at_least_one_test_fail == True: 
+    if at_least_one_test_in_the_loop_failed == True: 
         failures_only_report.write("The other tests succesfully passed\n")
-    if at_least_one_test_fail == False: 
+    if at_least_one_test_in_the_loop_failed == False: 
         failures_only_report.write("All tests successfully passed\n")
     for item in [main_report, failures_only_report]:
         item.write('\n')
@@ -358,7 +358,7 @@ def check_cooling (device, root_dir):
     data_json = json.loads(data) 
     for item in [main_report, failures_only_report]:
         item.write('Power supplies: \n')
-    at_least_one_test_fail = False
+    at_least_one_test_in_the_loop_failed = False
     for ps in data_json['powerSupplySlots']:
         for fan in ps['fans']: 
             status = fan['status'] 
@@ -367,18 +367,18 @@ def check_cooling (device, root_dir):
                 result = 'PASS'
             else:
                 result = 'FAIL'
-                at_least_one_test_fail = True
+                at_least_one_test_in_the_loop_failed = True
             message = "Fan: " + label + ' *** Status: ' + status + ' *** Result: ' + result + "\n"
             main_report.write(message)
             if result == 'FAIL':
                 failures_only_report.write(message)
-    if at_least_one_test_fail == True: 
+    if at_least_one_test_in_the_loop_failed == True: 
         failures_only_report.write("The other tests succesfully passed\n")
-    if at_least_one_test_fail == False: 
+    if at_least_one_test_in_the_loop_failed == False: 
         failures_only_report.write("All tests successfully passed\n")
     for item in [main_report, failures_only_report]:
         item.write('\nFan modules: \n')
-    at_least_one_test_fail = False
+    at_least_one_test_in_the_loop_failed = False
     for fantrayslot in data_json['fanTraySlots']:
         for fan in fantrayslot['fans']: 
             status = fan['status'] 
@@ -387,14 +387,14 @@ def check_cooling (device, root_dir):
                 result = 'PASS'
             else:
                 result = 'FAIL'
-                at_least_one_test_fail = True
+                at_least_one_test_in_the_loop_failed = True
             message = "Fan: " + label + ' *** Status: ' + status + ' *** Result: ' + result + "\n"
             main_report.write(message)
             if result == 'FAIL':
                 failures_only_report.write(message)
-    if at_least_one_test_fail == True: 
+    if at_least_one_test_in_the_loop_failed == True: 
         failures_only_report.write("The other tests succesfully passed\n")
-    if at_least_one_test_fail == False: 
+    if at_least_one_test_in_the_loop_failed == False: 
         failures_only_report.write("All tests successfully passed\n")
     for item in [main_report, failures_only_report]:
         item.write('\n')
@@ -452,7 +452,7 @@ def check_temperature (device, root_dir):
         failures_only_report.write("All tests successfully passed\n")
     for item in [main_report, failures_only_report]:
         item.write("\nSensors: \n" ) 
-    at_least_one_test_fail = False
+    at_least_one_test_in_the_loop_failed = False
     for sensor in data_json["tempSensors"]:
         hwStatus = sensor['hwStatus']
         alertCount = sensor['alertCount']
@@ -464,20 +464,20 @@ def check_temperature (device, root_dir):
         maxTemperatureLastChange = datetime.datetime.fromtimestamp(maxTemperatureLastChange_epoch).strftime("%d %b %Y %H:%M:%S")
         if hwStatus != 'ok' or alertCount!= 0 or str(inAlertState) != "False": 
             result = 'FAIL'
-            at_least_one_test_fail = True
+            at_least_one_test_in_the_loop_failed = True
         else:
             result = 'PASS'
         message = "Sensor: " + name + ' *** Description: ' + description + ' *** HW status: ' + hwStatus + ' *** Alert count: ' + str(alertCount) + ' *** In alert state: ' + str(inAlertState) + ' *** Max temperature (C): ' + str(int(maxTemperature)) + ' *** Max temperature last change: ' + maxTemperatureLastChange + ' *** Result: ' + result + "\n"
         main_report.write(message)
         if result == 'FAIL':
             failures_only_report.write(message)
-    if at_least_one_test_fail == True: 
+    if at_least_one_test_in_the_loop_failed == True: 
         failures_only_report.write("The other tests succesfully passed\n")
-    if at_least_one_test_fail == False: 
+    if at_least_one_test_in_the_loop_failed == False: 
         failures_only_report.write("All tests successfully passed\n")
     for item in [main_report, failures_only_report]:
         item.write("\nCard Slot: \n" ) 
-    at_least_one_test_fail = False
+    at_least_one_test_in_the_loop_failed = False
     for card in data_json["cardSlots"]: 
         entPhysicalClass = card['entPhysicalClass']
         relPos = card['relPos']
@@ -492,21 +492,21 @@ def check_temperature (device, root_dir):
             maxTemperatureLastChange = datetime.datetime.fromtimestamp(maxTemperatureLastChange_epoch).strftime("%d %b %Y %H:%M:%S")
             if hwStatus != 'ok' or alertCount!= 0 or str(inAlertState) != "False": 
                 result = 'FAIL'
-                at_least_one_test_fail = True
+                at_least_one_test_in_the_loop_failed = True
             else:
                 result = 'PASS'
             message = "Sensor: " + name + ' *** Description: ' + description + ' *** Card type: ' + entPhysicalClass + ' *** Card position: ' + relPos + ' *** HW status: ' + hwStatus + ' *** Alert count: ' + str(alertCount) + ' *** In alert state: ' + str(inAlertState) + ' *** Max temperature (C): ' + str(int(maxTemperature)) + ' *** Max temperature last change: ' + maxTemperatureLastChange + ' *** Result: ' + result + "\n"
             main_report.write(message)
             if result == 'FAIL':
                 failures_only_report.write(message)
-    if at_least_one_test_fail == True: 
+    if at_least_one_test_in_the_loop_failed == True: 
         failures_only_report.write("The other tests succesfully passed\n")
-    if at_least_one_test_fail == False: 
+    if at_least_one_test_in_the_loop_failed == False: 
         failures_only_report.write("All tests successfully passed\n")
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.write("Power Supplies: \n" ) 
-    at_least_one_test_fail = False
+    at_least_one_test_in_the_loop_failed = False
     for item in data_json["powerSupplySlots"]: 
         for sensor in item["tempSensors"]: 
             hwStatus = sensor['hwStatus']
@@ -519,16 +519,16 @@ def check_temperature (device, root_dir):
             maxTemperatureLastChange = datetime.datetime.fromtimestamp(maxTemperatureLastChange_epoch).strftime("%d %b %Y %H:%M:%S")
             if hwStatus != 'ok' or alertCount!= 0 or str(inAlertState) != "False": 
                 result = 'FAIL'
-                at_least_one_test_fail = True
+                at_least_one_test_in_the_loop_failed = True
             else:
                 result = 'PASS'
             message = "Sensor: " + name + ' *** Description: ' + description + ' *** HW status: ' + hwStatus + ' *** Alert count: ' + str(alertCount) + ' *** In alert state: ' + str(inAlertState) + ' *** Max temperature (C): ' + str(int(maxTemperature)) + ' *** Max temperature last change: ' + maxTemperatureLastChange + ' *** Result: ' + result + "\n"
             main_report.write(message)
             if result == 'FAIL':
                 failures_only_report.write(message)
-    if at_least_one_test_fail == True: 
+    if at_least_one_test_in_the_loop_failed == True: 
         failures_only_report.write("The other tests succesfully passed\n")
-    if at_least_one_test_fail == False: 
+    if at_least_one_test_in_the_loop_failed == False: 
         failures_only_report.write("All tests successfully passed\n")
     for item in [main_report, failures_only_report]:
         item.write('\n')
@@ -570,7 +570,7 @@ def check_temperature_transceivers (device, root_dir):
     data = f.read()
     f.close()
     data_json = json.loads(data) 
-    at_least_one_test_fail = False
+    at_least_one_test_in_the_loop_failed = False
     for sensor in data_json["tempSensors"]:
         hwStatus = sensor['hwStatus']
         alertCount = sensor['alertCount']
@@ -581,18 +581,18 @@ def check_temperature_transceivers (device, root_dir):
         maxTemperatureLastChange = datetime.datetime.fromtimestamp(maxTemperatureLastChange_epoch).strftime("%d %b %Y %H:%M:%S")
         if hwStatus != 'ok' or alertCount!= 0 or str(inAlertState) != "False": 
             result = 'FAIL'
-            at_least_one_test_fail = True
+            at_least_one_test_in_the_loop_failed = True
         else:
             result = 'PASS'
         message = 'Description: ' + description + ' *** HW status: ' + hwStatus + ' *** Alert count: ' + str(alertCount) + ' *** In alert state: ' + str(inAlertState) + ' *** Max temperature (C): ' + str(int(maxTemperature)) + ' *** Max temperature last change: ' + maxTemperatureLastChange + ' *** Result: ' + result + "\n"
         main_report.write(message)
         if result == 'FAIL':
             failures_only_report.write(message)
-    if at_least_one_test_fail == True: 
+    if at_least_one_test_in_the_loop_failed == True: 
         failures_only_report.write("The other tests succesfully passed\n")
-    if at_least_one_test_fail == False: 
+    if at_least_one_test_in_the_loop_failed == False: 
         failures_only_report.write("All tests successfully passed\n")
-    at_least_one_test_fail = False
+    at_least_one_test_in_the_loop_failed = False
     for card in data_json["cardSlots"]: 
         if card['entPhysicalClass'] == "Linecard":
             for sensor in card["tempSensors"]: 
@@ -605,7 +605,7 @@ def check_temperature_transceivers (device, root_dir):
                 maxTemperatureLastChange = datetime.datetime.fromtimestamp(maxTemperatureLastChange_epoch).strftime("%d %b %Y %H:%M:%S")
                 if hwStatus != 'ok' or alertCount!= 0 or str(inAlertState) != "False": 
                     result = 'FAIL'
-                    at_least_one_test_fail = True
+                    at_least_one_test_in_the_loop_failed = True
                 else:
                     result = 'PASS'
                 message = 'Description: ' + description + ' *** HW status: ' + hwStatus + ' *** Alert count: ' + str(alertCount) + ' *** In alert state: ' + str(inAlertState) + ' *** Max temperature (C): ' + str(int(maxTemperature)) + ' *** Max temperature last change: ' + maxTemperatureLastChange + ' *** Result: ' + result + "\n"
@@ -652,7 +652,7 @@ def check_reload_cause_history (device, root_dir):
     data = f.read()
     f.close()
     data_json = json.loads(data) 
-    at_least_one_test_fail = False
+    at_least_one_test_in_the_loop_failed = False
     for reboot_id in range(0,10):
         reboot_id = str(reboot_id)
         if reboot_id in data_json["resetHistory"]:
@@ -662,16 +662,16 @@ def check_reload_cause_history (device, root_dir):
                 timestamp = datetime.datetime.fromtimestamp(timestamp_epoch).strftime("%d %b %Y %H:%M:%S")
                 if description != "Reload requested by the user.": 
                     result = "FAIL"
-                    at_least_one_test_fail = True
+                    at_least_one_test_in_the_loop_failed = True
                 else:
                     result = "PASS" 
                 message = "Time: " + timestamp  + " *** Reason: " + description + " *** Result: " + result + '\n'
                 main_report.write(message)
                 if result == 'FAIL':
                     failures_only_report.write(message) 
-    if at_least_one_test_fail == True: 
+    if at_least_one_test_in_the_loop_failed == True: 
         failures_only_report.write("The other tests succesfully passed\n")
-    if at_least_one_test_fail == False: 
+    if at_least_one_test_in_the_loop_failed == False: 
         failures_only_report.write("All tests successfully passed\n")
     for item in [main_report, failures_only_report]:
         item.write('\n')
@@ -713,23 +713,23 @@ def check_reload_cause_full (device, root_dir):
     data = f.read()
     f.close()
     data_json = json.loads(data) 
-    at_least_one_test_fail = False
+    at_least_one_test_in_the_loop_failed = False
     for item in data_json["resetCauses"]: 
         description = item['description']
         timestamp_epoch = item['timestamp']
         timestamp = datetime.datetime.fromtimestamp(timestamp_epoch).strftime("%d %b %Y %H:%M:%S")
         if description != "Reload requested by the user.": 
             result = "FAIL"
-            at_least_one_test_fail = True
+            at_least_one_test_in_the_loop_failed = True
         else:
             result = "PASS" 
         message = "Time: " + timestamp  + " *** Reason: " + description + " *** Result: " + result + '\n'
         main_report.write(message) 
         if result == 'FAIL':
             failures_only_report.write(message)
-    if at_least_one_test_fail == True: 
+    if at_least_one_test_in_the_loop_failed == True: 
         failures_only_report.write("The other tests succesfully passed\n")
-    if at_least_one_test_fail == False: 
+    if at_least_one_test_in_the_loop_failed == False: 
         failures_only_report.write("All tests successfully passed\n")
     for item in [main_report, failures_only_report]:
         item.write('\n')
@@ -820,7 +820,7 @@ def check_bgp (device, root_dir):
         vrf = vrf
         for item in [main_report, failures_only_report]:
             item.write("vrf: " + vrf + "\n") 
-        at_least_one_test_fail = False
+        at_least_one_test_in_the_loop_failed = False
         for peer in data_json['vrfs'][vrf]['peers']: 
             peer = peer
             asn = data_json['vrfs'][vrf]['peers'][peer]['asn']
@@ -828,16 +828,16 @@ def check_bgp (device, root_dir):
             upDownTime = datetime.datetime.fromtimestamp(data_json['vrfs'][vrf]['peers'][peer]['upDownTime']).strftime("%d %b %Y %H:%M:%S")
             if peerState != 'Established': 
                 result = 'FAIL'
-                at_least_one_test_fail = True
+                at_least_one_test_in_the_loop_failed = True
             else:
                 result = 'PASS'
             message = "Peer: " + peer + " *** ASN: " + asn + " *** State: " + peerState + " *** Up/Down: " + upDownTime + " *** Result: " + result + "\n"
             main_report.write(message)
             if result == 'FAIL':
                 failures_only_report.write(message)
-        if at_least_one_test_fail == True: 
+        if at_least_one_test_in_the_loop_failed == True: 
             failures_only_report.write("The other tests succesfully passed\n")
-        if at_least_one_test_fail == False: 
+        if at_least_one_test_in_the_loop_failed == False: 
             failures_only_report.write("All tests successfully passed\n")
         for item in [main_report, failures_only_report]:
             item.write('\n')
@@ -953,7 +953,7 @@ def generate_failures_only_report(dev, topic, root_dir):
     """
     directories = device_directories(dev, root_dir)
     reports_directory = directories[4]
-    outfile = open(reports_directory + "/failures only.txt", "w")
+    outfile = open(reports_directory + "/failures_only.txt", "w")
     infile = open(init(dev, root_dir)[1], "r")
     for line in infile:  
         outfile.write(line)
@@ -1019,7 +1019,7 @@ def assemble_failures_only_reports(devices, topic, root_dir):
     for device in devices:
         directories = device_directories(device, root_dir)
         reports_directory = directories[4]
-        device_report = open(reports_directory + "/failures only.txt", "r")
+        device_report = open(reports_directory + "/failures_only.txt", "r")
         for line in device_report:  
             network_report_failures_only.write(line)
         device_report.close()

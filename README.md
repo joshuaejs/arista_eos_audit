@@ -42,16 +42,220 @@ Then update the file [input.yml](input.yml). It has the required input for the v
 
 Then you can run the script [collect_eos_commands.py](collect_eos_commands.py) to collect commands output from EOS devices.  
 
+If you want to generate offline a custom show tech-support text file, run the script [custom_show_tech_support.py](custom_show_tech_support.py).  
+
 Once you collected the commands output, you can run the script [generate_audit_report.py](generate_audit_report.py) to generate reports.  
+
+## Repository output 
+
+```          
+output
+├── 10.83.28.122
+│   ├── eos_commands
+│   │   ├── json
+│   │   │   ├── show\ hostname.json
+│   │   │   ├── show\ interfaces\ description.json
+│   │   │   ├── show\ inventory.json
+│   │   │   ├── show\ ip\ bgp\ summary\ vrf\ all.json
+│   │   │   ├── show\ lldp\ neighbors.json
+│   │   │   ├── show\ mlag\ detail.json
+│   │   │   ├── show\ reload\ cause\ full.json
+│   │   │   ├── show\ reload\ cause\ history.json
+│   │   │   ├── show\ system\ environment\ cooling.json
+│   │   │   ├── show\ system\ environment\ power.json
+│   │   │   ├── show\ system\ environment\ temperature\ transceiver.json
+│   │   │   ├── show\ system\ environment\ temperature.json
+│   │   │   └── show\ version.json
+│   │   └── text
+│   │       ├── custom\ show\ tech-support.txt
+│   │       ├── show\ hostname.txt
+│   │       ├── show\ interfaces\ description.txt
+│   │       ├── show\ inventory.txt
+│   │       ├── show\ ip\ bgp\ summary\ vrf\ all.txt
+│   │       ├── show\ lldp\ neighbors.txt
+│   │       ├── show\ logging\ system.txt
+│   │       ├── show\ mlag\ detail.txt
+│   │       ├── show\ reload\ cause\ full.txt
+│   │       ├── show\ reload\ cause\ history.txt
+│   │       ├── show\ running-config.txt
+│   │       ├── show\ system\ environment\ cooling.txt
+│   │       ├── show\ system\ environment\ power.txt
+│   │       ├── show\ system\ environment\ temperature\ transceiver.txt
+│   │       ├── show\ system\ environment\ temperature.txt
+│   │       └── show\ version.txt
+│   └── reports
+│       ├── failures_only
+│       │   ├── check_bgp.txt
+│       │   ├── check_cooling.txt
+│       │   ├── check_inventory.txt
+│       │   ├── check_mlag.txt
+│       │   ├── check_power.txt
+│       │   ├── check_reload_cause_full.txt
+│       │   ├── check_reload_cause_history.txt
+│       │   ├── check_temperature.txt
+│       │   ├── check_temperature_transceivers.txt
+│       │   ├── init.txt
+│       │   ├── print_hostname.txt
+│       │   ├── print_lldp.txt
+│       │   └── print_version.txt
+│       ├── failures_only.txt
+│       ├── main
+│       │   ├── check_bgp.txt
+│       │   ├── check_cooling.txt
+│       │   ├── check_inventory.txt
+│       │   ├── check_mlag.txt
+│       │   ├── check_power.txt
+│       │   ├── check_reload_cause_full.txt
+│       │   ├── check_reload_cause_history.txt
+│       │   ├── check_temperature.txt
+│       │   ├── check_temperature_transceivers.txt
+│       │   ├── init.txt
+│       │   ├── print_hostname.txt
+│       │   ├── print_lldp.txt
+│       │   └── print_version.txt
+│       └── main.txt
+├── 10.83.28.203
+│   ├── eos_commands
+│   │   ├── json
+│   │   │   ├── show\ hostname.json
+│   │   │   ├── show\ interfaces\ description.json
+│   │   │   ├── show\ inventory.json
+│   │   │   ├── show\ ip\ bgp\ summary\ vrf\ all.json
+│   │   │   ├── show\ lldp\ neighbors.json
+│   │   │   ├── show\ mlag\ detail.json
+│   │   │   ├── show\ reload\ cause\ full.json
+│   │   │   ├── show\ reload\ cause\ history.json
+│   │   │   ├── show\ system\ environment\ cooling.json
+│   │   │   ├── show\ system\ environment\ power.json
+│   │   │   ├── show\ system\ environment\ temperature\ transceiver.json
+│   │   │   ├── show\ system\ environment\ temperature.json
+│   │   │   └── show\ version.json
+│   │   └── text
+│   │       ├── custom\ show\ tech-support.txt
+│   │       ├── show\ hostname.txt
+│   │       ├── show\ interfaces\ description.txt
+│   │       ├── show\ inventory.txt
+│   │       ├── show\ ip\ bgp\ summary\ vrf\ all.txt
+│   │       ├── show\ lldp\ neighbors.txt
+│   │       ├── show\ logging\ system.txt
+│   │       ├── show\ mlag\ detail.txt
+│   │       ├── show\ reload\ cause\ full.txt
+│   │       ├── show\ reload\ cause\ history.txt
+│   │       ├── show\ running-config.txt
+│   │       ├── show\ system\ environment\ cooling.txt
+│   │       ├── show\ system\ environment\ power.txt
+│   │       ├── show\ system\ environment\ temperature\ transceiver.txt
+│   │       ├── show\ system\ environment\ temperature.txt
+│   │       └── show\ version.txt
+│   └── reports
+│       ├── failures_only
+│       │   ├── check_bgp.txt
+│       │   ├── check_cooling.txt
+│       │   ├── check_inventory.txt
+│       │   ├── check_mlag.txt
+│       │   ├── check_power.txt
+│       │   ├── check_reload_cause_full.txt
+│       │   ├── check_reload_cause_history.txt
+│       │   ├── check_temperature.txt
+│       │   ├── check_temperature_transceivers.txt
+│       │   ├── init.txt
+│       │   ├── print_hostname.txt
+│       │   ├── print_lldp.txt
+│       │   └── print_version.txt
+│       ├── failures_only.txt
+│       ├── main
+│       │   ├── check_bgp.txt
+│       │   ├── check_cooling.txt
+│       │   ├── check_inventory.txt
+│       │   ├── check_mlag.txt
+│       │   ├── check_power.txt
+│       │   ├── check_reload_cause_full.txt
+│       │   ├── check_reload_cause_history.txt
+│       │   ├── check_temperature.txt
+│       │   ├── check_temperature_transceivers.txt
+│       │   ├── init.txt
+│       │   ├── print_hostname.txt
+│       │   ├── print_lldp.txt
+│       │   └── print_version.txt
+│       └── main.txt
+├── 10.83.28.217
+│   ├── eos_commands
+│   │   ├── json
+│   │   │   ├── show\ hostname.json
+│   │   │   ├── show\ interfaces\ description.json
+│   │   │   ├── show\ inventory.json
+│   │   │   ├── show\ ip\ bgp\ summary\ vrf\ all.json
+│   │   │   ├── show\ lldp\ neighbors.json
+│   │   │   ├── show\ mlag\ detail.json
+│   │   │   ├── show\ reload\ cause\ full.json
+│   │   │   ├── show\ reload\ cause\ history.json
+│   │   │   ├── show\ system\ environment\ cooling.json
+│   │   │   ├── show\ system\ environment\ power.json
+│   │   │   ├── show\ system\ environment\ temperature\ transceiver.json
+│   │   │   ├── show\ system\ environment\ temperature.json
+│   │   │   └── show\ version.json
+│   │   └── text
+│   │       ├── custom\ show\ tech-support.txt
+│   │       ├── show\ hostname.txt
+│   │       ├── show\ interfaces\ description.txt
+│   │       ├── show\ inventory.txt
+│   │       ├── show\ ip\ bgp\ summary\ vrf\ all.txt
+│   │       ├── show\ lldp\ neighbors.txt
+│   │       ├── show\ logging\ system.txt
+│   │       ├── show\ mlag\ detail.txt
+│   │       ├── show\ reload\ cause\ full.txt
+│   │       ├── show\ reload\ cause\ history.txt
+│   │       ├── show\ running-config.txt
+│   │       ├── show\ system\ environment\ cooling.txt
+│   │       ├── show\ system\ environment\ power.txt
+│   │       ├── show\ system\ environment\ temperature\ transceiver.txt
+│   │       ├── show\ system\ environment\ temperature.txt
+│   │       └── show\ version.txt
+│   └── reports
+│       ├── failures_only
+│       │   ├── check_bgp.txt
+│       │   ├── check_cooling.txt
+│       │   ├── check_inventory.txt
+│       │   ├── check_mlag.txt
+│       │   ├── check_power.txt
+│       │   ├── check_reload_cause_full.txt
+│       │   ├── check_reload_cause_history.txt
+│       │   ├── check_temperature.txt
+│       │   ├── check_temperature_transceivers.txt
+│       │   ├── init.txt
+│       │   ├── print_hostname.txt
+│       │   ├── print_lldp.txt
+│       │   └── print_version.txt
+│       ├── failures_only.txt
+│       ├── main
+│       │   ├── check_bgp.txt
+│       │   ├── check_cooling.txt
+│       │   ├── check_inventory.txt
+│       │   ├── check_mlag.txt
+│       │   ├── check_power.txt
+│       │   ├── check_reload_cause_full.txt
+│       │   ├── check_reload_cause_history.txt
+│       │   ├── check_temperature.txt
+│       │   ├── check_temperature_transceivers.txt
+│       │   ├── init.txt
+│       │   ├── print_hostname.txt
+│       │   ├── print_lldp.txt
+│       │   └── print_version.txt
+│       └── main.txt
+├── failures_only.txt
+└── main.txt
+```
 
 ## Repository details 
 
-### audit directory
+### directory audit
 
 The [audit](audit) directory is a python package that has python functions.  
 Some of these functions are imported by the pythons scritps of this repository ([collect_eos_commands.py](collect_eos_commands.py), [custom_show_tech_support.py](custom_show_tech_support.py), [generate_audit_report.py](generate_audit_report.py))
 
-### Repository input 
+### file [input.yml](input.yml)
+
+This is the repository input.   
 
 The file [input.yml](input.yml) has the required input for the files
 - [collect_eos_commands.py](collect_eos_commands.py) 
@@ -69,20 +273,26 @@ It is used to define these variables:
 - custom_show_tech_support: list of files (show commands) to include in a custom show tech-support text file. 
 - audit: list of topics to audit and to include in the report.  
 
-### Collect EOS commands
+### file [collect_eos_commands.py](collect_eos_commands.py) 
+
+It is used to collect EOS commands.  
 
 The file [collect_eos_commands.py](collect_eos_commands.py) uses the variables defined in the file [input.yml](input.yml) to collect show commands from EOS devices.  
 It supports collecting show commands in both text and JSON format.  
 The commands output is saved in device directory in the [output](output) directory. 
 
-### Build a custom show tech-support file 
+### file [custom_show_tech_support.py](custom_show_tech_support.py) 
+
+It is used to build a custom show tech-support file.  
 
 The file [custom_show_tech_support.py](custom_show_tech_support.py) uses the variables defined in the file [input.yml](input.yml) to generate offline a custom show tech-support text file.  
 For each devices indicated in [input.yml](input.yml), it assembles the files indicated in [input.yml](input.yml) file to generate offline a custom show tech-support text file.  
 It supports only the text format (no JSON format support).  
 The name of the output file is "custom show tech-support.txt".  It is saved in device directory in the [output](output) directory. 
 
-### Generate audit reports
+### file [generate_audit_report.py](generate_audit_report.py) 
+
+It is used to generate audit reports.  
 
 #### Overview 
 
@@ -93,6 +303,102 @@ The file [generate_audit_report.py](generate_audit_report.py) uses the variables
 For each device defined in the file [input.yml](input.yml), the file [generate_audit_report.py](generate_audit_report.py) generates 2 reports:
 - The file "main.txt" includes details regarding all the tests for this device. It is saved in device directory in the [output](output) directory. 
 - The file "failures_only.txt" includes only the tests that failed for this device. It is saved in device directory in the [output](output) directory. 
+
+```
+output/10.83.28.122/reports
+├── failures_only
+│   ├── check_bgp.txt
+│   ├── check_cooling.txt
+│   ├── check_inventory.txt
+│   ├── check_mlag.txt
+│   ├── check_power.txt
+│   ├── check_reload_cause_full.txt
+│   ├── check_reload_cause_history.txt
+│   ├── check_temperature.txt
+│   ├── check_temperature_transceivers.txt
+│   ├── init.txt
+│   ├── print_hostname.txt
+│   ├── print_lldp.txt
+│   └── print_version.txt
+├── failures_only.txt
+├── main
+│   ├── check_bgp.txt
+│   ├── check_cooling.txt
+│   ├── check_inventory.txt
+│   ├── check_mlag.txt
+│   ├── check_power.txt
+│   ├── check_reload_cause_full.txt
+│   ├── check_reload_cause_history.txt
+│   ├── check_temperature.txt
+│   ├── check_temperature_transceivers.txt
+│   ├── init.txt
+│   ├── print_hostname.txt
+│   ├── print_lldp.txt
+│   └── print_version.txt
+└── main.txt
+output/10.83.28.203/reports
+├── failures_only
+│   ├── check_bgp.txt
+│   ├── check_cooling.txt
+│   ├── check_inventory.txt
+│   ├── check_mlag.txt
+│   ├── check_power.txt
+│   ├── check_reload_cause_full.txt
+│   ├── check_reload_cause_history.txt
+│   ├── check_temperature.txt
+│   ├── check_temperature_transceivers.txt
+│   ├── init.txt
+│   ├── print_hostname.txt
+│   ├── print_lldp.txt
+│   └── print_version.txt
+├── failures_only.txt
+├── main
+│   ├── check_bgp.txt
+│   ├── check_cooling.txt
+│   ├── check_inventory.txt
+│   ├── check_mlag.txt
+│   ├── check_power.txt
+│   ├── check_reload_cause_full.txt
+│   ├── check_reload_cause_history.txt
+│   ├── check_temperature.txt
+│   ├── check_temperature_transceivers.txt
+│   ├── init.txt
+│   ├── print_hostname.txt
+│   ├── print_lldp.txt
+│   └── print_version.txt
+└── main.txt
+output/10.83.28.217/reports
+├── failures_only
+│   ├── check_bgp.txt
+│   ├── check_cooling.txt
+│   ├── check_inventory.txt
+│   ├── check_mlag.txt
+│   ├── check_power.txt
+│   ├── check_reload_cause_full.txt
+│   ├── check_reload_cause_history.txt
+│   ├── check_temperature.txt
+│   ├── check_temperature_transceivers.txt
+│   ├── init.txt
+│   ├── print_hostname.txt
+│   ├── print_lldp.txt
+│   └── print_version.txt
+├── failures_only.txt
+├── main
+│   ├── check_bgp.txt
+│   ├── check_cooling.txt
+│   ├── check_inventory.txt
+│   ├── check_mlag.txt
+│   ├── check_power.txt
+│   ├── check_reload_cause_full.txt
+│   ├── check_reload_cause_history.txt
+│   ├── check_temperature.txt
+│   ├── check_temperature_transceivers.txt
+│   ├── init.txt
+│   ├── print_hostname.txt
+│   ├── print_lldp.txt
+│   └── print_version.txt
+└── main.txt
+```
 
 Then, the file [generate_audit_report.py](generate_audit_report.py) assembles the report of each device into one file: 
 - The file [main.txt](output/main.txt) includes for all the devices all the tests. It is saved at the root of the [output](output) directory. 
