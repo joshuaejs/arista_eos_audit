@@ -11,9 +11,9 @@
             "lineProtocolStatus": "notPresent"
         },
         "Ethernet2": {
-            "interfaceStatus": "down",
+            "interfaceStatus": "up",
             "description": "",
-            "lineProtocolStatus": "down"
+            "lineProtocolStatus": "up"
         },
         "Ethernet3": {
             "interfaceStatus": "down",

@@ -18,7 +18,7 @@ Test failure conditions: This is a report without any test so there is no failur
 Model: DCS-7150S-52-CL-F
 Serial number: JPE13110630
 Version: 4.22.4M-2GB
-Uptime: 2 days, 5:57:57
+Uptime: 2 days, 16:49:40
 
 ********** Device inventory **********
 
@@ -136,6 +136,7 @@ Required EOS command: show lldp neighbors | json
 Test failure conditions: This is a report without any test so there is no failure/passing condition
 
 Interface: Ethernet1 *** LLDP neighbor: switch1.lab.local *** LLDP remote port: Ethernet2
+Interface: Ethernet2 *** LLDP neighbor: s7155.lab.local *** LLDP remote port: Ethernet2
 Interface: Ethernet24 *** LLDP neighbor: switch2.lab.local *** LLDP remote port: Ethernet24
 Interface: Management1 *** LLDP neighbor: mgmt3.lab.local *** LLDP remote port: Ethernet12
 
@@ -146,8 +147,8 @@ Required EOS command: show ip bgp summary vrf all | json
 Test failure conditions: A test fails if a BGP session is not established
 
 vrf: default
-Peer: 10.10.10.4 *** ASN: 65002 *** State: Established *** Up/Down: 26 May 2020 14:16:52 *** Result: PASS
-Peer: 10.10.10.2 *** ASN: 65001 *** State: Established *** Up/Down: 25 May 2020 00:02:54 *** Result: PASS
+Peer: 10.10.10.4 *** ASN: 65002 *** State: Established *** Up/Down: 26 May 2020 14:16:51 *** Result: PASS
+Peer: 10.10.10.2 *** ASN: 65001 *** State: Established *** Up/Down: 25 May 2020 00:02:53 *** Result: PASS
 
 
 ********** MLAG state **********

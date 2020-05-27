@@ -18,7 +18,7 @@ Test failure conditions: This is a report without any test so there is no failur
 Model: DCS-7150S-52-CL-F
 Serial number: JPE13110630
 Version: 4.22.4M-2GB
-Uptime: 2 days, 5:57:57
+Uptime: 2 days, 16:49:40
 
 ********** Device inventory **********
 
@@ -112,6 +112,7 @@ Required EOS command: show lldp neighbors | json
 Test failure conditions: This is a report without any test so there is no failure/passing condition
 
 Interface: Ethernet1 *** LLDP neighbor: switch1.lab.local *** LLDP remote port: Ethernet2
+Interface: Ethernet2 *** LLDP neighbor: s7155.lab.local *** LLDP remote port: Ethernet2
 Interface: Ethernet24 *** LLDP neighbor: switch2.lab.local *** LLDP remote port: Ethernet24
 Interface: Management1 *** LLDP neighbor: mgmt3.lab.local *** LLDP remote port: Ethernet12
 

@@ -11,7 +11,7 @@ def device_directories (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
 
     Returns
@@ -61,7 +61,7 @@ def init (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
 
     Returns
@@ -77,7 +77,7 @@ def init (device, root_dir):
     for item in [main_report, failures_only_report]:
         item.write ('-'*13 + ' Report for device ' + device + ' ' + '-'*13 + "\n"*2)
         item.close()
-    result = main_reports_directory + '/init.txt', failures_only_reports_directory + '/init.txt' 
+    result = main_report.name, failures_only_report.name
     return result
 
 def print_hostname (device, root_dir):
@@ -89,7 +89,7 @@ def print_hostname (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
 
     Returns
@@ -102,8 +102,8 @@ def print_hostname (device, root_dir):
     main_reports_directory = directories[5]
     failures_only_reports_directory = directories[6]
     command = "show hostname"
-    main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
-    failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
+    main_report = open(main_reports_directory + '/print_hostname.txt', 'w')
+    failures_only_report = open(failures_only_reports_directory + '/print_hostname.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Device hostname " + '*'*10 + "\n"*2)
         item.write('Description: include the device hostname and fqdn\n')
@@ -119,8 +119,8 @@ def print_hostname (device, root_dir):
         item.write('Hostname: ' + hostname + '\n')
         item.write('FQDN: ' + fqdn + '\n')
         item.write('\n')
-        item.close()
-    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+        item.close() 
+    result = main_report.name, failures_only_report.name
     return result
 
 def print_version (device, root_dir):
@@ -132,7 +132,7 @@ def print_version (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
 
     Returns
@@ -145,8 +145,8 @@ def print_version (device, root_dir):
     main_reports_directory = directories[5]
     failures_only_reports_directory = directories[6]
     command = "show version"
-    main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
-    failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
+    main_report = open(main_reports_directory + '/print_version.txt', 'w')
+    failures_only_report = open(failures_only_reports_directory + '/print_version.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Device details " + '*'*10 + "\n"*2)
         item.write('Description: include some details regarding the device (HW model, SN, SW release, uptime)\n')
@@ -168,7 +168,7 @@ def print_version (device, root_dir):
         item.write('Uptime: ' + uptime + '\n')
         item.write('\n')
         item.close()
-    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    result = main_report.name, failures_only_report.name
     return result
 
 def check_inventory (device, root_dir):
@@ -179,7 +179,7 @@ def check_inventory (device, root_dir):
 
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
 
     Returns
@@ -192,8 +192,8 @@ def check_inventory (device, root_dir):
     main_reports_directory = directories[5]
     failures_only_reports_directory = directories[6]
     command = "show inventory"
-    main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
-    failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
+    main_report = open(main_reports_directory + '/check_inventory.txt', 'w')
+    failures_only_report = open(failures_only_reports_directory + '/check_inventory.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Device inventory " + '*'*10 + "\n"*2)
         item.write('Description: include tests report about the hardware inventory\n')
@@ -263,7 +263,7 @@ def check_inventory (device, root_dir):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    result = main_report.name, failures_only_report.name
     return result
 
 def check_power (device, root_dir):
@@ -276,7 +276,7 @@ def check_power (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
 
     Returns
@@ -289,8 +289,8 @@ def check_power (device, root_dir):
     main_reports_directory = directories[5]
     failures_only_reports_directory = directories[6]
     command = "show system environment power"
-    main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
-    failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
+    main_report = open(main_reports_directory + '/check_power.txt', 'w')
+    failures_only_report = open(failures_only_reports_directory + '/check_power.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Power supplies status " + '*'*10 + "\n"*2)
         item.write('Description: include tests report about the power status\n')
@@ -319,7 +319,7 @@ def check_power (device, root_dir):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    result = main_report.name, failures_only_report.name
     return result
 
 def check_cooling (device, root_dir):
@@ -332,7 +332,7 @@ def check_cooling (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
 
     Returns
@@ -345,8 +345,8 @@ def check_cooling (device, root_dir):
     main_reports_directory = directories[5]
     failures_only_reports_directory = directories[6]
     command = "show system environment cooling"
-    main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
-    failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
+    main_report = open(main_reports_directory + '/check_cooling.txt', 'w')
+    failures_only_report = open(failures_only_reports_directory + '/check_cooling.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Cooling status " + '*'*10 + "\n"*2)
         item.write('Description: include tests report about the cooling status\n')
@@ -399,7 +399,7 @@ def check_cooling (device, root_dir):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    result = main_report.name, failures_only_report.name
     return result
 
 def check_temperature (device, root_dir):
@@ -412,7 +412,7 @@ def check_temperature (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
 
     Returns
@@ -425,8 +425,8 @@ def check_temperature (device, root_dir):
     main_reports_directory = directories[5]
     failures_only_reports_directory = directories[6]
     command = "show system environment temperature"
-    main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
-    failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
+    main_report = open(main_reports_directory + '/check_temperature.txt', 'w')
+    failures_only_report = open(failures_only_reports_directory + '/check_temperature.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Temperature status " + '*'*10 + "\n"*2)
         item.write('Description: include tests report about the temperature status\n')
@@ -534,7 +534,7 @@ def check_temperature (device, root_dir):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    result = main_report.name, failures_only_report.name
     return result
 
 def check_temperature_transceivers (device, root_dir):
@@ -547,7 +547,7 @@ def check_temperature_transceivers (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
     
     Returns
@@ -560,8 +560,8 @@ def check_temperature_transceivers (device, root_dir):
     main_reports_directory = directories[5]
     failures_only_reports_directory = directories[6]
     command = "show system environment temperature transceiver"
-    main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
-    failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
+    main_report = open(main_reports_directory + '/check_temperature_transceivers.txt', 'w')
+    failures_only_report = open(failures_only_reports_directory + '/check_temperature_transceivers.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " transceivers temperature status " + '*'*10 + "\n"*2)
         item.write('Description: include tests report about the transceivers temperature status\n')
@@ -616,7 +616,7 @@ def check_temperature_transceivers (device, root_dir):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt'
+    result = main_report.name, failures_only_report.name
     return result
 
 def check_reload_cause_history (device, root_dir):
@@ -629,7 +629,7 @@ def check_reload_cause_history (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
     
     Returns
@@ -642,8 +642,8 @@ def check_reload_cause_history (device, root_dir):
     main_reports_directory = directories[5]
     failures_only_reports_directory = directories[6]
     command = "show reload cause history"
-    main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
-    failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
+    main_report = open(main_reports_directory + '/check_reload_cause_history.txt', 'w')
+    failures_only_report = open(failures_only_reports_directory + '/check_reload_cause_history.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Reload cause history " + '*'*10 + "\n"*2)
         item.write('Description: include tests report about the cause for the last 10 reload\n')
@@ -677,7 +677,7 @@ def check_reload_cause_history (device, root_dir):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    result = main_report.name, failures_only_report.name
     return result
 
 def check_reload_cause_full (device, root_dir):
@@ -690,7 +690,7 @@ def check_reload_cause_full (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
     
     Returns
@@ -703,8 +703,8 @@ def check_reload_cause_full (device, root_dir):
     main_reports_directory = directories[5]
     failures_only_reports_directory = directories[6]
     command = "show reload cause full"
-    main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
-    failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
+    main_report = open(main_reports_directory + '/check_reload_cause_full.txt', 'w')
+    failures_only_report = open(failures_only_reports_directory + '/check_reload_cause_full.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " Reload cause full " + '*'*10 + "\n"*2)
         item.write('Description: include tests report about the cause of the most recent reload\n')
@@ -735,7 +735,7 @@ def check_reload_cause_full (device, root_dir):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    result = main_report.name, failures_only_report.name
     return result
 
 def print_lldp (device, root_dir):
@@ -747,7 +747,7 @@ def print_lldp (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
     
     Returns
@@ -760,8 +760,8 @@ def print_lldp (device, root_dir):
     main_reports_directory = directories[5]
     failures_only_reports_directory = directories[6]
     command = "show lldp neighbors"
-    main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
-    failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
+    main_report = open(main_reports_directory + '/print_lldp.txt', 'w')
+    failures_only_report = open(failures_only_reports_directory + '/print_lldp.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " LLDP topology " + '*'*10 + "\n"*2)
         item.write('Description: include the lldp topology\n')
@@ -780,7 +780,7 @@ def print_lldp (device, root_dir):
     for f in [main_report, failures_only_report]:
         f.write('\n')
         f.close()
-    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt'
+    result = main_report.name, failures_only_report.name
     return result
 
 def check_bgp (device, root_dir):
@@ -793,7 +793,7 @@ def check_bgp (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
 
     Returns
@@ -806,8 +806,8 @@ def check_bgp (device, root_dir):
     main_reports_directory = directories[5]
     failures_only_reports_directory = directories[6]
     command = "show ip bgp summary vrf all"
-    main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
-    failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
+    main_report = open(main_reports_directory + '/check_bgp.txt', 'w')
+    failures_only_report = open(failures_only_reports_directory + '/check_bgp.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " BGP sessions state " + '*'*10 + "\n"*2)
         item.write('Description: include tests report about the bgp status for all configured vrf\n')
@@ -845,7 +845,7 @@ def check_bgp (device, root_dir):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt'
+    result = main_report.name, failures_only_report.name
     return result
 
 def check_mlag (device, root_dir):
@@ -858,7 +858,7 @@ def check_mlag (device, root_dir):
     ----------
     device : str
         Device IP address or hostname.
-    root: str
+    root_dir: str
         Root directory for all the outputs.
 
     Returns
@@ -871,8 +871,8 @@ def check_mlag (device, root_dir):
     main_reports_directory = directories[5]
     failures_only_reports_directory = directories[6]
     command = "show mlag detail"
-    main_report = open(main_reports_directory + '/' + command + '.txt', 'w')
-    failures_only_report = open(failures_only_reports_directory + '/' + command + '.txt', 'w') 
+    main_report = open(main_reports_directory + '/check_mlag.txt', 'w')
+    failures_only_report = open(failures_only_reports_directory + '/check_mlag.txt', 'w') 
     for item in [main_report, failures_only_report]:
         item.write('*'*10 + " MLAG state " + '*'*10 + "\n"*2)
         item.write('Description: include tests report about the mlag status\n')
@@ -914,7 +914,7 @@ def check_mlag (device, root_dir):
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.close()
-    result = main_reports_directory + '/' + command + '.txt', failures_only_reports_directory + '/' + command + '.txt' 
+    result = main_report.name, failures_only_report.name
     return result
 
 def generate_main_report(dev, topic, root_dir): 
@@ -926,7 +926,7 @@ def generate_main_report(dev, topic, root_dir):
         Device IP address or hostname.
     topic : list
         The list of functions to use to generate the device report 
-    root: str
+    root_dir: str
         Root directory for all the outputs.
     """
     directories = device_directories(dev, root_dir)
@@ -952,7 +952,7 @@ def generate_failures_only_report(dev, topic, root_dir):
         Device IP address or hostname.
     topic : list
         The list of functions to use to generate the device report 
-    root: str
+    root_dir: str
         Root directory for all the outputs.
     """
     directories = device_directories(dev, root_dir)
@@ -969,18 +969,21 @@ def generate_failures_only_report(dev, topic, root_dir):
         infile.close()
     outfile.close()
 
-def generate_network_main_report(devices, root_dir, audit_str_list):
+def assemble_main_reports(devices, topic, root_dir):
     """Assembles the generated main report of each device into one report for all devices
 
     Parameters
     ----------
     devices : list
         List of devices IP addresses or hostnames. 
-    root: str
+    topic : list
+        The list of functions to use to generate the device report 
+    root_dir: str
         Root directory for all the outputs.
-    audit_str_list: list
-        List of audited topics 
     """    
+    audit_str_list = []
+    for item in topic: 
+        audit_str_list.append(item.__name__)
     network_report = open(root_dir + "/main.txt", "w")
     network_report.write('Report generated using Python the ' + str(datetime.datetime.now().strftime("%d %b %Y at %H:%M:%S")) + "\n"*2)
     network_report.write ('The list of devices audited is: ' + str(devices) + '\n')
@@ -995,18 +998,22 @@ def generate_network_main_report(devices, root_dir, audit_str_list):
             network_report.write(line)
         device_report.close()
 
-def generate_network_failures_only_report(devices, root_dir, audit_str_list): 
+def assemble_failures_only_reports(devices, topic, root_dir): 
     """Assembles the generated failures_only report of each device into one report for all devices
 
     Parameters
     ----------
     devices : list
         List of devices IP addresses or hostnames. 
-    root: str
+    topic : list
+        The list of functions to use to generate the device report 
+    root_dir: str
         Root directory for all the outputs.
-    audit_str_list: list
-        List of audited topics 
+
     """ 
+    audit_str_list = []
+    for item in topic: 
+        audit_str_list.append(item.__name__)
     network_report_failures_only = open(root_dir + "/failures_only.txt", "w")
     network_report_failures_only.write('Report generated using Python the ' + str(datetime.datetime.now().strftime("%d %b %Y at %H:%M:%S")) + "\n"*2)
     network_report_failures_only.write ('The list of devices audited is: ' + str(devices) + '\n')

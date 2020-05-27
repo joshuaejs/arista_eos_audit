@@ -1,13 +1,20 @@
+
 {
-    "tablesLastChangeTime": 1590492762.9423513,
+    "tablesLastChangeTime": 1590569654.8111682,
     "tablesAgeOuts": 0,
-    "tablesInserts": 4,
+    "tablesInserts": 5,
     "lldpNeighbors": [
         {
             "ttl": 120,
             "neighborDevice": "switch1.lab.local",
             "neighborPort": "Ethernet2",
             "port": "Ethernet1"
+        },
+        {
+            "ttl": 120,
+            "neighborDevice": "s7155.lab.local",
+            "neighborPort": "Ethernet2",
+            "port": "Ethernet2"
         },
         {
             "ttl": 120,

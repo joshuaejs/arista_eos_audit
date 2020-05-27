@@ -1,3 +1,4 @@
+
 {
     "powerSupplies": {
         "1": {
@@ -9,7 +10,7 @@
             "tempSensors": {
                 "TempSensorP1/1": {
                     "status": "ok",
-                    "temperature": 17.25
+                    "temperature": 16.25
                 }
             },
             "managed": true,
@@ -24,7 +25,7 @@
         },
         "2": {
             "outputPower": 79.0,
-            "uptime": 1590338293.4097068,
+            "uptime": 1590338293.4097064,
             "modelName": "PWR-460AC-F",
             "capacity": 460.0,
             "tempSensors": {

@@ -5,7 +5,7 @@ Required EOS command: show ip bgp summary vrf all | json
 Test failure conditions: A test fails if a BGP session is not established
 
 vrf: default
-Peer: 10.10.10.4 *** ASN: 65002 *** State: Established *** Up/Down: 26 May 2020 14:16:52 *** Result: PASS
-Peer: 10.10.10.2 *** ASN: 65001 *** State: Established *** Up/Down: 25 May 2020 00:02:54 *** Result: PASS
+Peer: 10.10.10.4 *** ASN: 65002 *** State: Established *** Up/Down: 26 May 2020 14:16:51 *** Result: PASS
+Peer: 10.10.10.2 *** ASN: 65001 *** State: Established *** Up/Down: 25 May 2020 00:02:53 *** Result: PASS
 
 

@@ -1,7 +1,7 @@
 from netmiko import ConnectHandler
 import os
 import yaml
-from eos.audit import device_directories
+from audit.functions import device_directories
 
 input_f = open('input.yml', 'r')
 input_s = input_f.read()

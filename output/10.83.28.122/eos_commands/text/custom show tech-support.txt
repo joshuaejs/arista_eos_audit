@@ -15,9 +15,9 @@ Architecture:           i686
 Internal build version: 4.22.4M-2GB-15583082.4224M
 Internal build ID:      523a3357-484c-4110-9019-39750ffa8af5
 
-Uptime:                 0 weeks, 2 days, 5 hours and 56 minutes
+Uptime:                 0 weeks, 2 days, 16 hours and 48 minutes
 Total memory:           4009188 kB
-Free memory:            2824844 kB
+Free memory:            2824320 kB
 
 
 ------------- show reload cause history -------------
@@ -185,7 +185,6 @@ None available.
 
 ------------- show inventory -------------
 
-
 System information
   Model                    Description                                          
   ------------------------ ---------------------------------------------------- 
@@ -277,7 +276,8 @@ System has precision clock
 
 ------------- show lldp neighbors -------------
 
-Last table change time   : 2 days, 0:28:52 ago
+
+Last table change time   : 2 days, 11:20:34 ago
 Number of table inserts  : 3
 Number of table deletes  : 0
 Number of table drops    : 0
@@ -294,6 +294,6 @@ BGP summary information for VRF default
 Router identifier 172.16.0.1, local AS number 65001
 Neighbor Status Codes: m - Under maintenance
   Neighbor         V  AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State   PfxRcd PfxAcc
-  10.10.10.1       4  65002           2925      2922    0    0    2d00h Estab   6      6
-  10.10.10.3       4  65003           2924      2919    0    0    2d00h Estab   6      6
+  10.10.10.1       4  65002           3577      3574    0    0    2d11h Estab   6      6
+  10.10.10.3       4  65003           3576      3571    0    0    2d11h Estab   6      6
 

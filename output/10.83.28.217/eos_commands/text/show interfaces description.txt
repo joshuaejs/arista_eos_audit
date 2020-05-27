@@ -1,6 +1,6 @@
 Interface                      Status         Protocol           Description
 Et1                            up             up                 "switch1 **** Ethernet2"
-Et2                            down           down               
+Et2                            up             up                 
 Et3                            down           down               
 Et4                            down           down               
 Et5                            down           notpresent         

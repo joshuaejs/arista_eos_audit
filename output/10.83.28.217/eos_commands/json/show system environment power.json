@@ -1,4 +1,3 @@
-
 {
     "powerSupplies": {
         "1": {
@@ -24,8 +23,8 @@
             }
         },
         "2": {
-            "outputPower": 79.0,
-            "uptime": 1590338295.6975107,
+            "outputPower": 73.0,
+            "uptime": 1590338295.6975112,
             "modelName": "PWR-460AC-F",
             "capacity": 460.0,
             "tempSensors": {
@@ -44,7 +43,7 @@
             "inputCurrent": 0.421875,
             "managed": true,
             "inputVoltage": 222.5,
-            "outputCurrent": 6.5
+            "outputCurrent": 6.375
         }
     }
 }

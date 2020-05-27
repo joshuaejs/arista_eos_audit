@@ -1,3 +1,4 @@
+
 {
     "vrfs": {
         "default": {
@@ -5,13 +6,13 @@
             "peers": {
                 "10.10.10.4": {
                     "prefixReceived": 7,
-                    "msgSent": 664,
+                    "msgSent": 1316,
                     "inMsgQueue": 0,
                     "underMaintenance": false,
                     "prefixInBest": 3,
-                    "upDownTime": 1590495412.097773,
+                    "upDownTime": 1590495411.659741,
                     "version": 4,
-                    "msgReceived": 663,
+                    "msgReceived": 1315,
                     "prefixAccepted": 7,
                     "peerState": "Established",
                     "outMsgQueue": 0,
@@ -20,13 +21,13 @@
                 },
                 "10.10.10.2": {
                     "prefixReceived": 7,
-                    "msgSent": 2925,
+                    "msgSent": 3577,
                     "inMsgQueue": 0,
                     "underMaintenance": false,
                     "prefixInBest": 4,
-                    "upDownTime": 1590357774.096913,
+                    "upDownTime": 1590357773.658915,
                     "version": 4,
-                    "msgReceived": 2920,
+                    "msgReceived": 3572,
                     "prefixAccepted": 7,
                     "peerState": "Established",
                     "outMsgQueue": 0,
