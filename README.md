@@ -6,15 +6,14 @@
 [Requirements](#requirements)  
 [How to use this repository](#how-to-use-this-repository)  
 [Repository details](#repository-details)  
-&nbsp;&nbsp;&nbsp;&nbsp;[audit directory](audit-directory)   
-&nbsp;&nbsp;&nbsp;&nbsp;[Repository input](#repository-input)    
-&nbsp;&nbsp;&nbsp;&nbsp;[Collect EOS commands](#collect-eos-commands)  
-&nbsp;&nbsp;&nbsp;&nbsp;[Build a custom show tech-support file](#build-a-custom-show-tech-support-file)  
-&nbsp;&nbsp;&nbsp;&nbsp;[Generate audit reports](#generate-audit-reports)  
+&nbsp;&nbsp;&nbsp;&nbsp;[input.yml file](#inputyml-file)  
+&nbsp;&nbsp;&nbsp;&nbsp;[audit directory](#audit-directory)   
+&nbsp;&nbsp;&nbsp;&nbsp;[collect_eos_commands.py file](#collect_eos_commandspy-file)  
+&nbsp;&nbsp;&nbsp;&nbsp;[custom_show_tech_support.py file](#custom_show_tech_supportpy-file)  
+&nbsp;&nbsp;&nbsp;&nbsp;[generate_audit_report.py file](#generate_audit_reportpy-file)   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Overview](#overview)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Report files](#report-files)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Supported features](#supported-features)  
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Supported audit features](#supported-audit-features)  
 
 ## About this repository 
 
@@ -320,7 +319,7 @@ Then, the file [generate_audit_report.py](generate_audit_report.py):
 - Assembles the "main.txt" report of each device into one [main.txt](output/main.txt) file. So [main.txt](output/main.txt) includes all the tests [generate_audit_report.py](generate_audit_report.py) ran for all the devices. It is saved at the root of the [output](output) directory.  
 - Assembles the "failures_only.txt" report of each device into one [failures_only.txt](output/failures_only.txt) file. So [failures_only.txt](output/failures_only.txt) includes for all the devices only the tests that failed. It is saved at the root of the [output](output) directory. 
 
-#### Supported features 
+#### Supported audit features 
 
 The file [generate_audit_report.py](generate_audit_report.py) imports python functions from the [audit](audit) python package
 
