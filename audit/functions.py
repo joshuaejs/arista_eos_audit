@@ -235,10 +235,10 @@ def check_inventory (device, root_dir):
         name = data_json['fanTraySlots'][fan_module]['name']
         main_report.write('Module: ' + slot + ' *** Model: ' + name + '\n')
     failures_only_report.write("The script doesnt run tests about the Fans modules ...\n")
-    at_least_one_test_fail = False
     for item in [main_report, failures_only_report]:
         item.write('\n')
         item.write('Transceivers: \n')
+    at_least_one_test_fail = False
     for transceiver in sorted(data_json["xcvrSlots"]):
         transceiver = str(transceiver)
         mfgName = data_json['xcvrSlots'][transceiver]['mfgName']
@@ -376,9 +376,9 @@ def check_cooling (device, root_dir):
         failures_only_report.write("The other tests succesfully passed\n")
     if at_least_one_test_fail == False: 
         failures_only_report.write("All tests successfully passed\n")
-    at_least_one_test_fail = False
     for item in [main_report, failures_only_report]:
         item.write('\nFan modules: \n')
+    at_least_one_test_fail = False
     for fantrayslot in data_json['fanTraySlots']:
         for fan in fantrayslot['fans']: 
             status = fan['status'] 
@@ -818,9 +818,9 @@ def check_bgp (device, root_dir):
     data_json = json.loads(data) 
     for vrf in data_json['vrfs']: 
         vrf = vrf
-        at_least_one_test_fail = False
         for item in [main_report, failures_only_report]:
             item.write("vrf: " + vrf + "\n") 
+        at_least_one_test_fail = False
         for peer in data_json['vrfs'][vrf]['peers']: 
             peer = peer
             asn = data_json['vrfs'][vrf]['peers'][peer]['asn']
@@ -882,14 +882,12 @@ def check_mlag (device, root_dir):
     f.close()
     data_json = json.loads(data) 
     state = data_json["state"] 
-#    at_least_one_test_fail = False
     if state == "active": 
         negStatus = data_json["negStatus"]
         configSanity = data_json["configSanity"]
         peerAddress = data_json["peerAddress"] 
         if negStatus != 'connected': 
             result = 'FAIL'
-#            at_least_one_test_fail = True
         elif negStatus == 'connected':
             result = 'PASS' 
         if result == 'FAIL':
@@ -905,7 +903,6 @@ def check_mlag (device, root_dir):
             main_report.write("Negotiation Status: " + negStatus + "\n")
             main_report.write("Config Sanity: " + configSanity + "\n")
             main_report.write("\nTest result: " + result + "\n")  
-#        if at_least_one_test_fail == False: 
             failures_only_report.write("All tests successfully passed\n")
     elif state == "disabled": 
         for item in [main_report, failures_only_report]:
