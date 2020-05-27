@@ -440,6 +440,7 @@ def check_temperature (device, root_dir):
     systemStatus = json.loads(data)['systemStatus']
     if systemStatus != 'temperatureOk': 
         result = 'FAIL'
+        at_least_one_test_fail = True
     else:
         result = 'PASS'
         systemStatus = 'ok'
